@@ -1,5 +1,4 @@
 import { createTheme } from 'flowbite-react'
-
 const customTheme = createTheme({
   button: {
     base: 'group relative flex items-center justify-center p-0.5 text-center font-medium rounded-md cursor-pointer focus:outline-0 focus:ring-0',
@@ -813,5 +812,4 @@ const customTheme = createTheme({
     },
   },
 })
-
 export default customTheme

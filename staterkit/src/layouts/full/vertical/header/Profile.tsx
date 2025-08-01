@@ -2,7 +2,8 @@ import { Icon } from "@iconify/react";
 import { Button, Drawer, DrawerItems } from "flowbite-react";
 
 import SimpleBar from "simplebar-react";
-import user1 from "/src/assets//images/profile/user1.svg"
+import user1 from "/src/assets//images/profile/avtar.png"
+
 import { Link } from "react-router";
 import { useContext, useEffect } from "react";
 import { CustomizerContext } from "src/context/CustomizerContext";

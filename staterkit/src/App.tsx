@@ -11,7 +11,7 @@ function App() {
     <>
       <ThemeModeScript />
       <ThemeProvider theme={customTheme}>
-      <RouterProvider router={router} />
+        <RouterProvider router={router} />
       </ThemeProvider>
     </>
   );

@@ -9,7 +9,7 @@ import { useContext } from "react";
 import { CustomizerContext } from "src/context/CustomizerContext";
 import { ThemeMode } from "./ThemeMode";
 import CartItems from "./CartItems";
-import user1 from 'src/assets/images/profile/user1.svg'
+import user1 from 'src/assets/images/profile/avtar.png'
 
 const MobileHeaderItems = () => {
 

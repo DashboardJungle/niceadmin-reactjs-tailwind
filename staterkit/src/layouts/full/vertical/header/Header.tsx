@@ -15,7 +15,7 @@ import HorizontalMenu from "../../horizontal/header/HorizontalMenu";
 import { CustomizerContext } from "src/context/CustomizerContext";
 import CartItems from "./CartItems";
 import { ThemeMode } from "./ThemeMode";
-import user1 from 'src/assets/images/profile/user1.svg'
+import user1 from 'src/assets/images/profile/avtar.png'
 
 interface HeaderPropsType {
   layoutType: string;
@@ -169,7 +169,7 @@ const Header = ({ layoutType }: HeaderPropsType) => {
       </header>
 
       {/* Mobile Sidebar */}
-      <Drawer open={isOpen} onClose={handleClose} className="w-[320px]">
+      <Drawer open={isOpen} onClose={handleClose} >
         <DrawerItems>
           <MobileSidebar />
         </DrawerItems>

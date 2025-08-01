@@ -1,5 +1,5 @@
 
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Button, Drawer, RangeSlider, Tooltip } from "flowbite-react";
 import { Icon } from "@iconify/react";
 
@@ -21,6 +21,17 @@ export const Customizer = () => {
   const addAttributeToBody = (cvalue: any) => {
     document.body.setAttribute("data-color-theme", cvalue);
   };
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [isOpen])
 
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
@@ -141,8 +152,8 @@ export const Customizer = () => {
               <Button
                 color={'primary'}
                 className={`border bg-transparent border-ld text-link dark:text-darklink hover:scale-105 transition-all rounded-md py-3 px-6 h-14 ${activeMode === 'dark'
-                  ? 'active text-primary dark:text-secondary dark:bg-primary'
-                  : 'hover:bg-transparent dark:hover:bg-transparent  hover:text-primary dark:hover:text-darklink'
+                    ? 'active text-primary dark:text-secondary dark:bg-primary'
+                    : 'hover:bg-transparent dark:hover:bg-transparent  hover:text-primary dark:hover:text-darklink'
                   }`}
                 onClick={() => {
                   setActiveMode('dark')
@@ -159,8 +170,8 @@ export const Customizer = () => {
               <Button
                 color={'primary'}
                 className={`border bg-transparent btn-shadow border-ld text-link dark:text-darklink  hover:scale-105 transition-all rounded-md py-3 px-6 h-14  ${activeDir === 'ltr'
-                  ? 'text-primary dark:text-secondary bg-lightprimary dark:bg-primary hover:bg-lightprimary dark:hover:bg-primary'
-                  : 'bg-transparent hover:bg-transparent hover:text-primary dark:hover:text-darklink'
+                    ? 'text-primary dark:text-secondary bg-lightprimary dark:bg-primary hover:bg-lightprimary dark:hover:bg-primary'
+                    : 'bg-transparent hover:bg-transparent hover:text-primary dark:hover:text-darklink'
                   }`}
                 onClick={() => {
                   setActiveDir('ltr')
@@ -176,8 +187,8 @@ export const Customizer = () => {
               <Button
                 color={'primary'}
                 className={`border bg-transparent btn-shadow border-ld text-link dark:text-darklink  hover:scale-105 transition-all rounded-md py-3 px-6 h-14 ${activeDir === 'rtl'
-                  ? 'text-primary dark:text-secondary bg-lightprimary dark:bg-primary hover:bg-lightprimary dark:hover:bg-primary'
-                  : 'bg-transparent hover:bg-transparent hover:text-primary dark:hover:text-darklink'
+                    ? 'text-primary dark:text-secondary bg-lightprimary dark:bg-primary hover:bg-lightprimary dark:hover:bg-primary'
+                    : 'bg-transparent hover:bg-transparent hover:text-primary dark:hover:text-darklink'
                   }`}
                 onClick={() => {
                   setActiveDir('rtl')
@@ -225,8 +236,8 @@ export const Customizer = () => {
               <Button
                 color={'primary'}
                 className={`border bg-transparent btn-shadow border-ld text-link dark:text-darklink hover:scale-105 transition-all rounded-md py-3 px-6 h-14  ${activeLayout === 'vertical'
-                  ? 'text-primary dark:text-secondary bg-lightprimary dark:bg-primary hover:bg-lightprimary dark:hover:bg-primary'
-                  : 'bg-transparent hover:bg-transparent hover:text-primary dark:hover:text-darklink'
+                    ? 'text-primary dark:text-secondary bg-lightprimary dark:bg-primary hover:bg-lightprimary dark:hover:bg-primary'
+                    : 'bg-transparent hover:bg-transparent hover:text-primary dark:hover:text-darklink'
                   }`}
                 onClick={() => setActiveLayout('vertical')}>
                 <span className='flex items-center'>
@@ -241,8 +252,8 @@ export const Customizer = () => {
                 color={'primary'}
                 onClick={() => setActiveLayout('horizontal')}
                 className={`border bg-transparent border-ld text-link dark:text-darklink hover:scale-105 transition-all rounded-md py-3 px-6 h-14 ${activeLayout === 'horizontal'
-                  ? 'text-primary dark:text-secondary bg-lightprimary dark:bg-primary hover:bg-lightprimary dark:hover:bg-primary'
-                  : 'bg-transparent hover:bg-transparent hover:text-primary dark:hover:text-darklink'
+                    ? 'text-primary dark:text-secondary bg-lightprimary dark:bg-primary hover:bg-lightprimary dark:hover:bg-primary'
+                    : 'bg-transparent hover:bg-transparent hover:text-primary dark:hover:text-darklink'
                   }`}>
                 <span className='flex items-center'>
                   <Icon icon='tabler:layout-navbar' className='me-2 text-2xl' />
@@ -257,8 +268,8 @@ export const Customizer = () => {
               <Button
                 color={'primary'}
                 className={`border bg-transparent btn-shadow border-ld text-link dark:text-darklink hover:scale-105 transition-all rounded-md py-3 px-6 h-14 ${isLayout === 'boxed'
-                  ? 'text-primary dark:text-secondary bg-lightprimary dark:bg-primary hover:bg-lightprimary dark:hover:bg-primary'
-                  : 'bg-transparent hover:bg-transparent hover:text-primary dark:hover:text-darklink'
+                    ? 'text-primary dark:text-secondary bg-lightprimary dark:bg-primary hover:bg-lightprimary dark:hover:bg-primary'
+                    : 'bg-transparent hover:bg-transparent hover:text-primary dark:hover:text-darklink'
                   }`}
                 onClick={() => setIsLayout('boxed')}>
                 <span className='flex items-center'>
@@ -272,8 +283,8 @@ export const Customizer = () => {
               <Button
                 color={'primary'}
                 className={`border bg-transparent border-ld text-link dark:text-darklink hover:scale-105 transition-all rounded-md py-3 px-6 h-14 ${isLayout === 'full'
-                  ? 'text-primary dark:text-secondary bg-lightprimary dark:bg-primary hover:bg-lightprimary dark:hover:bg-primary'
-                  : 'bg-transparent hover:bg-transparent hover:text-primary dark:hover:text-darklink'
+                    ? 'text-primary dark:text-secondary bg-lightprimary dark:bg-primary hover:bg-lightprimary dark:hover:bg-primary'
+                    : 'bg-transparent hover:bg-transparent hover:text-primary dark:hover:text-darklink'
                   }`}
                 onClick={() => setIsLayout('full')}>
                 <span className='flex items-center'>
@@ -292,8 +303,8 @@ export const Customizer = () => {
               <Button
                 color={'primary'}
                 className={`border bg-transparent btn-shadow border-ld text-link dark:text-darklink hover:scale-105 transition-all rounded-md py-3 px-6 h-14 ${isCollapse == 'full-sidebar'
-                  ? 'text-primary dark:text-secondary bg-lightprimary dark:bg-primary hover:bg-lightprimary dark:hover:bg-primary'
-                  : 'bg-transparent hover:bg-transparent hover:text-primary dark:hover:text-darklink'
+                    ? 'text-primary dark:text-secondary bg-lightprimary dark:bg-primary hover:bg-lightprimary dark:hover:bg-primary'
+                    : 'bg-transparent hover:bg-transparent hover:text-primary dark:hover:text-darklink'
                   }`}
                 onClick={() => setIsCollapse('full-sidebar')}>
                 <span className='flex items-center'>
@@ -307,8 +318,8 @@ export const Customizer = () => {
               <Button
                 color={'primary'}
                 className={`border bg-transparent border-ld text-link dark:text-darklink hover:scale-105 transition-all rounded-md py-3 px-6 h-14 ${isCollapse == 'mini-sidebar'
-                  ? 'text-primary dark:text-secondary bg-lightprimary dark:bg-primary hover:bg-lightprimary dark:hover:bg-primary'
-                  : 'bg-transparent hover:bg-transparent hover:text-primary dark:hover:text-darklink'
+                    ? 'text-primary dark:text-secondary bg-lightprimary dark:bg-primary hover:bg-lightprimary dark:hover:bg-primary'
+                    : 'bg-transparent hover:bg-transparent hover:text-primary dark:hover:text-darklink'
                   }`}
                 onClick={() => setIsCollapse('mini-sidebar')}>
                 <span className='flex items-center'>
@@ -327,8 +338,8 @@ export const Customizer = () => {
               <Button
                 color={'primary'}
                 className={`border bg-transparent btn-shadow border-ld text-link dark:text-darklink hover:scale-105 transition-all rounded-md py-3 px-6 h-14  ${!isCardShadow
-                  ? 'text-primary dark:text-secondary bg-lightprimary dark:bg-primary hover:bg-lightprimary dark:hover:bg-primary'
-                  : 'bg-transparent hover:bg-transparent hover:text-primary dark:hover:text-darklink'
+                    ? 'text-primary dark:text-secondary bg-lightprimary dark:bg-primary hover:bg-lightprimary dark:hover:bg-primary'
+                    : 'bg-transparent hover:bg-transparent hover:text-primary dark:hover:text-darklink'
                   }`}
                 onClick={() => setIsCardShadow(false)}>
                 <span className='flex items-center'>
@@ -339,8 +350,8 @@ export const Customizer = () => {
               <Button
                 color={'primary'}
                 className={`border bg-transparent border-ld text-link dark:text-darklink hover:scale-105 transition-all rounded-md py-3 px-6 h-14 ${isCardShadow
-                  ? 'text-primary dark:text-secondary bg-lightprimary dark:bg-primary hover:bg-lightprimary dark:hover:bg-primary'
-                  : 'bg-transparent hover:bg-transparent hover:text-primary dark:hover:text-darklink'
+                    ? 'text-primary dark:text-secondary bg-lightprimary dark:bg-primary hover:bg-lightprimary dark:hover:bg-primary'
+                    : 'bg-transparent hover:bg-transparent hover:text-primary dark:hover:text-darklink'
                   }`}
                 onClick={() => setIsCardShadow(true)}>
                 <span className='flex items-center'>

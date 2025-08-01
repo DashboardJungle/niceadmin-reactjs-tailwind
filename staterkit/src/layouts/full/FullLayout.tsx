@@ -74,7 +74,7 @@ const FullLayout: FC = () => {
 
   return (
     <div className='flex w-full min-h-screen'>
-      <div className='page-wrapper bg-body dark:bg-darkbody flex w-full'>
+      <div className='page-wrapper bg-body dark:bg-darkbody flex w-full '>
         {/* Header/sidebar */}
         {activeLayout == 'vertical' ? <Sidebar /> : null}
         <div className='body-wrapper w-full'>
