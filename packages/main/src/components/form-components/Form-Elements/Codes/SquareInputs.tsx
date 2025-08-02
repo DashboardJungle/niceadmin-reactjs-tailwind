@@ -12,7 +12,7 @@ const SquareInputsCodes = () => {
           <TextInput
             id='email1'
             type='email'
-            placeholder='name@materialm.com'
+            placeholder='name@niceadmin.com'
             required
             className='!form-rounded-md'
           />

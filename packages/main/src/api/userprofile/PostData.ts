@@ -1,11 +1,12 @@
 import { PostType } from '../../types/apps/userProfile';
 import { Chance } from 'chance';
-import user2 from '/src/assets/images/profile/user-2.jpg';
-import user3 from '/src/assets/images/profile/user-3.jpg';
-import user4 from '/src/assets/images/profile/user-4.jpg';
-import user5 from '/src/assets/images/profile/user-5.jpg';
-import user6 from '/src/assets/images/profile/user-6.jpg';
-import user10 from "/src/assets/images/profile/user-10.jpg";
+
+import emily from 'src/assets/images/profile/emily.svg';
+import Juan from 'src/assets/images/profile/Juan.svg';
+import olivia from 'src/assets/images/profile/olivia.svg';
+import Kiley from 'src/assets/images/profile/Kiley.svg';
+import jason from 'src/assets/images/profile/jason.svg';
+import Dalton from 'src/assets/images/profile/Dalton.svg';
 
 import s1 from '/src/assets/images/products/s1.jpg';
 import s2 from '/src/assets/images/products/s2.jpg';
@@ -15,13 +16,13 @@ import { http, HttpResponse } from 'msw';
 const chance = new Chance();
 
 // social profile
-const posts: PostType[] = [
+export const posts: PostType[] = [
   {
-    id: chance.integer({ min: 1, max: 2000 }),
+    id: '1',
     profile: {
-      id: chance.integer({ min: 1, max: 2000 }),
-      avatar: user10,
-      name: 'Nirav Joshi',
+      id: '2',
+      avatar: emily,
+      name: 'Macky Dawn',
       time: '15 min ago',
     },
     data: {
@@ -38,10 +39,10 @@ const posts: PostType[] = [
       },
       comments: [
         {
-          id: chance.integer({ min: 1, max: 2000 }),
+          id: '3',
           profile: {
-            id: chance.integer({ min: 1, max: 2000 }),
-            avatar: user3,
+            id: '4',
+            avatar: Juan,
             name: 'Deran Mac',
             time: '8 min ago ',
           },
@@ -55,10 +56,10 @@ const posts: PostType[] = [
           },
         },
         {
-          id: chance.integer({ min: 1, max: 2000 }),
+          id: '5',
           profile: {
-            id: chance.integer({ min: 1, max: 2000 }),
-            avatar: user4,
+            id: '6',
+            avatar: jason,
             name: 'Jonathan Bg',
             time: '5 min ago ',
           },
@@ -70,10 +71,10 @@ const posts: PostType[] = [
             },
             replies: [
               {
-                id: chance.integer({ min: 1, max: 2000 }),
+                id: '7',
                 profile: {
-                  id: chance.integer({ min: 1, max: 2000 }),
-                  avatar: user5,
+                  id: '8',
+                  avatar: jason,
                   name: 'Carry minati',
                   time: 'just now ',
                 },
@@ -92,10 +93,10 @@ const posts: PostType[] = [
     },
   },
   {
-    id: chance.integer({ min: 1, max: 2000 }),
+    id: '9',
     profile: {
-      id: chance.integer({ min: 1, max: 2000 }),
-      avatar: user5,
+      id: '10',
+      avatar: jason,
       name: 'Carry Minati',
       time: 'now',
     },
@@ -110,10 +111,10 @@ const posts: PostType[] = [
     },
   },
   {
-    id: chance.integer({ min: 1, max: 2000 }),
+    id: '11',
     profile: {
-      id: chance.integer({ min: 1, max: 2000 }),
-      avatar: user2,
+      id: '12',
+      avatar: olivia,
       name: 'Genelia Desouza',
       time: '15 min ago ',
     },
@@ -135,10 +136,10 @@ const posts: PostType[] = [
       },
       comments: [
         {
-          id: chance.integer({ min: 1, max: 2000 }),
+          id: '13',
           profile: {
-            id: chance.integer({ min: 1, max: 2000 }),
-            avatar: user3,
+            id: '14',
+            avatar: Kiley,
             name: 'Ritesh Deshmukh',
             time: '15 min ago ',
           },
@@ -155,10 +156,10 @@ const posts: PostType[] = [
     },
   },
   {
-    id: chance.integer({ min: 1, max: 2000 }),
+    id: '15',
     profile: {
-      id: chance.integer({ min: 1, max: 2000 }),
-      avatar: user6,
+      id: '16',
+      avatar: Dalton,
       name: 'Himesh R',
       time: '15 min ago ',
     },
@@ -252,12 +253,12 @@ export const PostHandlers = [
 
       if (comment && comment.data && comment.data.likes)
         comment.data.likes.like = !comment.data.likes.like;
-      if (comment && comment.data && comment.data.likes){
+      if (comment && comment.data && comment.data.likes) {
         comment.data.likes.value = comment.data.likes.like
           ? comment.data.likes.value + 1
           : comment.data.likes.value - 1;
       }
-        
+
       if (post && post.data && post.data.comments) post.data.comments[commentIndex] = comment;
       return HttpResponse.json({ status: 200, msg: 'Success', data: posts });
     } catch (error) {
@@ -265,8 +266,5 @@ export const PostHandlers = [
     }
   }),
 ];
-
-
-
 
 export default posts;

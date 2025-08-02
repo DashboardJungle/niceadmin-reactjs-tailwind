@@ -3,7 +3,7 @@ import { MdCheck } from "react-icons/md";
 import "flowbite";
 import { Badge, Button, HR, Rating, RatingStar } from "flowbite-react";
 
-import  { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import { Link, useParams } from "react-router";
 import { ProductContext } from "src/context/Ecommercecontext";
 import { ProductType } from "src/types/apps/eCommerce";
@@ -47,101 +47,115 @@ const ProductDetail = () => {
       {/* Category */}
       {product ? (
         <>
-          <div className="flex gap-2 items-center">
-            <Badge color={"success"}>{product.stock == true ? 'In Stock' : ' Out Of Stock'}</Badge>
-            <span className="text-xs text-darklink dark:text-bodytext"> {product.category}</span>
+          <div className='flex gap-2 items-center'>
+            <Badge color={'lightsuccess'}>
+              {product.stock == true ? 'In Stock' : ' Out Of Stock'}
+            </Badge>
+            <span className='text-xs text-black/50 dark:text-darklink'>
+              {' '}
+              {product.category}
+            </span>
           </div>
-          <h4 className="text-xl my-2">{product.title}</h4>
-          <p className="text-sm text-darklink dark:text-bodytext">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ex arcu,
-            tincidunt bibendum felis.
+          <h4 className='text-xl my-2'>{product.title}</h4>
+          <p className='text-sm text-black/50 dark:text-darklink'>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ex
+            arcu, tincidunt bibendum felis.
           </p>
           {/* Price */}
-          <h5 className="text-xl flex gap-2 items-center my-3">
-            <span className=" text-lg text-darklink dark:text-bodytext line-through font-semibold">
+          <h5 className='text-xl flex gap-2 items-center my-3'>
+            <span className='text-lg text-black/50 dark:text-darklink line-through font-semibold'>
               ${product.salesPrice}
             </span>
-
             ${product.price}
           </h5>
           {/* Rattings */}
-          <div className="flex items-center gap-2">
-            <Rating size={"cs"} >
+          <div className='flex items-center gap-2'>
+            <Rating size={'cs'}>
               <RatingStar />
               <RatingStar />
               <RatingStar />
               <RatingStar />
               <RatingStar filled={false} />
             </Rating>
-            <span className="text-sm text-ld font-medium">(236 reviews)</span>
+            <span className='text-sm text-ld font-medium'>236 reviews</span>
           </div>
-          <HR className="my-6" />
+          <HR className='my-6' />
           {/* Colors */}
-          <div className="flex items-center gap-5 mb-8">
-            <span className="text-base text-ld font-semibold">Colors:</span>
-            {product.colors.map((color) => (
-              <div className="flex gap-3">
-                <div className={`h-6 w-6 rounded-full cursor-pointer flex items-center justify-center ${scolor === color ? `bg-${color}` : ''}`} onClick={() => setColor(color)}
+          <div className='flex items-center gap-5 mb-8'>
+            <span className='text-base text-ld font-semibold'>Colors:</span>
+            {product.colors.map((color, i) => (
+              <div className='flex gap-3' key={i}>
+                <div
+                  className={`h-6 w-6 rounded-full cursor-pointer flex items-center justify-center ${scolor === color ? `bg-${color}` : ''
+                    }`}
+                  onClick={() => setColor(color)}
                   style={{
                     transition: '0.1s ease-in',
                     backgroundColor: `${color}`,
-                  }}
-                >   {scolor === color ? <MdCheck size={16} className="text-white" />
-                  : ''}</div>
+                  }}>
+                  {' '}
+                  {scolor === color ? (
+                    <MdCheck size={16} className='text-white' />
+                  ) : (
+                    ''
+                  )}
+                </div>
               </div>
             ))}
           </div>
           {/* Qty */}
-          <div className="flex items-center gap-10">
-            <span className="text-base text-ld font-semibold">QTY:</span>
-            <form className="max-w-xs">
-              <div className="relative flex items-center ">
+          <div className='flex items-center gap-10'>
+            <span className='text-base font-semibold'>QTY:</span>
+            <form className='max-w-xs'>
+              <div className='relative flex items-center '>
                 <button
-                  type="button"
-                  id="decrement-button"
-                  data-input-counter-decrement="quantity-input"
+                  type='button'
+                  id='decrement-button'
+                  data-input-counter-decrement='quantity-input'
                   onClick={() => handleQuantityChange(false)}
-                  className="focus:ring-0 focus:outline-hidden border border-ld h-10 min-w-10 rounded-s-md rounded-e-none text-center flex justify-center items-center hover:bg-lightprimary hover:text-primary"
-                >
-                  <span className="text-3xl">-</span>
+                  className='focus:ring-0 focus:outline-none border border-ld h-10 min-w-10 rounded-s-md rounded-e-none text-center flex justify-center items-center hover:bg-lightprimary hover:text-primary'>
+                  <span className='text-3xl'>-</span>
                 </button>
 
                 <input
-                  type="text"
-                  id="quantity-input"
+                  type='text'
+                  id='quantity-input'
                   data-input-counter
-                  aria-describedby="helper-text-explanation"
-                  className="rounded-s-none! rounded-e-none! text-center h-10 border-x-0! w-fit max-w-12 border-y border-ld !focus:ring-0 focus:border-ld focus:ring-transparent focus:ring-offset-0 bg-transparent"
-                  placeholder="0"
+                  aria-describedby='helper-text-explanation'
+                  className='rounded-s-none! rounded-e-none! text-center h-10 border-x-0! w-fit max-w-12 border-y border-ld !focus:ring-0 focus:border-ld focus:ring-transparent focus:ring-offset-0 bg-transparent'
+                  placeholder='0'
                   required
-                  value={count}
-
+                  defaultValue={count}
                 />
 
                 <button
-                  type="button"
-                  id="increment-button"
-                  data-input-counter-increment="quantity-input"
+                  type='button'
+                  id='increment-button'
+                  data-input-counter-increment='quantity-input'
                   onClick={() => handleQuantityChange(true)}
-                  className="focus:ring-0 focus:outline-hidden border border-ld h-10 min-w-10 rounded-e-md rounded-s-none text-center flex justify-center items-center  hover:bg-lightprimary hover:text-primary"
-                >
-                  <span className="text-2xl">+</span>
+                  className='focus:ring-0 focus:outline-none border border-ld h-10 min-w-10 rounded-e-md rounded-s-none text-center flex justify-center items-center hover:bg-lightprimary hover:text-primary'>
+                  <span className='text-2xl'>+</span>
                 </button>
               </div>
             </form>
           </div>
-          <HR className="my-6" />
+          <HR className='my-6' />
           {/* Action Buttons */}
-          <div className="flex gap-3 flex-wrap items-center mb-6">
-            <Button color={"primary"} className="px-6  rounded-full" onClick={handleAddToCart}>
+          <div className='flex gap-3 items-center mb-6'>
+            <Button
+              color={'primary'}
+              className='px-6'
+              onClick={handleAddToCart}>
               Buy now
             </Button>
-            <Button color={"error"} className="px-6  rounded-full" onClick={handleAddToCart}>
+            <Button color={'error'} className='px-6' onClick={handleAddToCart}>
               Add to Cart
             </Button>
           </div>
-          <p className="text-sm text-darklink dark:text-bodytext ">Dispatched in 2-3 weeks</p>
-          <Link to="" className="text-sm text-ld text-primary-ld font-medium">
+          <p className='text-sm text-black/50 dark:text-darklink '>
+            Dispatched in 2-3 weeks
+          </p>
+          <Link to='' className='text-sm text-ld text-primary-ld font-medium'>
             Why the longer time for delivery?
           </Link>
         </>

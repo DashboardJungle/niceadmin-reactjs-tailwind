@@ -1,7 +1,7 @@
 import { Icon } from "@iconify/react";
 import { ChatContext } from "src/context/ChatContext";
 import { TextInput } from "flowbite-react";
-import  { ChangeEvent, FormEvent, useContext, useState } from "react";
+import { ChangeEvent, FormEvent, useContext, useState } from "react";
 
 
 
@@ -23,20 +23,19 @@ const ChatMsgSent = () => {
   return (
     <>
       <form onSubmit={onChatMsgSubmit}>
-        <div className="flex lg:gap-3 gap-0.5 items-center py-5 px-5 lg:flex-nowrap flex-wrap">
-          <div className="flex item-center flex-1" >
+        <div className="flex gap-3 items-center py-2 px-5">
+          <div>
             <div className="btn-circle-hover cursor-pointer">
               <Icon icon="solar:sticker-smile-circle-2-linear" height="20" />
             </div>
-            <TextInput
-            className="form-control-chat border-0 w-full min-w-10"
+          </div>
+          <TextInput
+            className="form-control-chat border-0 w-full"
             sizing="md"
             required
             value={msg}
             onChange={handleChatMsgChange}
           />
-          </div>
-
           <div className="flex gap-3 items-center">
             <div className="btn-circle-hover cursor-pointer ">
               <Icon icon="solar:plain-linear"

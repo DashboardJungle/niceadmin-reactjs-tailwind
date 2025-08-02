@@ -1,4 +1,4 @@
-import  { useContext } from "react";
+import { useContext } from "react";
 import PostBox from "./PostBox";
 import PostIem from "./PostItem";
 import { UserDataContext } from "src/context/UserDataContext";
@@ -9,16 +9,16 @@ const Post = () => {
 
   return (
     <>
-      <div className="grid grid-cols-12 gap-[30px]">
-        <div className="col-span-12">
+      <div className='grid grid-cols-12 gap-30'>
+        <div className='col-span-12'>
           <PostBox />
         </div>
         {posts.map((posts: any) => {
           return (
-            <div className="col-span-12" key={posts.id}>
+            <div className='col-span-12' key={posts.id}>
               <PostIem post={posts} />
             </div>
-          );
+          )
         })}
       </div>
     </>

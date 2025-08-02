@@ -1,5 +1,5 @@
 
-import  { useEffect, useContext } from "react";
+import { useEffect, useContext } from "react";
 
 import { FaQuoteLeft } from "react-icons/fa";
 import { GoDot } from "react-icons/go";
@@ -63,62 +63,72 @@ const BlogDetailData = () => {
     <>
       {post ? (
         <>
-          <CardBox className="p-0 overflow-hidden">
-            <div className="relative ">
-              <div className="overflow-hidden max-h-[440px]">
+          <CardBox className='p-0 overflow-hidden'>
+            <div className='relative '>
+              <div className='overflow-hidden max-h-[440px]'>
                 <img
                   src={post?.coverImg}
-                  alt="MatDash"
+                  alt='materialm'
                   height={440}
                   width={1500}
-                  className="w-full object-cover object-center "
+                  className='w-full object-cover object-center'
                 />
               </div>
-              <Badge color={"white"} className="absolute bottom-8 end-6">
+              <Badge
+                color={'white'}
+                className='absolute bottom-8 end-6 dark:bg-black'>
                 2 min Read
               </Badge>
             </div>
-            <div className="flex justify-between items-center -mt-7 px-6">
+            <div className='flex justify-between items-center -mt-7 px-6'>
               <div>
-                <Tooltip content={post ? post?.author.name : ""} className="">
+                <Tooltip content={post ? post?.author.name : ''} className=''>
                   <Avatar img={post?.author.avatar} rounded />
                 </Tooltip>
               </div>
             </div>
-            <div className="px-6 pb-6">
-              <Badge color={"muted"} className="mt-3">
+            <div className='px-6 pb-6'>
+              <Badge
+                color={'muted'}
+                className='mt-3 bg-gray-200 dark:bg-white/30'>
                 {post?.category}
               </Badge>
-              <h2 className="md:text-4xl text-2xl my-6">{post?.title}</h2>
+              <h2 className='md:text-4xl text-2xl my-6'>{post?.title}</h2>
               <div>
-                <div className="flex gap-3">
-                  <div className="flex gap-2 items-center text-darklink dark:text-bodytext text-[15px]">
-                    <Icon icon="solar:eye-outline" height="18" className="text-ld" />
+                <div className='flex gap-3'>
+                  <div className='flex gap-2 items-center text-black dark:text-darklink text-[15px]'>
+                    <Icon
+                      icon='solar:eye-outline'
+                      height='18'
+                      className='text-ld'
+                    />
                     {post?.view}
                   </div>
-                  <div className="flex gap-2 items-center text-darklink dark:text-bodytext text-[15px]">
-                    <Icon icon="solar:chat-line-outline"
-                    height="18"
-                      className="text-ld"
-                    />{" "}
+                  <div className='flex gap-2 items-center text-black dark:text-darklink text-[15px]'>
+                    <Icon
+                      icon='solar:chat-line-outline'
+                      height='18'
+                      className='text-ld'
+                    />{' '}
                     {post?.comments?.length || 0}
                   </div>
-                  <div className="ms-auto flex gap-2 items-center  text-darklink dark:text-bodytext text-[15px]">
-                    <GoDot 
-                      size="16"
-                      className="text-ld"
-                    />
+                  <div className='ms-auto flex gap-2 items-center  text-black dark:text-darklink text-[15px]'>
+                    <GoDot size='16' className='text-ld' />
                     <small>
-                      {post && post.createdAt ? format(new Date(post.createdAt), 'E, MMM d') : ''}
+                      {post && post.createdAt
+                        ? format(new Date(post.createdAt), 'E, MMM d')
+                        : ''}
                     </small>
                   </div>
                 </div>
               </div>
             </div>
-            <HR className="my-0 mb-4" />
-            <div className="px-6 pb-6">
-              <h2 className="md:text-3xl text-2xl pb-5">Title of the paragraph</h2>
-              <p className="text-darklink dark:text-bodytext">
+            <HR className='my-0 mb-4' />
+            <div className='px-6 pb-6'>
+              <h2 className='md:text-3xl text-2xl pb-5'>
+                Title of the paragraph
+              </h2>
+              <p className='text-black dark:text-darklink'>
                 But you cannot figure out what it is or what it can do. MTA web
                 directory is the simplest way in which one can bid on a link, or
                 a few links if they wish to do so. The link directory on MTA
@@ -127,10 +137,10 @@ const BlogDetailData = () => {
                 find what they are looking for if it is something specific and
                 they do not want to go through all the other sites and links as
                 well. It allows you to start your bid at the bottom and slowly
-                work your way to the top of the list
+                work your way to the top of the list.
               </p>
               <br></br>
-              <p className="text-darklink dark:text-bodytext">
+              <p className='text-black dark:text-darklink'>
                 Gigure out what it is or what it can do. MTA web directory is
                 the simplest way in which one can bid on a link, or a few links
                 if they wish to do so. The link directory on MTA displays all of
@@ -143,13 +153,11 @@ const BlogDetailData = () => {
               </p>
               <br></br>
               <p>
-                <b className="text-ld">
-                  This is strong text.
-                </b>
+                <b className='text-ld'>This is strong text.</b>
               </p>
               <i>This is italic text.</i>
               <HR />
-              <h3 className="text-xl mb-3">Unorder list</h3>
+              <h3 className='text-xl mb-3'>Unorder list.</h3>
               <List>
                 <ListItem>Gigure out what it is or</ListItem>
                 <ListItem>The links it currently</ListItem>
@@ -159,7 +167,7 @@ const BlogDetailData = () => {
                 <ListItem>It allows you to start your bid</ListItem>
               </List>
               <HR />
-              <h3 className="text-xl mb-3">Order list</h3>
+              <h3 className='text-xl mb-3'>Order list.</h3>
               <List ordered>
                 <ListItem>Gigure out what it is or</ListItem>
                 <ListItem>The links it currently</ListItem>
@@ -169,48 +177,42 @@ const BlogDetailData = () => {
                 <ListItem>It allows you to start your bid</ListItem>
               </List>
               <HR />
-              <h3 className="text-xl mb-3">Quotes</h3>
-              <div className="pt-5 pb-4 px-4 rounded-md border-s-2 border-primary bg-muted dark:bg-darkmuted flex gap-1 items-start">
-                <FaQuoteLeft 
-                  size={20}
-                  className="text-ld -mt-1"
-                />
-                <h2 className="text-base font-bold">
+              <h3 className='text-xl mb-3'>Quotes</h3>
+              <div className='pt-5 pb-4 px-4 rounded-md border-s-2 border-primary bg-lightprimary dark:bg-darkprimary flex gap-1 items-start'>
+                <FaQuoteLeft size={20} className='text-ld -mt-1' />
+                <h2 className='text-base font-bold'>
                   Life is short, Smile while you still have teeth!
                 </h2>
               </div>
             </div>
           </CardBox>
-          <CardBox className="mt-6">
-            <h5 className="text-xl mb-2">Post Comments</h5>
+          <CardBox className='mt-6'>
+            <h5 className='text-xl mb-2'>Post Comments</h5>
             <Textarea
               rows={4}
               value={replyTxt}
-              className="form-control-textarea"
-              onChange={(e) => setReplyTxt(e.target.value)}
-            ></Textarea>
-            <Button color={"primary"} className="w-fit mt-3" onClick={onSubmit}>
+              className='!form-control-textarea'
+              onChange={(e) => setReplyTxt(e.target.value)}></Textarea>
+            <Button color={'primary'} className='w-fit mt-3' onClick={onSubmit}>
               Post Comment
             </Button>
-            <div className="mt-6">
-              <div className="flex gap-3 items-center">
-                <h5 className="text-xl ">Comments</h5>
-                <div className="h-8 w-8 rounded-full bg-lightprimary dark:bg-lightprimary flex items-center justify-center text-primary font-bold">
+            <div className='mt-6'>
+              <div className='flex gap-3 items-center'>
+                <h5 className='text-xl '>Comments</h5>
+                <div className='h-8 w-8 rounded-full bg-lightprimary dark:bg-primary flex items-center justify-center text-primary dark:text-white font-bold'>
                   {post?.comments?.length || 0}
                 </div>
               </div>
               <div>
                 {post?.comments?.map((comment: BlogType | any) => {
-                  return (
-                    <BlogComment key={comment.id} comment={comment} />
-                  );
+                  return <BlogComment key={comment.id} comment={comment} />
                 })}
               </div>
             </div>
           </CardBox>
         </>
       ) : (
-        <p className="text-xl text-center py-6 font-bold">No Post Found</p>
+        <p className='text-xl text-center py-6 font-bold'>No Post Found</p>
       )}
     </>
   );

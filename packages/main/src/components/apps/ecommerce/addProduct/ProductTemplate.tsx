@@ -20,7 +20,7 @@ const Producttemplate = () => {
             <option>Office Stationary</option>
             <option>Electronics</option>
           </Select>
-          <small className="text-xs text-darklink dark:text-bodytext">
+          <small className="text-xs text-dark dark:text-darklink">
             Assign a template from your current theme to define how a single
             product is displayed.
           </small>

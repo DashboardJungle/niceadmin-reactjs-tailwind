@@ -1,11 +1,5 @@
 import { http, HttpResponse } from 'msw';
-interface notesType {
-  id: number;
-  color: string;
-  title: string;
-  datef: string;
-  deleted: boolean;
-}
+import { notesType } from 'src/types/apps/notes';
 
 export let NotesData: notesType[] = [
   {
@@ -131,9 +125,3 @@ export const NotesHandlers = [
     }
   }),
 ];
-
-
-
-
-
-

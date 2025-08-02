@@ -29,9 +29,13 @@ const EcommerceDetail = () => {
         <BreadcrumbComp title="Shop Detail" links={BCrumb} />
         {/* Slider and Details of Products */}
         <CardBox>
-          <div className="flex lg:flex-nowrap flex-wrap justify-between gap-[30px]">
-            <div className="lg:w-5/12 w-full"><ProductCarousel /></div>
-            <div className="lg:w-6/12 w-full"><ProductDetail /></div>
+          <div className='grid grid-cols-12 gap-30'>
+            <div className='lg:col-span-6 col-span-12'>
+              <ProductCarousel />
+            </div>
+            <div className='lg:col-span-6 col-span-12'>
+              <ProductDetail />
+            </div>
           </div>
         </CardBox>
         {/* Description Tabs Products */}

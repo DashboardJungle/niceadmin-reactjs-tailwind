@@ -1,6 +1,6 @@
-import  { useContext } from "react";
+import { useContext } from "react";
 import { Icon } from "@iconify/react";
-import { HR,} from "flowbite-react";
+import { HR, List, ListItem, } from "flowbite-react";
 import EmailCompose from "./EmailCompose";
 import { EmailContext } from "src/context/EmailContext";
 
@@ -96,36 +96,44 @@ const EmailFilter = () => {
 
   return (
     <>
-      <div className="left-part max-w-[235px] h-full w-full ">
+      <div className='left-part max-w-[235px] h-full w-full '>
         <EmailCompose />
-        <ul className="my-4">
+        <List className='my-4'>
           {filterData.map((item) => {
             if (item.filterbyTitle) {
               return (
-                <h6 className="uppercase text-xs pb-3" key={item.id}>
+                <h6 className='uppercase text-xs pb-3' key={item.id}>
                   {item.filterbyTitle}
                 </h6>
-              );
+              )
             } else if (item.divider) {
               return (
-                <div className="my-4" key={item.id}>
-                  <HR  className="my-6" />
+                <div className='my-4' key={item.id}>
+                  <HR className='my-6' />
                 </div>
-              );
+              )
             }
             return (
-              <li
+              <ListItem
                 key={item.id}
-                className={`py-[10px] first:mt-0 mt-1 flex items-center gap-2 px-4 hover:bg-muted dark:hover:bg-darkmuted rounded-md text-ld cursor-pointer capitalize  ${filter === item.name ? "text-primary bg-lighthover dark:bg-darkmuted" : ""}`}
-                onClick={() => handleFilterClick(item.name)}
-              >
-                <Icon icon={item.icon} height={18} className={`text-${item.color}`} />
+                className={`py-[10px] gap-2 px-4 hover:bg-lightprimary dark:hover:bg-darkprimary rounded-md text-ld cursor-pointer capitalize  ${filter === item.name
+                  ? 'text-primary dark:text-white bg-lightprimary dark:bg-darkprimary'
+                  : ''
+                  }`}
+                icon={() => (
+                  <Icon
+                    icon={item.icon}
+                    height={18}
+                    className={`text-${item.color}`}
+                  />
+                )}
+                onClick={() => handleFilterClick(item.name)}>
                 {item.name}
-              </li>
-            );
+              </ListItem>
+            )
           })}
-        </ul>
-      </div >
+        </List>
+      </div>
     </>
   );
 };

@@ -1,6 +1,6 @@
 import { HiOutlineDotsVertical } from "react-icons/hi";
 import { Badge, Dropdown, DropdownDivider, DropdownItem, TextInput } from "flowbite-react";
-import  { useContext } from "react";
+import { useContext } from "react";
 import { Icon } from "@iconify/react";
 import { last } from "lodash";
 import { formatDistanceToNowStrict } from "date-fns";
@@ -81,135 +81,130 @@ const ChatListing = () => {
 
   return (
     <>
-      <div className="left-part  w-full px-0 ">
-        <div className="flex justify-between items-center px-6">
-          <div className="flex items-center gap-3">
-            <div className="relative">
-              <img
-                src={profileImg}
-                height={56}
-                width={56}
-                alt="user"
-                className="rounded-full"
-              />
-              <Badge
-                color={"success"}
-                className="p-0 h-2 w-2 absolute bottom-1 end-0"
-              ></Badge>
+      <>
+        <div className='left-part w-full px-0'>
+          <div className='flex justify-between items-center px-6'>
+            <div className='flex items-center gap-3'>
+              <div className='relative'>
+                <img
+                  src={profileImg}
+                  height={56}
+                  width={56}
+                  alt='user'
+                  className='rounded-full'
+                />
+                <Badge
+                  color={'success'}
+                  className='p-0 h-2 w-2 absolute bottom-1 end-1'></Badge>
+              </div>
+
+              <div>
+                <h5 className='text-sm mb-1'>Cameron</h5>
+                <p className='text-xs'>Designer</p>
+              </div>
             </div>
-
-            <div>
-              <h5 className="text-sm mb-1">David McMichael</h5>
-              <p className="text-darklink dark:text-bodytext text-xs">Marketing Director</p>
-            </div>
-          </div>
-          <Dropdown
-            label=""
-            dismissOnClick={false}
-            renderTrigger={() => (
-              <span className="h-9 w-9 flex justify-center items-center rounded-full hover:bg-lightprimary hover:text-primary cursor-pointer ">
-                <HiOutlineDotsVertical size={22} />
-              </span>
-            )}
-          >
-            {DropdownAction.map((items, index) => (
-              <React.Fragment key={index}>
-                <DropdownItem className="flex gap-3">
-                  <Icon icon={`${items.icon}`} height={18} />
-                  <span>{items.listtitle}</span>
-                </DropdownItem>
-                {items.divider == true ? <DropdownDivider /> : null}
-              </React.Fragment>
-            ))}
-          </Dropdown>
-        </div>
-
-        <div className="px-6">
-          {/* Search box  */}
-          <div className="flex gap-3 bg-white dark:bg-transparent  py-5 items-center ">
-            <TextInput
-              id="search"
-              placeholder="Search contacts"
-              onChange={handleSearchChange}
-              value={chatSearch}
-              className="form-control w-full"
-              sizing="md"
-              required
-              icon={() => (
-                <Icon icon="solar:magnifer-line-duotone" height={18} />
-              )}
-            />
-          </div>
-
-          {/* Sorting */}
-          <div className="sorting mb-3">
-            <Dropdown label="Recent Chats">
-              <DropdownItem>Sort by Time</DropdownItem>
-              <DropdownItem>Sort by Unread</DropdownItem>
-              <DropdownDivider />
-              <DropdownItem>Sort by Favourites</DropdownItem>
+            <Dropdown
+              label=''
+              dismissOnClick={false}
+              renderTrigger={() => (
+                <span className='h-9 w-9 flex justify-center items-center rounded-full hover:bg-lightprimary hover:text-primary cursor-pointer '>
+                  <HiOutlineDotsVertical size={22} />
+                </span>
+              )}>
+              {DropdownAction.map((items, index) => (
+                <React.Fragment key={index}>
+                  <DropdownItem className='flex gap-3'>
+                    <Icon icon={`${items.icon}`} height={18} />
+                    <span>{items.listtitle}</span>
+                  </DropdownItem>
+                  {items.divider == true ? <DropdownDivider /> : null}
+                </React.Fragment>
+              ))}
             </Dropdown>
           </div>
-        </div>
 
-        {/* Listing */}
-        <SimpleBar className="max-h-[600px] h-[calc(100vh_-_100px)]">
-          {filteredChats.map((chat) => (
-            <div
-              key={chat.id}
-              className={`cursor-pointer py-4 px-6 gap-0 flex justify-between group bg-hover ${activeChatId === chat.id
-                  ? "bg-lighthover dark:bg-darkmuted"
-                  : "initial"
-                }`}
-              onClick={() => handleChatSelect(chat)}
-            >
-              <div className="flex items-center gap-3 max-w-[235px] w-full">
-                <div className="relative min-w-12">
-                  <img
-                    src={chat.thumb}
-                    height={48}
-                    width={48}
-                    alt="user"
-                    className="rounded-full"
-                  />
-                  {chat.status == "online" ? (
-                    <Badge
-                      color={"success"}
-                      className="p-0 h-2 w-2 absolute bottom-1 end-0"
-                    ></Badge>
-                  ) : chat.status == "busy" ? (
-                    <Badge
-                      color={"error"}
-                      className="p-0 h-2 w-2 absolute bottom-1 end-0"
-                    ></Badge>
-                  ) : chat.status == "away" ? (
-                    <Badge
-                      color={"warning"}
-                      className="p-0 h-2 w-2 absolute bottom-1 end-0"
-                    ></Badge>
-                  ) : (
-                    <Badge
-                      color={"primary"}
-                      className="p-0 h-2 w-2 absolute bottom-1 end-0"
-                    ></Badge>
-                  )}
-                </div>
-                <div>
-                  <h5 className="text-sm mb-1">{chat.name}</h5>
-                  <div className="text-sm text-ld opacity-90 line-clamp-1">
-                    {getDetails(chat)}
+          <div className='px-6'>
+            {/* Search box  */}
+            <div className='flex gap-3 bg-white dark:bg-transparent  py-5 items-center '>
+              <TextInput
+                id='search'
+                placeholder='Search contacts'
+                onChange={handleSearchChange}
+                value={chatSearch}
+                className='!form-control w-full'
+                sizing='md'
+                required
+                icon={() => (
+                  <Icon icon='solar:magnifer-line-duotone' height={18} />
+                )}
+              />
+            </div>
+
+            {/* Sorting */}
+            <div className='sorting mb-3'>
+              <Dropdown label='Recent Chats' className='dark:bg-transparent'>
+                <DropdownItem>Sort by Time</DropdownItem>
+                <DropdownItem>Sort by Unread</DropdownItem>
+                <DropdownDivider />
+                <DropdownItem>Sort by Favourites</DropdownItem>
+              </Dropdown>
+            </div>
+          </div>
+
+          {/* Listing */}
+          <SimpleBar className='max-h-[600px] h-[calc(100vh-100px)]'>
+            {filteredChats.map((chat) => (
+              <div
+                key={chat.id}
+                className={`cursor-pointer py-4 px-6 gap-0 flex justify-between group bg-hover my-1 ${activeChatId === chat.id
+                  ? 'bg-lightprimary dark:bg-darkprimary'
+                  : 'initial'
+                  }`}
+                onClick={() => handleChatSelect(chat)}>
+                <div className='flex items-center gap-3 max-w-[235px] w-full'>
+                  <div className='relative min-w-12'>
+                    <img
+                      src={chat.thumb}
+                      height={48}
+                      width={48}
+                      alt='user'
+                      className='rounded-full'
+                    />
+                    {chat.status == 'online' ? (
+                      <Badge
+                        color={'success'}
+                        className='p-0 h-2 w-2 absolute bottom-1 end-0'></Badge>
+                    ) : chat.status == 'busy' ? (
+                      <Badge
+                        color={'error'}
+                        className='p-0 h-2 w-2 absolute bottom-1 end-0'></Badge>
+                    ) : chat.status == 'away' ? (
+                      <Badge
+                        color={'warning'}
+                        className='p-0 h-2 w-2 absolute bottom-1 end-0'></Badge>
+                    ) : (
+                      <Badge
+                        color={'primary'}
+                        className='p-0 h-2 w-2 absolute bottom-1 end-0'></Badge>
+                    )}
+                  </div>
+                  <div>
+                    <h5 className='text-sm mb-1'>{chat.name}</h5>
+                    <div className='text-sm text-ld opacity-90 line-clamp-1'>
+                      {getDetails(chat)}
+                    </div>
                   </div>
                 </div>
+                <div className='text-xs pt-1'>
+                  {formatDistanceToNowStrict(new Date(lastActivity(chat)), {
+                    addSuffix: false,
+                  })}
+                </div>
               </div>
-              <div className="text-xs pt-1">
-                {formatDistanceToNowStrict(new Date(lastActivity(chat)), {
-                  addSuffix: false,
-                })}
-              </div>
-            </div>
-          ))}
-        </SimpleBar>
-      </div>
+            ))}
+          </SimpleBar>
+        </div>
+      </>
     </>
   );
 };

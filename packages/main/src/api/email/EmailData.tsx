@@ -1,14 +1,17 @@
 import { EmailType } from '../../types/apps/email';
 import { sub } from 'date-fns';
-import user2 from '/src/assets/images/profile/user-2.jpg';
-import user3 from '/src/assets/images/profile/user-3.jpg';
-import user4 from '/src/assets/images/profile/user-4.jpg';
-import user5 from '/src/assets/images/profile/user-5.jpg';
-import user6 from '/src/assets/images/profile/user-6.jpg';
-import user7 from '/src/assets/images/profile/user-7.jpg';
-import user8 from '/src/assets/images/profile/user-8.jpg';
-import user10 from "/src/assets/images/profile/user-10.jpg";
-import user9 from "/src/assets/images/profile/user-9.jpg";
+
+
+import olivia from 'src/assets/images/profile/olivia.svg';
+import emily from 'src/assets/images/profile/emily.svg';
+import Juan from 'src/assets/images/profile/Juan.svg';
+import ryan from 'src/assets/images/profile/ryan.svg';
+import Reva from 'src/assets/images/profile/Reva.svg';
+import Kiley from 'src/assets/images/profile/Kiley.svg';
+import jason from 'src/assets/images/profile/jason.svg';
+import Janita from 'src/assets/images/profile/Janita.svg';
+import Dalton from 'src/assets/images/profile/Dalton.svg';
+
 
 import adobe from '/src/assets/images/chat/icon-adobe.svg';
 import chrome from '/src/assets/images/chat/icon-chrome.svg';
@@ -21,7 +24,7 @@ let EmailData: EmailType[] = [
   {
     id: 1,
     from: 'James Smith',
-    thumbnail: user10,
+    thumbnail: jason,
     subject: 'Kindly check this latest updated',
     time: sub(new Date(), { days: 0, hours: 1, minutes: 45 }),
     To: 'abc@company.com',
@@ -66,7 +69,7 @@ let EmailData: EmailType[] = [
   {
     id: 2,
     from: 'Michael Smith',
-    thumbnail: user2,
+    thumbnail: ryan,
     subject: 'Fact that a reader will be distracted.',
     time: sub(new Date(), { days: 0, hours: 3, minutes: 45 }),
     To: 'abc@company.com',
@@ -92,7 +95,7 @@ let EmailData: EmailType[] = [
   {
     id: 3,
     from: 'Robert Smith',
-    thumbnail: user3,
+    thumbnail: Kiley,
     subject: 'The point of using Lorem Ipsum is that it has a more-or-less normal',
     time: sub(new Date(), { days: 0, hours: 11, minutes: 45 }),
     To: 'abc@company.com',
@@ -127,7 +130,7 @@ let EmailData: EmailType[] = [
   {
     id: 4,
     from: 'Maria Garcia',
-    thumbnail: user4,
+    thumbnail: Dalton,
     subject: 'Contrary to popular belief, Lorem Ipsum is.',
     time: sub(new Date(), { days: 1, hours: 2, minutes: 45 }),
     To: 'abc@company.com',
@@ -149,7 +152,7 @@ let EmailData: EmailType[] = [
   {
     id: 5,
     from: 'David Smith',
-    thumbnail: user5,
+    thumbnail: emily,
     subject: 'Literature from 45 BC, making',
     time: sub(new Date(), { days: 1, hours: 8, minutes: 45 }),
     To: 'abc@company.com',
@@ -171,7 +174,7 @@ let EmailData: EmailType[] = [
   {
     id: 6,
     from: 'Maria Rodriguez',
-    thumbnail: user6,
+    thumbnail: olivia,
     subject: 'Latin professor at Hampden-Sydney College.',
     time: sub(new Date(), { days: 1, hours: 10, minutes: 45 }),
     To: 'abc@company.com',
@@ -193,7 +196,7 @@ let EmailData: EmailType[] = [
   {
     id: 7,
     from: 'Mary Smith',
-    thumbnail: user7,
+    thumbnail: emily,
     subject: 'the cites of the word in classical.',
     time: sub(new Date(), { days: 1, hours: 11, minutes: 45 }),
     To: 'abc@company.com',
@@ -215,7 +218,7 @@ let EmailData: EmailType[] = [
   {
     id: 8,
     from: 'Maria Hernandez',
-    thumbnail: user8,
+    thumbnail: Reva,
     subject: ' This book is a treatise on the theory of ethics.',
     time: sub(new Date(), { days: 2, hours: 1, minutes: 45 }),
     To: 'abc@company.com',
@@ -237,7 +240,7 @@ let EmailData: EmailType[] = [
   {
     id: 9,
     from: 'Maria Martinez',
-    thumbnail: user9,
+    thumbnail: Juan,
     subject: 'Lorem Ipsum used since the 1500s is reproduced.',
     time: sub(new Date(), { days: 2, hours: 3, minutes: 45 }),
     To: 'abc@company.com',
@@ -259,7 +262,7 @@ let EmailData: EmailType[] = [
   {
     id: 10,
     from: 'James Johnson',
-    thumbnail: user2,
+    thumbnail: jason,
     subject: 'accompanied by English versions from the 1914 translation.',
     time: sub(new Date(), { days: 2, hours: 8, minutes: 45 }),
     To: 'abc@company.com',
@@ -281,7 +284,7 @@ let EmailData: EmailType[] = [
   {
     id: 11,
     from: 'James Smith',
-    thumbnail: user3,
+    thumbnail: ryan,
     subject: 'All the Lorem Ipsum generators on the Internet.',
     time: sub(new Date(), { days: 2, hours: 9, minutes: 45 }),
     To: 'abc@company.com',
@@ -303,7 +306,7 @@ let EmailData: EmailType[] = [
   {
     id: 12,
     from: 'Michael Smith',
-    thumbnail: user7,
+    thumbnail: Kiley,
     subject: 'Latin words, combined with a handful.',
     time: sub(new Date(), { days: 2, hours: 11, minutes: 45 }),
     To: 'abc@company.com',
@@ -325,7 +328,7 @@ let EmailData: EmailType[] = [
   {
     id: 13,
     from: 'Robert Smith',
-    thumbnail: user2,
+    thumbnail: Janita,
     subject: 'If you are going to use a passage.',
     time: sub(new Date(), { days: 3, hours: 2, minutes: 45 }),
     To: 'abc@company.com',
@@ -347,7 +350,7 @@ let EmailData: EmailType[] = [
   {
     id: 14,
     from: 'Maria Garcia',
-    thumbnail: user3,
+    thumbnail: Dalton,
     subject: 'piece of classical Latin literature.',
     time: sub(new Date(), { days: 3, hours: 11, minutes: 45 }),
     To: 'abc@company.com',
@@ -369,7 +372,7 @@ let EmailData: EmailType[] = [
   {
     id: 15,
     from: 'David Smith',
-    thumbnail: user4,
+    thumbnail: emily,
     subject: 'first true generator on the Internet.',
     time: sub(new Date(), { days: 3, hours: 4, minutes: 45 }),
     To: 'abc@company.com',
@@ -391,7 +394,7 @@ let EmailData: EmailType[] = [
   {
     id: 16,
     from: 'Maria Rodriguez',
-    thumbnail: user5,
+    thumbnail: olivia,
     subject: 'combined with a handful of model sentence structure.',
     time: sub(new Date(), { days: 4, hours: 1, minutes: 45 }),
     To: 'abc@company.com',
@@ -413,7 +416,7 @@ let EmailData: EmailType[] = [
   {
     id: 17,
     from: 'Mary Smith',
-    thumbnail: user6,
+    thumbnail: emily,
     subject: "randomised words which don't look even.",
     time: sub(new Date(), { days: 4, hours: 1, minutes: 45 }),
     To: 'abc@company.com',
@@ -435,7 +438,7 @@ let EmailData: EmailType[] = [
   {
     id: 18,
     from: 'Maria Hernandez',
-    thumbnail: user7,
+    thumbnail: Reva,
     subject: 'Lorem Ipsum generators on the Internet tend.',
     time: sub(new Date(), { days: 4, hours: 1, minutes: 45 }),
     To: 'abc@company.com',
@@ -457,7 +460,7 @@ let EmailData: EmailType[] = [
   {
     id: 19,
     from: 'Maria Martinez',
-    thumbnail: user8,
+    thumbnail: Juan,
     subject: 'combined with a handful of model.',
     time: sub(new Date(), { days: 4, hours: 1, minutes: 45 }),
     To: 'abc@company.com',
@@ -479,7 +482,7 @@ let EmailData: EmailType[] = [
   {
     id: 20,
     from: 'James Johnson',
-    thumbnail: user10,
+    thumbnail: Reva,
     subject: 'The Extremes of Good and Evil.',
     time: sub(new Date(), { days: 4, hours: 1, minutes: 45 }),
     To: 'abc@company.com',
@@ -502,7 +505,7 @@ let EmailData: EmailType[] = [
 
 //  All Mocked Api
 export const Emailhandlers = [
- 
+
   // Mock api to get emails
   http.get('/api/data/email/EmailData', () => {
     try {

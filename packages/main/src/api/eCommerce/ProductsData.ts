@@ -1,42 +1,47 @@
 import { sub } from 'date-fns';
 import { Chance } from 'chance';
 
-import s5 from 'src/assets/images/products/s5.jpg';
-import super_games from 'src/assets/images/products/updated-product/new-games.jpg';
-import psalms_book from 'src/assets/images/products/updated-product/new-book.jpg';
-import boat_headphone from 'src/assets/images/products/updated-product/boat-headphone.jpg';
-import macbook_air_pro from 'src/assets/images/products/updated-product/advance-macbook.jpg';
-import gaming_console from 'src/assets/images/products/updated-product/super-games.jpg';
-import red_dress from 'src/assets/images/products/updated-product/red-valvet-dress.jpg';
-import girls_shoes from 'src/assets/images/products/updated-product/shoes.jpg';
-import sweet_purse from 'src/assets/images/products/updated-product/short-sweet-purse.jpg';
-import soft_teddybear from 'src/assets/images/products/updated-product/teddybear.jpg';
-import little_toy from 'src/assets/images/products/updated-product/little-angel-toy.jpg';
-import dino_toy from 'src/assets/images/products/updated-product/toy-dino.jpg';
 import { http, HttpResponse } from 'msw';
+
+import s1 from 'src/assets/images/products/updated-product/innovation.webp';
+import s2 from 'src/assets/images/products/updated-product/book-growth.webp';
+
+import s3 from 'src/assets/images/products/updated-product/psychology-of-money.webp';
+
+import s4 from 'src/assets/images/products/updated-product/headphone.webp';
+
+import s5 from 'src/assets/images/products/updated-product/macbook.webp';
+import s6 from 'src/assets/images/products/updated-product/console.webp';
+import s7 from 'src/assets/images/products/updated-product/red-dress.webp';
+import s8 from 'src/assets/images/products/updated-product/shoe.webp';
+
+import s9 from 'src/assets/images/products/updated-product/short-purse.webp';
+import s10 from 'src/assets/images/products/updated-product/dino.webp';
+import s11 from 'src/assets/images/products/updated-product/teddy.webp';
+import s12 from 'src/assets/images/products/updated-product/angle-toy.webp';
 
 const chance = new Chance();
 
-const ProductsData = [
+export const ProductsData = [
   {
-    title: 'Super Games',
+    title: 'How Innovation Works',
     price: 275,
     discount: 25,
     related: false,
     salesPrice: 350,
-    category: ['toys', 'electronics'],
+    category: ['electronics'],
     gender: 'Men',
     rating: 5,
     stock: true,
     qty: 1,
     colors: ['#1890FF'],
-    photo: super_games,
+    photo: s1,
     id: 1,
     created: sub(new Date(), { days: 8, hours: 6, minutes: 20 }),
     description: chance.paragraph({ sentences: 2 }),
   },
   {
-    title: 'Psalms Book ',
+    title: 'Psalms Book for Growth',
     price: 89,
     discount: 10,
     related: true,
@@ -47,13 +52,13 @@ const ProductsData = [
     stock: false,
     qty: 1,
     colors: ['#1890FF', '#94D82D', '#FF4842'],
-    photo: psalms_book,
+    photo: s2,
     id: 2,
     created: sub(new Date(), { days: 10, hours: 8, minutes: 69 }),
     description: chance.paragraph({ sentences: 2 }),
   },
   {
-    title: 'Derma-E',
+    title: 'The Psychology of Money',
     price: 125,
     discount: 12,
     related: false,
@@ -64,7 +69,7 @@ const ProductsData = [
     stock: true,
     qty: 1,
     colors: ['#FF4842', '#1890FF', '#94D82D'],
-    photo: s5,
+    photo: s3,
     id: 3,
     created: sub(new Date(), { days: 8, hours: 6, minutes: 20 }),
     description: chance.paragraph({ sentences: 2 }),
@@ -81,7 +86,7 @@ const ProductsData = [
     stock: true,
     qty: 1,
     colors: ['#1890FF', '#94D82D', '#FFC107'],
-    photo: boat_headphone,
+    photo: s4,
     id: 4,
     created: sub(new Date(), { days: 4, hours: 9, minutes: 40 }),
     description: chance.paragraph({ sentences: 2 }),
@@ -98,7 +103,7 @@ const ProductsData = [
     stock: false,
     qty: 1,
     colors: ['#00AB55', '#000000'],
-    photo: macbook_air_pro,
+    photo: s5,
     id: 5,
     created: sub(new Date(), { days: 2, hours: 5, minutes: 50 }),
     description: chance.paragraph({ sentences: 2 }),
@@ -115,7 +120,7 @@ const ProductsData = [
     stock: true,
     qty: 1,
     colors: ['#FFC0CB', '#FF4842'],
-    photo: gaming_console,
+    photo: s6,
     id: 6,
     created: sub(new Date(), { days: 2, hours: 9, minutes: 45 }),
     description: chance.paragraph({ sentences: 2 }),
@@ -132,7 +137,7 @@ const ProductsData = [
     stock: true,
     qty: 1,
     colors: ['#FF4842', '#1890FF', '#94D82D'],
-    photo: red_dress,
+    photo: s7,
     id: 7,
     created: sub(new Date(), { days: 6, hours: 10, minutes: 0 }),
     description: chance.paragraph({ sentences: 2 }),
@@ -149,7 +154,7 @@ const ProductsData = [
     stock: true,
     qty: 1,
     colors: ['#1890FF', '#94D82D', '#FFC107'],
-    photo: girls_shoes,
+    photo: s8,
     id: 8,
     created: sub(new Date(), { days: 7, hours: 5, minutes: 20 }),
     description: chance.paragraph({ sentences: 2 }),
@@ -166,7 +171,7 @@ const ProductsData = [
     stock: true,
     qty: 1,
     colors: ['#00AB55', '#000000'],
-    photo: sweet_purse,
+    photo: s9,
     id: 9,
     created: sub(new Date(), { days: 8, hours: 6, minutes: 20 }),
     description: chance.paragraph({ sentences: 2 }),
@@ -183,7 +188,7 @@ const ProductsData = [
     stock: true,
     qty: 1,
     colors: ['#FFC0CB', '#FF4842'],
-    photo: dino_toy,
+    photo: s10,
     id: 10,
     created: sub(new Date(), { days: 6, hours: 6, minutes: 20 }),
     description: chance.paragraph({ sentences: 2 }),
@@ -200,7 +205,7 @@ const ProductsData = [
     stock: true,
     qty: 1,
     colors: ['#FF4842', '#1890FF', '#94D82D'],
-    photo: soft_teddybear,
+    photo: s11,
     id: 11,
     created: sub(new Date(), { days: 1, hours: 6, minutes: 20 }),
     description: chance.paragraph({ sentences: 2 }),
@@ -217,7 +222,7 @@ const ProductsData = [
     stock: true,
     qty: 1,
     colors: ['#1890FF', '#94D82D', '#FFC107'],
-    photo: little_toy,
+    photo: s12,
     id: 12,
     created: sub(new Date(), { days: 9, hours: 6, minutes: 20 }),
     description: chance.paragraph({ sentences: 2 }),

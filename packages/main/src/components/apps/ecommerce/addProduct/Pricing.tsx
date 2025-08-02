@@ -1,5 +1,5 @@
 
-import  { useState } from "react";
+import { useState } from "react";
 
 import { Label, Radio, RangeSlider, Select, TextInput } from "flowbite-react";
 import CardBox from "src/components/shared/CardBox";
@@ -29,7 +29,7 @@ const Pricing = () => {
             className="form-control"
             placeholder="Product Price"
           />
-          <small className="text-xs text-darklink dark:text-bodytext">
+          <small className="text-xs text-black dark:text-darklink">
             Set the product price.
           </small>
         </div>
@@ -157,7 +157,7 @@ const Pricing = () => {
                   <option>Taxable Goods</option>
                   <option>Downloadable Products</option>
                 </Select>
-                <small className="text-xs text-darklink dark:text-bodytext">
+                <small className="text-xs text-dark dark:text-darklink">
                   Set the product tax class.
                 </small>
               </div>
@@ -174,7 +174,7 @@ const Pricing = () => {
                   sizing="md"
                   className="form-control"
                 />
-                <small className="text-xs text-darklink dark:text-bodytext">
+                <small className="text-xs text-dark dark:text-darklink">
                   Set the product VAT amount.
                 </small>
               </div>

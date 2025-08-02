@@ -1,5 +1,5 @@
 
-import  { useState } from "react";
+import { useState } from "react";
 import { Button, Label, TextInput } from "flowbite-react";
 import { HiOutlinePlusSm, HiOutlineX } from "react-icons/hi";
 import CardBox from "src/components/shared/CardBox";
@@ -92,7 +92,7 @@ const ProductData = () => {
             onKeyDown={handleCatInputKeyDown}
             className="form-control"
           />
-          <small className="text-xs text-darklink dark:text-bodytext">
+          <small className="text-xs text-dark dark:text-darklink">
             Add product to a category.
           </small>
 
@@ -153,7 +153,7 @@ const ProductData = () => {
             onChange={(e) => setTagInput(e.target.value)}
             className="form-control"
           />
-          <small className="text-xs text-darklink dark:text-bodytext">Add tags for product.</small>
+          <small className="text-xs text-dark dark:text-darklink">Add tags for product.</small>
           <div className=" mt-1 w-full bg-white dark:bg-dark rounded-md shadow-lg z-10">
             {showTagOptions && (
               <div>

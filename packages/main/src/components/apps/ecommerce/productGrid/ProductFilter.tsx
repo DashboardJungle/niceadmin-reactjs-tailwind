@@ -2,7 +2,7 @@
 import { Icon } from "@iconify/react";
 import { ProductContext } from "src/context/Ecommercecontext";
 import { ProductFiterType } from "src/types/apps/eCommerce";
-import { Button, HR, Label, Radio } from "flowbite-react";
+import { Button, HR, Label, List, ListItem, Radio } from "flowbite-react";
 import { useContext } from "react";
 import { MdCheck } from "react-icons/md";
 
@@ -143,151 +143,159 @@ const ProductFilter = () => {
 
   return (
     <>
+      {/* ------------------------------------------- */}
       {/* Left Part */}
-      <div className="w-full border-e border-ld">
+      {/* ------------------------------------------- */}
+
+      <div className='w-full border-e border-ld'>
+        {/* ------------------------------------------- */}
         {/* Category filter */}
-        <ul className="my-4 mt-0 pt-4">
+        {/* ------------------------------------------- */}
+        <List className='my-4 mt-0 pt-4'>
           {filterCategory.map((filter) => {
             if (filter.filterbyTitle) {
               return (
                 <h6
-                  className="capitalize text-sm py-4 px-6"
-                  key={`filter-title-${filter.id}`}
-                >
+                  className='capitalize text-sm py-4 px-6'
+                  key={`filter-title-${filter.id}`}>
                   {filter.filterbyTitle}
                 </h6>
-              );
+              )
             } else if (filter.devider) {
               return (
-                <div className="my-4" key={`divider-${filter.id}`}>
-                  <HR className="my-6" />
+                <div className='my-4' key={filter.id}>
+                  <HR className='my-6' />
                 </div>
-              );
+              )
             }
             return (
-              <li
+              <ListItem
                 key={`category-item-${filter.id}`}
-                className={`py-3 flex gap-2 px-4 rounded-md text-ld cursor-pointer mx-6 ${selectedCategory === filter.sort
-                  ? "text-primary bg-lightprimary hover:bg-lightprimary! dark:hover:bg-lightprimary!"
-                  : "hover:bg-muted dark:hover:bg-darkmuted"
+                className={`py-3 gap-2 px-4 hover:bg-lightprimary dark:hover:bg-darkprimary rounded-md text-ld cursor-pointer mx-6 ${selectedCategory === filter.sort
+                  ? 'text-primary dark:text-white bg-lightprimary dark:bg-darkprimary hover:bg-lightprimary'
+                  : ' '
                   }`}
-                onClick={() => selectCategory(filter.sort as string)}
-              >
-                <Icon icon={filter.icon} height={18} />
+                icon={() => <Icon icon={filter.icon} height={18} />}
+                onClick={() => selectCategory(filter.sort as string)}>
                 {filter.name}
-              </li>
-            );
+              </ListItem>
+            )
           })}
-        </ul>
+        </List>
 
+        {/* ------------------------------------------- */}
         {/* Sort by */}
-        <ul className="mt-0 px-6">
-          <h6 className="capitalize text-sm pb-4">Sort By</h6>
+        {/* ------------------------------------------- */}
+        <List className='mt-0 px-6'>
+          <h6 className='capitalize text-sm pb-4'>Sort By</h6>
           {filterbySort.map((filter) => {
             return (
-              <li
+              <ListItem
                 key={`sort-item-${filter.id}`}
-                className={`py-3 flex gap-2 px-4 rounded-md text-ld cursor-pointer ${sortBy === filter.value ? "text-primary bg-lightprimary hover:bg-lightprimary dark:hover:bg-lightprimary" : "hover:bg-muted dark:hover:bg-darkmuted"
+                className={`py-3 gap-2 px-4 hover:bg-lightprimary dark:hover:bg-darkprimary rounded-md text-ld cursor-pointer ${sortBy === filter.value
+                  ? 'text-primary dark:text-white bg-lightprimary dark:bg-darkprimary hover:bg-lightprimary'
+                  : ' '
                   }`}
-                onClick={() => updateSortBy(filter.value)}
-              >
-                <Icon icon={filter.icon} height={18} />
+                icon={() => <Icon icon={filter.icon} height={18} />}
+                onClick={() => updateSortBy(filter.value)}>
                 {filter.label}
-              </li>
-            );
+              </ListItem>
+            )
           })}
-        </ul>
-        <HR className="my-6" />
+        </List>
+        <HR className='my-6' />
+        {/* ------------------------------------------- */}
         {/* Filter By Gender */}
-        <div className="mt-0 px-6">
-          <h6 className="capitalize text-sm pb-4">By Gender</h6>
+        {/* ------------------------------------------- */}
+        <div className='mt-0 px-6'>
+          <h6 className='capitalize text-sm pb-4'>By Gender</h6>
           {Gender.map((gen) => {
             return (
               <div
                 key={`gender-${gen.id}`}
-                className={`py-3 gap-2 px-4 rounded-md text-ld cursor-pointer`}
-              >
-                <div className="flex items-center gap-3 ">
+                className={`py-3 gap-2 hover:bg-lightprimary dark:hover:bg-darkprimary px-4 rounded-md text-ld cursor-pointer `}>
+                <div className='flex items-center gap-3 '>
                   <Radio
                     id={gen.radioid}
-                    name="gender"
+                    name='gender'
                     value={gen.radioid}
-                    className="cursor-pointer"
+                    className='cursor-pointer'
                     onChange={(e) => selectGender(e.target.value)}
                     checked={selectedGender === gen.radioid}
                   />
                   <Label
                     htmlFor={gen.radioid}
-                    className="cursor-pointer text-ld font-normal text-sm"
-                  >
+                    className='cursor-pointer text-ld font-normal text-sm'>
                     {gen.radioid}
                   </Label>
                 </div>
               </div>
-            );
+            )
           })}
         </div>
-        <HR className="my-6" />
+        <HR className='my-6' />
+        {/* ------------------------------------------- */}
         {/* Filter By Pricing */}
-        <div className="mt-0 px-6">
-          <h6 className="capitalize text-sm pb-4">By Pricing</h6>
+        {/* ------------------------------------------- */}
+        <div className='mt-0 px-6'>
+          <h6 className='capitalize text-sm pb-4'>By Pricing</h6>
           {filterbyPrice.map((price) => {
             return (
               <div
                 key={`price-${price.id}`}
-                className={`py-3 gap-2 px-4 rounded-md text-ld cursor-pointer`}
-              >
-                <div className="flex items-center gap-3 ">
+                className={`py-3 gap-2 hover:bg-lightprimary dark:hover:bg-darkprimary px-4 rounded-md text-ld cursor-pointer`}>
+                <div className='flex items-center gap-3 '>
                   <Radio
-                    id={price.radioid}
-                    name="pricing"
+                    id={price.lable}
+                    name='pricing'
                     value={price.lable}
-                    className="cursor-pointer"
+                    className='cursor-pointer'
                     onChange={(e) => updatePriceRange(e.target.value)}
                     checked={priceRange === price.lable}
                   />
                   <Label
-                    htmlFor={price.radioid}
-                    className="cursor-pointer text-ld font-normal text-sm"
-                  >
+                    htmlFor={price.lable}
+                    className='cursor-pointer text-ld font-normal text-sm'>
                     {price.lable}
                   </Label>
                 </div>
               </div>
-            );
+            )
           })}
         </div>
-        <HR className="my-6" />
+        <HR className='my-6' />
+        {/* ------------------------------------------- */}
         {/* Filter By Colors */}
-        <div className="mt-0 px-6">
-          <h6 className="capitalize text-sm pb-4">By Colors</h6>
-          <div className="flex flex-row flex-wrap gap-2 mb-7">
-            {filterbyColors.map((color, index) => (
+        {/* ------------------------------------------- */}
+        <div className='mt-0 px-6'>
+          <h6 className='capitalize text-sm pb-4'>By Colors</h6>
+          <div className='flex flex-row flex-wrap  gap-2 mb-7'>
+            {filterbyColors.map((theme, index) => (
               <label
                 key={`color-${index}`}
-                className="h-6 w-6 rounded-full block cursor-pointer flex items-center justify-center"
+                className=' h-6 w-6 rounded-full  cursor-pointer flex items-center justify-center'
                 style={{
-                  backgroundColor: color !== "All" ? color : "#fff",
-                  border: color === "All" ? "1px solid #ccc" : "none",
+                  backgroundColor: theme !== 'All' ? theme : '#fff',
+                  border: theme === 'All' ? '1px solid #ccc' : 'none',
                 }}
                 onClick={() =>
-                  selectedColor === color
-                    ? selectColor("All")
-                    : selectColor(color)
-                }
-              >
-                {selectedColor === color && (
-                  <MdCheck size={16} className="text-gray-500" />
+                  selectedColor === theme
+                    ? selectColor('All')
+                    : selectColor(theme)
+                }>
+                {selectedColor === theme && (
+                  <MdCheck size={16} className='text-gray-500 ' />
                 )}
               </label>
             ))}
           </div>
-          <HR className="my-6" />
+          <HR className='my-6' />
           <Button
-            color={"primary"}
-            className="w-full  rounded-xl"
-            onClick={filterReset}
-          >
+            color={'primary'}
+            className='w-full'
+            onClick={() => {
+              filterReset()
+            }}>
             Reset Filter
           </Button>
         </div>

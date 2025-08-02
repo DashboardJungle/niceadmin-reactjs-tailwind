@@ -16,7 +16,7 @@ const FormHelperText = () => {
           <TextInput
             id='email3'
             type='email'
-            placeholder='name@materialm.com'
+            placeholder='name@niceadmin.com'
             required
             className='!form-control'
           />

@@ -21,7 +21,7 @@ const ProductRelated = () => {
                 >
                   <CardBox className="p-0 overflow-hidden group card-hover group">
                     <div className="relative">
-                      <Link to={`/apps/blog/detail/${product.id}`}>
+                      <Link to={`/apps/ecommerce/detail/${product.id}`}>
                         <div className="overflow-hidden h-[265px]">
                           <img
                             src={product.photo}

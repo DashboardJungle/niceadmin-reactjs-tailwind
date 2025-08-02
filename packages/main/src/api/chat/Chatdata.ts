@@ -1,16 +1,16 @@
-
 import { Chance } from 'chance';
 import { sub } from 'date-fns';
 import { uniqueId } from 'lodash';
 
+import emily from 'src/assets/images/profile/emily.svg';
+import Juan from 'src/assets/images/profile/Juan.svg';
+import ryan from 'src/assets/images/profile/ryan.svg';
 
-import user2 from '/src/assets/images/profile/user-2.jpg';
-import user3 from '/src/assets/images/profile/user-3.jpg';
-import user4 from '/src/assets/images/profile/user-4.jpg';
-import user5 from '/src/assets/images/profile/user-5.jpg';
-import user8 from '/src/assets/images/profile/user-8.jpg';
-import user10 from "/src/assets/images/profile/user-10.jpg";
-import user9 from "/src/assets/images/profile/user-9.jpg";
+import Kiley from 'src/assets/images/profile/Kiley.svg';
+import jason from 'src/assets/images/profile/jason.svg';
+import Janita from 'src/assets/images/profile/Janita.svg';
+import Dalton from 'src/assets/images/profile/Dalton.svg';
+
 import s1 from '/src/assets/images/blog/blog-img1.jpg';
 
 import adobe from '/src/assets/images/chat/icon-adobe.svg';
@@ -22,7 +22,6 @@ import zip from '/src/assets/images/chat/icon-zip-folder.svg';
 import { http, HttpResponse } from 'msw';
 import { ChatsType } from 'src/types/apps/chat';
 
-
 const chance = new Chance();
 
 const ChatData: ChatsType[] = [
@@ -30,7 +29,7 @@ const ChatData: ChatsType[] = [
     id: 1,
     name: 'James Johnson',
     status: 'online',
-    thumb: user10,
+    thumb: ryan,
     recent: false,
     excerpt: 'Theme Developer',
     messages: [
@@ -85,7 +84,7 @@ const ChatData: ChatsType[] = [
     id: 2,
     name: 'Maria Hernandez',
     status: 'away',
-    thumb: user9,
+    thumb: Janita,
     recent: true,
     excerpt: 'Doctor',
     messages: [
@@ -139,7 +138,7 @@ const ChatData: ChatsType[] = [
     id: 3,
     name: 'David Smith',
     status: 'busy',
-    thumb: user3,
+    thumb: Juan,
     recent: false,
     excerpt: 'Hacker',
     messages: [
@@ -178,14 +177,13 @@ const ChatData: ChatsType[] = [
         attachment: [],
         id: uniqueId(),
       },
-
     ],
   },
   {
     id: 4,
     name: 'Maria Rodriguez',
     status: 'offline',
-    thumb: user2,
+    thumb: emily,
     recent: true,
     excerpt: 'Please wait outside of the house',
     messages: [
@@ -238,7 +236,7 @@ const ChatData: ChatsType[] = [
     id: 5,
     name: 'Robert Smith',
     status: 'online',
-    thumb: user5,
+    thumb: jason,
     recent: true,
     excerpt: 'Front End Developer',
     messages: [
@@ -293,7 +291,7 @@ const ChatData: ChatsType[] = [
     id: 6,
     name: 'Joseph Sarah',
     status: 'busy',
-    thumb: user10,
+    thumb: Kiley,
     recent: false,
     excerpt: 'Graphics Designer',
     messages: [
@@ -338,7 +336,7 @@ const ChatData: ChatsType[] = [
     id: 7,
     name: 'Thomas Smith',
     status: 'away',
-    thumb: user8,
+    thumb: Dalton,
     recent: true,
     excerpt: 'Back End Developer',
     messages: [
@@ -383,7 +381,7 @@ const ChatData: ChatsType[] = [
     id: 8,
     name: 'David Elizabeth',
     status: 'offline',
-    thumb: user3,
+    thumb: Juan,
     recent: false,
     excerpt: 'Theme Developer',
     messages: [
@@ -429,7 +427,7 @@ const ChatData: ChatsType[] = [
     id: 9,
     name: 'Charles Martha',
     status: 'online',
-    thumb: user4,
+    thumb: Kiley,
     recent: false,
     excerpt: 'Administrator',
     messages: [
@@ -482,7 +480,7 @@ const ChatData: ChatsType[] = [
     id: 10,
     name: 'Samuel Eliza',
     status: 'online',
-    thumb: user5,
+    thumb: jason,
     recent: false,
     excerpt: 'Doctor',
     messages: [
@@ -579,6 +577,5 @@ export const Chathandlers = [
     }
   }),
 ];
-
 
 export default ChatData;

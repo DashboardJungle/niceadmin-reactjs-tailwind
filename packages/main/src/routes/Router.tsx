@@ -9,6 +9,14 @@ import Loadable from '../layouts/full/shared/loadable/Loadable';
 const FullLayout = Loadable(lazy(() => import('../layouts/full/FullLayout')));
 const BlankLayout = Loadable(lazy(() => import('../layouts/blank/BlankLayout')));
 
+/* ***Dashboard**** */
+// Dashboards
+const EcommerceDashboard = Loadable(lazy(() => import('../views/dashboards/Ecommerce')));
+const Analytics = Loadable(lazy(() => import('../views/dashboards/Analytics')));
+const Modern = Loadable(lazy(() => import('../views/dashboards/Modern')));
+
+
+
 /* ****Apps***** */
 const Contact = Loadable(lazy(() => import('../views/apps/contact/Contact')));
 const Ecommerce = Loadable(lazy(() => import('../views/apps/eCommerce/Ecommerce')));
@@ -50,13 +58,43 @@ const FormVertical = Loadable(lazy(() => import('../views/forms/FormVertical')))
 const FormValidation = Loadable(lazy(() => import('../views/forms/FormValidation')));
 const FormElements = Loadable(lazy(() => import('../views/forms/FormElements')));
 
+
+// theme pages
+const RollbaseCASL = Loadable(lazy(() => import('../views/pages/RollbaseCASL')));
+const Faq = Loadable(lazy(() => import('../views/pages/Faq')));
+const Pricing = Loadable(lazy(() => import('../views/pages/Pricing')));
+const AccountSetting = Loadable(
+  lazy(() => import('../views/pages/AccountSetting')),
+);
+
+
+//Shadcn Forms
+const ShadcnInput = Loadable(lazy(() => import('../views/shadcn-form/ShadcnInput')));
+const ShadcnCheckbox = Loadable(lazy(() => import('../views/shadcn-form/ShadcnCheckbox')));
+const ShadcnRadio = Loadable(lazy(() => import('../views/shadcn-form/ShadcnRadio')));
+const ShadcnSelect = Loadable(lazy(() => import('../views/shadcn-form/ShadcnSelect')));
+
+//Headless  Forms
+const HeadlessButton = Loadable(lazy(() => import('../views/headless-form/ButtonForm')));
+const HeadlessCheckbox = Loadable(lazy(() => import('../views/headless-form/CheckboxForm')));
+const HeadlessCombobox = Loadable(lazy(() => import('../views/headless-form/ComboboxForm')));
+const HeadlessFieldset = Loadable(lazy(() => import('../views/headless-form/FieldsetForm')));
+const HeadlessInput = Loadable(lazy(() => import('../views/headless-form/InputForm')));
+const HeadlessListbox = Loadable(lazy(() => import('../views/headless-form/ListboxForm')));
+const HeadlessRadio = Loadable(lazy(() => import('../views/headless-form/RadioGroupForm')));
+const HeadlessSelect = Loadable(lazy(() => import('../views/headless-form/SelectForm')));
+const HeadlessSwitch = Loadable(lazy(() => import('../views/headless-form/SwitchForm')));
+const HeadlessTextarea = Loadable(lazy(() => import('../views/headless-form/TextareaForm')));
+
+
+
 // authentication
 const Login = Loadable(lazy(() => import('../views/authentication/auth1/Login')));
 const Register = Loadable(lazy(() => import('../views/authentication/auth1/Register')));
 const ForgotPassword = Loadable(lazy(() => import('../views/authentication/auth1/ForgotPassword')));
 const TwoSteps = Loadable(lazy(() => import('../views/authentication/auth1/TwoSteps')));
 const Maintainance = Loadable(lazy(() => import('../views/authentication/Maintainance')));
-const SamplePage = Loadable(lazy(() => import('../views/sample-page/SamplePage')));
+// const SamplePage = Loadable(lazy(() => import('../views/sample-page/SamplePage')));
 
 const Error = Loadable(lazy(() => import('../views/authentication/Error')));
 
@@ -65,7 +103,11 @@ const Router = [
     path: '/',
     element: <FullLayout />,
     children: [
-      { path: '/', exact: true, element: <SamplePage /> },
+      { path: '/', exact: true, element: <Analytics /> },
+      { path: '/dashboards/eCommerce', exact: true, element: <EcommerceDashboard /> },
+      { path: '/dashboards/modern', exact: true, element: <Modern /> },
+
+      // { path: '/', exact: true, element: <SamplePage /> },
       { path: '*', element: <Navigate to="/auth/404" /> },
 
       { path: '/apps/contacts', element: <Contact /> },
@@ -93,12 +135,37 @@ const Router = [
       { path: '/apps/tickets/create', element: <CreateTickets /> },
       { path: '/apps/kanban', element: <Kanban /> },
 
+      { path: '/theme-pages/casl', element: <RollbaseCASL /> },
+      { path: '/theme-pages/pricing', element: <Pricing /> },
+      { path: '/theme-pages/faq', element: <Faq /> },
+      { path: '/theme-pages/account-settings', element: <AccountSetting /> },
+
       { path: '/forms/form-elements', element: <FormElements /> },
       { path: '/forms/form-validation', element: <FormValidation /> },
       { path: '/forms/form-horizontal', element: <FormHorizontal /> },
       { path: '/forms/form-vertical', element: <FormVertical /> },
       { path: '/forms/form-layouts', element: <FormLayouts /> },
       { path: '/forms/form-custom', element: <FormCustom /> },
+
+      { path: '/shadcn-form/input', element: <ShadcnInput /> },
+      { path: '/shadcn-form/select', element: <ShadcnSelect /> },
+      { path: '/shadcn-form/checkbox', element: <ShadcnCheckbox /> },
+      { path: '/shadcn-form/radio', element: <ShadcnRadio /> },
+
+      { path: '/headless-form/buttons', element: <HeadlessButton /> },
+      { path: '/headless-form/checkbox', element: <HeadlessCheckbox /> },
+      { path: '/headless-form/combobox', element: <HeadlessCombobox /> },
+      { path: '/headless-form/fieldset', element: <HeadlessFieldset /> },
+      { path: '/headless-form/input', element: <HeadlessInput /> },
+      { path: '/headless-form/listbox', element: <HeadlessListbox /> },
+      { path: '/headless-form/radiogroup', element: <HeadlessRadio /> },
+      { path: '/headless-form/select', element: <HeadlessSelect /> },
+      { path: '/headless-form/switch', element: <HeadlessSwitch /> },
+      { path: '/headless-form/textarea', element: <HeadlessTextarea /> },
+
+
+
+
 
     ],
   },

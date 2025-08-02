@@ -1,9 +1,9 @@
 
 import { Icon } from "@iconify/react";
-import  { useState, useContext, useEffect } from "react";
+import { useState, useContext, useEffect } from "react";
 import { Alert, Button, TextInput, Tooltip } from "flowbite-react";
 import { NotesContext } from "src/context/NotesContext";
-import { NotesType } from "src/types/apps/notes";
+import { notesType } from "src/types/apps/notes";
 let counter = 0;
 
 
@@ -18,16 +18,16 @@ const Notelist = () => {
 
 
   useEffect(() => {
-    if (notes.length > 0 && counter===0) {
+    if (notes.length > 0 && counter === 0) {
       // Set the first note as active 
       const firstNoteId = notes[0].id;
       setActiveNoteId(firstNoteId);
-      counter = counter+1;
+      counter = counter + 1;
     }
   }, [notes]);
 
 
-  const filterNotes = (notes: NotesType[], nSearch: string) => {
+  const filterNotes = (notes: notesType[], nSearch: string) => {
     if (nSearch !== "")
       return notes.filter(
         (t: any) =>

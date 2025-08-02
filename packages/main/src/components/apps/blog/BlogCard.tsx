@@ -22,19 +22,19 @@ const BlogCard = ({ post }: Btype) => {
   return (
     <>
       <div className="lg:col-span-4 md:col-span-6 col-span-12">
-        <CardBox className="p-0 overflow-hidden group card-hover ">
+        <CardBox className="p-0 overflow-hidden group card-hover">
           <div className="relative">
             <Link to={`/apps/blog/detail/${linkTo}`} >
-              <div className="overflow-hidden h-60">
+              <div className="overflow-hidden h-[240px]">
                 <img
                   src={coverImg}
-                  alt="MatDash"
+                  alt="materialm"
                   height={240}
                   width={500}
-                  className="w-full"
+                  className="w-100"
                 />
               </div>
-              <Badge color={"white"} className="absolute bottom-8 end-6">
+              <Badge color={"white"} className="absolute bottom-8 end-6 text-black dark:text-black">
                 2 min Read
               </Badge>
             </Link>
@@ -47,7 +47,7 @@ const BlogCard = ({ post }: Btype) => {
             </div>
           </div>
           <div className="px-6 pb-6">
-            <Badge color={"muted"} className="mt-3">
+            <Badge color={"muted"} className="mt-3 bg-gray-200 dark:text-black">
               {category}
             </Badge>
             <h5 className="text-xl py-6 group-hover:text-primary">
@@ -55,13 +55,13 @@ const BlogCard = ({ post }: Btype) => {
             </h5>
             <div>
               <div className="flex gap-3">
-                <div className="flex gap-2 items-center text-darklink dark:text-bodytext text-[15px]">
+                <div className="flex gap-2 items-center text-black dark:text-darklink text-[15px]">
                   <Icon icon="solar:eye-outline" height="18" className="text-ld" /> {view}
                 </div>
-                <div className="flex gap-2 items-center text-darklink dark:text-bodytext text-[15px]">
+                <div className="flex gap-2 items-center text-black dark:text-darklink text-[15px]">
                   <Icon icon="solar:chat-line-outline" height="18" className="text-ld" /> {comments?.length}
                 </div>
-                <div className="ms-auto flex gap-2 items-center  text-darklink dark:text-bodytext text-[15px]">
+                <div className="ms-auto flex gap-2 items-center text-black dark:text-darklink text-[15px]">
                   <GoDot size="16" className="text-ld" />
                   <small>{format(new Date(createdAt), "E, MMM d")}</small>
                 </div>

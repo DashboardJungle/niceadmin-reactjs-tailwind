@@ -1,4 +1,4 @@
-import  { useState, useContext } from "react";
+import { useState, useContext } from "react";
 import { TbArrowBackUp, TbThumbUp } from "react-icons/tb";
 import uniqueId from "lodash/uniqueId";
 
@@ -9,7 +9,7 @@ import { UserDataContext } from "src/context/UserDataContext";
 
 
 interface CommentProps {
-  comment:  any;
+  comment: any;
   post: PostType;
 }
 interface ReplyProps {
@@ -58,59 +58,56 @@ const PostComments = ({ comment, post }: CommentProps) => {
 
   return (
     <>
-      <div className="p-4 bg-muted dark:bg-darkmuted rounded-lg my-6">
-        <div className="flex items-center gap-3">
+      <div className='p-4 bg-neutral-100 dark:bg-white/10  rounded-lg my-6'>
+        <div className='flex items-center gap-3'>
           <Avatar
             img={comment?.profile.avatar}
-            alt="profile"
+            alt='profile'
             rounded
-            size={"sm"}
+            size={'sm'}
           />
           <h6>{comment?.profile.name}</h6>
-          <p className="flex items-center gap-2">
-            <span className="h-[6px] w-[6px] rounded-full bg-dark opacity-40 dark:bg-white block"></span>
+          <p className='flex items-center gap-2'>
+            <span className='h-[6px] w-[6px] rounded-full bg-dark opacity-40 dark:bg-white block'></span>
             {comment?.profile.time}
           </p>
         </div>
         {/**Post Content**/}
-        <p className="text-ld opacity-80 text-sm py-4">
+        <p className='text-ld opacity-80 text-sm py-4'>
           {comment?.data.comment}
         </p>
 
-        <div className="flex gap-5 mt-3">
-          <div className="flex items-center gap-3 cursor-pointer text-dark font-medium text-primary-ld">
-            <Tooltip content="Like">
+        <div className='flex gap-5 mt-3'>
+          <div className='flex items-center gap-3 cursor-pointer text-dark font-medium text-primary-ld'>
+            <Tooltip content='Like'>
               <Button
-                className="btn-circle p-0"
+                className='!btn-circle !text-white p-0'
                 color={
                   comment?.data &&
                     comment?.data.likes &&
                     comment?.data.likes.like
-                    ? "primary"
-                    : "muted"
+                    ? 'primary'
+                    : 'muted'
                 }
-                onClick={() => handleLikeReply(post?.id, comment?.id)}
-              >
-                <TbThumbUp size="16" />
+                onClick={() => handleLikeReply(post?.id, comment?.id)}>
+                <TbThumbUp size='16' />
               </Button>
             </Tooltip>
-            <span className="font-semibold text-ld text-sm">
+            <span className='font-semibold text-ld text-sm'>
               {comment?.data &&
                 comment?.data.likes &&
                 comment?.data.likes.value}
             </span>
           </div>
-          <div className="flex items-center gap-3 cursor-pointer text-dark font-medium text-primary-ld">
-            <Tooltip content="Reply">
+          <div className='flex items-center gap-3 cursor-pointer text-dark font-medium text-primary-ld'>
+            <Tooltip content='Reply'>
               <Button
-                className="btn-circle p-0"
-                color={"secondary"}
-                onClick={() => setShowReply(!showReply)}
-              >
-                <TbArrowBackUp size="16" />
+                className='!btn-circle p-0 bg-skyblue dark:bg-skyblue hover:bg-sky-600'
+                onClick={() => setShowReply(!showReply)}>
+                <TbArrowBackUp size='16' />
               </Button>
             </Tooltip>
-            <span className="font-semibold text-ld text-sm">
+            <span className='font-semibold text-ld text-sm'>
               {comment?.data.replies.length > 0
                 ? comment?.data.replies.length
                 : 0}
@@ -123,52 +120,56 @@ const PostComments = ({ comment, post }: CommentProps) => {
         <>
           {comment?.data.replies.map((reply: ReplyProps) => {
             return (
-              <div className="ps-4" key={reply.data.comment}>
-                <div className="p-4 bg-muted dark:bg-darkmuted rounded-lg mt-6">
-                  <div className="flex items-center gap-3">
-                    <Avatar img={reply.profile.avatar} alt="profile" rounded />
+              <div className='ps-4' key={reply.data.comment}>
+                <div className='p-4 bg-lightprimary dark:bg-darkprimary rounded-lg mt-6'>
+                  <div className='flex items-center gap-3'>
+                    <Avatar img={reply.profile.avatar} alt='profile' rounded />
                     <h6>{reply?.profile.name}</h6>
-                    <p className="flex items-center gap-2">
-                      <span className="h-[6px] w-[6px] rounded-full bg-dark opacity-40 dark:bg-white block"></span>
+                    <p className='flex items-center gap-2'>
+                      <span className='h-[6px] w-[6px] rounded-full bg-dark opacity-40 dark:bg-white block'></span>
                       {reply?.profile.time}
                     </p>
                   </div>
 
-                  <p className="text-ld opacity-80 text-sm py-4">
+                  <p className='text-ld opacity-80 text-sm py-4'>
                     {reply?.data.comment}
                   </p>
                 </div>
               </div>
-            );
+            )
           })}
         </>
       ) : (
-        ""
+        ''
       )}
       {showReply ? (
-        <div className="ps-8 mt-6">
-          <div className="flex gap-3 items-center justify-between">
-            <div className="w-12">
-              <Avatar img={post?.profile.avatar} alt="profile" className="" rounded />
+        <div className='ps-8 mt-6'>
+          <div className='flex gap-3 items-center justify-between'>
+            <div className='w-12'>
+              <Avatar
+                img={post?.profile.avatar}
+                alt='profile'
+                className=''
+                rounded
+              />
             </div>
             <TextInput
-              type="text"
-              sizing="md"
-              className="form-control w-full"
-              placeholder="Reply"
+              type='text'
+              sizing='md'
+              className='!form-control w-full'
+              placeholder='Reply'
               value={replyTxt}
               onChange={(e) => setReplyTxt(e.target.value)}
             />
             <Button
               onClick={() => onSubmit(post.id, comment.id, replyTxt)}
-              color={"secondary"}
-            >
+              color={'primary'}>
               Reply
             </Button>
           </div>
         </div>
       ) : (
-        ""
+        ''
       )}
     </>
   );

@@ -1,10 +1,10 @@
 
 
 import CardBox from "src/components/shared/CardBox";
-import user1 from "/src/assets/images/profile/user-2.jpg";
-import user2 from "/src/assets/images/profile/user-3.jpg";
-import user3 from "/src/assets/images/profile/user-4.jpg";
-import user4 from "/src/assets/images/profile/user-5.jpg";
+import user1 from "/src/assets/images/profile/Dalton.svg";
+import user2 from "/src/assets/images/profile/jason.svg";
+import user3 from "/src/assets/images/profile/Juan.svg";
+import user4 from "/src/assets/images/profile/Kiley.svg";
 import { Rating, RatingStar, Table, TableBody, TableCell, TableHead, TableHeadCell, TableRow } from "flowbite-react";
 const LatestReviewData = [
   {
@@ -75,37 +75,39 @@ const CustomerReviews = () => {
   return (
     <>
       <CardBox>
-        <h5 className="card-title mb-2">Customer Reviews</h5>
-        <div className="overflow-x-auto">
+        <h5 className='card-title mb-2'>Customer Reviews</h5>
+        <div className='overflow-x-auto'>
           <Table hoverable>
             <TableHead>
-              <TableHeadCell className="text-sm font-semibold  pb-2">
-                Customer
-              </TableHeadCell>
-              <TableHeadCell className="text-sm font-semibold pb-2">
-                Comment
-              </TableHeadCell>
-              <TableHeadCell className="text-sm font-semibold pb-2">
-                Date
-              </TableHeadCell>
+              <TableRow>
+                <TableHeadCell className='text-sm font-semibold  pb-2'>
+                  Customer
+                </TableHeadCell>
+                <TableHeadCell className='text-sm font-semibold pb-2'>
+                  Comment
+                </TableHeadCell>
+                <TableHeadCell className='text-sm font-semibold pb-2'>
+                  Date
+                </TableHeadCell>
+              </TableRow>
             </TableHead>
-            <TableBody className="divide-y divide-border dark:divide-darkborder ">
+            <TableBody className='divide-y divide-border dark:divide-darkborder '>
               {LatestReviewData.map((item, index) => (
                 <TableRow key={index}>
-                  <TableCell className="whitespace-nowrap ps-6 md:min-w-auto min-w-[200px]">
-                    <div className="flex gap-3 items-center">
+                  <TableCell className='whitespace-nowrap ps-6 md:min-w-auto min-w-[200px]'>
+                    <div className='flex gap-3 items-center'>
                       <img
                         src={item.profile}
-                        alt="icon"
-                        className="h-8 w-8 rounded-full"
+                        alt='icon'
+                        className='h-8 w-8 rounded-full'
                       />
-                      <h6 className="text-base">{item.customername}</h6>
+                      <h6 className='text-base'>{item.customername}</h6>
                     </div>
                   </TableCell>
-                  <TableCell className="whitespace-nowrap md:min-w-auto min-w-[200px]">
-                    <div className="truncat line-clamp-2 text-wrap max-w-56">
+                  <TableCell className='whitespace-nowrap md:min-w-auto min-w-[200px]'>
+                    <div className='truncat line-clamp-2 text-wrap max-w-56'>
                       {item.review == 5 ? (
-                        <Rating size={"sm"} className="mt-1">
+                        <Rating size={'sm'} className='mt-1'>
                           <RatingStar />
                           <RatingStar />
                           <RatingStar />
@@ -113,7 +115,7 @@ const CustomerReviews = () => {
                           <RatingStar />
                         </Rating>
                       ) : item.review == 4 ? (
-                        <Rating size={"sm"} className="mt-1">
+                        <Rating size={'sm'} className='mt-1'>
                           <RatingStar />
                           <RatingStar />
                           <RatingStar />
@@ -121,7 +123,7 @@ const CustomerReviews = () => {
                           <RatingStar filled={false} />
                         </Rating>
                       ) : (
-                        <Rating size={"sm"} className="mt-1">
+                        <Rating size={'sm'} className='mt-1'>
                           <RatingStar />
                           <RatingStar />
                           <RatingStar />
@@ -130,12 +132,12 @@ const CustomerReviews = () => {
                         </Rating>
                       )}
                     </div>
-                    <p className="text-darklink dark:text-bodytext truncat line-clamp-2 text-wrap max-w-56 text-sm">
+                    <p className='text-black dark:text-darklink truncat line-clamp-2 text-wrap max-w-56 text-sm'>
                       {item.reviewtext}
                     </p>
                   </TableCell>
-                  <TableCell className="whitespace-nowrap">
-                    <p className="text-darklink dark:text-bodytext text-sm">
+                  <TableCell className='whitespace-nowrap'>
+                    <p className='text-black dark:text-darklink text-sm'>
                       {item.time}
                     </p>
                   </TableCell>

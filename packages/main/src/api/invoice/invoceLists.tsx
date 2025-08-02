@@ -3,7 +3,7 @@ import { InvoiceList } from '../../types/apps/invoice';
 import { http, HttpResponse } from 'msw';
 
 
-export let invoceLists: InvoiceList[] = [
+let invoceLists: InvoiceList[] = [
     {
         id: 101,
         billFrom: 'PineappleInc.',
@@ -28,7 +28,9 @@ export let invoceLists: InvoiceList[] = [
         totalCost: 90,
         vat: 9,
         grandTotal: 99,
-        status: 'Shipped',
+        status: 'Paid',
+        createdDate: new Date('2025-04-01'),
+        dueDate: new Date('2025-04-05'),
         completed: false,
         isSelected: false,
     },
@@ -56,7 +58,9 @@ export let invoceLists: InvoiceList[] = [
         totalCost: 90,
         vat: 9,
         grandTotal: 99,
-        status: 'Delivered',
+        status: 'Overdue',
+        createdDate: new Date('2025-04-02'),
+        dueDate: new Date('2025-04-07'),
         completed: false,
         isSelected: false,
     },
@@ -85,6 +89,8 @@ export let invoceLists: InvoiceList[] = [
         vat: 9,
         grandTotal: 99,
         status: 'Pending',
+        createdDate: new Date('2025-04-03'),
+        dueDate: new Date('2025-04-08'),
         completed: false,
         isSelected: false,
     },
@@ -112,7 +118,9 @@ export let invoceLists: InvoiceList[] = [
         totalCost: 90,
         vat: 9,
         grandTotal: 99,
-        status: 'Shipped',
+        status: 'Paid',
+        createdDate: new Date('2025-04-04'),
+        dueDate: new Date('2025-04-09'),
         completed: false,
         isSelected: false,
     },
@@ -140,7 +148,9 @@ export let invoceLists: InvoiceList[] = [
         totalCost: 90,
         vat: 9,
         grandTotal: 99,
-        status: 'Delivered',
+        status: 'Overdue',
+        createdDate: new Date('2025-04-05'),
+        dueDate: new Date('2025-04-10'),
         completed: false,
         isSelected: false,
     },
@@ -168,7 +178,9 @@ export let invoceLists: InvoiceList[] = [
         totalCost: 90,
         vat: 9,
         grandTotal: 99,
-        status: 'Shipped',
+        status: 'Draft',
+        createdDate: new Date('2025-04-06'),
+        dueDate: new Date('2025-04-11'),
         completed: false,
         isSelected: false,
     },
@@ -196,11 +208,13 @@ export let invoceLists: InvoiceList[] = [
         totalCost: 90,
         vat: 9,
         grandTotal: 99,
-        status: 'Delivered',
+        status: 'Overdue',
+        createdDate: new Date('2025-04-07'),
+        dueDate: new Date('2025-04-12'),
         completed: false,
         isSelected: false,
     },
-];
+]
 
 const getNextId = () => {
     const maxId = Math.max(...invoceLists.map((invoice) => invoice.id));

@@ -18,7 +18,7 @@ const InputWithIcon = () => {
               type='email'
               icon={HiMail}
               className='!form-control'
-              placeholder='name@materialm.com'
+              placeholder='name@niceadmin.com'
               required
             />
           </div>
@@ -31,7 +31,7 @@ const InputWithIcon = () => {
               type='email'
               rightIcon={HiMail}
               className='!form-control'
-              placeholder='name@materialm.com'
+              placeholder='name@niceadmin.com'
               required
             />
           </div>
@@ -45,7 +45,7 @@ const InputWithIcon = () => {
               icon={HiMail}
               rightIcon={HiMail}
               className='!form-control'
-              placeholder='name@materialm.com'
+              placeholder='name@niceadmin.com'
               required
             />
           </div>

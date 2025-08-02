@@ -1,7 +1,7 @@
 
 
 
-import  { useState, useEffect, useRef, useContext } from "react";
+import { useState, useEffect, useRef, useContext } from "react";
 // Carousel slider for product
 
 
@@ -55,15 +55,16 @@ const ProductCarousel = () => {
           <img
             src={getProductImage}
             alt="Main Product"
-            height={500}
+            style={{ width: '500px', height: "500px" }}
           />
           {SliderData.map((items, index) => (
             <div key={index}>
               <img
                 src={items.imgPath}
-                height={500}
+
                 alt="carousel"
                 className="rounded-md"
+                style={{ width: '500px', height: "500px" }}
               />
             </div>
           ))}
@@ -78,8 +79,8 @@ const ProductCarousel = () => {
             <img
               src={getProductImage}
               alt="Thumbnail"
-              width={72}
-              height={72}
+              style={{ width: '72px', height: "72px" }}
+
               className="rounded-md"
             />
           </div>
@@ -88,8 +89,7 @@ const ProductCarousel = () => {
               <img
                 src={items.imgPath}
                 alt={`Thumbnail ${items.id}`}
-                width={72}
-                height={72}
+                style={{ width: '72px', height: "72px" }}
                 className="rounded-md"
               />
             </div>

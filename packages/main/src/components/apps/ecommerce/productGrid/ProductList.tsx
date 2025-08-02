@@ -1,6 +1,6 @@
 
 import { Button, Rating, Tooltip, Alert, RatingStar } from "flowbite-react";
-import  { useState, useContext, SetStateAction, Dispatch } from "react";
+import { useState, useContext, SetStateAction, Dispatch } from "react";
 
 import { Icon } from "@iconify/react";
 import ProductSearch from "./ProductSearch";
@@ -74,7 +74,7 @@ const ProductList = ({ openShopFilter }: ShopProps) => {
                     <div className="flex justify-between items-center mt-1">
                       <h5 className="text-base flex gap-2 items-center">
                         ${product.price}{" "}
-                        <span className="font-normal text-sm text-darklink dark:text-bodytext line-through">
+                        <span className="font-normal text-sm line-through">
                           ${product.salesPrice}
                         </span>
                       </h5>

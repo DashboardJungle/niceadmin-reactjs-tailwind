@@ -1,16 +1,16 @@
-
 import { Chance } from 'chance';
 
-import user2 from '/src/assets/images/profile/user-2.jpg';
-import user3 from '/src/assets/images/profile/user-3.jpg';
-import user4 from '/src/assets/images/profile/user-4.jpg';
-import user5 from '/src/assets/images/profile/user-5.jpg';
-import user6 from '/src/assets/images/profile/user-6.jpg';
-import user7 from '/src/assets/images/profile/user-7.jpg';
-import user8 from '/src/assets/images/profile/user-8.jpg';
-import user10 from "/src/assets/images/profile/user-10.jpg";
 import { TicketType } from 'src/types/apps/ticket';
 import { http, HttpResponse } from 'msw';
+
+import emily from 'src/assets/images/profile/emily.svg';
+import Juan from 'src/assets/images/profile/Juan.svg';
+import ryan from 'src/assets/images/profile/ryan.svg';
+import Reva from 'src/assets/images/profile/Reva.svg';
+import Kiley from 'src/assets/images/profile/Kiley.svg';
+import jason from 'src/assets/images/profile/jason.svg';
+
+import Dalton from 'src/assets/images/profile/Dalton.svg';
 
 const chance = new Chance();
 
@@ -22,7 +22,7 @@ export let TicketData: TicketType[] = [
       'ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos',
     Status: 'Closed',
     Label: 'error',
-    thumb: user10,
+    thumb: emily,
     AgentName: 'Liam',
     Date: chance.date(),
     deleted: false,
@@ -34,7 +34,7 @@ export let TicketData: TicketType[] = [
       'ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos',
     Status: 'Pending',
     Label: 'warning',
-    thumb: user2,
+    thumb: Kiley,
     AgentName: 'Steve',
     Date: chance.date(),
     deleted: false,
@@ -46,7 +46,7 @@ export let TicketData: TicketType[] = [
       'ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos',
     Status: 'Open',
     Label: 'success',
-    thumb: user3,
+    thumb: jason,
     AgentName: 'Jack',
     Date: chance.date(),
     deleted: false,
@@ -58,7 +58,7 @@ export let TicketData: TicketType[] = [
       'ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos',
     Status: 'Closed',
     Label: 'error',
-    thumb: user4,
+    thumb: Dalton,
     AgentName: 'Steve',
     Date: chance.date(),
     deleted: false,
@@ -70,7 +70,7 @@ export let TicketData: TicketType[] = [
       'ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos',
     Status: 'Closed',
     Label: 'error',
-    thumb: user5,
+    thumb: Reva,
     AgentName: 'Liam',
     Date: chance.date(),
     deleted: false,
@@ -82,7 +82,7 @@ export let TicketData: TicketType[] = [
       'ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos',
     Status: 'Pending',
     Label: 'warning',
-    thumb: user6,
+    thumb: Juan,
     AgentName: 'Jack',
     Date: chance.date(),
     deleted: false,
@@ -94,7 +94,7 @@ export let TicketData: TicketType[] = [
       'ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos',
     Status: 'Open',
     Label: 'success',
-    thumb: user7,
+    thumb: ryan,
     AgentName: 'Steve',
     Date: chance.date(),
     deleted: false,
@@ -106,7 +106,7 @@ export let TicketData: TicketType[] = [
       'ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos',
     Status: 'Closed',
     Label: 'error',
-    thumb: user8,
+    thumb: jason,
     AgentName: 'John',
     Date: chance.date(),
     deleted: false,
@@ -149,7 +149,7 @@ export const TicketHandlers = [
   http.post('/api/data/ticket/add', async ({ request }) => {
     try {
       const newTicket = (await request.json()) as TicketType;
-      TicketData.push(newTicket)
+      TicketData.push(newTicket);
       return HttpResponse.json({ status: 200, msg: 'Success', data: TicketData });
     } catch (error) {
       return HttpResponse.json({
@@ -159,8 +159,4 @@ export const TicketHandlers = [
       });
     }
   }),
-
 ];
-
-
-

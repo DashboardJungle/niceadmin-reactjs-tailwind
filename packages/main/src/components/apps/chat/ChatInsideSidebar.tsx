@@ -1,4 +1,4 @@
-import  { useContext } from "react";
+import { useContext } from "react";
 import { uniq, flatten } from 'lodash';
 import { Icon } from "@iconify/react";
 import { ChatContext } from "src/context/ChatContext";
@@ -6,7 +6,7 @@ import React from 'react';
 
 const ChatInsideSidebar = () => {
 
-  const { selectedChat,  } = useContext(ChatContext);
+  const { selectedChat, } = useContext(ChatContext);
   const totalAttachment = uniq(flatten(selectedChat?.messages.map((item) => item.attachment))).length;
   const totalMedia = uniq(flatten(selectedChat?.messages.map((item) => (item?.type === 'image' ? item.msg : null)))).length - 1;
 
@@ -51,7 +51,7 @@ const ChatInsideSidebar = () => {
                       return (
                         <div key={index}>
                           <div className="flex items-center gap-3 group cursor-pointer">
-                            <div className="bg-muted dark:bg-darkmuted p-3 rounded-md">
+                            <div className="bg-neutral-100 dark:bg-white/10 p-3 rounded-md">
                               <img
                                 src={a.icon || ''}
                                 height={24}
@@ -63,7 +63,7 @@ const ChatInsideSidebar = () => {
                               <h5 className="text-sm group-hover:text-primary">
                                 {a.file}
                               </h5>
-                              <p className="text-xs text-darklink dark:text-bodytext">
+                              <p className="text-xs text-darklink">
                                 {a.fileSize}
                               </p>
                             </div>

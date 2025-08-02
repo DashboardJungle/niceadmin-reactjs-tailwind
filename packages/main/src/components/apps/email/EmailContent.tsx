@@ -8,7 +8,7 @@ import {
   Textarea,
   Tooltip,
 } from "flowbite-react";
-import  { useState, useContext } from "react";
+import { useState, useContext } from "react";
 // @ts-ignore
 import SimpleBar from "simplebar-react";
 import { Icon } from "@iconify/react";
@@ -78,7 +78,7 @@ const EmailContent: React.FC<MailListItemProps> = ({
           <Button
             color={"outlineprimary"}
             onClick={onCloseMail}
-            className="py-0 gap-2"
+            className="py-0"
           >
             <Icon icon="solar:round-arrow-left-linear" height={18}></Icon>Back
           </Button>
@@ -114,12 +114,12 @@ const EmailContent: React.FC<MailListItemProps> = ({
               </Tooltip>
               <Tooltip content={"Delete"}>
                 <div className="btn-circle-hover cursor-pointer group">
-                  <Icon icon="solar:trash-bin-minimalistic-outline" className="text-dark  dark:text-darklink group-hover:text-primary" height="18" onClick={handleDelete} />
+                  <Icon icon="solar:trash-bin-minimalistic-outline" className="text-dark dark:text-darklink group-hover:text-primary" height="18" onClick={handleDelete} />
                 </div>
               </Tooltip>
             </div>
           </div>
-          <SimpleBar className="max-h-[600px] h-[calc(100vh_-_100px)]">
+          <SimpleBar className="max-h-[600px] h-[calc(100vh-100px)]">
             <div className="py-5 px-5">
               <div className="flex items-center w-full">
                 <div className="flex items-center gap-2 w-full">
@@ -132,7 +132,7 @@ const EmailContent: React.FC<MailListItemProps> = ({
                   />
                   <div>
                     <h6 className="text-sm">{selectedEmail.from}</h6>
-                    <p className="text-darklink dark:text-darklink text-sm">{selectedEmail.To}</p>
+                    <p className="text-darklink text-sm">{selectedEmail.To}</p>
                   </div>
                 </div>
                 <div>
@@ -166,7 +166,7 @@ const EmailContent: React.FC<MailListItemProps> = ({
                           key={attach.id}
                         >
                           <div className="flex items-center gap-3 group cursor-pointer">
-                            <div className="bg-muted dark:bg-darkmuted p-3 rounded-md">
+                            <div className="bg-neutral-100 dark:bg-white/10  p-3 rounded-md">
                               <img
                                 src={attach.image}
                                 height={24}
@@ -178,7 +178,7 @@ const EmailContent: React.FC<MailListItemProps> = ({
                               <h5 className="text-sm group-hover:text-primary">
                                 {attach.title}
                               </h5>
-                              <p className="text-sm text-darklink dark:text-darklink">
+                              <p className="text-sm text-darklink">
                                 {attach.fileSize}
                               </p>
                             </div>

@@ -1,4 +1,4 @@
-"use client"
+
 import React, { createContext, useState, Dispatch, SetStateAction, useEffect } from 'react';
 import { EmailType } from '../../types/apps/email';
 import useSWR from 'swr';

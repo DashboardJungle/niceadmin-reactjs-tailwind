@@ -1,30 +1,30 @@
-
 import { sub } from 'date-fns';
 import { Chance } from 'chance';
 import { uniqueId } from 'lodash';
 import { userType } from '../../types/apps/users';
-import user2 from '/src/assets/images/profile/user-2.jpg';
-import user3 from '/src/assets/images/profile/user-3.jpg';
-import user4 from '/src/assets/images/profile/user-4.jpg';
-import user5 from '/src/assets/images/profile/user-5.jpg';
-import user6 from '/src/assets/images/profile/user-6.jpg';
-import user7 from '/src/assets/images/profile/user-7.jpg';
-import user8 from '/src/assets/images/profile/user-8.jpg';
-import user10 from "/src/assets/images/profile/user-10.jpg";
-import user9 from "/src/assets/images/profile/user-9.jpg";
 
-import s1 from '/src/assets/images/products/s1.jpg';
-import s2 from '/src/assets/images/products/s2.jpg';
-import s3 from '/src/assets/images/products/s3.jpg';
-import s4 from '/src/assets/images/products/s4.jpg';
-import s5 from '/src/assets/images/products/s5.jpg';
-import s6 from '/src/assets/images/products/s6.jpg';
-import s7 from '/src/assets/images/products/s7.jpg';
-import s8 from '/src/assets/images/products/s8.jpg';
-import s9 from '/src/assets/images/products/s9.jpg';
-import s10 from '/src/assets/images/products/s10.jpg';
-import s11 from '/src/assets/images/products/s11.jpg';
-import s12 from '/src/assets/images/products/s12.jpg';
+import emily from 'src/assets/images/profile/emily.svg';
+import Juan from 'src/assets/images/profile/Juan.svg';
+import olivia from 'src/assets/images/profile/olivia.svg';
+import Kiley from 'src/assets/images/profile/Kiley.svg';
+import jason from 'src/assets/images/profile/jason.svg';
+import Dalton from 'src/assets/images/profile/Dalton.svg';
+import ryan from 'src/assets/images/profile/ryan.svg';
+import Janita from 'src/assets/images/profile/Janita.svg';
+import Reva from 'src/assets/images/profile/Reva.svg';
+
+import s1 from 'src/assets/images/products/updated-product/innovation.webp';
+import s2 from 'src/assets/images/products/updated-product/book-growth.webp';
+import s3 from 'src/assets/images/products/updated-product/psychology-of-money.webp';
+import s4 from 'src/assets/images/products/updated-product/headphone.webp';
+import s5 from 'src/assets/images/products/updated-product/macbook.webp';
+import s6 from 'src/assets/images/products/updated-product/console.webp';
+import s7 from 'src/assets/images/products/updated-product/red-dress.webp';
+import s8 from 'src/assets/images/products/updated-product/shoe.webp';
+import s9 from 'src/assets/images/products/updated-product/short-purse.webp';
+import s10 from 'src/assets/images/products/updated-product/dino.webp';
+import s11 from 'src/assets/images/products/updated-product/teddy.webp';
+import s12 from 'src/assets/images/products/updated-product/angle-toy.webp';
 import { http, HttpResponse } from 'msw';
 
 const chance = new Chance();
@@ -32,7 +32,7 @@ const chance = new Chance();
 const users: userType[] = [
   {
     id: uniqueId('#follow_'),
-    avatar: user10,
+    avatar: emily,
     name: chance.name(),
     role: chance.profession(),
     country: chance.country({ full: true }),
@@ -40,7 +40,7 @@ const users: userType[] = [
   },
   {
     id: uniqueId('#follow_'),
-    avatar: user2,
+    avatar: jason,
     name: chance.name(),
     role: chance.profession(),
     country: chance.country({ full: true }),
@@ -48,7 +48,7 @@ const users: userType[] = [
   },
   {
     id: uniqueId('#follow_'),
-    avatar: user3,
+    avatar: Dalton,
     name: chance.name(),
     role: chance.profession(),
     country: chance.country({ full: true }),
@@ -56,7 +56,7 @@ const users: userType[] = [
   },
   {
     id: uniqueId('#follow_'),
-    avatar: user4,
+    avatar: Janita,
     name: chance.name(),
     role: chance.profession(),
     country: chance.country({ full: true }),
@@ -64,7 +64,7 @@ const users: userType[] = [
   },
   {
     id: uniqueId('#follow_'),
-    avatar: user5,
+    avatar: Juan,
     name: chance.name(),
     role: chance.profession(),
     country: chance.country({ full: true }),
@@ -72,7 +72,7 @@ const users: userType[] = [
   },
   {
     id: uniqueId('#follow_'),
-    avatar: user6,
+    avatar: Kiley,
     name: chance.name(),
     role: chance.profession(),
     country: chance.country({ full: true }),
@@ -80,7 +80,7 @@ const users: userType[] = [
   },
   {
     id: uniqueId('#follow_'),
-    avatar: user7,
+    avatar: olivia,
     name: chance.name(),
     role: chance.profession(),
     country: chance.country({ full: true }),
@@ -88,7 +88,7 @@ const users: userType[] = [
   },
   {
     id: uniqueId('#follow_'),
-    avatar: user8,
+    avatar: Reva,
     name: chance.name(),
     role: chance.profession(),
     country: chance.country({ full: true }),
@@ -96,7 +96,7 @@ const users: userType[] = [
   },
   {
     id: uniqueId('#follow_'),
-    avatar: user9,
+    avatar: ryan,
     name: chance.name(),
     role: chance.profession(),
     country: chance.country({ full: true }),
@@ -104,7 +104,7 @@ const users: userType[] = [
   },
   {
     id: uniqueId('#follow_'),
-    avatar: user10,
+    avatar: Dalton,
     name: chance.name(),
     role: chance.profession(),
     country: chance.country({ full: true }),
@@ -112,7 +112,7 @@ const users: userType[] = [
   },
   {
     id: uniqueId('#follow_'),
-    avatar: user5,
+    avatar: emily,
     name: chance.name(),
     role: chance.profession(),
     country: chance.country({ full: true }),
@@ -120,7 +120,7 @@ const users: userType[] = [
   },
   {
     id: uniqueId('#follow_'),
-    avatar: user2,
+    avatar: Janita,
     name: chance.name(),
     role: chance.profession(),
     country: chance.country({ full: true }),
@@ -128,7 +128,7 @@ const users: userType[] = [
   },
   {
     id: uniqueId('#follow_'),
-    avatar: user3,
+    avatar: jason,
     name: chance.name(),
     role: chance.profession(),
     country: chance.country({ full: true }),
@@ -136,7 +136,7 @@ const users: userType[] = [
   },
   {
     id: uniqueId('#follow_'),
-    avatar: user4,
+    avatar: Juan,
     name: chance.name(),
     role: chance.profession(),
     country: chance.country({ full: true }),
@@ -144,7 +144,7 @@ const users: userType[] = [
   },
   {
     id: uniqueId('#follow_'),
-    avatar: user5,
+    avatar: Kiley,
     name: chance.name(),
     role: chance.profession(),
     country: chance.country({ full: true }),
@@ -152,7 +152,7 @@ const users: userType[] = [
   },
   {
     id: uniqueId('#follow_'),
-    avatar: user6,
+    avatar: olivia,
     name: chance.name(),
     role: chance.profession(),
     country: chance.country({ full: true }),
@@ -160,7 +160,7 @@ const users: userType[] = [
   },
   {
     id: uniqueId('#follow_'),
-    avatar: user7,
+    avatar: Reva,
     name: chance.name(),
     role: chance.profession(),
     country: chance.country({ full: true }),
@@ -168,7 +168,7 @@ const users: userType[] = [
   },
   {
     id: uniqueId('#follow_'),
-    avatar: user8,
+    avatar: ryan,
     name: chance.name(),
     role: chance.profession(),
     country: chance.country({ full: true }),
@@ -176,7 +176,7 @@ const users: userType[] = [
   },
   {
     id: uniqueId('#follow_'),
-    avatar: user9,
+    avatar: Dalton,
     name: chance.name(),
     role: chance.profession(),
     country: chance.country({ full: true }),
@@ -184,7 +184,7 @@ const users: userType[] = [
   },
   {
     id: uniqueId('#follow_'),
-    avatar: user10,
+    avatar: emily,
     name: chance.name(),
     role: chance.profession(),
     country: chance.country({ full: true }),
@@ -287,6 +287,4 @@ export const UserDataHandlers = [
   }),
 ];
 
-
-export {users,gallery}
-
+export { users, gallery };

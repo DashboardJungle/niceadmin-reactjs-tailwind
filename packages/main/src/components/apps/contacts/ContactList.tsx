@@ -1,5 +1,5 @@
 
-import  { Dispatch, SetStateAction, useContext, useState } from "react";
+import { Dispatch, SetStateAction, useContext, useState } from "react";
 import { Icon } from "@iconify/react";
 import { Alert, Button, Modal, ModalBody, ModalHeader } from "flowbite-react";
 // @ts-ignore
@@ -10,6 +10,7 @@ import { ContactType } from "src/types/apps/contact";
 type ContactListProps = {
   openContact: Dispatch<SetStateAction<boolean>>;
 };
+
 
 function ContactList({ openContact }: ContactListProps) {
   const {
@@ -23,9 +24,11 @@ function ContactList({ openContact }: ContactListProps) {
     searchTerm,
     openModal,
     setOpenModal,
-  }: any = useContext(ContactContext);
 
-  const [ deleteContactId , setDeleteContactId] = useState(null);
+  }: any = useContext(ContactContext)
+
+  const [deleteContactId, setDeleteContactId] = useState(null);
+
 
   // Handle click on delete contact
   const handleDeleteClick = (contactId: number | any) => {
@@ -33,48 +36,48 @@ function ContactList({ openContact }: ContactListProps) {
     setOpenModal(true);
   };
 
+
   // Filter contacts based on selected department and search query
   const filterContacts = (
     contacts: ContactType[],
     selectedDepartment: string,
     search: string
   ): ContactType[] => {
-    let filteredContacts = [...contacts];
-
-    if (selectedDepartment !== "All") {
-      if (selectedDepartment === "Frequent") {
+    let filteredContacts = [...contacts]
+    if (selectedDepartment !== 'All') {
+      if (selectedDepartment === 'Frequent') {
         filteredContacts = filteredContacts.filter(
           (contact) => contact.frequentlycontacted
-        );
-      } else if (selectedDepartment === "Starred") {
+        )
+      } else if (selectedDepartment === 'Starred') {
         filteredContacts = filteredContacts.filter((contact) =>
           starredContacts.includes(contact.id)
-        );
+        )
       } else {
         filteredContacts = filteredContacts.filter(
           (contact) => contact.department === selectedDepartment
-        );
+        )
       }
     }
 
-    if (searchTerm.trim() !== "") {
-      const searchTermLower = search.toLowerCase();
+    if (searchTerm.trim() !== '') {
+      const searchTermLower = search.toLowerCase()
       filteredContacts = filteredContacts.filter(
         (contact) =>
           contact.firstname.toLowerCase().includes(searchTermLower) ||
           contact.lastname.toLowerCase().includes(searchTermLower)
-      );
+      )
     }
 
-    return filteredContacts;
-  };
+    return filteredContacts
+  }
 
   // Get filtered contacts based on selected department and search query
   const filteredContacts = filterContacts(
     contacts,
     selectedDepartment,
     searchTerm
-  );
+  )
 
   // Handle click on a contact to view details
   const handleContactClick = (contact: ContactType) => {
@@ -82,78 +85,75 @@ function ContactList({ openContact }: ContactListProps) {
   };
   return (
     <>
-      <SimpleBar className="max-h-[600px] h-[calc(100vh_-_100px)]">
-        <div className="border-right border-color-divider  h-full">
-          {selectedDepartment === "Starred" && filteredContacts.length === 0 ? (
-            <div className="px-6 pt-3">
+      <SimpleBar className='max-h-[600px] h-[calc(100vh-100px)]'>
+        <div className='border-right border-color-divider  h-full w-full'>
+          {selectedDepartment === 'Starred' && filteredContacts.length === 0 ? (
+            <div className='px-6 pt-3'>
               <Alert
-                color="lighterror"
+                color='lighterror'
                 icon={() => (
-                  <Icon icon="solar:info-circle-broken" height={18} />
-                )}
-              >
-                <span className="font-medium ms-3">No</span> starred contacts
+                  <Icon icon='solar:info-circle-broken' height={18} />
+                )}>
+                <span className='font-medium ms-3'>No</span> starred contacts
                 available.
               </Alert>
             </div>
-          ) : searchTerm !== "" && filteredContacts.length === 0 ? (
-            <div className="px-6 pt-3">
+          ) : searchTerm !== '' && filteredContacts.length === 0 ? (
+            <div className='px-6 pt-3'>
               <Alert
-                color="lighterror"
+                color='lighterror'
                 icon={() => (
-                  <Icon icon="solar:info-circle-broken" height={18} />
-                )}
-              >
-                <span className="font-medium ms-3">No</span> Contact found
+                  <Icon icon='solar:info-circle-broken' height={18} />
+                )}>
+                <span className='font-medium ms-3'>No</span> Contact found
               </Alert>
             </div>
           ) : (
             <div>
-              {filteredContacts.map((contact,index) => (
+              {filteredContacts.map((contact) => (
                 <div
-                  key={index}
-                  className={`cursor-pointer flex py-4 px-6 gap-3 items-center group bg-hover  ${selectedContact && selectedContact.id === contact.id
-                    ? "bg-lighthover dark:bg-darkmuted"
-                    : "bg-transparent"
+                  key={contact.id}
+                  className={`cursor-pointer flex my-1.5 py-4 px-6 gap-3 items-center group bg-hover  ${selectedContact && selectedContact.id === contact.id
+                    ? 'bg-lightprimary dark:bg-darkprimary'
+                    : 'bg-transparent'
                     }`}
                   onClick={() => {
-                    handleContactClick(contact);
+                    handleContactClick(contact)
                     openContact(true)
-                  }}
-                >
+                  }}>
                   <img
                     src={contact.image}
                     width={40}
                     height={40}
-                    alt="name"
-                    className="rounded-full"
+                    alt='name'
+                    className='rounded-full bg-black/20 dark:bg-white/20 pt-0.5'
                   />
                   <div>
-                    <h6 className="text-sm group-hover:text-primary">
+                    <h6 className='text-sm group-hover:text-primary dark:group-hover:text-white'>
                       {contact.firstname} {contact.lastname}
                     </h6>
-                    <p className="text-xs text-ld opacity-80 font-medium mt-0.5">
+                    <p className='text-xs text-ld opacity-80 font-medium mt-0.5'>
                       {contact.department}
                     </p>
                   </div>
 
-                  <div className="flex ms-auto">
+                  <div className='flex ms-auto'>
                     <div
-                      className="me-2"
-                      onClick={() => toggleStarred(contact.id)}
-                    >
+                      className='me-2'
+                      onClick={() => toggleStarred(contact.id)}>
                       {starredContacts.includes(contact.id) ? (
-                        <Icon icon='solar:star-bold'
-                          className="text-warning"
-                          height="15"
-                          fill="rgb(255, 193, 7)"
+                        <Icon
+                          icon='solar:star-bold'
+                          className='text-warning'
+                          height='15'
+                          fill='rgb(255, 193, 7)'
                         />
                       ) : (
-                        <Icon icon='solar:star-line-duotone' height="15" />
+                        <Icon icon='solar:star-line-duotone' height='15' />
                       )}
                     </div>
-                    <div onClick={() => handleDeleteClick(contact.id)}>
-                      <Icon icon="solar:trash-bin-2-outline" height={15} />
+                    <div onClick={() => handleDeleteClick(contact.id)} >
+                      <Icon icon='solar:trash-bin-2-outline' height={15} />
                     </div>
                   </div>
                 </div>
@@ -178,7 +178,8 @@ function ContactList({ openContact }: ContactListProps) {
             <div className="flex justify-center gap-4">
               <Button color='primary' onClick={() => {
                 deleteContact(deleteContactId);
-                setOpenModal(false)}}>
+                setOpenModal(false)
+              }}>
                 {"Yes"}
               </Button>
               <Button color={'error'} onClick={() => setOpenModal(false)}>
@@ -188,8 +189,9 @@ function ContactList({ openContact }: ContactListProps) {
           </div>
         </ModalBody>
       </Modal>
+
     </>
-  );
+  )
 }
 
-export default ContactList;
+export default ContactList

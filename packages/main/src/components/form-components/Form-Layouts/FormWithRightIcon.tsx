@@ -18,7 +18,7 @@ const FormWithRightIcon = () => {
               id="email4"
               type="email"
               rightIcon={() => <IconUser size={20} />}
-              placeholder="name@materialm.com"
+              placeholder="name@niceadmin.com"
               required
               className="!form-control"
             />
@@ -31,7 +31,7 @@ const FormWithRightIcon = () => {
               id="email4"
               type="email"
               rightIcon={() => <IconMail size={20} />}
-              placeholder="name@materialm.com"
+              placeholder="name@niceadmin.com"
               required
               className="!form-control"
             />

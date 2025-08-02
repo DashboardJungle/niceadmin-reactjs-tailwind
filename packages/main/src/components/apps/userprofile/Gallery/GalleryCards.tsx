@@ -1,4 +1,4 @@
-import  { useContext } from "react";
+import { useContext } from "react";
 import { TbDotsVertical } from "react-icons/tb";
 import { format } from "date-fns";
 import { Badge, Dropdown, DropdownItem, TextInput } from "flowbite-react";
@@ -24,55 +24,53 @@ const GalleryCards = () => {
 
   return (
     <>
-      <div className="md:flex justify-between mb-6">
-        <h5 className="text-2xl flex gap-3 items-center sm:my-0 my-4">
-          Gallery <Badge color={"secondary"}>{getPhotos.length}</Badge>
+      <div className='md:flex justify-between mb-6'>
+        <h5 className='text-2xl flex gap-3 items-center sm:my-0 my-4'>
+          Gallery <Badge color={'secondary'}>{getPhotos.length}</Badge>
         </h5>
         <TextInput
-          icon={() => <Icon icon="solar:magnifer-line-duotone" height={18} />}
-          type="text"
-          sizing="md"
-          className="form-control "
-          placeholder="Search Gallery"
+          icon={() => <Icon icon='solar:magnifer-line-duotone' height={18} />}
+          type='text'
+          sizing='md'
+          className='!form-control'
+          placeholder='Search Gallery'
           onChange={(e) => setSearchLocal(e.target.value)}
         />
       </div>
-      <div className="grid grid-cols-12 lg:gap-y-30 lg:gap-x-30 gap-y-30 gap-x-0">
+      <div className='grid grid-cols-12 gap-30'>
         {getPhotos.map((photo) => {
           return (
             <div
-              className="lg:col-span-4 md:col-span-4 sm:col-span-6 col-span-12"
-              key={photo.id}
-            >
-              <CardBox className="overflow-hidden p-0 card-hover">
-                <div className="h-[220px]  overflow-hidden">
+              className='lg:col-span-4 md:col-span-4 sm:col-span-6 col-span-12'
+              key={photo.id}>
+              <CardBox className='overflow-hidden p-0 card-hover'>
+                <div className='h-[220px]  overflow-hidden'>
                   <img
                     src={photo.cover}
                     height={220}
                     width={500}
-                    alt="gllery"
-                    className="object-center object-cover h-full"
+                    alt='gllery'
+                    className='object-center object-cover h-full'
                   />
                 </div>
-                <div className="pt-4 p-6 flex">
+                <div className='pt-4 p-6 flex'>
                   <div>
-                    <h6 className="text-sm">{photo.name}jpg</h6>
-                    <p className="text-xs font-medium text-darklink dark:text-bodytext">
-                      {" "}
-                      {format(new Date(photo.time), "E, MMM d, yyyy")}
+                    <h6 className='text-sm'>{photo.name}jpg</h6>
+                    <p className='text-xs font-medium text-black/70 dark:text-darklink'>
+                      {' '}
+                      {format(new Date(photo.time), 'E, MMM d, yyyy')}
                     </p>
                   </div>
-                  <div className="ms-auto">
+                  <div className='ms-auto'>
                     <Dropdown
-                      label=""
+                      label=''
                       dismissOnClick={false}
                       renderTrigger={() => (
-                        <span className="h-9 w-9 flex justify-center items-center rounded-full hover:bg-lightprimary hover:text-primary cursor-pointer">
+                        <span className='h-9 w-9 flex justify-center items-center rounded-full hover:bg-lightprimary dark:hover:bg-darkprimary hover:text-primary cursor-pointer'>
                           <TbDotsVertical size={22} />
                         </span>
-                      )}
-                    >
-                      <DropdownItem className="flex gap-3">
+                      )}>
+                      <DropdownItem className='flex gap-3'>
                         <span>{photo.name}.jpg</span>
                       </DropdownItem>
                     </Dropdown>
@@ -80,7 +78,7 @@ const GalleryCards = () => {
                 </div>
               </CardBox>
             </div>
-          );
+          )
         })}
       </div>
     </>

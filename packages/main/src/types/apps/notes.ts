@@ -1,7 +1,7 @@
-export interface NotesType {
-  id: number | undefined;
-  color?: string;
-  title?: string;
-  datef?: any | string;
+export interface notesType {
+  id: number;
+  color: string;
+  title: string;
+  datef: string;
   deleted: boolean;
 }

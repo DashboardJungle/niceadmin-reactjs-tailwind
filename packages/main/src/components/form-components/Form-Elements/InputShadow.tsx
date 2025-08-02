@@ -17,7 +17,7 @@ const InputShadow = () => {
             <TextInput
               id='email2'
               type='email'
-              placeholder='name@materialm.com'
+              placeholder='name@niceadmin.com'
               className='!form-control'
               required
               shadow

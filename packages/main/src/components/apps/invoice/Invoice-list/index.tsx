@@ -1,5 +1,4 @@
-
-import  { useContext, useState } from "react";
+import { useContext, useEffect, useState } from 'react'
 import {
   Checkbox,
   Table,
@@ -8,277 +7,455 @@ import {
   Modal,
   Badge,
   Tooltip,
+  ModalBody,
+  ModalFooter,
   TableBody,
   TableCell,
   TableHead,
   TableHeadCell,
   TableRow,
-  ModalBody,
-  ModalFooter,
-} from "flowbite-react";
+  Datepicker,
+} from 'flowbite-react'
 
-import { Icon } from "@iconify/react";
+import { Icon } from '@iconify/react'
+import { format } from 'date-fns'
+import { InvoiceContext } from 'src/context/InvoiceContext'
+import { Link } from 'react-router'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from 'src/components/shadcn-ui/Default-Ui/select'
 
-import { Link } from "react-router";
-import { InvoiceContext } from "src/context/InvoiceContext";
 
 function InvoiceList() {
-  const { invoices, deleteInvoice } = useContext(InvoiceContext);
-  const [searchTerm, setSearchTerm] = useState("");
-  const [activeTab, setActiveTab] = useState("All");
-  const [selectedProducts, setSelectedProducts] = useState<any>([]);
-  const [selectAll, setSelectAll] = useState(false);
-  const [openDeleteDialog, setOpenDeleteDialog] = useState(false);
+  const { invoices, deleteInvoice } = useContext(InvoiceContext)
+  const [searchTerm, setSearchTerm] = useState('')
+  const [activeTab, setActiveTab] = useState('All Invoice')
+  const [selectedProducts, setSelectedProducts] = useState<any>([])
+  const [selectAll, setSelectAll] = useState(false)
+  const [openDeleteDialog, setOpenDeleteDialog] = useState(false)
 
-  // Filter invoices based on search term
+  // pagination
+  const [currentPage, setCurrentPage] = useState(1)
+  const [itemsPerPage, setItemsPerPage] = useState(5)
+
+  //date
+  const [createdDateFilter, setCreatedDateFilter] = useState<Date | null>(null)
+  const [dueDateFilter, setDueDateFilter] = useState<Date | null>(null)
+
+
   const filteredInvoices = invoices.filter(
-    (invoice: { billFrom: string; billTo: string; status: string }) => {
-      return (
-        (invoice.billFrom.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          invoice.billTo.toLowerCase().includes(searchTerm.toLowerCase())) &&
-        (activeTab === "All" || invoice.status === activeTab)
-      );
-    }
-  );
+    (invoice: { billFrom: string; billTo: string; status: string; createdDate: Date; dueDate: Date }) => {
+      const matchesSearch =
+        invoice.billFrom.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        invoice.billTo.toLowerCase().includes(searchTerm.toLowerCase())
 
-  const handleTabClick = (tabName: string) => {
-    setActiveTab(tabName);
-  };
+      const matchesTab = activeTab === 'All Invoice' || invoice.status === activeTab
+
+      const matchesCreatedDate = createdDateFilter
+        ? new Date(invoice.createdDate).toDateString() === createdDateFilter.toDateString()
+        : true
+
+      const matchesDueDate = dueDateFilter
+        ? new Date(invoice.dueDate).toDateString() === dueDateFilter.toDateString()
+        : true
+
+      return matchesSearch && matchesTab && matchesCreatedDate && matchesDueDate
+    }
+  )
+
+
+  // pagination logic
+  const indexOfLastItem = currentPage * itemsPerPage
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage
+  const currentInvoices = filteredInvoices.slice(
+    indexOfFirstItem,
+    indexOfLastItem
+  )
+  const totalPages = Math.ceil(filteredInvoices.length / itemsPerPage)
+
+  useEffect(() => {
+    setCurrentPage(1)
+  }, [searchTerm, activeTab])
+
 
   // Calculate the counts for different statuses
-  const Shipped = invoices.filter((t: { status: string }) => t.status === "Shipped").length;
-  const Delivered = invoices.filter((t: { status: string }) => t.status === "Delivered").length;
-  const Pending = invoices.filter((t: { status: string }) => t.status === "Pending").length;
+  const Paid = invoices.filter(
+    (t: { status: string }) => t.status === 'Paid'
+  ).length
+  const Overdue = invoices.filter(
+    (t: { status: string }) => t.status === 'Overdue'
+  ).length
+  const Pending = invoices.filter(
+    (t: { status: string }) => t.status === 'Pending'
+  ).length
+  const Draft = invoices.filter(
+    (t: { status: string }) => t.status === 'Draft'
+  ).length
+
+  // filter status wise
+  const statusFilter = [
+    {
+      label: 'All Invoice',
+      count: invoices.length,
+      bgcolor: 'lightprimary',
+      darkbgcolor: 'darkprimary',
+      txtcolor: 'primary',
+    },
+    {
+      label: 'Paid',
+      count: Paid,
+      bgcolor: 'lightsuccess',
+      darkbgcolor: 'lightsuccess',
+      txtcolor: 'success',
+    },
+    {
+      label: 'Overdue',
+      count: Overdue,
+      bgcolor: 'lighterror',
+      darkbgcolor: 'lighterror',
+      txtcolor: 'error',
+    },
+    {
+      label: 'Pending',
+      count: Pending,
+      bgcolor: 'lightwarning',
+      darkbgcolor: 'lightwarning',
+      txtcolor: 'warning',
+    },
+    {
+      label: 'Draft',
+      count: Draft,
+      bgcolor: 'lightinfo',
+      darkbgcolor: 'lightinfo',
+      txtcolor: 'info',
+    },
+  ]
 
   // Toggle all checkboxes
   const toggleSelectAll = () => {
-    const selectAllValue = !selectAll;
-    setSelectAll(selectAllValue);
+    const selectAllValue = !selectAll
+    setSelectAll(selectAllValue)
     if (selectAllValue) {
-      setSelectedProducts(invoices.map((invoice: { id: any }) => invoice.id));
+      setSelectedProducts(invoices.map((invoice: { id: any }) => invoice.id))
     } else {
-      setSelectedProducts([]);
+      setSelectedProducts([])
     }
-  };
+  }
 
   // Toggle individual product selection
   const toggleSelectProduct = (productId: any) => {
-    const index = selectedProducts.indexOf(productId);
+    const index = selectedProducts.indexOf(productId)
     if (index === -1) {
-      setSelectedProducts([...selectedProducts, productId]);
+      setSelectedProducts([...selectedProducts, productId])
     } else {
-      setSelectedProducts(selectedProducts.filter((id: any) => id !== productId));
+      setSelectedProducts(
+        selectedProducts.filter((id: any) => id !== productId)
+      )
     }
-  };
+  }
 
   // Handle opening delete confirmation dialog
   const handleDelete = () => {
-    setOpenDeleteDialog(true);
-  };
+    setOpenDeleteDialog(true)
+  }
 
   // Handle confirming deletion of selected products
   const handleConfirmDelete = async () => {
     for (const productId of selectedProducts) {
-      await deleteInvoice(productId);
+      await deleteInvoice(productId)
     }
-    setSelectedProducts([]);
-    setSelectAll(false);
-    setOpenDeleteDialog(false);
-  };
+    setSelectedProducts([])
+    setSelectAll(false)
+    setOpenDeleteDialog(false)
+  }
 
   // Handle closing delete confirmation dialog
   const handleCloseDeleteDialog = () => {
-    setOpenDeleteDialog(false);
+    setOpenDeleteDialog(false)
+  }
+
+
+
+  const safeFormatDate = (date: string | Date) => {
+    if (!date) return '';
+    if (typeof date === 'string') {
+      return format(new Date(date), 'dd MMMM yyyy');
+    }
+    return format(date, 'dd MMMM yyyy');
   };
 
 
   return (
-    <div className="overflow-x-auto">
-      <div className="flex justify-between overflow-x-auto mb-8 gap-6 ">
-        {/* Summary sections */}
-        <div
-          className={`flex gap-3 items-center sm:w-3/12 w-full mb-2 cursor-pointer p-5 rounded-lg hover:bg-muted dark:hover:bg-darkmuted ${activeTab == "All" ? "bg-muted dark:bg-darkmuted" : null
-            }   `}
-          onClick={() => handleTabClick("All")}
-        >
-          <div className="h-14 w-14 rounded-full border-2 border-primary text-primary flex justify-center items-center">
-            <Icon icon="solar:tag-horizontal-broken" height={25} />
-          </div>
-          <div>
-            <h5 className="text-base">Total</h5>
-            <p className="text-ld opacity-80">{invoices.length} invoices</p>
-            <h6 className="text-sm">$46,218.04</h6>
-          </div>
+    <div className='overflow-x-auto'>
+      {/* filter & add invoice */}
+      <div className='flex lg:flex-row flex-col lg:items-center justify-between gap-4'>
+        <div className='flex items-center gap-4 flex-wrap lg:order-1 order-2'>
+          {statusFilter.map(
+            ({ label, count, bgcolor, darkbgcolor, txtcolor }) => (
+              <div
+                key={label}
+                className={`flex px-2 py-1.5 rounded-md items-center gap-2 ${activeTab === label
+                  ? 'text-black dark:text-white bg-lightprimary dark:bg-darkprimary'
+                  : 'text-black/60 dark:text-white/60 hover:bg-lightprimary hover:dark:bg-darkprimary'
+                  } hover:cursor-pointer`}
+                onClick={() => setActiveTab(label)}>
+                <p className='text-sm font-medium'>{label}</p>
+                <p
+                  className={`text-sm font-medium px-2.5 py-1 rounded-full bg-${bgcolor} dark:bg-${darkbgcolor} text-${txtcolor}`}>
+                  {count}
+                </p>
+              </div>
+            )
+          )}
         </div>
-        <div
-          className={`flex gap-3 items-center sm:w-3/12 w-full mb-2 cursor-pointer p-5 rounded-lg hover:bg-muted dark:hover:bg-darkmuted ${activeTab == "Shipped" ? "bg-muted dark:bg-darkmuted" : null
-            }`}
-          onClick={() => handleTabClick("Shipped")}
-        >
-          <div className="h-14 w-14 rounded-full border-2 border-success text-success flex justify-center items-center">
-            <Icon icon="solar:shield-up-linear" height={25} />
-          </div>
-          <div>
-            <h5 className="text-base">Shipped</h5>
-            <p className="text-ld opacity-80">{Shipped} invoices</p>
-            <h6 className="text-sm">$23,110.23</h6>
-          </div>
-        </div>
-        <div
-          className={`flex gap-3 items-center sm:w-3/12 w-full mb-2 cursor-pointer p-5 rounded-lg hover:bg-muted dark:hover:bg-darkmuted ${activeTab == "Delivered" ? "bg-muted dark:bg-darkmuted" : null
-            }`}
-          onClick={() => handleTabClick("Delivered")}
-        >
-          <div className="h-14 w-14 rounded-full border-2 border-secondary text-secondary flex justify-center items-center">
-            <Icon icon="solar:map-point-wave-linear" height={25} />
-          </div>
-          <div>
-            <h5 className="text-base">Delivered</h5>
-            <p className="text-ld opacity-80">{Delivered} invoices</p>
-            <h6 className="text-sm">$13,825.05</h6>
-          </div>
-        </div>
-        <div
-          className={`flex gap-3 items-center sm:w-3/12 w-full mb-2  cursor-pointer p-5 rounded-lg hover:bg-muted dark:hover:bg-darkmuted ${activeTab == "Pending" ? "bg-muted dark:bg-darkmuted" : null
-            }`}
-          onClick={() => handleTabClick("Pending")}
-        >
-          <div className="h-14 w-14 rounded-full border-2 border-warning text-warning flex justify-center items-center">
-            <Icon icon="solar:camera-rotate-broken" height={25} />
-          </div>
-          <div>
-            <h5 className="text-base">Pending</h5>
-            <p className="text-ld opacity-80">{Pending} invoices</p>
-            <h6 className="text-sm">$4,655.63</h6>
-          </div>
+        <div className='lg:order-2 order-1'>
+          <Button color={'primary'} className='sm:w-fit w-full sm:mt-0 mt-4'>
+            <Link to='/apps/invoice/create'>New Invoice</Link>
+          </Button>
         </div>
       </div>
-      <div className="sm:flex justify-between my-6">
+      {/* search & filter */}
+      <div className='flex sm:flex-row flex-col item-center gap-2 my-6'>
         <div>
           <TextInput
-            id="dis"
-            type="text"
-            className="form-control"
-            placeholder="search"
+            id='dis'
+            type='text'
+            className='!form-control'
+            placeholder='search'
             value={searchTerm}
-            icon={() => <Icon icon="solar:magnifer-line-duotone" height={18} />}
+            icon={() => <Icon icon='solar:magnifer-line-duotone' height={18} />}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
         </div>
-        <Button color={"primary"} className="sm:w-fit w-full sm:mt-0 mt-4">
-          <Link to="/apps/invoice/create">New Invoice</Link>
-        </Button>
+
+        <div>
+          <Datepicker
+            className='!form-control'
+            value={createdDateFilter}
+            onChange={(date: Date | null) => setCreatedDateFilter(date)}
+            placeholder='Created Date'
+          />
+        </div>
+        <div>
+          <Datepicker
+            className='!form-control'
+            value={dueDateFilter}
+            onChange={(date: Date | null) => setDueDateFilter(date)}
+            placeholder='Due Date'
+          />
+        </div>
       </div>
 
-      <div className="overflow-x-auto">
+      <div className='overflow-x-auto'>
         <Table hoverable>
-          <TableHead className="!bg-transparent" >
-            <TableHeadCell className="p-4">
-              <Checkbox
-                className="checkbox"
-                checked={selectAll}
-                onChange={toggleSelectAll}
-              />
-            </TableHeadCell>
-            <TableHeadCell>ID</TableHeadCell>
-            <TableHeadCell>BILL FROM</TableHeadCell>
-            <TableHeadCell>BILL TO</TableHeadCell>
-            <TableHeadCell>TOTAL COST</TableHeadCell>
-            <TableHeadCell>STATUS</TableHeadCell>
-            <TableHeadCell className="text-center">ACTION</TableHeadCell>
+          <TableHead>
+            <TableRow>
+              <TableHeadCell className='p-4'>
+                <Checkbox
+                  className='checkbox'
+                  checked={selectAll}
+                  onChange={toggleSelectAll}
+                />
+              </TableHeadCell>
+              <TableHeadCell>Id</TableHeadCell>
+              <TableHeadCell>Bill From</TableHeadCell>
+              <TableHeadCell>Bill To</TableHeadCell>
+              <TableHeadCell>Total Cost</TableHeadCell>
+              <TableHeadCell>Status</TableHeadCell>
+              <TableHeadCell>Created</TableHeadCell>
+              <TableHeadCell>Due</TableHeadCell>
+              <TableHeadCell className='text-center'>Action</TableHeadCell>
+            </TableRow>
           </TableHead>
-          <TableBody className="divide-y divide-border dark:divide-darkborder">
-            {filteredInvoices.map((invoice: {
-              id: any;
-              billFrom: any;
-              billTo: any;
-              totalCost: any;
-              status: any;
-            }) => {
-              console.log(decodeURIComponent(invoice.billFrom));
-              return (
+          <TableBody className='divide-y divide-border dark:divide-darkborder'>
+            {currentInvoices.map(
+              (invoice: {
+                id: any
+                billFrom: any
+                billTo: any
+                totalCost: any
+                status: any
+                createdDate: any
+                dueDate: any
+              }) => (
                 <TableRow key={invoice.id}>
-                  <TableCell className="p-4">
+                  <TableCell className='p-4'>
                     <Checkbox
-                      className="checkbox"
                       onChange={() => toggleSelectProduct(invoice.id)}
                       checked={selectedProducts.includes(invoice.id)}
                     />
                   </TableCell>
-                  <TableCell className="whitespace-nowrap">
-                    <h5 className="text-sm">{invoice.id}</h5>
+                  <TableCell className='whitespace-nowrap'>
+                    <h5 className='text-sm'>{invoice.id}</h5>
                   </TableCell>
                   <TableCell>
-                    <h5 className="text-sm">{invoice.billFrom}</h5>
+                    <h5 className='text-sm'>{invoice.billFrom}</h5>
                   </TableCell>
-                  <TableCell className="text-ld">{invoice.billTo}</TableCell>
-                  <TableCell className="text-ld">{invoice.totalCost}</TableCell>
+                  <TableCell className='text-ld'>{invoice.billTo}</TableCell>
+                  <TableCell className='text-ld'>{invoice.totalCost}</TableCell>
                   <TableCell>
-                    {invoice.status === "Shipped" ? (
-                      <Badge color="success">{invoice.status}</Badge>
-                    ) : invoice.status === "Delivered" ? (
-                      <Badge color="secondary">{invoice.status}</Badge>
-                    ) : invoice.status === "Pending" ? (
-                      <Badge color="warning">{invoice.status}</Badge>
-                    ) : (
-                      ""
-                    )}
+                    <Badge
+                      color={
+                        invoice.status === 'Paid'
+                          ? 'lightsuccess'
+                          : invoice.status === 'Overdue'
+                            ? 'lighterror'
+                            : invoice.status === 'Draft'
+                              ? 'lightinfo'
+                              : invoice.status === 'Pending'
+                                ? 'lightwarning'
+                                : 'gray'
+                      }>
+                      {invoice.status}
+                    </Badge>
                   </TableCell>
-                  <TableCell className="text-center">
-                    <div className="flex justify-center gap-3">
-                      <Tooltip content="Edit Invoice" placement="bottom">
-                        <Button className="btn-circle p-0 mb-2 bg-lightsuccess dark:bg-lightsuccess hover:text-white text-success dark:text-success hover:bg-success dark:hover:text-white dark:hover:bg-success">
-                          <Link to={`/apps/invoice/edit/${decodeURIComponent(invoice.billFrom)}`}>
-                            <Icon icon="solar:pen-outline" height={18} />
-                          </Link>
-                        </Button>
-                      </Tooltip>
-                      <Tooltip content="View Invoice" placement="bottom">
-                        <Button color={"lightprimary"} className="btn-circle p-0 mb-2 dark:text-primary dark:hover:text-white">
-                          <Link to={`/apps/invoice/detail/${decodeURIComponent(invoice.billFrom)}`}>
-                            <Icon icon="solar:eye-outline" height={18} />
-                          </Link>
-                        </Button>
-                      </Tooltip>
-                      <Tooltip content="Delete Invoice" placement="bottom">
+                  <TableCell className='text-ld'>
+                    {/* {format(new Date(invoice.createdDate), 'dd MMMM yyyy')} */}
+
+                    {safeFormatDate(invoice.createdDate)}
+                  </TableCell>
+                  <TableCell className='text-ld'>
+                    {/* {format(new Date(invoice.dueDate), 'dd MMMM yyyy')} */}
+                    {safeFormatDate(invoice.dueDate)}
+                  </TableCell>
+                  <TableCell className='text-center'>
+                    <div className='flex justify-center gap-3'>
+                      <Tooltip content='Edit Invoice' placement='bottom'>
                         <Button
-                          color={"lighterror"}
-                          className="btn-circle p-0 mb-2 dark:text-error dark:hover:text-white" 
+                          color={'lightsuccess'}
+                          className='h-8 w-8 p-0 mb-2 group rounded-full'>
+                          <Link to={`/apps/invoice/edit/${invoice.billFrom}`}>
+                            <Icon
+                              icon='solar:pen-outline'
+                              height={18}
+                              className='group-hover:text-white'
+                            />
+                          </Link>
+                        </Button>
+                      </Tooltip>
+                      <Tooltip content='View Invoice' placement='bottom'>
+                        <Button
+                          color={'lightprimary'}
+                          className='h-8 w-8 p-0 mb-2 group rounded-full'>
+                          <Link
+                            to={`/apps/invoice/detail/${invoice.billFrom}`}>
+                            <Icon
+                              icon='solar:eye-outline'
+                              height={18}
+                              className='group-hover:text-white'
+                            />
+                          </Link>
+                        </Button>
+                      </Tooltip>
+                      <Tooltip content='Delete Invoice' placement='bottom'>
+                        <Button
+                          color={'lighterror'}
+                          className='h-8 w-8 p-0 mb-2 group rounded-full'
                           onClick={() => {
-                            setSelectedProducts([invoice.id]);
-                            handleDelete();
-                          }}
-                        >
-                          <Icon icon="solar:trash-bin-minimalistic-outline" height={18} />
+                            setSelectedProducts([invoice.id])
+                            handleDelete()
+                          }}>
+                          <Icon
+                            icon='solar:trash-bin-minimalistic-outline'
+                            height={18}
+                            className='group-hover:text-white'
+                          />
                         </Button>
                       </Tooltip>
                     </div>
                   </TableCell>
                 </TableRow>
               )
-            })}
+            )}
           </TableBody>
         </Table>
       </div>
-      <Modal show={openDeleteDialog} onClose={handleCloseDeleteDialog} size={"md"}>
+
+      {/* pagination control */}
+      <div className='flex items-center justify-between flex-wrap mt-6 lg:gap-0 gap-2'>
+        {/* Rows per page selector */}
+        <div className='flex items-center gap-1'>
+          <p className='text-sm text-muted dark:text-lightgray'>Show</p>
+          <Select
+            value={String(itemsPerPage)}
+            onValueChange={(value) => {
+              setCurrentPage(1)
+              setItemsPerPage(Number(value))
+            }}>
+            <SelectTrigger className='w-fit me-0' aria-label='Rows per page'>
+              <SelectValue placeholder='Rows per page' />
+            </SelectTrigger>
+            <SelectContent>
+              {[5, 10, 20].map((item) => (
+                <SelectItem key={item} value={String(item)}>
+                  {item}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+          <p className='text-sm text-muted dark:text-lightgray'>per page</p>
+        </div>
+
+        {/* Page info and navigation */}
+        <div className='flex items-center gap-5'>
+          <p className='text-sm font-normal text-muted dark:text-lightgray'>
+            {filteredInvoices.length === 0
+              ? '0–0'
+              : `${indexOfFirstItem + 1}-${Math.min(
+                indexOfLastItem,
+                filteredInvoices.length
+              )}`}{' '}
+            of {filteredInvoices.length}
+          </p>
+          <div className='flex items-center gap-2'>
+            <Icon
+              icon='solar:arrow-left-line-duotone'
+              className={`text-dark dark:text-white hover:text-primary cursor-pointer ${currentPage === 1 ? 'opacity-50 !cursor-not-allowed' : ''
+                }`}
+              width={20}
+              height={20}
+              onClick={() =>
+                currentPage > 1 && setCurrentPage((prev) => prev - 1)
+              }
+            />
+            <span className='w-8 h-8 bg-lightprimary text-primary flex items-center justify-center rounded-md dark:bg-darkprimary dark:text-white text-sm font-normal'>
+              {currentPage}
+            </span>
+            <Icon
+              icon='solar:arrow-right-line-duotone'
+              className={`text-dark dark:text-white hover:text-primary cursor-pointer ${currentPage === totalPages
+                ? 'opacity-50 !cursor-not-allowed'
+                : ''
+                }`}
+              width={20}
+              height={20}
+              onClick={() =>
+                currentPage < totalPages && setCurrentPage((prev) => prev + 1)
+              }
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* delete modal */}
+      <Modal
+        show={openDeleteDialog}
+        onClose={handleCloseDeleteDialog}
+        size={'md'}>
         <ModalBody>
-          <p className="text-center text-lg text-ld">
+          <p className='text-center text-lg text-ld'>
             Are you sure you want to delete selected products?
           </p>
         </ModalBody>
-        <ModalFooter className="mx-auto">
-          <Button color="lighterror" onClick={handleCloseDeleteDialog}>
+        <ModalFooter className='mx-auto'>
+          <Button color='lighterror' onClick={handleCloseDeleteDialog}>
             Cancel
           </Button>
-          <Button color="error" onClick={handleConfirmDelete}>
+          <Button color='error' onClick={handleConfirmDelete}>
             Delete
           </Button>
         </ModalFooter>
       </Modal>
-    </div >
-  );
+    </div>
+  )
 }
 
-export default InvoiceList;
-
-
+export default InvoiceList

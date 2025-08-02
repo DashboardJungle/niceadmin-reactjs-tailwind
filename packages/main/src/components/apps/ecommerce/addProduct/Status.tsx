@@ -1,7 +1,7 @@
 
 import CardBox from "src/components/shared/CardBox";
 import { Badge, Label, Select } from "flowbite-react";
-import  { useState } from "react";
+import { useState } from "react";
 
 
 const Status = () => {
@@ -36,7 +36,7 @@ const Status = () => {
             <option value="Publish">Publish</option>
             <option value="Inactive">Inactive</option>
           </Select>
-          <small className="text-xs text-darklink dark:text-bodytext">
+          <small className="text-xs text-dark dark:text-darklink">
             Set the product status.
           </small>
         </div>

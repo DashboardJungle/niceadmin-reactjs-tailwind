@@ -1,6 +1,6 @@
 
 import { Icon } from "@iconify/react";
-import  { useState } from "react";
+import { useState } from "react";
 import OrderSummary from "./OrderSummary";
 import { Button } from "flowbite-react";
 import DeliveryOption from "./DeliveryOption";
@@ -21,9 +21,9 @@ const BillsAddress = ({ Discount, total }: any) => {
         <>
           <div className="grid grid-cols-12 gap-6">
             <div className="lg:col-span-4 col-span-12">
-              <OutlineCard className="shadow-none rounded-xl">
+              <OutlineCard className="shadow-none">
                 <h5 className="text-base">Johnathan Doe</h5>
-                <p className="text-xs text-darklink dark:text-bodytext my-3">
+                <p className="text-xs my-3">
                   E601 Vrundavan Heights, godrej garden city - 382481
                 </p>
                 <h6 className="flex gap-2 items-center text-base mb-4">
@@ -32,7 +32,7 @@ const BillsAddress = ({ Discount, total }: any) => {
                 </h6>
                 <Button
                   color={"outlineprimary"}
-                  className="w-fit  rounded-xl"
+                  className="w-fit"
                   onClick={toggleVisibility}
                 >
                   Deliver To this address
@@ -40,9 +40,9 @@ const BillsAddress = ({ Discount, total }: any) => {
               </OutlineCard>
             </div>
             <div className="lg:col-span-4 col-span-12">
-              <OutlineCard className="shadow-none rounded-xl">
+              <OutlineCard className="shadow-none">
                 <h5 className="text-base">ParleG Doe</h5>
-                <p className="text-xs text-darklink dark:text-bodytext my-3">
+                <p className="text-xs my-3">
                   D201 Galexy Heights, godrej garden city - 382481
                 </p>
                 <h6 className="flex gap-2 items-center text-base mb-4">
@@ -51,7 +51,7 @@ const BillsAddress = ({ Discount, total }: any) => {
                 </h6>
                 <Button
                   color={"outlineprimary"}
-                  className="w-fit rounded-xl"
+                  className="w-fit"
                   onClick={toggleVisibility}
                 >
                   Deliver To this address
@@ -59,9 +59,9 @@ const BillsAddress = ({ Discount, total }: any) => {
               </OutlineCard>
             </div>
             <div className="lg:col-span-4 col-span-12">
-              <OutlineCard className="shadow-none rounded-xl">
+              <OutlineCard className="shadow-none">
                 <h5 className="text-base">Guddu Bhaiya</h5>
-                <p className="text-xs text-darklink dark:text-bodytext my-3">
+                <p className="text-xs my-3">
                   Mumbai khao gali, Behind shukan, godrej garden city - 382481
                 </p>
                 <h6 className="flex gap-2 items-center text-base mb-4">
@@ -70,7 +70,7 @@ const BillsAddress = ({ Discount, total }: any) => {
                 </h6>
                 <Button
                   color={"outlineprimary"}
-                  className="w-fit  rounded-xl"
+                  className="w-fit"
                   onClick={toggleVisibility}
                 >
                   Deliver To this address

@@ -1,17 +1,17 @@
 
 // import { Icon } from "@iconify/react";
 // import React from "react";
-import {  useLocation, useNavigate } from "react-router";
+import { useLocation, useNavigate } from "react-router";
 import {
   TbUserCircle,
   TbHeart,
   TbUsers,
- TbPhotoPlus
+  TbPhotoPlus
 } from "react-icons/tb";
 
 // const MemoizedIcon = React.memo(Icon);
 const ProfileTab = () => {
-  const path = useLocation(); 
+  const path = useLocation();
   const location = path.pathname;
 
   const navigate = useNavigate();
@@ -38,22 +38,22 @@ const ProfileTab = () => {
     },
   ];
 
-  const IconWrapper = ({ icon: Icon, }:{icon:any}) => {
+  const IconWrapper = ({ icon: Icon, }: { icon: any }) => {
     return <Icon size={20} />;
   };
 
   return (
     <>
-      <div className="bg-lightprimary dark:bg-lightprimary -mt-2">
+      <div className="bg-lightprimary dark:bg-lightprimary -mt-2 ">
         <div className="flex justify-end ">
-          {ProfileTabs.map((tab,index) => (
+          {ProfileTabs.map((tab, index) => (
             <button
-            key={index}
+              key={index}
               onClick={() => navigate(tab.to)}
               className={
                 location === tab.to
-                  ? "flex gap-2 items-center px-4 py-3 border-b-2 border-primary text-primary"
-                  : "flex gap-2 items-center px-4 py-3 border-b-2 border-transparent text-ld opacity-80"
+                  ? "flex gap-2 items-center px-4 py-3 border-b-2 border-primary text-primary cursor-pointer"
+                  : "flex gap-2 items-center px-4 py-3 border-b-2 border-transparent text-ld opacity-80 cursor-pointer"
               }
             >
               <IconWrapper icon={tab.icon} />

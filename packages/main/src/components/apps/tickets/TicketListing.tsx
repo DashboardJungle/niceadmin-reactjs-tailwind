@@ -124,7 +124,7 @@ const TicketListing = () => {
                   </TableCell>
                   <TableCell className="max-w-md">
                     <h6 className="text-base truncate line-clamp-1">{ticket.ticketTitle}</h6>
-                    <p className="text-sm text-darklink dark:text-bodytext truncate line-clamp-1 text-wrap sm:max-w-56">
+                    <p className='text-sm text-black/70 dark:text-darklink truncate line-clamp-1 text-wrap sm:max-w-56'>
                       {ticket.ticketDescription}
                     </p>
                   </TableCell>
@@ -148,8 +148,8 @@ const TicketListing = () => {
                     </Badge>
                   </TableCell>
                   <TableCell className="whitespace-nowrap">
-                    <p className="text-sm text-darklink dark:text-bodytext">
-                      {format(new Date(ticket.Date), "E, MMM d")}
+                    <p className='text-sm text-black/70 dark:text-darklink'>
+                      {format(new Date(ticket.Date), 'E, MMM d')}
                     </p>
                   </TableCell>
                   <TableCell>

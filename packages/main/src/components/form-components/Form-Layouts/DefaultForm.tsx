@@ -34,7 +34,7 @@ const DefaultForm = () => {
             <TextInput
               id="email1"
               type="email"
-              placeholder="name@materialm.com"
+              placeholder="name@niceadmin.com"
               className="!form-control"
               required
             />

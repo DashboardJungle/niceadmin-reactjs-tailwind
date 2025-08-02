@@ -4,18 +4,18 @@ import { createContext, useState, useEffect } from 'react';
 import React from "react";
 import useSWR from 'swr';
 import { deleteFetcher, getFetcher, postFetcher, putFetcher } from 'src/api/globalFetcher';
-import { NotesType } from 'src/types/apps/notes';
+import { notesType } from 'src/types/apps/notes';
 
 
 
 // Define context type
 interface NotesContextType {
-    notes: NotesType[];
+    notes: notesType[];
     loading: boolean;
     error: Error | null;
     selectedNoteId: number;
     selectNote: (id: number) => void;
-    addNote: (newNote: NotesType) => Promise<void>;
+    addNote: (newNote: notesType) => Promise<void>;
     updateNote: (id: number, title: string, color: string) => Promise<void>;
     deleteNote: (id: number) => Promise<void>;
 }
@@ -37,7 +37,7 @@ export const NotesContext = createContext<NotesContextType>(initialContext);
 
 // Provider component
 export const NotesProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-    const [notes, setNotes] = useState<NotesType[]>(initialContext.notes);
+    const [notes, setNotes] = useState<notesType[]>(initialContext.notes);
     const [loading, setLoading] = useState<boolean>(initialContext.loading);
     const [error, setError] = useState<Error | null>(initialContext.error);
     const [selectedNoteId, setSelectedNoteId] = useState<number>(initialContext.selectedNoteId);
@@ -62,7 +62,7 @@ export const NotesProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     };
 
     // Add a new note
-    const addNote = async (newNote: NotesType) => {
+    const addNote = async (newNote: notesType) => {
         try {
             await mutate(postFetcher('/api/notes/add', newNote))
         } catch (error) {
@@ -74,7 +74,7 @@ export const NotesProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     const updateNote = async (id: number, title: string, color: string) => {
         try {
             await mutate(putFetcher('/api/notes/update', { id, title, color }));
-            
+
         } catch (error) {
             console.error('Error updating note:', error);
         }

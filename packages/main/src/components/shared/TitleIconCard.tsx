@@ -1,6 +1,6 @@
 
 import { Card, Button } from "flowbite-react";
-import  { useContext } from "react";
+import { useContext } from "react";
 import { Icon } from "@iconify/react";
 import { CustomizerContext } from "src/context/CustomizerContext";
 import React from "react";
@@ -19,16 +19,15 @@ const TitleIconCard: React.FC<TitleCardProps> = ({
   title,
   onDownload,
 }) => {
-  const {  isCardShadow, isBorderRadius } =
+  const { isCardShadow, isBorderRadius } =
     useContext(CustomizerContext);
 
   return (
     <Card
-      className={`card ${className} ${
-        isCardShadow
-          ? "dark:shadow-dark-md shadow-md p-0"
-          : "shadow-none border border-ld p-0"
-      }`}
+      className={`card ${className} ${isCardShadow
+        ? "dark:shadow-dark-md shadow-md p-0"
+        : "shadow-none border border-ld p-0"
+        }`}
       style={{
         borderRadius: `${isBorderRadius}px`,
       }}

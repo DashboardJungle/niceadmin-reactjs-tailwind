@@ -24,7 +24,7 @@ const GeneralDetail = () => {
             className="form-control"
             placeholder="Product Name"
           />
-          <small className="text-xs text-darklink dark:text-bodytext">
+          <small className='text-xs text-black dark:text-darklink'>
             A product name is required and recommended to be unique.
           </small>
         </div>
@@ -32,8 +32,8 @@ const GeneralDetail = () => {
           <div className="mb-2 block">
             <Label htmlFor="desc" >Description</Label>
           </div>
-           <TiptapEdit/>
-          <small className="text-xs text-darklink dark:text-bodytext">
+          <TiptapEdit />
+          <small className="text-xs text-black dark:text-darklink">
             Set a description to the product for better visibility.
           </small>
         </div>
