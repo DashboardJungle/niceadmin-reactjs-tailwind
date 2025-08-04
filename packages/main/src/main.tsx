@@ -18,10 +18,14 @@ async function deferRender() {
 deferRender().then(() => {
   createRoot(document.getElementById('root')!).render(
     <CustomizerContextProvider>
+
       <Suspense fallback={<Spinner />}>
+
         <App />
+
       </Suspense>
-    </CustomizerContextProvider>
+
+    </CustomizerContextProvider >
 
   )
 })

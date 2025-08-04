@@ -184,6 +184,12 @@ const SidebarContent: MenuItem[] = [
     heading: 'Pages',
     children: [
       {
+        name: 'Landing Page',
+        id: uniqueId(),
+        icon: 'solar:tablet-linear',
+        url: '/landingpage',
+      },
+      {
         name: 'Roll Base Access',
         id: uniqueId(),
         icon: 'solar:accessibility-broken',
@@ -487,7 +493,7 @@ const SidebarContent: MenuItem[] = [
         name: 'UI Components',
         icon: 'solar:widget-5-line-duotone',
         id: uniqueId(),
-        url: '/ComponentPage/ui-components/flowbite/buttons',
+        url: '/componentpage/ui-components/flowbite/buttons',
       },
     ],
   },

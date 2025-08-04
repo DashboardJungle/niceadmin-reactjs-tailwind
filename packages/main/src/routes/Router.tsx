@@ -158,6 +158,19 @@ const LineChart = Loadable(lazy(() => import('../views/charts/LineChart')));
 const SolarIcon = Loadable(lazy(() => import('../views/icons/SolarIcon')));
 const TablerIcon = Loadable(lazy(() => import('../views/icons/TablerIcon')));
 
+
+// landingpage
+const Landingpage = Loadable(lazy(() => import('../views/pages/landingpage/Landingpage')));
+
+
+
+
+const ComponentLayout = Loadable(lazy(() => import('../views/componentpage/index')));
+const Buttonlayout = Loadable(lazy(() => import('../views/componentpage/ui-components/flowbite/buttons/page')));
+
+
+
+
 const Error = Loadable(lazy(() => import('../views/authentication/Error')));
 
 const Router = [
@@ -272,6 +285,19 @@ const Router = [
     path: '/',
     element: <BlankLayout />,
     children: [
+      { path: '/landingpage', element: <Landingpage /> },
+
+
+      {
+        path: 'componentpage',
+        element: <ComponentLayout />,
+        children: [
+          { path: 'ui-components/flowbite/buttons', element: <Buttonlayout /> },
+          { path: 'ui-components/flowbite/button-group', element: <Buttonlayout /> },
+
+        ],
+      },
+
       { path: '/auth/auth1/login', element: <Login /> },
       { path: '/auth/auth2/login', element: <Login2 /> },
       { path: '/auth/auth1/register', element: <Register /> },
