@@ -87,14 +87,76 @@ const HeadlessSwitch = Loadable(lazy(() => import('../views/headless-form/Switch
 const HeadlessTextarea = Loadable(lazy(() => import('../views/headless-form/TextareaForm')));
 
 
+// widget
+const WidgetCards = Loadable(lazy(() => import('../views/widgets/cards/WidgetCards')));
+const WidgetBanners = Loadable(lazy(() => import('../views/widgets/banners/WidgetBanners')));
+const WidgetCharts = Loadable(lazy(() => import('../views/widgets/charts/WidgetCharts')));
 
 // authentication
 const Login = Loadable(lazy(() => import('../views/authentication/auth1/Login')));
+const Login2 = Loadable(lazy(() => import('../views/authentication/auth2/Login')));
+
 const Register = Loadable(lazy(() => import('../views/authentication/auth1/Register')));
+const Register2 = Loadable(lazy(() => import('../views/authentication/auth2/Register')));
+
 const ForgotPassword = Loadable(lazy(() => import('../views/authentication/auth1/ForgotPassword')));
+const ForgotPassword2 = Loadable(
+  lazy(() => import('../views/authentication/auth2/ForgotPassword')),
+);
+
 const TwoSteps = Loadable(lazy(() => import('../views/authentication/auth1/TwoSteps')));
+const TwoSteps2 = Loadable(lazy(() => import('../views/authentication/auth2/TwoSteps')));
+
+
 const Maintainance = Loadable(lazy(() => import('../views/authentication/Maintainance')));
 // const SamplePage = Loadable(lazy(() => import('../views/sample-page/SamplePage')));
+
+
+//Flowbite table
+const FlowbiteBasicTable = Loadable(lazy(() => import('../views/flowbite-tables/FlowbiteBasicTable')));
+const FlowbiteCheckboxTable = Loadable(lazy(() => import('../views/flowbite-tables/FlowbiteCheckboxTable')));
+const FlowbiteHoverTable = Loadable(lazy(() => import('../views/flowbite-tables/FlowbiteHoverTable')));
+const FlowbiteStripedTable = Loadable(lazy(() => import('../views/flowbite-tables/FlowbiteStripedTable')));
+
+//shadcn table
+
+const ShadcnTable = Loadable(lazy(() => import('../views/shadcn-tables/basic/ShadcnTable')));
+
+//react tables
+const ReactBasicTable = Loadable(lazy(() => import('../views/react-tables/basic/Basic')));
+const ReactColumnVisibilityTable = Loadable(
+  lazy(() => import('../views/react-tables/columnvisibility/Columnvisibility')),
+);
+const ReactDenseTable = Loadable(lazy(() => import('../views/react-tables/dense/Dense')));
+const ReactDragDropTable = Loadable(lazy(() => import('../views/react-tables/drag-drop/DragDrop')));
+const ReactEditableTable = Loadable(lazy(() => import('../views/react-tables/editable/Editable')));
+const ReactEmptyTable = Loadable(lazy(() => import('../views/react-tables/empty/Empty')));
+const ReactExpandingTable = Loadable(lazy(() => import('../views/react-tables/expanding/Expanding')));
+const ReactFilterTable = Loadable(lazy(() => import('../views/react-tables/filtering/Filtering')));
+const ReactPaginationTable = Loadable(lazy(() => import('../views/react-tables/pagination/Pagination')));
+const ReactRowSelectionTable = Loadable(
+  lazy(() => import('../views/react-tables/row-selection/RowSelection')),
+);
+const ReactSortingTable = Loadable(lazy(() => import('../views/react-tables/sorting/Sorting')));
+const ReactStickyTable = Loadable(lazy(() => import('../views/react-tables/sticky/Sticky')));
+
+const ReactOrderTable = Loadable(lazy(() => import('../views/react-tables/order-datatable/OrderTable')));
+const ReactUserTable = Loadable(lazy(() => import('../views/react-tables/user-datatable/UserTable')));
+
+
+// charts
+const AreaChart = Loadable(lazy(() => import('../views/charts/AreaChart')));
+const CandlestickChart = Loadable(lazy(() => import('../views/charts/CandlestickChart')));
+const ColumnChart = Loadable(lazy(() => import('../views/charts/ColumnChart')));
+const DoughnutChart = Loadable(lazy(() => import('../views/charts/DoughnutChart')));
+const GredientChart = Loadable(lazy(() => import('../views/charts/GredientChart')));
+const RadialbarChart = Loadable(lazy(() => import('../views/charts/RadialbarChart')));
+const LineChart = Loadable(lazy(() => import('../views/charts/LineChart')));
+
+
+// icons
+const SolarIcon = Loadable(lazy(() => import('../views/icons/SolarIcon')));
+const TablerIcon = Loadable(lazy(() => import('../views/icons/TablerIcon')));
 
 const Error = Loadable(lazy(() => import('../views/authentication/Error')));
 
@@ -164,8 +226,45 @@ const Router = [
       { path: '/headless-form/textarea', element: <HeadlessTextarea /> },
 
 
+      { path: '/widgets/cards', element: <WidgetCards /> },
+      { path: '/widgets/banners', element: <WidgetBanners /> },
+      { path: '/widgets/charts', element: <WidgetCharts /> },
+
+      { path: '/tables/basic', element: <FlowbiteBasicTable /> },
+      { path: '/tables/checkbox-table', element: <FlowbiteCheckboxTable /> },
+      { path: '/tables/hover-table', element: <FlowbiteHoverTable /> },
+      { path: '/tables/striped-row', element: <FlowbiteStripedTable /> },
 
 
+      { path: '/shadcn-tables/basic', element: <ShadcnTable /> },
+
+
+
+      { path: '/react-tables/basic', element: <ReactBasicTable /> },
+      { path: '/react-tables/columnvisibility', element: <ReactColumnVisibilityTable /> },
+      { path: '/react-tables/drag-drop', element: <ReactDragDropTable /> },
+      { path: '/react-tables/dense', element: <ReactDenseTable /> },
+      { path: '/react-tables/editable', element: <ReactEditableTable /> },
+      { path: '/react-tables/empty', element: <ReactEmptyTable /> },
+      { path: '/react-tables/expanding', element: <ReactExpandingTable /> },
+      { path: '/react-tables/filtering', element: <ReactFilterTable /> },
+      { path: '/react-tables/pagination', element: <ReactPaginationTable /> },
+      { path: '/react-tables/row-selection', element: <ReactRowSelectionTable /> },
+      { path: '/react-tables/sorting', element: <ReactSortingTable /> },
+      { path: '/react-tables/sticky', element: <ReactStickyTable /> },
+      { path: '/react-tables/order-datatable', element: <ReactOrderTable /> },
+      { path: '/react-tables/user-datatable', element: <ReactUserTable /> },
+
+      { path: '/charts/area', element: <AreaChart /> },
+      { path: '/charts/line', element: <LineChart /> },
+      { path: '/charts/gradient', element: <GredientChart /> },
+      { path: '/charts/candlestick', element: <CandlestickChart /> },
+      { path: '/charts/column', element: <ColumnChart /> },
+      { path: '/charts/doughnut', element: <DoughnutChart /> },
+      { path: '/charts/radialbar', element: <RadialbarChart /> },
+
+      { path: '/icons/iconify', element: <SolarIcon /> },
+      { path: '/icons/tabler', element: <TablerIcon /> },
 
     ],
   },
@@ -174,10 +273,17 @@ const Router = [
     element: <BlankLayout />,
     children: [
       { path: '/auth/auth1/login', element: <Login /> },
+      { path: '/auth/auth2/login', element: <Login2 /> },
       { path: '/auth/auth1/register', element: <Register /> },
+      { path: '/auth/auth2/register', element: <Register2 /> },
       { path: '/auth/auth1/forgot-password', element: <ForgotPassword /> },
+      { path: '/auth/auth2/forgot-password', element: <ForgotPassword2 /> },
+
       { path: '/auth/auth1/two-steps', element: <TwoSteps /> },
+      { path: '/auth/auth2/two-steps', element: <TwoSteps2 /> },
+
       { path: '/auth/maintenance', element: <Maintainance /> },
+
       { path: '404', element: <Error /> },
       { path: '/auth/404', element: <Error /> },
       { path: '*', element: <Navigate to="/auth/404" /> },

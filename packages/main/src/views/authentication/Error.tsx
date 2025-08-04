@@ -7,7 +7,7 @@ const Error = () => (
   <>
     <div className="h-screen flex items-center justify-center bg-white dark:bg-black">
       <div className="text-center">
-        <img src={ErrorImg} alt="error" className="mb-20" style={{ width: "200px" }} />
+        <img src={ErrorImg} alt="error" className="mb-20" width={500} />
         <h1 className="text-ld text-4xl mb-6">Opps!!!</h1>
         <h6 className="text-xl text-ld">
           This page you are looking for could not be found.
