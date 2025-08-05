@@ -65,7 +65,7 @@ const ContactAdd = () => {
         Add New Contact
       </Button>
       <Modal show={show} onClose={handleClose}>
-        <ModalHeader className='pb-0'>
+        <ModalHeader>
           <span className='text-link dark:text-darklink'>Add New Contact</span>
         </ModalHeader>
         <ModalBody>

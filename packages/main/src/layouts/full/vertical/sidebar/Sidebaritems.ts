@@ -49,6 +49,16 @@ const SidebarContent: MenuItem[] = [
             name: 'Blog Detail',
             url: '/apps/blog/detail/streaming-video-way-before-it-was-cool-go-dark-tomorrow',
           },
+          {
+            id: uniqueId(),
+            name: 'Add Blog',
+            url: '/apps/blog/addblog',
+          },
+          {
+            id: uniqueId(),
+            name: 'Edit Blog',
+            url: '/apps/blog/editblog',
+          },
         ],
       },
       {

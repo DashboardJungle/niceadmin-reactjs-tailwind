@@ -33,6 +33,9 @@ const EcomProductCheckout = Loadable(
 );
 const Blog = Loadable(lazy(() => import('../views/apps/blog/Blog')));
 const BlogDetail = Loadable(lazy(() => import('../views/apps/blog/BlogDetail')));
+const BlogAdd = Loadable(lazy(() => import('../views/apps/blog/BlogAdd')));
+const BlogEdit = Loadable(lazy(() => import('../views/apps/blog/BlogEdit')));
+
 const Chats = Loadable(lazy(() => import('../views/apps/chat/Chats')));
 const UserProfile = Loadable(lazy(() => import('../views/apps/user-profile/UserProfile')));
 const Followers = Loadable(lazy(() => import('../views/apps/user-profile/Followers')));
@@ -254,6 +257,9 @@ const Router = [
       { path: '/apps/ecommerce/detail/:id', element: <EcommerceDetail /> },
       { path: '/apps/blog/post', element: <Blog /> },
       { path: '/apps/blog/detail/:id', element: <BlogDetail /> },
+      { path: '/apps/blog/addblog', element: <BlogAdd /> },
+      { path: '/apps/blog/editblog', element: <BlogEdit /> },
+
       { path: '/apps/chats', element: <Chats /> },
       { path: '/apps/user-profile/profile', element: <UserProfile /> },
       { path: '/apps/user-profile/followers', element: <Followers /> },
