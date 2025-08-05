@@ -6,7 +6,7 @@ import {
   MegaMenu,
   MegaMenuDropdown,
   MegaMenuDropdownToggle,
-  Navbar,
+
   NavbarCollapse,
   NavbarLink,
   NavbarToggle,

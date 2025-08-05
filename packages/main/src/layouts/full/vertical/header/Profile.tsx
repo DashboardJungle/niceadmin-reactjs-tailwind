@@ -4,17 +4,24 @@ import { Button, Drawer, DrawerItems } from "flowbite-react";
 import SimpleBar from "simplebar-react";
 import user1 from "/src/assets//images/profile/user-1.jpg"
 
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { useContext, useEffect } from "react";
 import { CustomizerContext } from "src/context/CustomizerContext";
 import sidebarBg from 'src/assets/images/backgrounds/first-steps.png'
 import { v4 as uuidv4 } from 'uuid'
+import { AuthContext } from "src/context/AuthContext";
 
 
 const Profile = () => {
   const { isProfileDrawerOpen, setIsProfileDrawerOpen } =
     useContext(CustomizerContext)
 
+
+  const navigate = useNavigate();
+  const { logout, user } = useContext(AuthContext);
+  const userName = user?.displayName || "Cameron";
+
+  const userEmail = user?.email || 'info@niceadmin.com';
 
   useEffect(() => {
     if (isProfileDrawerOpen) {
@@ -26,6 +33,11 @@ const Profile = () => {
       document.body.style.overflow = '';
     };
   }, [isProfileDrawerOpen]);
+
+  const handleLogout = async () => {
+    logout();
+    navigate("/auth/auth1/login");
+  };
 
 
   const profileItems = [
@@ -96,13 +108,13 @@ const Profile = () => {
               className='rounded-full'
             />
             <div className='flex flex-col items-center gap-1'>
-              <h5 className='card-title leading-none'>Cameron</h5>
+              <h5 className='card-title leading-none'>  {userName}</h5>
               <p className='text-bodytext dark:text-lightgray mb-0 mt-1 flex items-center'>
                 <Icon
                   icon='solar:mailbox-line-duotone'
                   className='text-base me-1'
                 />
-                info@niceadmin.com
+                {userEmail}
               </p>
             </div>
           </div>
@@ -148,8 +160,7 @@ const Profile = () => {
         </SimpleBar>
         <div className='mx-6 my-5'>
           <Button color='primary' className='w-full'
-            as={Link}
-            to="/auth/auth1/login"
+            onClick={handleLogout}
           >
             Log out
           </Button>

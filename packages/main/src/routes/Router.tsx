@@ -74,7 +74,7 @@ const ShadcnCheckbox = Loadable(lazy(() => import('../views/shadcn-form/ShadcnCh
 const ShadcnRadio = Loadable(lazy(() => import('../views/shadcn-form/ShadcnRadio')));
 const ShadcnSelect = Loadable(lazy(() => import('../views/shadcn-form/ShadcnSelect')));
 
-//Headless  Forms
+// //Headless  Forms
 const HeadlessButton = Loadable(lazy(() => import('../views/headless-form/ButtonForm')));
 const HeadlessCheckbox = Loadable(lazy(() => import('../views/headless-form/CheckboxForm')));
 const HeadlessCombobox = Loadable(lazy(() => import('../views/headless-form/ComboboxForm')));
@@ -163,10 +163,70 @@ const TablerIcon = Loadable(lazy(() => import('../views/icons/TablerIcon')));
 const Landingpage = Loadable(lazy(() => import('../views/pages/landingpage/Landingpage')));
 
 
+// Shadcn-ui
+const ShadcnButton = Loadable(lazy(() => import('../views/shadcn-ui/ShadcnButton')));
+const ShadcnBadge = Loadable(lazy(() => import('../views/shadcn-ui/ShadcnBadge')));
+const ShadcnDropdown = Loadable(lazy(() => import('../views/shadcn-ui/ShadcnDropdown')));
+const ShadcnDialog = Loadable(lazy(() => import('../views/shadcn-ui/ShadcnDialog')));
+const ShadcnAlert = Loadable(lazy(() => import('../views/shadcn-ui/ShadcnAlert')));
+const ShadcnBreadcrumb = Loadable(lazy(() => import('../views/shadcn-ui/ShadcnBreadcrumb')));
+const ShadcnCurosel = Loadable(lazy(() => import('../views/shadcn-ui/ShadcnCurosel')));
+const ShadcnCard = Loadable(lazy(() => import('../views/shadcn-ui/ShadcnCard')));
+const ShadcnDatepicker = Loadable(lazy(() => import('../views/shadcn-ui/ShadcnDatepicker')));
+const ShadcnCombobox = Loadable(lazy(() => import('../views/shadcn-ui/ShadcnCombobox')));
+const ShadcnCollapsible = Loadable(lazy(() => import('../views/shadcn-ui/ShadcnCollapsible')));
+const ShadcnCommand = Loadable(lazy(() => import('../views/shadcn-ui/ShadcnCommand')));
+const ShadcnSkeleton = Loadable(lazy(() => import('../views/shadcn-ui/ShadcnSkeleton')));
+const ShadcnAvatar = Loadable(lazy(() => import('../views/shadcn-ui/ShadcnAvatar')));
+const ShadcnTooltip = Loadable(lazy(() => import('../views/shadcn-ui/ShadcnTooltip')));
+const ShadcnAccordion = Loadable(lazy(() => import('../views/shadcn-ui/ShadcnAccordion')));
+const ShadcnTab = Loadable(lazy(() => import('../views/shadcn-ui/ShadcnTab')));
+const ShadcnProgress = Loadable(lazy(() => import('../views/shadcn-ui/ShadcnProgress')));
+const ShadcnDrawer = Loadable(lazy(() => import('../views/shadcn-ui/ShadcnDrawer')));
+const ShadcnToast = Loadable(lazy(() => import('../views/shadcn-ui/ShadcnToast')));
 
 
-const ComponentLayout = Loadable(lazy(() => import('../views/componentpage/index')));
-const Buttonlayout = Loadable(lazy(() => import('../views/componentpage/ui-components/flowbite/buttons/page')));
+
+// headless-ui
+const Dialog = Loadable(lazy(() => import('../views/headless-ui/Dialog')));
+const Disclosure = Loadable(lazy(() => import('../views/headless-ui/Disclosure')));
+const Dropdown = Loadable(lazy(() => import('../views/headless-ui/Dropdown')));
+const Popover = Loadable(lazy(() => import('../views/headless-ui/Popover')));
+const Tabs = Loadable(lazy(() => import('../views/headless-ui/Tabs')));
+const Transition = Loadable(lazy(() => import('../views/headless-ui/Transition')));
+
+// ui components
+const FlowbiteAccordion = Loadable(lazy(() => import('../views/ui-components/FlowbiteAccordion')));
+const FlowbiteAlert = Loadable(lazy(() => import('../views/ui-components/FlowbiteAlert')));
+const FlowbiteAvatar = Loadable(lazy(() => import('../views/ui-components/FlowbiteAvatar')));
+const FlowbiteBadge = Loadable(lazy(() => import('../views/ui-components/FlowbiteBadge')));
+const FlowbiteBanner = Loadable(lazy(() => import('../views/ui-components/FlowbiteBanner')));
+const FlowbiteBreadcrumb = Loadable(lazy(() => import('../views/ui-components/FlowbiteBreadcrumb')));
+const FlowbiteButtonGroup = Loadable(lazy(() => import('../views/ui-components/FlowbiteButtonGroup')));
+const FlowbiteButtons = Loadable(lazy(() => import('../views/ui-components/FlowbiteButtons')));
+const FlowbiteCard = Loadable(lazy(() => import('../views/ui-components/FlowbiteCard')));
+const FlowbiteCarousel = Loadable(lazy(() => import('../views/ui-components/FlowbiteCarousel')));
+const FlowbiteDatePicker = Loadable(lazy(() => import('../views/ui-components/FlowbiteDatePicker')));
+const FlowbiteDrawer = Loadable(lazy(() => import('../views/ui-components/FlowbiteDrawer')));
+const FlowbiteDropdown = Loadable(lazy(() => import('../views/ui-components/FlowbiteDropdown')));
+const FlowbiteFooter = Loadable(lazy(() => import('../views/ui-components/FlowbiteFooter')));
+const FlowbiteKbd = Loadable(lazy(() => import('../views/ui-components/FlowbiteKbd')));
+const FlowbiteListgroup = Loadable(lazy(() => import('../views/ui-components/FlowbiteListgroup')));
+const FlowbiteMegamenu = Loadable(lazy(() => import('../views/ui-components/FlowbiteMegamenu')));
+const FlowbiteModals = Loadable(lazy(() => import('../views/ui-components/FlowbiteModals')));
+const FlowbiteNavbar = Loadable(lazy(() => import('../views/ui-components/FlowbiteNavbar')));
+const FlowbitePagination = Loadable(lazy(() => import('../views/ui-components/FlowbitePagination')));
+const FlowbitePopover = Loadable(lazy(() => import('../views/ui-components/FlowbitePopover')));
+const FlowbiteProgressbar = Loadable(lazy(() => import('../views/ui-components/FlowbiteProgressbar')));
+const FlowbiteRating = Loadable(lazy(() => import('../views/ui-components/FlowbiteRating')));
+const FlowbiteSidebar = Loadable(lazy(() => import('../views/ui-components/FlowbiteSidebar')));
+const FlowbiteSpinner = Loadable(lazy(() => import('../views/ui-components/FlowbiteSpinner')));
+const FlowbiteTab = Loadable(lazy(() => import('../views/ui-components/FlowbiteTab')));
+const FlowbiteTables = Loadable(lazy(() => import('../views/ui-components/FlowbiteTables')));
+const FlowbiteTimeline = Loadable(lazy(() => import('../views/ui-components/FlowbiteTimeline')));
+const FlowbiteToast = Loadable(lazy(() => import('../views/ui-components/FlowbiteToast')));
+const FlowbiteTooltip = Loadable(lazy(() => import('../views/ui-components/FlowbiteTooltip')));
+const FlowbiteTypography = Loadable(lazy(() => import('../views/ui-components/FlowbiteTypography')));
 
 
 
@@ -279,6 +339,81 @@ const Router = [
       { path: '/icons/iconify', element: <SolarIcon /> },
       { path: '/icons/tabler', element: <TablerIcon /> },
 
+
+      /*Shadcn-ui*/
+      { path: '/shadcn-ui/buttons', element: <ShadcnButton /> },
+      { path: '/shadcn-ui/badge', element: <ShadcnBadge /> },
+      { path: '/shadcn-ui/dropdown', element: <ShadcnDropdown /> },
+      { path: '/shadcn-ui/dialogs', element: <ShadcnDialog /> },
+      { path: '/shadcn-ui/alert', element: <ShadcnAlert /> },
+      { path: '/shadcn-ui/toast', element: <ShadcnToast /> },
+      { path: '/shadcn-ui/breadcrumb', element: <ShadcnBreadcrumb /> },
+      { path: '/shadcn-ui/carousel', element: <ShadcnCurosel /> },
+      { path: '/shadcn-ui/card', element: <ShadcnCard /> },
+      { path: '/shadcn-ui/datepicker', element: <ShadcnDatepicker /> },
+      { path: '/shadcn-ui/combobox', element: <ShadcnCombobox /> },
+      { path: '/shadcn-ui/collapsible', element: <ShadcnCollapsible /> },
+      { path: '/shadcn-ui/command', element: <ShadcnCommand /> },
+      { path: '/shadcn-ui/skeleton', element: <ShadcnSkeleton /> },
+      { path: '/shadcn-ui/avatar', element: <ShadcnAvatar /> },
+      { path: '/shadcn-ui/tooltip', element: <ShadcnTooltip /> },
+      { path: '/shadcn-ui/accordion', element: <ShadcnAccordion /> },
+      { path: '/shadcn-ui/tab', element: <ShadcnTab /> },
+      { path: '/shadcn-ui/progressbar', element: <ShadcnProgress /> },
+      { path: '/shadcn-ui/drawer', element: <ShadcnDrawer /> },
+
+
+      { path: '/headless-form/buttons', element: <HeadlessButton /> },
+      { path: '/headless-form/checkbox', element: <HeadlessCheckbox /> },
+      { path: '/headless-form/combobox', element: <HeadlessCombobox /> },
+      { path: '/headless-form/fieldset', element: <HeadlessFieldset /> },
+      { path: '/headless-form/input', element: <HeadlessInput /> },
+      { path: '/headless-form/listbox', element: <HeadlessListbox /> },
+      { path: '/headless-form/radiogroup', element: <HeadlessRadio /> },
+      { path: '/headless-form/select', element: <HeadlessSelect /> },
+      { path: '/headless-form/switch', element: <HeadlessSwitch /> },
+      { path: '/headless-form/textarea', element: <HeadlessTextarea /> },
+
+
+      { path: '/ui-components/accordion', element: <FlowbiteAccordion /> },
+      { path: '/ui-components/alert', element: <FlowbiteAlert /> },
+      { path: '/ui-components/avatar', element: <FlowbiteAvatar /> },
+      { path: '/ui-components/badge', element: <FlowbiteBadge /> },
+      { path: '/ui-components/banner', element: <FlowbiteBanner /> },
+      { path: '/ui-components/breadcrumb', element: <FlowbiteBreadcrumb /> },
+      { path: '/ui-components/button-group', element: <FlowbiteButtonGroup /> },
+      { path: '/ui-components/buttons', element: <FlowbiteButtons /> },
+      { path: '/ui-components/card', element: <FlowbiteCard /> },
+      { path: '/ui-components/carousel', element: <FlowbiteCarousel /> },
+      { path: '/ui-components/datepicker', element: <FlowbiteDatePicker /> },
+      { path: '/ui-components/drawer', element: <FlowbiteDrawer /> },
+      { path: '/ui-components/dropdown', element: <FlowbiteDropdown /> },
+      { path: '/ui-components/footer', element: <FlowbiteFooter /> },
+      { path: '/ui-components/kbd', element: <FlowbiteKbd /> },
+      { path: '/ui-components/listgroup', element: <FlowbiteListgroup /> },
+      { path: '/ui-components/megamenu', element: <FlowbiteMegamenu /> },
+      { path: '/ui-components/modals', element: <FlowbiteModals /> },
+      { path: '/ui-components/navbar', element: <FlowbiteNavbar /> },
+      { path: '/ui-components/pagination', element: <FlowbitePagination /> },
+      { path: '/ui-components/popover', element: <FlowbitePopover /> },
+      { path: '/ui-components/progressbar', element: <FlowbiteProgressbar /> },
+      { path: '/ui-components/rating', element: <FlowbiteRating /> },
+      { path: '/ui-components/sidebar', element: <FlowbiteSidebar /> },
+      { path: '/ui-components/spinner', element: <FlowbiteSpinner /> },
+      { path: '/ui-components/tab', element: <FlowbiteTab /> },
+      { path: '/ui-components/tables', element: <FlowbiteTables /> },
+      { path: '/ui-components/timeline', element: <FlowbiteTimeline /> },
+      { path: '/ui-components/toast', element: <FlowbiteToast /> },
+      { path: '/ui-components/tooltip', element: <FlowbiteTooltip /> },
+      { path: '/ui-components/typography', element: <FlowbiteTypography /> },
+
+
+      { path: '/headless-ui/dialog', element: <Dialog /> },
+      { path: '/headless-ui/disclosure', element: <Disclosure /> },
+      { path: '/headless-ui/dropdown', element: <Dropdown /> },
+      { path: '/headless-ui/popover', element: <Popover /> },
+      { path: '/headless-ui/tabs', element: <Tabs /> },
+      { path: '/headless-ui/transition', element: <Transition /> },
     ],
   },
   {
@@ -288,15 +423,7 @@ const Router = [
       { path: '/landingpage', element: <Landingpage /> },
 
 
-      {
-        path: 'componentpage',
-        element: <ComponentLayout />,
-        children: [
-          { path: 'ui-components/flowbite/buttons', element: <Buttonlayout /> },
-          { path: 'ui-components/flowbite/button-group', element: <Buttonlayout /> },
 
-        ],
-      },
 
       { path: '/auth/auth1/login', element: <Login /> },
       { path: '/auth/auth2/login', element: <Login2 /> },

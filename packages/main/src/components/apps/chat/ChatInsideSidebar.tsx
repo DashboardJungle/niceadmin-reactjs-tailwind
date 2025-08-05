@@ -1,14 +1,18 @@
-import { useContext } from "react";
+import { useContext } from 'react';
 import { uniq, flatten } from 'lodash';
-import { Icon } from "@iconify/react";
-import { ChatContext } from "src/context/ChatContext";
+import { Icon } from '@iconify/react';
+import { ChatContext } from 'src/context/ChatContext';
 import React from 'react';
+import SimpleBar from 'simplebar-react';
 
 const ChatInsideSidebar = () => {
-
-  const { selectedChat, } = useContext(ChatContext);
-  const totalAttachment = uniq(flatten(selectedChat?.messages.map((item) => item.attachment))).length;
-  const totalMedia = uniq(flatten(selectedChat?.messages.map((item) => (item?.type === 'image' ? item.msg : null)))).length - 1;
+  const { selectedChat } = useContext(ChatContext);
+  const totalAttachment = uniq(
+    flatten(selectedChat?.messages.map((item) => item.attachment)),
+  ).length;
+  const totalMedia =
+    uniq(flatten(selectedChat?.messages.map((item) => (item?.type === 'image' ? item.msg : null))))
+      .length - 1;
 
   return (
     <>
@@ -20,11 +24,8 @@ const ChatInsideSidebar = () => {
             <React.Fragment>
               {selectedChat?.messages.map((c, index) => {
                 return (
-                  <div
-                    className="md:col-span-4 sm:col-span-6 col-span-12"
-                    key={index}
-                  >
-                    {c?.type === "image" ? (
+                  <div className="md:col-span-4 sm:col-span-6 col-span-12" key={index}>
+                    {c?.type === 'image' ? (
                       <img
                         src={c.msg}
                         alt="media"
@@ -39,31 +40,27 @@ const ChatInsideSidebar = () => {
             </React.Fragment>
           </>
         </div>
-        {/* Files */}
-        <div className="mt-8">
-          <h6 className="text-sm">  Attachments ({totalAttachment})</h6>
-          <div>
+      </div>
+      {/* Files */}
+      <div className="mt-8">
+        <h6 className="text-sm px-5"> Attachments ({totalAttachment})</h6>
+
+        <div className="flex-1 overflow-hidden">
+          <SimpleBar className="md:h-[calc(100vh_-_550px)] h-[calc(100vh_-_80px)] ">
             {selectedChat?.messages.map((c, index) => {
               return (
                 <div key={index}>
-                  <div className="flex flex-col gap-4 mt-4">
+                  <div className="flex flex-col gap-4 mt-4 px-5">
                     {c?.attachment?.map((a, index) => {
                       return (
                         <div key={index}>
                           <div className="flex items-center gap-3 group cursor-pointer">
-                            <div className="bg-neutral-100 dark:bg-white/10 p-3 rounded-md">
-                              <img
-                                src={a.icon || ''}
-                                height={24}
-                                width={24}
-                                alt="download"
-                              />
+                            <div className="bg-muted dark:bg-darkmuted p-3 rounded-md">
+                              <img src={a.icon || ''} height={24} width={24} alt="download" />
                             </div>
                             <div>
-                              <h5 className="text-sm group-hover:text-primary">
-                                {a.file}
-                              </h5>
-                              <p className="text-xs text-darklink">
+                              <h5 className="text-sm group-hover:text-primary">{a.file}</h5>
+                              <p className="text-xs text-darklink dark:text-bodytext">
                                 {a.fileSize}
                               </p>
                             </div>
@@ -78,9 +75,10 @@ const ChatInsideSidebar = () => {
                 </div>
               );
             })}
-          </div>
+          </SimpleBar>
         </div>
       </div>
+
     </>
   );
 };

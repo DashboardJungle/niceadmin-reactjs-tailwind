@@ -1,7 +1,7 @@
-import avt1 from 'src/assets/images/profile/Dalton.svg';
-import avt2 from 'src/assets/images/profile/Janita.svg';
-import avt3 from 'src/assets/images/profile/Kiley.svg';
-import avt4 from 'src/assets/images/profile/emily.svg';
+import avt1 from 'src/assets/images/kanban/avtar/avtar1.png';
+import avt2 from 'src/assets/images/kanban/avtar/avtar2.png';
+import avt3 from 'src/assets/images/kanban/avtar/avtar3.png';
+import avt4 from 'src/assets/images/kanban/avtar/avtar4.png';
 
 export const avatarList = [
   { avatar: avt1, label: 'avatar-1' },

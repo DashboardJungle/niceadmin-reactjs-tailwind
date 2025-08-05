@@ -96,4 +96,3 @@ export const CustomizerContextProvider: React.FC<CustomizerContextProps> = ({ ch
   );
 };
 
-

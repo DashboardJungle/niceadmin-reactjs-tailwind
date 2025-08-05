@@ -6,6 +6,7 @@ import Spinner from './views/spinner/Spinner.tsx'
 
 import './utils/i18n';
 import { CustomizerContextProvider } from './context/CustomizerContext.tsx'
+import { AuthProvider } from './context/AuthContext.tsx'
 
 
 async function deferRender() {
@@ -17,15 +18,17 @@ async function deferRender() {
 
 deferRender().then(() => {
   createRoot(document.getElementById('root')!).render(
-    <CustomizerContextProvider>
+    <AuthProvider>
+      <CustomizerContextProvider>
 
-      <Suspense fallback={<Spinner />}>
+        <Suspense fallback={<Spinner />}>
 
-        <App />
+          <App />
 
-      </Suspense>
+        </Suspense>
 
-    </CustomizerContextProvider >
+      </CustomizerContextProvider >
+    </AuthProvider>
 
   )
 })

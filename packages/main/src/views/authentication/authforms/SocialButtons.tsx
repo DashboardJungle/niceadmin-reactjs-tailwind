@@ -1,25 +1,30 @@
 
-import React from "react";
+
 import Google from "/src/assets/images/svgs/google-icon.svg";
 import Github from "/src/assets/images/svgs/github-icon.svg";
 import GithubWhite from "/src/assets/images/svgs/github-icon-white.svg";
-import { Link } from "react-router";
+
+import React from 'react'
+
+
 
 interface MyAppProps {
   title?: string;
 }
 
 const SocialButtons: React.FC<MyAppProps> = ({ title }) => {
+
+
   return (
     <>
       <div className='flex justify-between gap-8 my-6 '>
-        <Link
-          to={"/"}
+        <div
+
           className='px-4 py-2.5 border border-ld flex gap-2 items-enter w-full rounded-md text-center justify-center text-ld text-primary-ld hover:bg-lightprimary dark:hover:bg-darkprimary cursor-pointer'>
           <img src={Google} alt="google" height={18} width={18} /> Google
-        </Link>
-        <Link
-          to={"/"}
+        </div>
+        <div
+
           className='px-4 py-2.5 border border-ld flex gap-2 items-enter w-full rounded-md text-center justify-center text-ld text-primary-ld hover:bg-lightprimary dark:hover:bg-darkprimary cursor-pointer'>
           <img
             src={Github}
@@ -36,7 +41,7 @@ const SocialButtons: React.FC<MyAppProps> = ({ title }) => {
             className='dark:block hidden'
           />
           GitHub
-        </Link>
+        </div>
       </div>
       {/* Divider */}
       <div className='flex items-center w-full'>

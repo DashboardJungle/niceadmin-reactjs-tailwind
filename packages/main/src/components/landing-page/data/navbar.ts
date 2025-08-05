@@ -2,10 +2,10 @@ export const navbarLinks = {
   navbarList: [
     {
       label: 'Components',
-      href: '/componentpage/ui-components/flowbite/buttons',
+      href: 'https://coredash-nextjs-tailwind.vercel.app/componentpage/ui-components/flowbite/buttons',
     },
     { label: 'Docs', href: '/docs' },
-    { label: 'Support', href: '/support' },
+    { label: 'Support', href: 'https://support.wrappixel.com/' },
     { label: 'Blog', href: '/blog' },
     { label: 'Changelog', href: '/changelog' },
   ],
@@ -59,4 +59,4 @@ export const navbarLinks = {
       href: '/nuxt',
     },
   ],
-}
+};

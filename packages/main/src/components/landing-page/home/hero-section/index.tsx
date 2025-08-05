@@ -4,28 +4,21 @@ import { Icon } from '@iconify/react/dist/iconify.js'
 import { Link } from 'react-router'
 import { InfiniteMovingCards } from 'src/components/aceternity-ui/infinite-moving-cards'
 import { avatarList } from '../../data/avatar'
-import sliderImg1 from 'src/assets/images/landingpage/hero-section/hero-slider-image-1.svg'
 
-// import sliderImg2 from 'src/assets/images/landingpage/hero-section/hero-slider-image-2.svg'
-// import sliderImg3 from 'src/assets/images/landingpage/hero-section/hero-slider-image-3.svg'
 
+const sliderImg1 = new URL('src/assets/images/landingpage/hero-section/hero-slider-image-1.svg', import.meta.url).href;
+const slider2 = new URL('src/assets/images/landingpage/hero-section/hero-slider-image-2.svg', import.meta.url).href;
+const slider3 = new URL('src/assets/images/landingpage/hero-section/hero-slider-image-3.svg', import.meta.url).href;
 
 
 
 const heroimageslider = [
-  {
-    img: sliderImg1,
-    href: '/',
-  },
-  // {
-  //   img: sliderImg2,
-  //   href: '/',
-  // },
-  // {
-  //   img: sliderImg3,
-  //   href: '/',
-  // },
-]
+  { img: sliderImg1, href: '/' },
+  { img: slider2, href: '/' },
+  { img: slider3, href: '/' },
+];
+
+
 
 const HeroSection = () => {
   return (

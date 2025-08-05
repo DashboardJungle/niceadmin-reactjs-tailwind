@@ -23,19 +23,22 @@ const ChatMsgSent = () => {
   return (
     <>
       <form onSubmit={onChatMsgSubmit}>
-        <div className="flex gap-3 items-center py-2 px-5">
+        <div className="flex flex-wrap gap-3 items-center py-5 px-5">
           <div>
             <div className="btn-circle-hover cursor-pointer">
               <Icon icon="solar:sticker-smile-circle-2-linear" height="20" />
             </div>
           </div>
-          <TextInput
-            className="form-control-chat border-0 w-full"
-            sizing="md"
-            required
-            value={msg}
-            onChange={handleChatMsgChange}
-          />
+          <div className="flex-1 min-w-[150px]">
+            <TextInput
+              className="form-control-chat border-0"
+              sizing="md"
+              required
+              value={msg}
+              onChange={handleChatMsgChange}
+              placeholder="Type here"
+            />
+          </div>
           <div className="flex gap-3 items-center">
             <div className="btn-circle-hover cursor-pointer ">
               <Icon icon="solar:plain-linear"
@@ -58,6 +61,8 @@ const ChatMsgSent = () => {
           </div>
         </div>
       </form>
+
+
     </>
   );
 };

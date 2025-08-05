@@ -490,10 +490,369 @@ const SidebarContent: MenuItem[] = [
     heading: 'UI ELEMENTS',
     children: [
       {
-        name: 'UI Components',
-        icon: 'solar:widget-5-line-duotone',
+        name: 'Flowbite',
+        icon: 'solar:waterdrops-line-duotone',
         id: uniqueId(),
-        url: '/componentpage/ui-components/flowbite/buttons',
+        children: [
+          {
+            id: uniqueId(),
+            name: 'Accordion',
+            url: '/ui-components/accordion',
+          },
+          {
+            id: uniqueId(),
+            name: 'Badge',
+
+            url: '/ui-components/badge',
+          },
+          {
+            id: uniqueId(),
+            name: 'Button',
+
+            url: '/ui-components/buttons',
+          },
+          {
+            id: uniqueId(),
+            name: 'Dropdowns',
+
+            url: '/ui-components/dropdown',
+          },
+          {
+            id: uniqueId(),
+            name: 'Modals',
+
+            url: '/ui-components/modals',
+          },
+          {
+            id: uniqueId(),
+            name: 'Tab',
+
+            url: '/ui-components/tab',
+          },
+          {
+            id: uniqueId(),
+            name: 'Tooltip',
+
+            url: '/ui-components/tooltip',
+          },
+          {
+            id: uniqueId(),
+            name: 'Alert',
+
+            url: '/ui-components/alert',
+          },
+          {
+            id: uniqueId(),
+            name: 'Progressbar',
+
+            url: '/ui-components/progressbar',
+          },
+          {
+            id: uniqueId(),
+            name: 'Pagination',
+
+            url: '/ui-components/pagination',
+          },
+          {
+            id: uniqueId(),
+            name: 'Breadcrumbs',
+
+            url: '/ui-components/breadcrumb',
+          },
+          {
+            id: uniqueId(),
+            name: 'Drawer',
+
+            url: '/ui-components/drawer',
+          },
+          {
+            id: uniqueId(),
+            name: 'Lists',
+
+            url: '/ui-components/listgroup',
+          },
+          {
+            id: uniqueId(),
+            name: 'Carousel',
+
+            url: '/ui-components/carousel',
+          },
+          {
+            id: uniqueId(),
+            name: 'Spinner',
+
+            url: '/ui-components/spinner',
+          },
+          {
+            id: uniqueId(),
+            name: 'Avatar',
+
+            url: '/ui-components/avatar',
+          },
+          {
+            id: uniqueId(),
+            name: 'Banner',
+
+            url: '/ui-components/banner',
+          },
+          {
+            id: uniqueId(),
+            name: 'Button Group',
+
+            url: '/ui-components/button-group',
+          },
+          {
+            id: uniqueId(),
+            name: 'Card',
+
+            url: '/ui-components/card',
+          },
+          {
+            id: uniqueId(),
+            name: 'Datepicker',
+
+            url: '/ui-components/datepicker',
+          },
+          {
+            id: uniqueId(),
+            name: 'Footer',
+
+            url: '/ui-components/footer',
+          },
+          {
+            id: uniqueId(),
+            name: 'KBD',
+
+            url: '/ui-components/kbd',
+          },
+          {
+            id: uniqueId(),
+            name: 'Mega Menu',
+
+            url: '/ui-components/megamenu',
+          },
+          {
+            id: uniqueId(),
+            name: 'Navbar',
+
+            url: '/ui-components/navbar',
+          },
+          {
+            id: uniqueId(),
+            name: 'Popover',
+
+            url: '/ui-components/popover',
+          },
+          {
+            id: uniqueId(),
+            name: 'Rating',
+
+            url: '/ui-components/rating',
+          },
+          {
+            id: uniqueId(),
+            name: 'Sidebar',
+
+            url: '/ui-components/sidebar',
+          },
+          {
+            id: uniqueId(),
+            name: 'Tables',
+
+            url: '/ui-components/tables',
+          },
+          {
+            id: uniqueId(),
+            name: 'Timeline',
+
+            url: '/ui-components/timeline',
+          },
+          {
+            id: uniqueId(),
+            name: 'Toast',
+
+            url: '/ui-components/toast',
+          },
+          {
+            id: uniqueId(),
+            name: 'Typography',
+
+            url: '/ui-components/typography',
+          },
+        ],
+      },
+      {
+        name: 'Headless',
+        icon: 'solar:round-alt-arrow-down-outline',
+        id: uniqueId(),
+        children: [
+          {
+            name: 'Dropdown',
+
+            id: uniqueId(),
+            url: '/headless-ui/dropdown',
+          },
+          {
+            name: 'Disclosure',
+
+            id: uniqueId(),
+            url: '/headless-ui/disclosure',
+          },
+          {
+            name: 'Dialog',
+
+            id: uniqueId(),
+            url: '/headless-ui/dialog',
+          },
+          {
+            name: 'Popover',
+
+            id: uniqueId(),
+            url: '/headless-ui/popover',
+          },
+          {
+            name: 'Tabs',
+
+            id: uniqueId(),
+            url: '/headless-ui/tabs',
+          },
+          {
+            name: 'Transition',
+
+            id: uniqueId(),
+            url: '/headless-ui/transition',
+          },
+        ],
+      },
+      {
+        name: 'Shadcn UI',
+        icon: 'solar:tag-horizontal-line-duotone',
+        id: uniqueId(),
+        children: [
+          {
+            id: uniqueId(),
+            name: 'Badge',
+
+            url: '/shadcn-ui/badge',
+          },
+          {
+            id: uniqueId(),
+            name: 'Buttons',
+
+            url: '/shadcn-ui/buttons',
+          },
+          {
+            id: uniqueId(),
+            name: 'Dropdowns',
+
+            url: '/shadcn-ui/dropdown',
+          },
+          {
+            id: uniqueId(),
+            name: 'Dialogs',
+
+            url: '/shadcn-ui/dialogs',
+          },
+          {
+            id: uniqueId(),
+            name: 'Alert',
+
+            url: '/shadcn-ui/alert',
+          },
+          {
+            id: uniqueId(),
+            name: 'Toast',
+
+            url: '/shadcn-ui/toast',
+          },
+          {
+            id: uniqueId(),
+            name: 'Breadcrumbs',
+
+            url: '/shadcn-ui/breadcrumb',
+          },
+
+          {
+            id: uniqueId(),
+            name: 'Carousel',
+
+            url: '/shadcn-ui/carousel',
+          },
+
+          {
+            id: uniqueId(),
+            name: 'Card',
+
+            url: '/shadcn-ui/card',
+          },
+          {
+            id: uniqueId(),
+            name: 'Datepicker',
+
+            url: '/shadcn-ui/datepicker',
+          },
+          {
+            id: uniqueId(),
+            name: 'Combobox',
+
+            url: '/shadcn-ui/combobox',
+          },
+          {
+            id: uniqueId(),
+            name: 'Collapsible',
+
+            url: '/shadcn-ui/collapsible',
+          },
+          {
+            id: uniqueId(),
+            name: 'Command',
+
+            url: '/shadcn-ui/command',
+          },
+          {
+            id: uniqueId(),
+            name: 'Skeleton',
+
+            url: '/shadcn-ui/skeleton',
+          },
+          {
+            id: uniqueId(),
+            name: 'Avatar',
+
+            url: '/shadcn-ui/avatar',
+          },
+
+          {
+            id: uniqueId(),
+            name: 'Tooltip',
+
+            url: '/shadcn-ui/tooltip',
+          },
+          {
+            name: 'Accordion',
+
+            id: uniqueId(),
+            url: '/shadcn-ui/accordion',
+          },
+          {
+            id: uniqueId(),
+            name: 'Tab',
+
+            url: '/shadcn-ui/tab',
+          },
+          {
+            id: uniqueId(),
+            name: 'Progressbar',
+
+            url: '/shadcn-ui/progressbar',
+          },
+          {
+            id: uniqueId(),
+            name: 'Drawer',
+
+            url: '/shadcn-ui/drawer',
+          },
+        ],
       },
     ],
   },
