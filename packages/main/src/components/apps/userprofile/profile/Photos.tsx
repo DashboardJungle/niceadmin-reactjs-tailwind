@@ -2,7 +2,7 @@
 
 import user1 from "src/assets/images/profile/ryan.svg";
 import user2 from "src/assets/images/profile/emily.svg";
-import user3 from "src/assets/images/profile/juan.svg";
+
 import user4 from "src/assets/images/profile/Kiley.svg";
 import user5 from "src/assets/images/profile/Reva.svg";
 import user6 from "src/assets/images/profile/olivia.svg";
@@ -22,7 +22,7 @@ const photos = [
     id: 2,
   },
   {
-    cardimage: user3,
+    cardimage: user1,
     id: 3,
   },
   {
