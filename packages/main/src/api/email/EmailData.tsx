@@ -13,11 +13,11 @@ import Janita from 'src/assets/images/profile/Janita.svg';
 import Dalton from 'src/assets/images/profile/Dalton.svg';
 
 
-import adobe from '/src/assets/images/chat/icon-adobe.svg';
-import chrome from '/src/assets/images/chat/icon-chrome.svg';
-import figma from '/src/assets/images/chat/icon-figma.svg';
-import java from '/src/assets/images/chat/icon-javascript.svg';
-import zip from '/src/assets/images/chat/icon-zip-folder.svg';
+import adobe from 'src/assets/images/chat/icon-adobe.svg';
+import chrome from 'src/assets/images/chat/icon-chrome.svg';
+import figma from 'src/assets/images/chat/icon-figma.svg';
+import java from 'src/assets/images/chat/icon-javascript.svg';
+import zip from 'src/assets/images/chat/icon-zip-folder.svg';
 import { http, HttpResponse } from 'msw';
 
 let EmailData: EmailType[] = [

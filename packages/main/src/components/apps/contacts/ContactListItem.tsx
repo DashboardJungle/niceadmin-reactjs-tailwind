@@ -21,7 +21,7 @@ import { ContactContext } from "src/context/Conatactcontext";
 import { ContactType } from "src/types/apps/contact";
 import { CustomizerContext } from "src/context/CustomizerContext";
 import React from 'react';
-import emailSv from "/src/assets/images/backgrounds/emailSv.png"
+import emailSv from "src/assets/images/backgrounds/emailSv.png"
 
 // Define the props interface
 interface ContactListItemProps {

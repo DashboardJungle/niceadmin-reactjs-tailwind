@@ -5,10 +5,10 @@ import { isValid, format } from 'date-fns';
 import { useNavigate } from "react-router";
 import { TicketType } from 'src/types/apps/ticket';
 import { TicketContext } from 'src/context/TicketContext';
-import user10 from '/src/assets/images/profile/user-10.jpg';
-import user2 from '/src/assets/images/profile/user-2.jpg';
-import user3 from '/src/assets/images/profile/user-3.jpg';
-import user8 from '/src/assets/images/profile/user-8.jpg';
+import user10 from 'src/assets/images/profile/user-10.jpg';
+import user2 from 'src/assets/images/profile/user-2.jpg';
+import user3 from 'src/assets/images/profile/user-3.jpg';
+import user8 from 'src/assets/images/profile/user-8.jpg';
 
 
 
@@ -75,7 +75,7 @@ const CreateTicketForm = () => {
         <div className="p-6 bg-white dark:bg-darkgray rounded-lg shadow-md">
             <h2 className="text-lg font-semibold mb-4">Create New Ticket</h2>
             <p>  ID : {ticketId !== undefined ? ticketId : ''}</p>
-            <p>Date : {formattedOrderDate}</p> 
+            <p>Date : {formattedOrderDate}</p>
             <div className="bg-lightgray dark:bg-gray-800/70 p-6 my-6 rounded-md">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="mb-4">

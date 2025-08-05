@@ -1,9 +1,9 @@
 
 import { Label, Radio } from "flowbite-react";
-import  { useState } from "react";
-import paypal from "/src/assets/images/svgs/paypal.svg";
-import master from "/src/assets/images/svgs/mastercard.svg";
-import payment from "/src/assets/images/backgrounds/payment.svg";
+import { useState } from "react";
+import paypal from "src/assets/images/svgs/paypal.svg";
+import master from "src/assets/images/svgs/mastercard.svg";
+import payment from "src/assets/images/backgrounds/payment.svg";
 import OutlineCard from "src/components/shared/OutlineCard";
 import React from 'react';
 

@@ -1,8 +1,8 @@
 
 import CardBox from "../../shared/CardBox";
 import { IconGift } from "@tabler/icons-react";
-import img1 from "/src/assets/images/products/s1.jpg";
-import img2 from "/src/assets/images/products/s2.jpg";
+import img1 from "src/assets/images/products/s1.jpg";
+import img2 from "src/assets/images/products/s2.jpg";
 import { Button } from "flowbite-react";
 
 const GiftCards = () => {
@@ -25,7 +25,7 @@ const GiftCards = () => {
               <h5 className="card-title">Leo Pratt </h5>
               <IconGift className="text-primary" size={20} />
             </div>
-            <img src={img2} alt="maaterialm" className="rounded-lg w-full object-cover h-[150px]"  />
+            <img src={img2} alt="maaterialm" className="rounded-lg w-full object-cover h-[150px]" />
             <Button color={'primary'} className="mt-4">Gift to Friend ($50.00)</Button>
           </CardBox>
         </div>

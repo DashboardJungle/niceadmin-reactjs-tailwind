@@ -34,11 +34,11 @@ export interface PaginationTableType {
   actions?: any;
 }
 
-import s1 from '/src/assets/images/blog/blog-img1.jpg';
-import s2 from '/src/assets/images/blog/blog-img2.jpg';
-import s3 from '/src/assets/images/blog/blog-img3.jpg';
-import s4 from '/src/assets/images/blog/blog-img4.jpg';
-import s5 from '/src/assets/images/blog/blog-img5.jpg';
+import s1 from 'src/assets/images/blog/blog-img1.jpg';
+import s2 from 'src/assets/images/blog/blog-img2.jpg';
+import s3 from 'src/assets/images/blog/blog-img3.jpg';
+import s4 from 'src/assets/images/blog/blog-img4.jpg';
+import s5 from 'src/assets/images/blog/blog-img5.jpg';
 
 const basicTableData5: PaginationTableType[] = [
   {

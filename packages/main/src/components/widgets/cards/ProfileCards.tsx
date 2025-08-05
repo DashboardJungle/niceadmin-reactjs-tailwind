@@ -1,7 +1,7 @@
 
-import user1 from "/src/assets/images/profile/user-6.jpg";
-import user2 from "/src/assets/images/profile/user-2.jpg";
-import user3 from "/src/assets/images/profile/user-3.jpg";
+import user1 from "src/assets/images/profile/user-6.jpg";
+import user2 from "src/assets/images/profile/user-2.jpg";
+import user3 from "src/assets/images/profile/user-3.jpg";
 import { Button } from "flowbite-react";
 import { IconMapPin } from "@tabler/icons-react";
 import CardBox from "src/components/shared/CardBox";

@@ -8,7 +8,7 @@ import SimpleBar from 'simplebar-react';
 import { ChatContext } from 'src/context/ChatContext';
 import { ChatsType } from 'src/types/apps/chat';
 import React from 'react';
-import profileImg from '/src/assets/images/profile/user-1.jpg';
+import profileImg from 'src/assets/images/profile/user-1.jpg';
 
 const ChatListing = () => {
   const DropdownAction = [

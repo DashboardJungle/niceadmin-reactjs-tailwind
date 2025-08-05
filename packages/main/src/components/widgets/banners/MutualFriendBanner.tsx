@@ -1,6 +1,6 @@
 
 import CardBox from "src/components/shared/CardBox";
-import Banner from "/src/assets/images/profile/user-3.jpg";
+import Banner from "src/assets/images/profile/user-3.jpg";
 import { Button } from "flowbite-react";
 const MutualBanner = () => {
   return (

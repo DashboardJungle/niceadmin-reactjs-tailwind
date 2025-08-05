@@ -1,6 +1,6 @@
 
 import CardBox from "src/components/shared/CardBox";
-import Banner from "/src/assets/images/products/empty-shopping-bag.gif";
+import Banner from "src/assets/images/products/empty-shopping-bag.gif";
 import { Button } from "flowbite-react";
 const EmptyBanner = () => {
   return (
@@ -10,7 +10,7 @@ const EmptyBanner = () => {
         <div className="text-center mx-auto">
           <h5 className="text-lg">Oop, Your cart is empty!</h5>
           <p className="text-bodytext mt-2">
-          Get back to shopping and get rewards from it.
+            Get back to shopping and get rewards from it.
           </p>
           <div className="flex justify-center mt-5">
             <Button color={"primary"}>Go for shopping</Button>

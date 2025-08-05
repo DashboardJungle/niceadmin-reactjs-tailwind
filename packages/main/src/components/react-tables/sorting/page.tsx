@@ -1,16 +1,16 @@
 
-import  { useState } from 'react';
+import { useState } from 'react';
 import { useReactTable, createColumnHelper, flexRender, getCoreRowModel, getSortedRowModel, SortingState } from '@tanstack/react-table';
 import { Badge, Progress } from 'flowbite-react';
 import { IconArrowBackUp, IconCheck, IconX } from '@tabler/icons-react';
 import TitleIconCard from 'src/components/shared/TitleIconCard';
 
 
-import user3 from '/src/assets/images/profile/user-3.jpg'
-import user5 from '/src/assets/images/profile/user-5.jpg';
-import user9 from '/src/assets/images/profile/user-9.jpg';
-import user8 from '/src/assets/images/profile/user-8.jpg';
-import user4 from '/src/assets/images/profile/user-4.jpg';
+import user3 from 'src/assets/images/profile/user-3.jpg'
+import user5 from 'src/assets/images/profile/user-5.jpg';
+import user9 from 'src/assets/images/profile/user-9.jpg';
+import user8 from 'src/assets/images/profile/user-8.jpg';
+import user4 from 'src/assets/images/profile/user-4.jpg';
 
 export interface TableType4 {
     invoice: string;

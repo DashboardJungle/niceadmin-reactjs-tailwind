@@ -4,10 +4,10 @@ import { useTranslation } from "react-i18next";
 import { Dropdown, DropdownItem } from "flowbite-react";
 import { CustomizerContext } from "src/context/CustomizerContext";
 
-import englishFlag from "/src/assets/images/flag/icon-flag-en.svg"
-import chineseFlag from "/src/assets/images/flag/icon-flag-cn.svg"
-import frenchFlag from "/src/assets/images/flag/icon-flag-fr.svg"
-import southAfricaFlag from "/src/assets/images/flag/icon-flag-sa.svg"
+import englishFlag from "src/assets/images/flag/icon-flag-en.svg"
+import chineseFlag from "src/assets/images/flag/icon-flag-cn.svg"
+import frenchFlag from "src/assets/images/flag/icon-flag-fr.svg"
+import southAfricaFlag from "src/assets/images/flag/icon-flag-sa.svg"
 
 const Languages = [
   {

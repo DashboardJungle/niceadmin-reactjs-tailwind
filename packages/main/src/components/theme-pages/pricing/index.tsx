@@ -12,9 +12,9 @@ import { IconCheck, IconX } from "@tabler/icons-react";
 import CardBox from "src/components/shared/CardBox";
 import React from "react";
 
-import silver from "/src/assets/images/backgrounds/silver.png";
-import bronze from "/src/assets/images/backgrounds/bronze.png";
-import gold from "/src/assets/images/backgrounds/gold.png";
+import silver from "src/assets/images/backgrounds/silver.png";
+import bronze from "src/assets/images/backgrounds/bronze.png";
+import gold from "src/assets/images/backgrounds/gold.png";
 
 const pricing = [
   {

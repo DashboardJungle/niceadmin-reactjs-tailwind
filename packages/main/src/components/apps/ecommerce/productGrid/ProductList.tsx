@@ -4,7 +4,7 @@ import { useState, useContext, SetStateAction, Dispatch } from "react";
 
 import { Icon } from "@iconify/react";
 import ProductSearch from "./ProductSearch";
-import NoProduct from "/src/assets/images/backgrounds/empty-shopping-cart.svg";
+import NoProduct from "src/assets/images/backgrounds/empty-shopping-cart.svg";
 import { Link } from "react-router";
 import { ProductContext } from "src/context/Ecommercecontext";
 import CardBox from "src/components/shared/CardBox";

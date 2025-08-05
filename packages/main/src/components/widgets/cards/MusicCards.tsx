@@ -1,8 +1,8 @@
 
 
-import img1 from "/src/assets/images/blog/blog-img8.jpg";
-import img2 from "/src/assets/images/blog/blog-img9.jpg";
-import img3 from "/src/assets/images/blog/blog-img7.jpg";
+import img1 from "src/assets/images/blog/blog-img8.jpg";
+import img2 from "src/assets/images/blog/blog-img9.jpg";
+import img3 from "src/assets/images/blog/blog-img7.jpg";
 import CardBox from "src/components/shared/CardBox";
 import { Icon } from "@iconify/react/dist/iconify.js";
 

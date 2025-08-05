@@ -1,7 +1,7 @@
 
 import OutlineCard from "../../shared/OutlineCard";
 import { Button, Label, Select, TextInput } from "flowbite-react";
-import userImg from "/src/assets/images/profile/user-1.jpg"
+import userImg from "src/assets/images/profile/user-1.jpg"
 
 const AccountTab = () => {
   return (

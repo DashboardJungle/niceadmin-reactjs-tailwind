@@ -12,14 +12,14 @@ import { Icon } from "@iconify/react";
 import TitleIconCard from 'src/components/shared/TitleIconCard';
 
 
-import user2 from '/src/assets/images/profile/user-2.jpg';
-import user1 from '/src/assets/images/profile/user-1.jpg';
-import user3 from '/src/assets/images/profile/user-3.jpg'
-import user5 from '/src/assets/images/profile/user-5.jpg';
-import user6 from '/src/assets/images/profile/user-6.jpg';
-import user8 from '/src/assets/images/profile/user-8.jpg';
-import user4 from '/src/assets/images/profile/user-4.jpg';
-import user9 from '/src/assets/images/profile/user-9.jpg';
+import user2 from 'src/assets/images/profile/user-2.jpg';
+import user1 from 'src/assets/images/profile/user-1.jpg';
+import user3 from 'src/assets/images/profile/user-3.jpg'
+import user5 from 'src/assets/images/profile/user-5.jpg';
+import user6 from 'src/assets/images/profile/user-6.jpg';
+import user8 from 'src/assets/images/profile/user-8.jpg';
+import user4 from 'src/assets/images/profile/user-4.jpg';
+import user9 from 'src/assets/images/profile/user-9.jpg';
 
 
 export interface TableType3 {
@@ -39,7 +39,7 @@ export interface TableType3 {
 
 const basicTableData2: TableType3[] = [
   {
-    avatar:user1,
+    avatar: user1,
     name: 'Olivia Rhye',
     post: 'Xtreme admin',
     status: 'active',
@@ -59,7 +59,7 @@ const basicTableData2: TableType3[] = [
     users: [
       { id: '1', icon: user3 },
       { id: '2', icon: user2 },
-      { id: '3', icon:user1 }
+      { id: '3', icon: user1 }
     ]
   },
   {
@@ -96,7 +96,7 @@ const basicTableData2: TableType3[] = [
       },
       {
         id: '3',
-        icon:user1
+        icon: user1
       }
     ]
   },

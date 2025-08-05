@@ -1,8 +1,8 @@
 
 import CardBox from "../../shared/CardBox";
-import user1 from "/src/assets/images/profile/Juan.svg";
-import user2 from "/src/assets/images/profile/emily.svg";
-import user3 from "/src/assets/images/profile/Kiley.svg";
+import user1 from "src/assets/images/profile/Juan.svg";
+import user2 from "src/assets/images/profile/emily.svg";
+import user3 from "src/assets/images/profile/Kiley.svg";
 import { Button } from "flowbite-react";
 
 const userImg = [

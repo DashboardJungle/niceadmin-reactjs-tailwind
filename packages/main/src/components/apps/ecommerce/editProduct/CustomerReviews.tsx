@@ -1,10 +1,10 @@
 
 
 import CardBox from "src/components/shared/CardBox";
-import user1 from "/src/assets/images/profile/Dalton.svg";
-import user2 from "/src/assets/images/profile/jason.svg";
-import user3 from "/src/assets/images/profile/Juan.svg";
-import user4 from "/src/assets/images/profile/Kiley.svg";
+import user1 from "src/assets/images/profile/Dalton.svg";
+import user2 from "src/assets/images/profile/jason.svg";
+import user3 from "src/assets/images/profile/Juan.svg";
+import user4 from "src/assets/images/profile/Kiley.svg";
 import { Rating, RatingStar, Table, TableBody, TableCell, TableHead, TableHeadCell, TableRow } from "flowbite-react";
 const LatestReviewData = [
   {

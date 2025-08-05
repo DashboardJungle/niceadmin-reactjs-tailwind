@@ -1,6 +1,6 @@
 
 import { Link } from "react-router";
-import payment from "/src/assets/images/backgrounds/payment.svg";
+import payment from "src/assets/images/backgrounds/payment.svg";
 import { Button } from "flowbite-react";
 const Thankyou = () => {
   return (

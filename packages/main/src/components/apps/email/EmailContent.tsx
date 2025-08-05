@@ -14,7 +14,7 @@ import SimpleBar from "simplebar-react";
 import { Icon } from "@iconify/react";
 import { EmailContext } from "src/context/EmailContext";
 import React from 'react';
-import emailSv from "/src/assets/images/backgrounds/emailSv.png"
+import emailSv from "src/assets/images/backgrounds/emailSv.png"
 
 // Define the props interface
 interface MailListItemProps {

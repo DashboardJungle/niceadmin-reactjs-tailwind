@@ -1,8 +1,8 @@
 
 
-import Google from "/src/assets/images/svgs/google-icon.svg";
-import Github from "/src/assets/images/svgs/github-icon.svg";
-import GithubWhite from "/src/assets/images/svgs/github-icon-white.svg";
+import Google from "src/assets/images/svgs/google-icon.svg";
+import Github from "src/assets/images/svgs/github-icon.svg";
+import GithubWhite from "src/assets/images/svgs/github-icon-white.svg";
 
 import React from 'react'
 

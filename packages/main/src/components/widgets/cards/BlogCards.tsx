@@ -2,12 +2,12 @@
 import CardBox from "../../shared/CardBox";
 
 
-import user1 from "/src/assets/images/profile/user-6.jpg";
-import user2 from "/src/assets/images/profile/user-2.jpg";
-import user3 from "/src/assets/images/profile/user-3.jpg";
-import img1 from "/src/assets/images/blog/blog-img1.jpg";
-import img2 from "/src/assets/images/blog/blog-img2.jpg";
-import img3 from "/src/assets/images/blog/blog-img3.jpg";
+import user1 from "src/assets/images/profile/user-6.jpg";
+import user2 from "src/assets/images/profile/user-2.jpg";
+import user3 from "src/assets/images/profile/user-3.jpg";
+import img1 from "src/assets/images/blog/blog-img1.jpg";
+import img2 from "src/assets/images/blog/blog-img2.jpg";
+import img3 from "src/assets/images/blog/blog-img3.jpg";
 import { Badge } from "flowbite-react";
 
 import { Link } from "react-router";

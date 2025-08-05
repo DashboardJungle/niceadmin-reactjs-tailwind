@@ -1,10 +1,10 @@
 
 import { Button } from "flowbite-react";
 
-import icon1 from "/src/assets/images/svgs/icon-paypal.svg";
-import icon2 from "/src/assets/images/svgs/icon-office-bag.svg";
-import icon3 from "/src/assets/images/svgs/icon-master-card.svg";
-import icon5 from "/src/assets/images/svgs/icon-pie.svg";
+import icon1 from "src/assets/images/svgs/icon-paypal.svg";
+import icon2 from "src/assets/images/svgs/icon-office-bag.svg";
+import icon3 from "src/assets/images/svgs/icon-master-card.svg";
+import icon5 from "src/assets/images/svgs/icon-pie.svg";
 import CardBox from "src/components/shared/CardBox";
 
 

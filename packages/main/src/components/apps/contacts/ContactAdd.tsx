@@ -1,6 +1,6 @@
 
 import { useContext, useState } from "react";
-import profilepic from "/src/assets/images/profile/user-5.jpg";
+import profilepic from "src/assets/images/profile/user-5.jpg";
 
 import {
   Modal,

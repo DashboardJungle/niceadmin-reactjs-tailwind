@@ -8,9 +8,9 @@ import Kiley from 'src/assets/images/profile/Kiley.svg';
 import jason from 'src/assets/images/profile/jason.svg';
 import Dalton from 'src/assets/images/profile/Dalton.svg';
 
-import s1 from '/src/assets/images/products/s1.jpg';
-import s2 from '/src/assets/images/products/s2.jpg';
-import s4 from '/src/assets/images/products/s4.jpg';
+import s1 from 'src/assets/images/products/s1.jpg';
+import s2 from 'src/assets/images/products/s2.jpg';
+import s4 from 'src/assets/images/products/s4.jpg';
 import { http, HttpResponse } from 'msw';
 
 const chance = new Chance();

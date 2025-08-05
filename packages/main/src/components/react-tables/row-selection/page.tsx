@@ -25,11 +25,11 @@ export interface TableTypeRowSelection {
   budget?: string;
   selection?: any;
 }
-import user2 from '/src/assets/images/profile/user-2.jpg';
-import user1 from '/src/assets/images/profile/user-1.jpg';
-import user3 from '/src/assets/images/profile/user-3.jpg'
-import user5 from '/src/assets/images/profile/user-5.jpg';
-import user7 from '/src/assets/images/profile/user-7.jpg';
+import user2 from 'src/assets/images/profile/user-2.jpg';
+import user1 from 'src/assets/images/profile/user-1.jpg';
+import user3 from 'src/assets/images/profile/user-3.jpg'
+import user5 from 'src/assets/images/profile/user-5.jpg';
+import user7 from 'src/assets/images/profile/user-7.jpg';
 
 
 const basicTableData: TableTypeRowSelection[] = [
@@ -209,7 +209,7 @@ const columns = [
     cell: (info) => (
       <Badge
         color={`light${info.row.original.statuscolor}`}
-        className="capitalize" 
+        className="capitalize"
       >
         {info.getValue()}
       </Badge>
@@ -288,9 +288,9 @@ const ReactEditable = () => {
                       {header.isPlaceholder
                         ? null
                         : flexRender(
-                            header.column.columnDef.header,
-                            header.getContext()
-                          )}
+                          header.column.columnDef.header,
+                          header.getContext()
+                        )}
                     </th>
                   ))}
                 </tr>

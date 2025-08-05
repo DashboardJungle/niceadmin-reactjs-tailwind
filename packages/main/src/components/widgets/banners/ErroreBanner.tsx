@@ -1,6 +1,6 @@
 
 import CardBox from "src/components/shared/CardBox";
-import Banner from "/src/assets/images/backgrounds/website-under-construction.svg";
+import Banner from "src/assets/images/backgrounds/website-under-construction.svg";
 import { Button } from "flowbite-react";
 const ErroreBanner = () => {
   return (

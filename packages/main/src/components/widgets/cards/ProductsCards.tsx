@@ -1,9 +1,9 @@
 
 /*--Products Cards Images--*/
-import proimg1 from "/src/assets/images/products/s2.jpg";
-import proimg2 from "/src/assets/images/products/s5.jpg";
-import proimg3 from "/src/assets/images/products/s8.jpg";
-import proimg4 from "/src/assets/images/products/s11.jpg";
+import proimg1 from "src/assets/images/products/s2.jpg";
+import proimg2 from "src/assets/images/products/s5.jpg";
+import proimg3 from "src/assets/images/products/s8.jpg";
+import proimg4 from "src/assets/images/products/s11.jpg";
 import { Button, Rating, RatingStar } from "flowbite-react";
 
 import { Link } from "react-router";

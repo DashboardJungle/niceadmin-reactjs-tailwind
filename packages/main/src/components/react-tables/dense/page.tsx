@@ -24,11 +24,11 @@ export interface TableTypeDense {
   budget?: string;
 }
 
-import user2 from '/src/assets/images/profile/user-2.jpg';
-import user1 from '/src/assets/images/profile/user-1.jpg';
-import user3 from '/src/assets/images/profile/user-3.jpg';
-import user5 from '/src/assets/images/profile/user-5.jpg';
-import user7 from '/src/assets/images/profile/user-7.jpg';
+import user2 from 'src/assets/images/profile/user-2.jpg';
+import user1 from 'src/assets/images/profile/user-1.jpg';
+import user3 from 'src/assets/images/profile/user-3.jpg';
+import user5 from 'src/assets/images/profile/user-5.jpg';
+import user7 from 'src/assets/images/profile/user-7.jpg';
 
 const basicTableData: TableTypeDense[] = [
   {
@@ -280,9 +280,9 @@ const ReactDenseTable = () => {
                       {header.isPlaceholder
                         ? null
                         : flexRender(
-                            header.column.columnDef.header,
-                            header.getContext()
-                          )}
+                          header.column.columnDef.header,
+                          header.getContext()
+                        )}
                     </th>
                   ))}
                 </tr>

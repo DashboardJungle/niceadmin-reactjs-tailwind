@@ -10,11 +10,11 @@ import { Badge } from "flowbite-react";
 import TitleIconCard from "src/components/shared/TitleIconCard";
 import React from "react";
 
-import user2 from '/src/assets/images/profile/user-2.jpg';
-import user1 from '/src/assets/images/profile/user-1.jpg';
-import user3 from '/src/assets/images/profile/user-3.jpg'
-import user5 from '/src/assets/images/profile/user-5.jpg';
-import user7 from '/src/assets/images/profile/user-7.jpg';
+import user2 from 'src/assets/images/profile/user-2.jpg';
+import user1 from 'src/assets/images/profile/user-1.jpg';
+import user3 from 'src/assets/images/profile/user-3.jpg'
+import user5 from 'src/assets/images/profile/user-5.jpg';
+import user7 from 'src/assets/images/profile/user-7.jpg';
 
 
 

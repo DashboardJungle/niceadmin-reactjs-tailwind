@@ -1,5 +1,5 @@
 
-import  { useState } from "react";
+import { useState } from "react";
 import {
     createColumnHelper,
     useReactTable,
@@ -9,7 +9,7 @@ import {
 import { Label } from "flowbite-react";
 import TitleIconCard from "src/components/shared/TitleIconCard";
 import React from "react";
-import noData from "/src/assets/images/svgs/no-data.webp"
+import noData from "src/assets/images/svgs/no-data.webp"
 
 const columnHelper = createColumnHelper();
 

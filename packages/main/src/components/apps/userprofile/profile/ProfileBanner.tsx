@@ -9,12 +9,12 @@ import {
   TbUserCircle,
 } from "react-icons/tb";
 
-import Banner from "/src/assets/images/backgrounds/profilebg.jpg";
+import Banner from "src/assets/images/backgrounds/profilebg.jpg";
 import { Button } from "flowbite-react";
 import ProfileTab from "./ProfileTab";
 import { Link } from "react-router";
 import CardBox from "src/components/shared/CardBox";
-import profileImg from "/src/assets/images/profile/user-1.jpg"
+import profileImg from "src/assets/images/profile/user-1.jpg"
 
 const ProfileBanner = () => {
   return (

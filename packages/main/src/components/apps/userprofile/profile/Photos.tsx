@@ -1,14 +1,14 @@
 
 
-import user1 from "/src/assets/images/profile/ryan.svg";
-import user2 from "/src/assets/images/profile/emily.svg";
-import user3 from "/src/assets/images/profile/juan.svg";
-import user4 from "/src/assets/images/profile/Kiley.svg";
-import user5 from "/src/assets/images/profile/Reva.svg";
-import user6 from "/src/assets/images/profile/olivia.svg";
-import user7 from "/src/assets/images/profile/Dalton.svg";
-import user8 from "/src/assets/images/profile/jason.svg";
-import user9 from "/src/assets/images/profile/Janita.svg";
+import user1 from "src/assets/images/profile/ryan.svg";
+import user2 from "src/assets/images/profile/emily.svg";
+import user3 from "src/assets/images/profile/juan.svg";
+import user4 from "src/assets/images/profile/Kiley.svg";
+import user5 from "src/assets/images/profile/Reva.svg";
+import user6 from "src/assets/images/profile/olivia.svg";
+import user7 from "src/assets/images/profile/Dalton.svg";
+import user8 from "src/assets/images/profile/jason.svg";
+import user9 from "src/assets/images/profile/Janita.svg";
 import CardBox from "src/components/shared/CardBox";
 
 

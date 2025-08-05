@@ -1,5 +1,5 @@
 
-import icon from "/src/assets/images/svgs/icon-master-card-2.svg";
+import icon from "src/assets/images/svgs/icon-master-card-2.svg";
 import CardBox from 'src/components/shared/CardBox';
 import Chart from 'react-apexcharts';
 import { IconArrowUpLeft } from "@tabler/icons-react";
