@@ -26,8 +26,9 @@ const GenerateApiKeyModal: React.FC<GenerateApiKeyModalProps> = ({ open, onClose
                 <p className='text-sm mt-3'>Naming your application makes it easier to recognize your API key in the future.</p>
             </ModalBody>
             <ModalFooter>
-                <Button onClick={onClose}>Cancel</Button>
-                <Button color="primary">Generate Api Key</Button>
+                <Button color="secondary">Generate Api Key</Button>
+                <Button color="primary" onClick={onClose}>Cancel</Button>
+
             </ModalFooter>
         </Modal>
     );

@@ -1,5 +1,5 @@
 import { Icon } from "@iconify/react/dist/iconify.js"
-import { Button, Table, Badge, ToggleSwitch, TableHead, TableCell, TableHeadCell, TableBody, TableRow, Label, Tooltip } from "flowbite-react"
+import { Button, Table, Badge, ToggleSwitch, TableHead, TableCell, TableHeadCell, TableBody, TableRow, Label, Tooltip, Modal, ModalBody, ModalFooter } from "flowbite-react"
 import { useState } from "react";
 import SimpleBar from "simplebar-react";
 
@@ -46,8 +46,8 @@ function ApiKeys() {
     const [keysData, setKeysData] = useState(apiKeys);
     const [showModal, setShowModal] = useState(false);
     const [copied, setCopied] = useState<number | null>(null);
-
-
+    const [openDeleteDialog, setOpenDeleteDialog] = useState(false)
+    const [deleteKeyId, setDeleteKeyId] = useState<number | null>(null);
     const handleToggle = (id: any) => {
         setKeysData((prev) =>
             prev.map((k) =>
@@ -62,6 +62,29 @@ function ApiKeys() {
         setTimeout(() => setCopied(null), 2000); // reset after 2s
     };
 
+    // const handleDelete = (id: number) => {
+    //     const confirmed = window.confirm("Are you sure you want to delete this API key?");
+    //     if (confirmed) {
+    //         setKeysData((prev) => prev.filter((key) => key.id !== id));
+    //     }
+    // };
+    const handleDelete = (id: number) => {
+        setDeleteKeyId(id);
+        setOpenDeleteDialog(true);
+    }
+    // Handle closing delete confirmation dialog
+    const handleCloseDeleteDialog = () => {
+        setOpenDeleteDialog(false)
+    }
+
+    // Handle confirming deletion of selected products
+    const handleConfirmDelete = async () => {
+        if (deleteKeyId !== null) {
+            setKeysData((prev) => prev.filter((key) => key.id !== deleteKeyId));
+        }
+        setOpenDeleteDialog(false);
+        setDeleteKeyId(null); // reset after delete
+    }
     return (
         <CardBox>
             <div className="flex flex-col gap-5 sm:flex-row sm:items-center justify-between border-b border-border dark:border-darkborder py-4 px-1 ">
@@ -191,19 +214,14 @@ function ApiKeys() {
                                             onChange={() => handleToggle(key.id)}
                                         />
                                     </TableCell>
-                                    <TableCell className="flex items-center gap-2">
+                                    <TableCell >
                                         <Tooltip content="Delete" style="light">
-                                            <Button className="btn-circle text-muted dark:text-lightgray" color={"transparent"}>
+                                            <Button className="btn-circle text-muted dark:text-lightgray" color={"transparent"} onClick={() => handleDelete(key.id)}>
                                                 <Icon icon="solar:trash-bin-minimalistic-outline" width={20}
                                                     height={20} />
                                             </Button>
                                         </Tooltip>
-                                        <Tooltip content="Edit" style="light">
-                                            <Button className="btn-circle text-muted dark:text-lightgray" color={"transparent"}>
-                                                <Icon icon="solar:pen-line-duotone" width={20}
-                                                    height={20} />
-                                            </Button>
-                                        </Tooltip>
+
                                     </TableCell>
 
                                 </TableRow>
@@ -214,6 +232,26 @@ function ApiKeys() {
                 </div>
             </SimpleBar>
             <GenerateApiKeyModal open={showModal} onClose={() => setShowModal(false)} />
+            {/* delete modal */}
+            <Modal
+                show={openDeleteDialog}
+                onClose={handleCloseDeleteDialog}
+                size={'md'}>
+                <ModalBody>
+                    <p className='text-center text-lg text-ld'>
+                        Are you sure you want to delete this API key?
+                    </p>
+                </ModalBody>
+                <ModalFooter className='mx-auto'>
+
+                    <Button color='error' onClick={handleConfirmDelete}>
+                        Delete
+                    </Button>
+                    <Button color='lighterror' onClick={handleCloseDeleteDialog}>
+                        Cancel
+                    </Button>
+                </ModalFooter>
+            </Modal>
         </CardBox>
 
     )
