@@ -2,8 +2,8 @@ import { Button } from "flowbite-react"
 import GeneralDetail from "src/components/apps/blog/blogadd/GeneralDetail"
 import Media from "src/components/apps/blog/blogadd/Media"
 
-import ProductData from "src/components/apps/blog/blogadd/ProductData"
-import Producttemplate from "src/components/apps/blog/blogadd/ProductTemplate"
+import CategoryTags from "src/components/apps/blog/blogadd/CategoryTags"
+import PostDate from "src/components/apps/blog/blogadd/PostDate"
 import Status from "src/components/apps/blog/blogadd/Status"
 
 // import Variation from "src/components/apps/blog/blogadd/Variation"
@@ -38,8 +38,7 @@ function BlogAdd() {
                         <GeneralDetail />
                         {/* Media  */}
                         <Media />
-                        {/* Variation  */}
-                        {/* <Variation /> */}
+
 
                     </div>
                 </div>
@@ -48,10 +47,10 @@ function BlogAdd() {
 
                         {/* Status */}
                         <Status />
-                        {/* ProductData */}
-                        <ProductData />
-                        {/* Producttemplate */}
-                        <Producttemplate />
+                        {/* CategoryTags */}
+                        <CategoryTags />
+                        {/* PostDate */}
+                        <PostDate />
                     </div>
                 </div>
                 <div className="lg:col-span-8 col-span-12">

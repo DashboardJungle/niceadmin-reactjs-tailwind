@@ -5,7 +5,7 @@ import { HiOutlinePlusSm, HiOutlineX } from "react-icons/hi";
 import CardBox from "src/components/shared/CardBox";
 import React from 'react';
 
-const ProductData = () => {
+const CategoryTags = () => {
   const [tags, setTags] = useState<string[]>([]);
   const [tagInput, setTagInput] = useState<string>("");
 
@@ -78,7 +78,7 @@ const ProductData = () => {
 
   return (
     <CardBox>
-      <h5 className="card-title mb-4">Blog Details</h5>
+      <h5 className="card-title mb-4">Blog Category</h5>
       <div className="">
         <div className="mb-2 block">
           <Label htmlFor="cat">Categories</Label>
@@ -191,4 +191,4 @@ const ProductData = () => {
   );
 };
 
-export default ProductData;
+export default CategoryTags;

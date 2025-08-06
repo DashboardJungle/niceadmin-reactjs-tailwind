@@ -224,6 +224,18 @@ const SidebarContent: MenuItem[] = [
         url: '/theme-pages/faq',
       },
       {
+        name: 'API Keys',
+        id: uniqueId(),
+        icon: 'solar:key-square-line-duotone',
+        url: '/theme-pages/apikey',
+      },
+      {
+        name: 'Integrations',
+        id: uniqueId(),
+        icon: 'stash:integrations-light',
+        url: '/theme-pages/integration',
+      },
+      {
         name: 'Widgets',
         icon: 'solar:widget-line-duotone',
         id: uniqueId(),

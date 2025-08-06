@@ -69,6 +69,8 @@ const Pricing = Loadable(lazy(() => import('../views/pages/Pricing')));
 const AccountSetting = Loadable(
   lazy(() => import('../views/pages/AccountSetting')),
 );
+const Apikeys = Loadable(lazy(() => import('../views/pages/Apikeys')));
+const Integrations = Loadable(lazy(() => import('../views/pages/Integration')));
 
 
 //Shadcn Forms
@@ -280,6 +282,8 @@ const Router = [
       { path: '/theme-pages/pricing', element: <Pricing /> },
       { path: '/theme-pages/faq', element: <Faq /> },
       { path: '/theme-pages/account-settings', element: <AccountSetting /> },
+      { path: '/theme-pages/apikey', element: <Apikeys /> },
+      { path: '/theme-pages/integration', element: <Integrations /> },
 
       { path: '/forms/form-elements', element: <FormElements /> },
       { path: '/forms/form-validation', element: <FormValidation /> },
