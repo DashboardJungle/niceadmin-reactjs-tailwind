@@ -62,12 +62,7 @@ function ApiKeys() {
         setTimeout(() => setCopied(null), 2000); // reset after 2s
     };
 
-    // const handleDelete = (id: number) => {
-    //     const confirmed = window.confirm("Are you sure you want to delete this API key?");
-    //     if (confirmed) {
-    //         setKeysData((prev) => prev.filter((key) => key.id !== id));
-    //     }
-    // };
+
     const handleDelete = (id: number) => {
         setDeleteKeyId(id);
         setOpenDeleteDialog(true);

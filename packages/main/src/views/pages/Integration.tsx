@@ -1,3 +1,4 @@
+import Integartionpage from "src/components/theme-pages/integration/Integartionpage";
 import BreadcrumbComp from "src/layouts/full/shared/breadcrumb/BreadcrumbComp";
 
 
@@ -15,7 +16,10 @@ const BCrumb = [
 
 function Integration() {
     return (
-        <BreadcrumbComp title="Integrations" links={BCrumb} />
+        <>
+            <BreadcrumbComp title="Integrations" links={BCrumb} />
+            <Integartionpage />
+        </>
     )
 }
 
