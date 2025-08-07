@@ -118,11 +118,22 @@ function Integartionpage() {
                         <div className="p-5 pb-9">
                             <div className="flex items-start justify-between gap-3">
 
-                                <div className="mb-5 inline-flex h-10 w-10 items-center justify-center">
+                                <div className="mb-5 inline-flex items-center justify-center">
 
-                                    <img src={integration.icon} alt="inetegartin img" />
-                                    {/* <img src={integration.icon} className="block dark:hidden " />
-                                    <img src={integration.icondark} className="hidden dark:block " /> */}
+                                    <img
+                                        src={integration.icon}
+                                        alt={`${integration.name} logo`}
+                                        className={`h-10 w-10 object-contain ${integration.icondark ? 'block dark:hidden' : ''}`}
+                                    />
+
+                                    {/* Dark mode: show icondark if it exists */}
+                                    {integration.icondark && (
+                                        <img
+                                            src={integration.icondark}
+                                            alt={`${integration.name} logo (dark)`}
+                                            className="hidden dark:block h-10 w-10 object-contain"
+                                        />
+                                    )}
                                 </div>
 
 
