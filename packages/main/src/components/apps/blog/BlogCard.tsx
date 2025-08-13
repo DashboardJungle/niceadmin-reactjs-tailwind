@@ -28,7 +28,7 @@ const BlogCard = ({ post }: Btype) => {
               <div className="overflow-hidden h-[240px]">
                 <img
                   src={coverImg}
-                  alt="materialm"
+                  alt="niceadmin"
                   height={240}
                   width={500}
                   className="w-100"

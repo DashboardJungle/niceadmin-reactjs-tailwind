@@ -31,7 +31,7 @@ const NavWithDropdownCode = () => {
               <DropdownHeader>
                 <span className='block text-sm'>Bonnie Green</span>
                 <span className='block truncate text-sm font-medium'>
-                  info@Materialm.com
+                  info@niceadmi.com
                 </span>
               </DropdownHeader>
               <DropdownItem>Dashboard</DropdownItem>

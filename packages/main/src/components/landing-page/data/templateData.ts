@@ -22,31 +22,31 @@ export const demoVariation = [
     title: 'Main Version',
     tag: 'Free',
     img: maindemo,
-    liveUrl: 'https://niceadmin-mui-nextjs-main.vercel.app/',
+    liveUrl: 'https://niceadmin-reactjs-tailwind-main.netlify.app/',
   },
   {
     title: 'Dark Version',
     tag: 'Pro',
     img: darkdemo,
-    liveUrl: 'https://niceadmin-mui-nextjs-dark.vercel.app/',
+    liveUrl: 'https://niceadmin-reactjs-tailwind-dark.netlify.app/',
   },
   {
     title: 'Horizontal Version',
     tag: 'Pro',
     img: horizontaldemo,
-    liveUrl: 'https://niceadmin-mui-nextjs-horizontal.vercel.app/',
+    liveUrl: 'https://niceadmin-reactjs-tailwind-horizontal.netlify.app/',
   },
   {
     title: 'RTL Version',
     tag: 'Pro',
     img: rtldemo,
-    liveUrl: 'https://niceadmin-mui-nextjs-rtl.vercel.app/',
+    liveUrl: 'https://niceadmin-reactjs-tailwind-rtl.netlify.app/',
   },
   {
     title: 'Mini Sidebar Version',
     tag: 'Pro',
     img: minisidebar,
-    liveUrl: 'https://niceadmin-mui-nextjs-minisidebar.vercel.app/',
+    liveUrl: 'https://niceadmin-reactjs-tailwind-minisidebar.netlify.app/',
   },
 ];
 
@@ -55,73 +55,73 @@ export const applicationsVariation = [
     title: 'Ticket App',
     tag: 'Free',
     img: app1,
-    liveUrl: 'https://niceadmin-mui-nextjs-main.vercel.app/apps/tickets',
+    liveUrl: 'https://niceadmin-reactjs-tailwind-main.netlify.app/apps/tickets',
   },
   {
     title: 'Chat AI',
     tag: 'Pro',
     img: app2,
-    liveUrl: 'https://niceadmin-mui-nextjs-main.vercel.app/apps/chat-ai',
+    liveUrl: 'https://niceadmin-reactjs-tailwind-main.netlify.app/apps/chat-ai',
   },
   {
     title: 'Kanban App',
     tag: 'Pro',
     img: app3,
-    liveUrl: 'https://niceadmin-mui-nextjs-main.vercel.app/apps/kanban',
+    liveUrl: 'https://niceadmin-reactjs-tailwind-main.netlify.app/apps/kanban',
   },
   {
     title: 'Chat App',
     tag: 'Pro',
     img: app4,
-    liveUrl: 'https://niceadmin-mui-nextjs-main.vercel.app/apps/chats',
+    liveUrl: 'https://niceadmin-reactjs-tailwind-main.netlify.app/apps/chats',
   },
   {
     title: 'Calendar App',
     tag: 'Pro',
     img: app5,
-    liveUrl: 'https://niceadmin-mui-nextjs-main.vercel.app/apps/calendar',
+    liveUrl: 'https://niceadmin-reactjs-tailwind-main.netlify.app/apps/calendar',
   },
   {
     title: 'Email App',
     tag: 'Pro',
     img: app6,
-    liveUrl: 'https://niceadmin-mui-nextjs-main.vercel.app/apps/email',
+    liveUrl: 'https://niceadmin-reactjs-tailwind-main.netlify.app/apps/email',
   },
   {
     title: 'E-Commerce App',
     tag: 'Pro',
     img: app7,
-    liveUrl: 'https://niceadmin-mui-nextjs-main.vercel.app/apps/ecommerce/shop',
+    liveUrl: 'https://niceadmin-reactjs-tailwind-main.netlify.app/apps/ecommerce/shop',
   },
   {
     title: 'Blog App',
     tag: 'Pro',
     img: app8,
-    liveUrl: 'https://niceadmin-mui-nextjs-main.vercel.app/apps/blog/post',
+    liveUrl: 'https://niceadmin-reactjs-tailwind-main.netlify.app/apps/blog/post',
   },
   {
     title: 'Invoice App',
     tag: 'Pro',
     img: app9,
-    liveUrl: 'https://niceadmin-mui-nextjs-main.vercel.app/apps/invoice/list',
+    liveUrl: 'https://niceadmin-reactjs-tailwind-main.netlify.app/apps/invoice/list',
   },
   {
     title: 'Contact App',
     tag: 'Pro',
     img: app10,
-    liveUrl: 'https://niceadmin-mui-nextjs-main.vercel.app/apps/contacts',
+    liveUrl: 'https://niceadmin-reactjs-tailwind-main.netlify.app/apps/contacts',
   },
   {
     title: 'User Profile App',
     tag: 'Pro',
     img: app11,
-    liveUrl: 'https://niceadmin-mui-nextjs-main.vercel.app/apps/user-profile/profile',
+    liveUrl: 'https://niceadmin-reactjs-tailwind-main.netlify.app/apps/user-profile/profile',
   },
   {
     title: 'Note App',
     tag: 'Pro',
     img: app12,
-    liveUrl: 'https://niceadmin-mui-nextjs-main.vercel.app/apps/notes',
+    liveUrl: 'https://niceadmin-reactjs-tailwind-main.netlify.app/apps/notes',
   },
 ];
 
@@ -129,7 +129,7 @@ export const featuresData = [
   {
     icon: 'solar:magic-stick-3-linear',
     title: '6 Theme Colors',
-    descp: 'MaterialM Admin comes with 6 pre-defined theme colors.',
+    descp: 'Niceadmin Admin comes with 6 pre-defined theme colors.',
   },
   {
     icon: 'solar:archive-linear',
@@ -139,7 +139,7 @@ export const featuresData = [
   {
     icon: 'solar:widget-6-linear',
     title: '50+ UI Components',
-    descp: 'Almost 50+ UI Components being given with MaterialM Admin Pack.',
+    descp: 'Almost 50+ UI Components being given with Niceadmin Admin Pack.',
   },
   {
     icon: 'solar:presentation-graph-linear',
@@ -154,7 +154,7 @@ export const featuresData = [
   {
     icon: 'solar:refresh-linear',
     title: 'Regular Updates',
-    descp: 'MaterialM Admin comes with 6 pre-defined theme colors.',
+    descp: 'Niceadmin Admin comes with 6 pre-defined theme colors.',
   },
   {
     icon: 'solar:chart-linear',

@@ -43,7 +43,7 @@ const Messages = () => {
                     src={links.avatar}
                     width={45}
                     height={45}
-                    alt='materialm'
+                    alt='niceadmin'
                     className='rounded-full bg-black/20 dark:bg-white/20 pt-0.5'
                   />
                   <i

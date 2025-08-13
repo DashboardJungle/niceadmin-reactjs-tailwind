@@ -59,7 +59,7 @@ const FriendsCard = () => {
                 <CardBox className='px-0 pb-0  text-center overflow-hidden'>
                   <img
                     src={profile.avatar}
-                    alt='materialm'
+                    alt='niceadmin'
                     className='rounded-full mx-auto'
                     height={80}
                     width={80}

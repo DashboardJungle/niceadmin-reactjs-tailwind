@@ -68,7 +68,7 @@ const BlogDetailData = () => {
               <div className='overflow-hidden max-h-[440px]'>
                 <img
                   src={post?.coverImg}
-                  alt='materialm'
+                  alt='niceadmin'
                   height={440}
                   width={1500}
                   className='w-full object-cover object-center'

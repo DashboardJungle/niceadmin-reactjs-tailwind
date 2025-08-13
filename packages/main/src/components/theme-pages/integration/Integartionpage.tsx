@@ -27,29 +27,17 @@ type Integration = {
 };
 
 export const integrations = [
+
     {
-        name: 'Mailchimp',
-        desc: 'Connect Mailchimp to streamline your email marketing—automate campaigns.',
-        icon: Mailchimpimg,
-        icondark: Mailchimpdark,
-        enabled: true,
+        name: 'Gmail',
+        desc: 'Integrate Gmail to send, receive, and manage emails directly from your workspace.',
+        icon: Gmailimg,
+        enabled: false,
     },
     {
         name: 'Google Meet',
         desc: 'Connect your Google Meet account for seamless video conferencing.',
         icon: Meetimg,
-        enabled: false,
-    },
-    {
-        name: 'Zoom',
-        desc: 'Integrate Zoom to streamline your virtual meetings and team collaborations.',
-        icon: Zoomimg,
-        enabled: false,
-    },
-    {
-        name: 'Loom',
-        desc: 'Integrate Loom to easily record, share, and manage video messages.',
-        icon: Loomimg,
         enabled: false,
     },
     {
@@ -59,10 +47,23 @@ export const integrations = [
         enabled: false,
     },
     {
-        name: 'Gmail',
-        desc: 'Integrate Gmail to send, receive, and manage emails directly from your workspace.',
-        icon: Gmailimg,
+        name: 'Loom',
+        desc: 'Integrate Loom to easily record, share, and manage video messages.',
+        icon: Loomimg,
         enabled: false,
+    },
+    {
+        name: 'Zoom',
+        desc: 'Integrate Zoom to streamline your virtual meetings and team collaborations.',
+        icon: Zoomimg,
+        enabled: true,
+    },
+    {
+        name: 'Mailchimp',
+        desc: 'Connect Mailchimp to streamline your email marketing—automate campaigns.',
+        icon: Mailchimpimg,
+        icondark: Mailchimpdark,
+        enabled: true,
     },
     {
         name: 'Notion',

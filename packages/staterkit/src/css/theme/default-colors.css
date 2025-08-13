@@ -1,0 +1,92 @@
+:root {
+  --color-info: #8754ec;
+  --color-success: #70c748;
+  --color-warning: #f6b51e;
+  --color-error: #ef4444;
+  --color-lightsuccess: #70c7481a;
+  --color-lighterror: #fa896b1a;
+  --color-lightinfo: #8754ec1a;
+  --color-darkinfo: #223662;
+  --color-lightwarning: #ffae1f20;
+  --color-white: #fff;
+  --color-dark: #030e09;
+  --color-lightdark: #141a18;
+  --color-border: #030e091a;
+  --color-darkborder: #ffffff30;
+  --color-link: #030e09cc;
+  --color-muted: #030e0999;
+  --color-lightmuted: #030d0866;
+  --color-darklink: #ffffffcc;
+  --color-lightgray: #e3e2e273;
+  --color-darkgray: #333f55;
+  --color-bodytext: #030e0999;
+  --color-body: #f5f5f5;
+  --color-darkbody: #101a16;
+  --color-error-emphasis: #c23333;
+  --color-warning-emphasis: #d9941a;
+  --color-success-emphasis: #5aa538;
+  --color-info-emphasis: #693fbd;
+  --color-lightwhite: #ffffff40;
+  --color-lighterwhite: #ffffff50;
+  --color-blue: #1a56db;
+  --color-darkmuted: #ffffff99;
+  --color-skyblue: #50b2fc;
+  --color-cherryred: #f44c66;
+  --color-black40: #030E0966;
+  --color-white40: #ffffff66;
+}
+
+[data-color-theme='GREEN_THEME'] {
+  --color-primary: #165a50;
+  --color-lightprimary: #165a501a;
+  --color-darkprimary: #165a5040;
+  --color-primary-emphasis: #11463f;
+  --color-secondary: #c2fd75;
+  --color-lightsecondary: #c2fd751a;
+  --color-secondary-emphasis: #9fc95f;
+}
+[data-color-theme='ORANGE_THEME'] {
+  --color-primary: #3b3e33;
+  --color-lightprimary: #3b3e331a;
+  --color-darkprimary: #3b3e3340;
+  --color-primary-emphasis: #2f3229;
+  --color-secondary: #ff9f1c;
+  --color-lightsecondary: #ff9f1c1a;
+  --color-secondary-emphasis: #cc7f17;
+}
+[data-color-theme='VIOLET_THEME'] {
+  --color-primary: #3a1957;
+  --color-lightprimary: #3a19571a;
+  --color-darkprimary: #3a195740;
+  --color-primary-emphasis: #2f1545;
+  --color-secondary: #c2b4f8;
+  --color-lightsecondary: #c2b4f81a;
+  --color-secondary-emphasis: #a18edb;
+}
+[data-color-theme='BLUE_THEME'] {
+  --color-primary: #05476b;
+  --color-lightprimary: #05476b1a;
+  --color-darkprimary: #05476b40;
+  --color-primary-emphasis: #03364f;
+  --color-secondary: #6ee7ff;
+  --color-lightsecondary: #6ee7ff1a;
+  --color-secondary-emphasis: #4dc3da;
+}
+[data-color-theme='TEAL_THEME'] {
+  --color-primary: #105060;
+  --color-lightprimary: #1050601a;
+  --color-darkprimary: #10506040;
+  --color-primary-emphasis: #0b3b44;
+  --color-secondary: #73fbd3;
+  --color-lightsecondary: #73fbd31a;
+  --color-secondary-emphasis: #59c9af;
+}
+[data-color-theme='LAVENDER_THEME'] {
+  --color-primary: #0b1549;
+  --color-lightprimary: #0b15491a;
+  --color-darkprimary: #0b154940;
+  --color-primary-emphasis: #080f38;
+  --color-secondary: #b9cbff;
+  --color-lightsecondary: #b9cbff1a;
+  --color-secondary-emphasis: #8a9edd;
+}

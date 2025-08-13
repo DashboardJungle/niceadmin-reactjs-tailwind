@@ -63,7 +63,7 @@ const HeroSection = () => {
             </div>
             <div className='flex flex-wrap items-center justify-center gap-4'>
               <Link
-                to='/'
+                to='https://niceadmin-reactjs-tailwind-main.netlify.app/'
                 className='group flex items-center gap-2.5 px-4 sm:px-6 py-2.5 sm:py-3.5 bg-primary hover:bg-secondary rounded-10'>
                 <svg
                   width='20'
@@ -85,7 +85,7 @@ const HeroSection = () => {
               </Link>
               <div className='relative w-fit group rounded-xl p-0.5 bg-transparent'>
                 <Link
-                  to='/'
+                  to='https://niceadmin-reactjs-tailwind-main.netlify.app/'
                   className='flex items-center gap-2.5 px-4 sm:px-6 py-2.5 sm:py-3.5 bg-white dark:bg-darkbody hover:bg-primary/15 dark:hover:bg-darkprimary rounded-10 border border-forest-black/20 dark:border-white/20 transition-all'>
                   <Icon
                     icon={'solar:download-minimalistic-linear'}

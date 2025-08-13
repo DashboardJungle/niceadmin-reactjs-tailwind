@@ -43,7 +43,7 @@ const MusicCards = () => {
                   </div>
                 </div>
                 <div className="col-span-6">
-                  <img src={item.img} alt="materialm" className="h-full object-cover" />
+                  <img src={item.img} alt="niceadmin" className="h-full object-cover" />
                 </div>
               </div>
             </CardBox>
