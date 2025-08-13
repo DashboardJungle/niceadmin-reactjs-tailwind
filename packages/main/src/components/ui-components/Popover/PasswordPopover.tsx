@@ -16,7 +16,7 @@ const PasswordPopover = () => {
             <TextInput
               id='email1'
               type='email'
-              placeholder='info@Materialm.com'
+              placeholder='info@niceadmin.com'
               className='!form-control'
               required
             />

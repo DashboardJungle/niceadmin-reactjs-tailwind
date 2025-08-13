@@ -14,7 +14,7 @@ const Login = () => {
         <div className='container mx-auto py-5 max-w-5xl min-h-[calc(100vh-120px)]'>
           <div className='grid lg:grid-cols-2 grid-cols-1 bg-white dark:bg-dark rounded-md'>
             <div className='sm:p-16 xs:p-8 p-4'>
-              <div className='mb-14'>
+              <div className='mb-14 flex justify-start'>
                 <FullLogo />
               </div>
               <div className='flex flex-col gap-2'>

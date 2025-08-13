@@ -431,10 +431,6 @@ const Router = [
     element: <BlankLayout />,
     children: [
       { path: '/landingpage', element: <Landingpage /> },
-
-
-
-
       { path: '/auth/auth1/login', element: <Login /> },
       { path: '/auth/auth2/login', element: <Login2 /> },
       { path: '/auth/auth1/register', element: <Register /> },

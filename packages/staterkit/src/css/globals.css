@@ -1,0 +1,583 @@
+@import 'tailwindcss';
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
+
+
+@import './layouts/container.css' layer(utilities);
+@import './layouts/sidebar.css' layer(utilities);
+@import './layouts/horizontal.css' layer(utilities);
+@import './layouts/header.css' layer(utilities);
+@import './pages/dashboards.css' layer(utilities);
+@import './pages/widgets.css' layer(utilities);
+@import './pages/landingpage.css' layer(utilities);
+@import './pages/auth.css' layer(utilities);
+@import './pages/app.css' ;
+@import './theme/default-colors.css' layer(utilities);
+@import './theme/dark.css' layer(utilities);
+@import './override/reboot.css' layer(utilities);
+@import './layouts/rtl.css' layer(utilities);
+
+
+@plugin 'flowbite-react/plugin/tailwindcss';
+@source '../../.flowbite-react/class-list.json';
+@source '../../node_modules/flowbite-react/dist/esm/**/*.mjs';
+
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --shadow-md: 0px 3px 6px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+  --shadow-dark-md: 0px 3px 6px rgba(0, 0, 0, 0.04);
+  --shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  --shadow-btn-shadow: box-shadow: rgba(0, 0, 0, 0.05) 0 9px 17.5px;
+
+  --breakpoint-xs: 410px;
+
+  --radius-xss: 2px;
+  --radius-xs: 8px;
+  --radius-sm: 10px;
+  --radius-md: 10px;
+  --radius-lg: 10px;
+  --radius-tw: 12px;
+
+  --gap-30: 30px;
+  --leading-21: 21px;
+
+  --padding-15: 15px;
+  --padding-30: 30px;
+
+  --margin-30: 30px;
+
+  --spacing-5.5: 22px;
+  --spacing-82: 330px;
+  --spacing-88: 360px;
+
+  --text-15: 15px;
+  --text-28: 28px;
+
+  --color-cyan-500: var(--color-primary);
+  --color-cyan-600: var(--color-primary);
+  --color-cyan-700: var(--color-primary);
+
+  --color-gray-600: var(--color-lighterwhite);
+  --color-gray-700: var(--color-lightwhite);
+  --color-gray-800: var(--color-dark);
+
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-info: var(--color-info);
+  --color-success: var(--color-success);
+  --color-warning: var(--color-warning);
+  --color-error: var(--color-error);
+  --color-lightprimary: var(--color-lightprimary);
+  --color-lightsecondary: var(--color-lightsecondary);
+  --color-lightsuccess: var(--color-lightsuccess);
+  --color-lighterror: var(--color-lighterror);
+  --color-lightinfo: var(--color-lightinfo);
+  --color-lightwarning: var(--color-lightwarning);
+  --color-border: var(--color-border);
+  --color-bordergray: var(--color-bordergray);
+  --color-lightgray: var(--color-lightgray);
+  --color-muted: var(--color-muted);
+  --color-lightmuted: var(--color-lightmuted);
+  --color-bodytext: var(--color-bodytext);
+  --color-body: var(--color-body);
+  --color-darkbody: var(--color-darkbody);
+  --color-dark: var(--color-dark);
+  --color-lightdark: var(--color-lightdark);
+  --color-link: var(--color-link);
+  --color-darklink: var(--color-darklink);
+  --color-darkborder: var(--color-darkborder);
+  --color-darkgray: var(--color-darkgray);
+  --color-darkinfo: var(--color-darkinfo);
+  --color-darkprimary: var(--color-darkprimary);
+  --color-darkmuted: var(--color-darkmuted);
+  --color-primaryemphasis: var(--color-primary-emphasis);
+  --color-secondaryemphasis: var(--color-secondary-emphasis);
+  --color-warningemphasis: var(--color-warning-emphasis);
+  --color-erroremphasis: var(--color-error-emphasis);
+  --color-successemphasis: var(--color-success-emphasis);
+  --color-infoemphasis: var(--color-info-emphasis);
+  --color-skyblue: var(--color-skyblue);
+  --color-cherryred: var(--color-cherryred);
+  --color-black40: var(--color-black40);
+  --color-white40: var(--color-white40);
+
+    /* landing page colors */
+  --color-soft-white: #F5F5F5;
+  --color-forest-black: #030E09;
+  --color-muted-gray: #D9D9D9;
+  --color-success-green: #20A867;
+}
+
+
+
+/* landing page css start */
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+@theme inline {
+  --animate-scroll: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite;
+ 
+  @keyframes scroll {
+    to {
+      transform: translate(calc(-50% - 0.5rem));
+    }
+  }
+}
+
+@layer utilities {
+
+  .bg-gradient-with-grid {
+    background-image: radial-gradient(226.29% 100% at 50% 0%, #F5F5F5 0%, rgba(245, 245, 245, 0) 14.94%, #F5F5F5 100%);
+    background-size: cover, cover;
+    background-position: center, center;
+    background-repeat: no-repeat, no-repeat;
+  }
+  .dark .bg-gradient-with-grid {
+    background-image: radial-gradient(226.29% 100% at 50% 0%, var(--color-darkprimary) 0%, rgba(245, 245, 245, 0) 14.94%, var(--color-darkprimary) 100%);
+    background-size: cover, cover;
+    background-position: center, center;
+    background-repeat: no-repeat, no-repeat;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .animate-slide-left-content {
+    animation: slideLeft 20s linear infinite;
+  }
+  @keyframes slideLeft {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+/* ------- landing page css end ----------- */
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 30px;
+  @apply max-w-[1368px] px-6;
+
+  .landingpage & {
+    @apply max-w-[1320px];
+  }
+}
+
+html, body {
+    font-family: "Onest", sans-serif;
+}
+
+
+@utility landingpage {
+  & .container {
+    /* @apply max-w-[1320px]; */
+    @apply w-full max-w-[81.5rem] mx-auto mt-0 mb-0 py-0 sm:px-7 px-5;
+  }
+}
+
+@utility dropdown {
+  @apply shadow-md bg-white dark:bg-black relative rounded-xs dark:shadow-dark-md;
+}
+
+@utility card-title {
+  @apply text-lg font-semibold text-dark dark:text-white;
+}
+
+@utility card-subtitle {
+  @apply text-sm dark:text-lightgray font-medium;
+}
+
+@utility border-ld {
+  @apply border-border dark:border-darkborder;
+}
+
+@utility bg-hover {
+  @apply hover:bg-lightprimary dark:hover:bg-darkprimary;
+}
+
+@utility form-control {
+  & input {
+    @apply border border-ld bg-transparent dark:bg-transparent w-full text-sm;
+  }
+
+  &.trans-input input {
+    @apply border border-ld bg-transparent dark:bg-transparent w-full ps-11 py-2 text-sm placeholder:text-black/50 dark:placeholder:text-lightgray rounded-xs;
+  }
+
+  &.trans-input input:focus {
+    @apply border-primary dark:border-primary outline-hidden shadow-none ring-offset-0 ring-transparent;
+  }
+
+  & input:focus {
+    @apply border-primary dark:border-primary outline-hidden shadow-none ring-offset-0 ring-transparent;
+  }
+}
+
+@utility trans-input {
+  &.form-control input {
+    @apply border border-ld bg-transparent dark:bg-transparent w-full ps-11 py-2 text-sm placeholder:text-black/50 dark:placeholder:text-lightgray;
+  }
+}
+
+@utility form-control-chat {
+  & input {
+    @apply rounded-md border-0 bg-transparent dark:bg-transparent w-full text-sm;
+  }
+
+  & input:focus {
+    @apply border-0! bg-transparent dark:bg-transparent w-full text-sm ring-transparent dark:ring-transparent;
+  }
+}
+
+@utility form-control-rounded {
+  & input {
+    @apply rounded-full border border-ld bg-transparent dark:bg-transparent w-full text-sm;
+  }
+
+  & input:focus {
+    @apply border-primary dark:border-primary outline-hidden shadow-none ring-offset-0 ring-transparent;
+  }
+}
+
+@utility form-control-textarea {
+  @apply rounded-md border border-ld bg-transparent dark:bg-transparent w-full text-sm p-4;
+
+  &:focus {
+    @apply border-primary dark:border-primary outline-hidden shadow-none ring-offset-0 ring-transparent;
+  }
+}
+
+@utility form-control-input {
+  @apply rounded-md border border-ld bg-transparent dark:bg-transparent w-full text-sm px-4 py-2 placeholder:text-black/50 dark:placeholder:text-lightgray;
+
+  &:focus {
+    @apply border-primary dark:border-primary outline-hidden shadow-none ring-offset-0 ring-transparent;
+  }
+}
+
+@utility form-rounded-md {
+  & input {
+    @apply rounded-md border border-ld bg-transparent dark:bg-transparent w-full text-sm;
+  }
+
+  & input:focus {
+    @apply border-primary dark:border-primary outline-hidden shadow-none ring-offset-0 ring-transparent;
+  }
+}
+
+@utility form-rounded {
+  & input {
+    @apply rounded-full;
+  }
+}
+
+@utility input-center {
+  & input {
+    @apply text-center;
+  }
+}
+
+@utility elipse {
+  @apply w-[18px] h-[10px];
+}
+
+@utility select-option {
+  & select {
+    @apply bg-white dark:bg-black hover:border-primary hover:text-primary border border-ld text-dark dark:text-white py-2.5 ps-4 pe-9 w-auto cursor-pointer focus:border-border dark:focus:border-darkborder focus:ring-0 font-medium;
+  }
+  &.table-select select {
+    @apply bg-transparent dark:bg-black hover:border-primary hover:text-primary border border-ld text-dark dark:text-white py-1.5 ps-4 pe-9 w-auto cursor-pointer focus:border-border dark:focus:border-darkborder focus:ring-0 font-medium;
+  }
+}
+
+@utility table-select {
+  &.select-option select {
+    @apply bg-transparent dark:bg-black hover:border-primary hover:text-primary border border-ld text-dark dark:text-white py-1.5 ps-4 pe-9 w-auto cursor-pointer focus:border-border dark:focus:border-darkborder focus:ring-0 font-medium;
+  }
+}
+
+@utility select-md {
+  & select {
+    @apply border-ld bg-transparent dark:bg-black w-full text-sm rounded-md focus:border-primary dark:focus:border-primary focus:ring-0;
+  }
+}
+
+@utility select-rounded {
+  & select {
+    @apply border-ld bg-transparent dark:bg-black w-full text-sm rounded-full focus:border-primary dark:focus:border-primary focus:ring-0;
+  }
+}
+
+@utility select-md-transparent {
+  & select {
+    @apply border-ld bg-transparent dark:bg-gray-800/70 w-full text-sm rounded-md focus:border-primary dark:focus:border-primary focus:ring-0 pe-9 hover:cursor-pointer;
+  }
+}
+
+@utility select-rounded-transparent {
+  & select {
+    @apply border-ld bg-transparent dark:bg-gray-800/70 w-full text-sm rounded-full focus:border-primary dark:focus:border-primary focus:ring-0;
+  }
+}
+
+@utility checkbox {
+  @apply h-[18px] w-[18px] focus:ring-0 focus:ring-offset-0 border-ld;
+}
+
+@utility text-primary-ld {
+  @apply hover:text-primary dark:hover:text-primary;
+}
+
+@utility left-part {
+  /* Apps */
+  @apply w-80 border-e border-ld p-6;
+}
+
+@utility btn-circle {
+  @apply h-8 w-8 rounded-full flex justify-center items-center p-0 text-black dark:text-white;
+}
+
+@utility btn-circle-hover {
+  @apply h-9 w-9 flex justify-center items-center rounded-full hover:bg-lightprimary dark:hover:bg-darkprimary hover:text-primary dark:hover:text-white cursor-pointer bg-transparent;
+}
+
+@utility text-ld {
+  @apply text-dark dark:text-white;
+}
+
+@utility avatar-full {
+  & img {
+    @apply w-full h-full;
+  }
+}
+
+@utility sorting {
+  & button {
+    @apply bg-transparent text-dark dark:text-white p-0;
+  }
+
+  & button:hover {
+    @apply bg-transparent;
+  }
+
+  & button span {
+    @apply p-0;
+  }
+
+  & ul li {
+    @apply px-4 py-2;
+  }
+
+  & ul li button:hover {
+    @apply hover:text-primary;
+  }
+}
+
+@utility bg-primary {
+  /* Button Hover Color Set */
+  &button {
+    @apply hover:bg-primaryemphasis;
+  }
+}
+
+@utility bg-secondary {
+  &button {
+    @apply hover:bg-secondaryemphasis;
+  }
+}
+
+@utility bg-info {
+  &button {
+    @apply hover:bg-infoemphasis;
+  }
+}
+
+@utility bg-error {
+  &button {
+    @apply hover:bg-erroremphasis;
+  }
+}
+
+@utility bg-success {
+  &button {
+    @apply hover:bg-successemphasis;
+  }
+}
+
+@utility bg-warning {
+  &button {
+    @apply hover:bg-warningemphasis;
+  }
+}
+
+@utility ui-button {
+  /* Headlessui */
+  @apply flex items-stretch justify-between  py-2.5 px-5 text-white text-center font-medium rounded-full hover:cursor-pointer;
+}
+
+@utility ui-background-color {
+  @apply bg-white dark:bg-gray-500/50;
+}
+
+@utility ui-button-small {
+  @apply flex items-stretch justify-between py-2 px-6 text-white text-center font-medium rounded-full hover:cursor-pointer;
+}
+
+@utility ui-dropdown {
+  @apply text-ld w-full max-w-56! bg-white dark:bg-black shadow-md dark:shadow-dark-md text-start rounded-xs py-3;
+}
+
+@utility ui-dropdown-item {
+  @apply flex w-full gap-3 cursor-pointer items-center justify-start px-4 py-2 text-sm text-ld hover:text-primary dark:hover:text-white bg-hover focus:bg-hover focus:outline-hidden;
+}
+
+@utility ui-dropdown-animation {
+  @apply origin-top-right transition duration-100 ease-out [--anchor-gap:var(--spacing-1)] focus:outline-hidden data-closed:scale-95 data-closed:opacity-0;
+}
+
+@utility ui-form-control {
+  @apply border border-border dark:border-white/20 bg-transparent dark:bg-transparent w-full text-sm;
+
+  &:focus {
+    @apply border-primary dark:border-primary outline-hidden shadow-none ring-offset-0 ring-transparent dark:ring-transparent dark:focus:ring-0;
+  }
+}
+
+@utility ui-checkbox {
+  @apply h-[18px] w-[18px] border border-bordergray dark:border-gray-50/50 bg-white dark:bg-transparent data-checked:bg-primary dark:data-checked:bg-primary data-checked:border-primary dark:data-checked:border-primary rounded cursor-pointer focus:ring-0 focus:ring-offset-0 outline-hidden;
+}
+
+@utility ui-disclosure {
+  @apply w-full divide-y divide-border dark:divide-darkborder rounded-xl bg-gray-100 dark:bg-white/10;
+}
+
+@utility ui-disclosure-btn {
+  @apply text-sm font-medium text-ld group-data-[hover]:text-primary dark:group-data-[hover]:text-ld group-data-[hover]:cursor-pointer;
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+@layer components {
+
+  body {
+    @apply text-sm overflow-x-hidden bg-body dark:bg-darkbody;
+  }
+
+  body {
+    @apply text-link dark:text-darklink;
+  }
+
+  /*heading text color*/
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-link dark:text-darklink font-semibold;
+  }
+
+  p {
+    @apply text-muted dark:text-darkmuted;
+  }
+
+  input::placeholder {
+    @apply text-black/50 dark:text-darklink
+  }
+
+  ::selection {
+  background: var(--color-secondary);
+  color: black;
+  }
+
+}
+
+/* pulse animation */
+.dot-wrapper {
+      position: relative;
+      width: 16px;
+      height: 16px;
+    }
+
+    .pulse-outer {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #f32020;
+      border-radius: 50%;
+      opacity: 0.5;
+      animation: pulse-glow 1.5s ease-in-out infinite;
+    }
+
+    .dot-inner {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: red;
+      border-radius: 50%;
+      opacity: 1;
+    }
+
+    @keyframes pulse-glow {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 0.5;
+      }
+      50% {
+        transform: scale(1.4);
+        opacity: 0.2;
+      }
+    }
+
+/* shadcn bar chart Stacked + Legend hover bg colors */
+.recharts-tooltip-cursor {
+  fill: var(--color-lightprimary) !important;
+}
+.dark .recharts-tooltip-cursor {
+  fill: var(--color-darkprimary) !important;
+}
+

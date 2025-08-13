@@ -2,22 +2,22 @@ export const navbarLinks = {
   navbarList: [
     {
       label: 'Components',
-      href: 'https://coredash-nextjs-tailwind.vercel.app/componentpage/ui-components/flowbite/buttons',
+      href: 'https://niceadmin-nextjs-tailwind-main.vercel.app/componentpage/ui-components/flowbite/buttons',
     },
     { label: 'Docs', href: '/docs' },
     { label: 'Support', href: 'https://support.wrappixel.com/' },
-    { label: 'Blog', href: '/blog' },
+    { label: 'Blog', href: 'https://niceadmin-reactjs-tailwind-main.netlify.app/apps/blog/post' },
     { label: 'Changelog', href: '/changelog' },
   ],
   button: [
     {
       label: 'Free Download',
-      href: '/free',
+      href: 'https://niceadmin-reactjs-tailwind-main.netlify.app/',
       icon: '/images/landingpage/icon/download-icon.svg',
     },
     {
       label: 'Get Pro',
-      href: '/pro',
+      href: 'https://niceadmin-reactjs-tailwind-main.netlify.app/',
       icon: '/images/landingpage/icon/pro-icon.svg',
     },
   ],

@@ -15,7 +15,7 @@ const twoSteps = () => {
         <div className='container mx-auto py-5 max-w-5xl min-h-[calc(100vh-120px)]'>
           <div className='grid lg:grid-cols-2 grid-cols-1 bg-white dark:bg-dark rounded-md items-center'>
             <div className='sm:p-16 xs:p-8 p-4'>
-              <div className='mb-14'>
+              <div className='mb-14 flex justify-start'>
                 <FullLogo />
               </div>
               <div>
