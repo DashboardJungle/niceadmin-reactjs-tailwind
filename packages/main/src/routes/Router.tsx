@@ -1,9 +1,8 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import { lazy } from 'react';
-import { Navigate, createBrowserRouter } from "react-router";
+import { Navigate, createBrowserRouter } from 'react-router';
 import Loadable from '../layouts/full/shared/loadable/Loadable';
-
 
 /* ***Layouts**** */
 const FullLayout = Loadable(lazy(() => import('../layouts/full/FullLayout')));
@@ -14,8 +13,6 @@ const BlankLayout = Loadable(lazy(() => import('../layouts/blank/BlankLayout')))
 const EcommerceDashboard = Loadable(lazy(() => import('../views/dashboards/Ecommerce')));
 const Analytics = Loadable(lazy(() => import('../views/dashboards/Analytics')));
 const Modern = Loadable(lazy(() => import('../views/dashboards/Modern')));
-
-
 
 /* ****Apps***** */
 const Contact = Loadable(lazy(() => import('../views/apps/contact/Contact')));
@@ -51,7 +48,8 @@ const Email = Loadable(lazy(() => import('../views/apps/email/Email')));
 const Tickets = Loadable(lazy(() => import('../views/apps/tickets/Tickets')));
 const CreateTickets = Loadable(lazy(() => import('../views/apps/tickets/CreateTickets')));
 const Kanban = Loadable(lazy(() => import('../views/apps/kanban/Kanban')));
-
+const ChatAi = Loadable(lazy(() => import('../views/apps/chat-ai/ChatAi')));
+const ImageAI = Loadable(lazy(() => import('../views/apps/image-ai/ImageAI')));
 
 // forms
 const FormLayouts = Loadable(lazy(() => import('../views/forms/FormLayouts')));
@@ -61,17 +59,13 @@ const FormVertical = Loadable(lazy(() => import('../views/forms/FormVertical')))
 const FormValidation = Loadable(lazy(() => import('../views/forms/FormValidation')));
 const FormElements = Loadable(lazy(() => import('../views/forms/FormElements')));
 
-
 // theme pages
 const RollbaseCASL = Loadable(lazy(() => import('../views/pages/RollbaseCASL')));
 const Faq = Loadable(lazy(() => import('../views/pages/Faq')));
 const Pricing = Loadable(lazy(() => import('../views/pages/Pricing')));
-const AccountSetting = Loadable(
-  lazy(() => import('../views/pages/AccountSetting')),
-);
+const AccountSetting = Loadable(lazy(() => import('../views/pages/AccountSetting')));
 const Apikeys = Loadable(lazy(() => import('../views/pages/Apikeys')));
 const Integrations = Loadable(lazy(() => import('../views/pages/Integration')));
-
 
 //Shadcn Forms
 const ShadcnInput = Loadable(lazy(() => import('../views/shadcn-form/ShadcnInput')));
@@ -90,7 +84,6 @@ const HeadlessRadio = Loadable(lazy(() => import('../views/headless-form/RadioGr
 const HeadlessSelect = Loadable(lazy(() => import('../views/headless-form/SelectForm')));
 const HeadlessSwitch = Loadable(lazy(() => import('../views/headless-form/SwitchForm')));
 const HeadlessTextarea = Loadable(lazy(() => import('../views/headless-form/TextareaForm')));
-
 
 // widget
 const WidgetCards = Loadable(lazy(() => import('../views/widgets/cards/WidgetCards')));
@@ -112,16 +105,22 @@ const ForgotPassword2 = Loadable(
 const TwoSteps = Loadable(lazy(() => import('../views/authentication/auth1/TwoSteps')));
 const TwoSteps2 = Loadable(lazy(() => import('../views/authentication/auth2/TwoSteps')));
 
-
 const Maintainance = Loadable(lazy(() => import('../views/authentication/Maintainance')));
 // const SamplePage = Loadable(lazy(() => import('../views/sample-page/SamplePage')));
 
-
 //Flowbite table
-const FlowbiteBasicTable = Loadable(lazy(() => import('../views/flowbite-tables/FlowbiteBasicTable')));
-const FlowbiteCheckboxTable = Loadable(lazy(() => import('../views/flowbite-tables/FlowbiteCheckboxTable')));
-const FlowbiteHoverTable = Loadable(lazy(() => import('../views/flowbite-tables/FlowbiteHoverTable')));
-const FlowbiteStripedTable = Loadable(lazy(() => import('../views/flowbite-tables/FlowbiteStripedTable')));
+const FlowbiteBasicTable = Loadable(
+  lazy(() => import('../views/flowbite-tables/FlowbiteBasicTable')),
+);
+const FlowbiteCheckboxTable = Loadable(
+  lazy(() => import('../views/flowbite-tables/FlowbiteCheckboxTable')),
+);
+const FlowbiteHoverTable = Loadable(
+  lazy(() => import('../views/flowbite-tables/FlowbiteHoverTable')),
+);
+const FlowbiteStripedTable = Loadable(
+  lazy(() => import('../views/flowbite-tables/FlowbiteStripedTable')),
+);
 
 //shadcn table
 
@@ -136,18 +135,25 @@ const ReactDenseTable = Loadable(lazy(() => import('../views/react-tables/dense/
 const ReactDragDropTable = Loadable(lazy(() => import('../views/react-tables/drag-drop/DragDrop')));
 const ReactEditableTable = Loadable(lazy(() => import('../views/react-tables/editable/Editable')));
 const ReactEmptyTable = Loadable(lazy(() => import('../views/react-tables/empty/Empty')));
-const ReactExpandingTable = Loadable(lazy(() => import('../views/react-tables/expanding/Expanding')));
+const ReactExpandingTable = Loadable(
+  lazy(() => import('../views/react-tables/expanding/Expanding')),
+);
 const ReactFilterTable = Loadable(lazy(() => import('../views/react-tables/filtering/Filtering')));
-const ReactPaginationTable = Loadable(lazy(() => import('../views/react-tables/pagination/Pagination')));
+const ReactPaginationTable = Loadable(
+  lazy(() => import('../views/react-tables/pagination/Pagination')),
+);
 const ReactRowSelectionTable = Loadable(
   lazy(() => import('../views/react-tables/row-selection/RowSelection')),
 );
 const ReactSortingTable = Loadable(lazy(() => import('../views/react-tables/sorting/Sorting')));
 const ReactStickyTable = Loadable(lazy(() => import('../views/react-tables/sticky/Sticky')));
 
-const ReactOrderTable = Loadable(lazy(() => import('../views/react-tables/order-datatable/OrderTable')));
-const ReactUserTable = Loadable(lazy(() => import('../views/react-tables/user-datatable/UserTable')));
-
+const ReactOrderTable = Loadable(
+  lazy(() => import('../views/react-tables/order-datatable/OrderTable')),
+);
+const ReactUserTable = Loadable(
+  lazy(() => import('../views/react-tables/user-datatable/UserTable')),
+);
 
 // charts
 const AreaChart = Loadable(lazy(() => import('../views/charts/AreaChart')));
@@ -158,15 +164,12 @@ const GredientChart = Loadable(lazy(() => import('../views/charts/GredientChart'
 const RadialbarChart = Loadable(lazy(() => import('../views/charts/RadialbarChart')));
 const LineChart = Loadable(lazy(() => import('../views/charts/LineChart')));
 
-
 // icons
 const SolarIcon = Loadable(lazy(() => import('../views/icons/SolarIcon')));
 const TablerIcon = Loadable(lazy(() => import('../views/icons/TablerIcon')));
 
-
 // landingpage
 const Landingpage = Loadable(lazy(() => import('../views/pages/landingpage/Landingpage')));
-
 
 // Shadcn-ui
 const ShadcnButton = Loadable(lazy(() => import('../views/shadcn-ui/ShadcnButton')));
@@ -190,8 +193,6 @@ const ShadcnProgress = Loadable(lazy(() => import('../views/shadcn-ui/ShadcnProg
 const ShadcnDrawer = Loadable(lazy(() => import('../views/shadcn-ui/ShadcnDrawer')));
 const ShadcnToast = Loadable(lazy(() => import('../views/shadcn-ui/ShadcnToast')));
 
-
-
 // headless-ui
 const Dialog = Loadable(lazy(() => import('../views/headless-ui/Dialog')));
 const Disclosure = Loadable(lazy(() => import('../views/headless-ui/Disclosure')));
@@ -206,12 +207,18 @@ const FlowbiteAlert = Loadable(lazy(() => import('../views/ui-components/Flowbit
 const FlowbiteAvatar = Loadable(lazy(() => import('../views/ui-components/FlowbiteAvatar')));
 const FlowbiteBadge = Loadable(lazy(() => import('../views/ui-components/FlowbiteBadge')));
 const FlowbiteBanner = Loadable(lazy(() => import('../views/ui-components/FlowbiteBanner')));
-const FlowbiteBreadcrumb = Loadable(lazy(() => import('../views/ui-components/FlowbiteBreadcrumb')));
-const FlowbiteButtonGroup = Loadable(lazy(() => import('../views/ui-components/FlowbiteButtonGroup')));
+const FlowbiteBreadcrumb = Loadable(
+  lazy(() => import('../views/ui-components/FlowbiteBreadcrumb')),
+);
+const FlowbiteButtonGroup = Loadable(
+  lazy(() => import('../views/ui-components/FlowbiteButtonGroup')),
+);
 const FlowbiteButtons = Loadable(lazy(() => import('../views/ui-components/FlowbiteButtons')));
 const FlowbiteCard = Loadable(lazy(() => import('../views/ui-components/FlowbiteCard')));
 const FlowbiteCarousel = Loadable(lazy(() => import('../views/ui-components/FlowbiteCarousel')));
-const FlowbiteDatePicker = Loadable(lazy(() => import('../views/ui-components/FlowbiteDatePicker')));
+const FlowbiteDatePicker = Loadable(
+  lazy(() => import('../views/ui-components/FlowbiteDatePicker')),
+);
 const FlowbiteDrawer = Loadable(lazy(() => import('../views/ui-components/FlowbiteDrawer')));
 const FlowbiteDropdown = Loadable(lazy(() => import('../views/ui-components/FlowbiteDropdown')));
 const FlowbiteFooter = Loadable(lazy(() => import('../views/ui-components/FlowbiteFooter')));
@@ -220,9 +227,13 @@ const FlowbiteListgroup = Loadable(lazy(() => import('../views/ui-components/Flo
 const FlowbiteMegamenu = Loadable(lazy(() => import('../views/ui-components/FlowbiteMegamenu')));
 const FlowbiteModals = Loadable(lazy(() => import('../views/ui-components/FlowbiteModals')));
 const FlowbiteNavbar = Loadable(lazy(() => import('../views/ui-components/FlowbiteNavbar')));
-const FlowbitePagination = Loadable(lazy(() => import('../views/ui-components/FlowbitePagination')));
+const FlowbitePagination = Loadable(
+  lazy(() => import('../views/ui-components/FlowbitePagination')),
+);
 const FlowbitePopover = Loadable(lazy(() => import('../views/ui-components/FlowbitePopover')));
-const FlowbiteProgressbar = Loadable(lazy(() => import('../views/ui-components/FlowbiteProgressbar')));
+const FlowbiteProgressbar = Loadable(
+  lazy(() => import('../views/ui-components/FlowbiteProgressbar')),
+);
 const FlowbiteRating = Loadable(lazy(() => import('../views/ui-components/FlowbiteRating')));
 const FlowbiteSidebar = Loadable(lazy(() => import('../views/ui-components/FlowbiteSidebar')));
 const FlowbiteSpinner = Loadable(lazy(() => import('../views/ui-components/FlowbiteSpinner')));
@@ -231,10 +242,9 @@ const FlowbiteTables = Loadable(lazy(() => import('../views/ui-components/Flowbi
 const FlowbiteTimeline = Loadable(lazy(() => import('../views/ui-components/FlowbiteTimeline')));
 const FlowbiteToast = Loadable(lazy(() => import('../views/ui-components/FlowbiteToast')));
 const FlowbiteTooltip = Loadable(lazy(() => import('../views/ui-components/FlowbiteTooltip')));
-const FlowbiteTypography = Loadable(lazy(() => import('../views/ui-components/FlowbiteTypography')));
-
-
-
+const FlowbiteTypography = Loadable(
+  lazy(() => import('../views/ui-components/FlowbiteTypography')),
+);
 
 const Error = Loadable(lazy(() => import('../views/authentication/Error')));
 
@@ -262,6 +272,8 @@ const Router = [
       { path: '/apps/blog/addblog', element: <BlogAdd /> },
       { path: '/apps/blog/editblog', element: <BlogEdit /> },
 
+      { path: '/apps/chat-ai', element: <ChatAi /> },
+      { path: '/apps/image-ai', element: <ImageAI /> },
       { path: '/apps/chats', element: <Chats /> },
       { path: '/apps/user-profile/profile', element: <UserProfile /> },
       { path: '/apps/user-profile/followers', element: <Followers /> },
@@ -308,7 +320,6 @@ const Router = [
       { path: '/headless-form/switch', element: <HeadlessSwitch /> },
       { path: '/headless-form/textarea', element: <HeadlessTextarea /> },
 
-
       { path: '/widgets/cards', element: <WidgetCards /> },
       { path: '/widgets/banners', element: <WidgetBanners /> },
       { path: '/widgets/charts', element: <WidgetCharts /> },
@@ -318,10 +329,7 @@ const Router = [
       { path: '/tables/hover-table', element: <FlowbiteHoverTable /> },
       { path: '/tables/striped-row', element: <FlowbiteStripedTable /> },
 
-
       { path: '/shadcn-tables/basic', element: <ShadcnTable /> },
-
-
 
       { path: '/react-tables/basic', element: <ReactBasicTable /> },
       { path: '/react-tables/columnvisibility', element: <ReactColumnVisibilityTable /> },
@@ -349,7 +357,6 @@ const Router = [
       { path: '/icons/iconify', element: <SolarIcon /> },
       { path: '/icons/tabler', element: <TablerIcon /> },
 
-
       /*Shadcn-ui*/
       { path: '/shadcn-ui/buttons', element: <ShadcnButton /> },
       { path: '/shadcn-ui/badge', element: <ShadcnBadge /> },
@@ -372,7 +379,6 @@ const Router = [
       { path: '/shadcn-ui/progressbar', element: <ShadcnProgress /> },
       { path: '/shadcn-ui/drawer', element: <ShadcnDrawer /> },
 
-
       { path: '/headless-form/buttons', element: <HeadlessButton /> },
       { path: '/headless-form/checkbox', element: <HeadlessCheckbox /> },
       { path: '/headless-form/combobox', element: <HeadlessCombobox /> },
@@ -383,7 +389,6 @@ const Router = [
       { path: '/headless-form/select', element: <HeadlessSelect /> },
       { path: '/headless-form/switch', element: <HeadlessSwitch /> },
       { path: '/headless-form/textarea', element: <HeadlessTextarea /> },
-
 
       { path: '/ui-components/accordion', element: <FlowbiteAccordion /> },
       { path: '/ui-components/alert', element: <FlowbiteAlert /> },
@@ -417,7 +422,6 @@ const Router = [
       { path: '/ui-components/tooltip', element: <FlowbiteTooltip /> },
       { path: '/ui-components/typography', element: <FlowbiteTypography /> },
 
-
       { path: '/headless-ui/dialog', element: <Dialog /> },
       { path: '/headless-ui/disclosure', element: <Disclosure /> },
       { path: '/headless-ui/dropdown', element: <Dropdown /> },
@@ -431,9 +435,6 @@ const Router = [
     element: <BlankLayout />,
     children: [
       { path: '/landingpage', element: <Landingpage /> },
-
-
-
 
       { path: '/auth/auth1/login', element: <Login /> },
       { path: '/auth/auth2/login', element: <Login2 /> },
@@ -451,10 +452,9 @@ const Router = [
       { path: '/auth/404', element: <Error /> },
       { path: '*', element: <Navigate to="/auth/404" /> },
     ],
-  }
-  ,
+  },
 ];
 
-const router = createBrowserRouter(Router)
+const router = createBrowserRouter(Router);
 
 export default router;

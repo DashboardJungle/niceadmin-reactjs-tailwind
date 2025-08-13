@@ -29,6 +29,45 @@ const SidebarContent: MenuItem[] = [
     heading: 'APPS',
     children: [
       {
+        name: 'AI',
+        icon: 'solar:star-circle-line-duotone',
+        id: uniqueId(),
+        children: [
+          {
+            id: uniqueId(),
+            name: 'Chat',
+            url: '/apps/chat-ai',
+            badge: true,
+            badgeType: 'filled',
+            badgeContent: 'New',
+          },
+          {
+            id: uniqueId(),
+            name: 'Image',
+            url: '/apps/image-ai',
+            badge: true,
+            badgeType: 'filled',
+            badgeContent: 'New',
+          },
+          {
+            id: uniqueId(),
+            name: 'Integrations',
+            url: '/theme-pages/integration',
+            badge: true,
+            badgeType: 'filled',
+            badgeContent: 'New',
+          },
+          {
+            id: uniqueId(),
+            name: 'API Keys',
+            url: '/theme-pages/apikey',
+            badge: true,
+            badgeType: 'filled',
+            badgeContent: 'New',
+          },
+        ],
+      },
+      {
         name: 'Contacts',
         icon: 'solar:phone-line-duotone',
         id: uniqueId(),
@@ -222,18 +261,6 @@ const SidebarContent: MenuItem[] = [
         id: uniqueId(),
         icon: 'solar:question-circle-line-duotone',
         url: '/theme-pages/faq',
-      },
-      {
-        name: 'API Keys',
-        id: uniqueId(),
-        icon: 'solar:key-square-line-duotone',
-        url: '/theme-pages/apikey',
-      },
-      {
-        name: 'Integrations',
-        id: uniqueId(),
-        icon: 'stash:integrations-light',
-        url: '/theme-pages/integration',
       },
       {
         name: 'Widgets',
@@ -1100,6 +1127,7 @@ const SidebarContent: MenuItem[] = [
         url: '#',
         badge: true,
         badgeType: 'filled',
+        badgeContent: '9',
       },
       {
         name: 'Outlined',

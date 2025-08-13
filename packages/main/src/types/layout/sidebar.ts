@@ -10,6 +10,7 @@ export interface ChildItem {
   subtitle?: string;
   badge?: boolean;
   badgeType?: string;
+  badgeContent?: string;
 }
 
 export interface MenuItem {
@@ -25,4 +26,5 @@ export interface MenuItem {
   subtitle?: string;
   badgeType?: string;
   badge?: boolean;
+  badgeContent?: string;
 }

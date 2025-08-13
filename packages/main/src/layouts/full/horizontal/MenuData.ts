@@ -36,6 +36,34 @@ const Menuitems = [
     column: 0,
     children: [
       {
+        title: 'AI',
+        icon: 'tabler:circle',
+        id: uniqueId(),
+        href: '',
+        children: [
+          {
+            id: uniqueId(),
+            title: 'Chat',
+            href: '/apps/chat-ai',
+          },
+          {
+            id: uniqueId(),
+            title: 'Image',
+            href: '/apps/image-ai',
+          },
+          {
+            id: uniqueId(),
+            title: 'Integrations',
+            href: '/theme-pages/integration',
+          },
+          {
+            id: uniqueId(),
+            title: 'API Keys',
+            href: '/theme-pages/apikey',
+          },
+        ],
+      },
+      {
         title: 'Contacts',
         icon: 'tabler:circle',
         id: uniqueId(),

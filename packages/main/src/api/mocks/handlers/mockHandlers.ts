@@ -9,6 +9,9 @@ import { TicketHandlers } from 'src/api/ticket/TicketData';
 import { Emailhandlers } from 'src/api/email/EmailData';
 import { InvoiceHandlers } from 'src/api/invoice/invoceLists';
 import { Kanbanhandlers } from 'src/api/kanban/KanbanData';
+import { ChatAiHandlers } from 'src/api/chat-ai/Chat';
+import { ChatHistoryhandlers } from 'src/api/chat-ai/HistoryData';
+import { ImageAiHandlers } from 'src/api/image-ai/ImageAi';
 import { accountHandlers } from 'src/api/mocks/handlers/accountHandlers';
 
 export const mockHandlers = [
@@ -23,5 +26,8 @@ export const mockHandlers = [
   ...Emailhandlers,
   ...InvoiceHandlers,
   ...Kanbanhandlers,
+  ...ChatAiHandlers,
+  ...ChatHistoryhandlers,
+  ...ImageAiHandlers,
   ...accountHandlers,
 ];
