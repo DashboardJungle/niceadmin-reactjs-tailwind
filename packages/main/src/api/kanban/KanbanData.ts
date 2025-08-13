@@ -6,16 +6,16 @@ import img2 from 'src/assets/images/blog/blog-image9.jpg';
 
 import attach1 from 'src/assets/images/blog/blog-image10.jpg';
 
-import olivia from 'src/assets/images/profile/olivia.svg';
-import emily from 'src/assets/images/profile/emily.svg';
+import olivia from 'src/assets/images/profile/olivia.png';
+import emily from 'src/assets/images/profile/emily.png';
 
-import ryan from 'src/assets/images/profile/ryan.svg';
+import ryan from 'src/assets/images/profile/ryan.png';
 
-import Kiley from 'src/assets/images/profile/Kiley.svg';
-import jason from 'src/assets/images/profile/jason.svg';
-import Dalton from 'src/assets/images/profile/Dalton.svg';
-import Juan from 'src/assets/images/profile/Juan.svg';
-import Reva from 'src/assets/images/profile/Reva.svg';
+import Kiley from 'src/assets/images/profile/Kiley.png';
+import jason from 'src/assets/images/profile/jason.png';
+import Dalton from 'src/assets/images/profile/Dalton.png';
+import Juan from 'src/assets/images/profile/Juan.png';
+import Reva from 'src/assets/images/profile/Reva.png';
 
 import { http, HttpResponse } from 'msw';
 

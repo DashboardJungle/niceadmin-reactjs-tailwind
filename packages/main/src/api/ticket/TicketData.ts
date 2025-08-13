@@ -3,14 +3,13 @@ import { Chance } from 'chance';
 import { TicketType } from 'src/types/apps/ticket';
 import { http, HttpResponse } from 'msw';
 
-import emily from 'src/assets/images/profile/emily.svg';
-import Juan from 'src/assets/images/profile/Juan.svg';
-import ryan from 'src/assets/images/profile/ryan.svg';
-import Reva from 'src/assets/images/profile/Reva.svg';
-import Kiley from 'src/assets/images/profile/Kiley.svg';
-import jason from 'src/assets/images/profile/jason.svg';
-
-import Dalton from 'src/assets/images/profile/Dalton.svg';
+import emily from 'src/assets/images/profile/emily.png';
+import Juan from 'src/assets/images/profile/Juan.png';
+import ryan from 'src/assets/images/profile/ryan.png';
+import Reva from 'src/assets/images/profile/Reva.png';
+import Kiley from 'src/assets/images/profile/Kiley.png';
+import jason from 'src/assets/images/profile/jason.png';
+import Dalton from 'src/assets/images/profile/Dalton.png';
 
 const chance = new Chance();
 

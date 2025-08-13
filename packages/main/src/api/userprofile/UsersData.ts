@@ -3,15 +3,15 @@ import { Chance } from 'chance';
 import { uniqueId } from 'lodash';
 import { userType } from '../../types/apps/users';
 
-import emily from 'src/assets/images/profile/emily.svg';
-import Juan from 'src/assets/images/profile/Juan.svg';
-import olivia from 'src/assets/images/profile/olivia.svg';
-import Kiley from 'src/assets/images/profile/Kiley.svg';
-import jason from 'src/assets/images/profile/jason.svg';
-import Dalton from 'src/assets/images/profile/Dalton.svg';
-import ryan from 'src/assets/images/profile/ryan.svg';
-import Janita from 'src/assets/images/profile/Janita.svg';
-import Reva from 'src/assets/images/profile/Reva.svg';
+import emily from 'src/assets/images/profile/emily.png';
+import Juan from 'src/assets/images/profile/Juan.png';
+import olivia from 'src/assets/images/profile/olivia.png';
+import Kiley from 'src/assets/images/profile/Kiley.png';
+import jason from 'src/assets/images/profile/jason.png';
+import Dalton from 'src/assets/images/profile/Dalton.png';
+import ryan from 'src/assets/images/profile/ryan.png';
+import Janita from 'src/assets/images/profile/Janita.png';
+import Reva from 'src/assets/images/profile/Reva.png';
 
 import s1 from 'src/assets/images/products/updated-product/innovation.webp';
 import s2 from 'src/assets/images/products/updated-product/book-growth.webp';

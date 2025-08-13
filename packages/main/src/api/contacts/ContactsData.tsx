@@ -1,20 +1,17 @@
 import { ContactType } from '../../types/apps/contact';
 import { Chance } from 'chance';
 
-
-import olivia from 'src/assets/images/profile/olivia.svg';
-import emily from 'src/assets/images/profile/emily.svg';
-import Juan from 'src/assets/images/profile/Juan.svg';
-import ryan from 'src/assets/images/profile/ryan.svg';
-import Reva from 'src/assets/images/profile/Reva.svg';
-import Kiley from 'src/assets/images/profile/Kiley.svg';
-import jason from 'src/assets/images/profile/jason.svg';
-import Janita from 'src/assets/images/profile/Janita.svg';
-import Dalton from 'src/assets/images/profile/Dalton.svg';
-
+import olivia from 'src/assets/images/profile/olivia.png';
+import emily from 'src/assets/images/profile/emily.png';
+import Juan from 'src/assets/images/profile/Juan.png';
+import ryan from 'src/assets/images/profile/ryan.png';
+import Reva from 'src/assets/images/profile/Reva.png';
+import Kiley from 'src/assets/images/profile/Kiley.png';
+import jason from 'src/assets/images/profile/jason.png';
+import Janita from 'src/assets/images/profile/Janita.png';
+import Dalton from 'src/assets/images/profile/Dalton.png';
 
 import { http, HttpResponse } from 'msw';
-
 
 const chance = new Chance();
 
@@ -481,62 +478,58 @@ export const Contacthandlers = [
     try {
       return HttpResponse.json({
         status: 200,
-        msg: "success",
+        msg: 'success',
         data: ContactList,
       });
     } catch (error) {
-      return HttpResponse.json({ status: 400, msg: "failed", data: error });
+      return HttpResponse.json({ status: 400, msg: 'failed', data: error });
     }
   }),
 
   // Mock API endpoint to add a new contact
   http.post('/api/data/contacts/addContact', async ({ request }) => {
     try {
-      let newContact = await request.json() as ContactType;
+      let newContact = (await request.json()) as ContactType;
       newContact.id = ContactList.length + 1;
       ContactList.push(newContact);
       return HttpResponse.json({
         status: 200,
-        msg: "success",
+        msg: 'success',
         data: ContactList,
       });
     } catch (error) {
-      return HttpResponse.json({ status: 400, msg: "failed", data: error });
+      return HttpResponse.json({ status: 400, msg: 'failed', data: error });
     }
   }),
 
   // Mock API endpoint to delete a contact
-  http.delete("/api/data/contacts/deleteContact", async ({ request }) => {
+  http.delete('/api/data/contacts/deleteContact', async ({ request }) => {
     try {
-      const { data } = await request.json() as { data: any };
+      const { data } = (await request.json()) as { data: any };
 
       let contactId = data.contactId;
-      const contactIndex = ContactList.findIndex(
-        (contact) => contact.id === contactId
-      );
+      const contactIndex = ContactList.findIndex((contact) => contact.id === contactId);
       if (contactIndex !== -1) {
         ContactList = ContactList.filter((contact) => contact.id !== contactId);
         return HttpResponse.json({
           status: 200,
-          msg: "success",
+          msg: 'success',
           data: ContactList,
         });
       } else {
-        return HttpResponse.json({ status: 404, msg: "Contact not found" });
+        return HttpResponse.json({ status: 404, msg: 'Contact not found' });
       }
     } catch (error) {
-
-      return HttpResponse.json({ status: 400, msg: "failed", data: error });
+      return HttpResponse.json({ status: 400, msg: 'failed', data: error });
     }
   }),
 
-
   // Mock API endpoint to update a contact
-  http.put("/api/data/contacts/updateContact", async ({ request }) => {
+  http.put('/api/data/contacts/updateContact', async ({ request }) => {
     try {
-      const updatedContactData = await request.json() as ContactType;
+      const updatedContactData = (await request.json()) as ContactType;
       const updatedContactIndex = ContactList.findIndex(
-        (contact) => contact.id === updatedContactData.id
+        (contact) => contact.id === updatedContactData.id,
       );
       if (updatedContactIndex !== -1) {
         ContactList[updatedContactIndex] = {
@@ -545,17 +538,16 @@ export const Contacthandlers = [
         };
         return HttpResponse.json({
           status: 200,
-          msg: "success",
+          msg: 'success',
           data: ContactList,
         });
       } else {
-        return HttpResponse.json({ status: 404, msg: "Contact not found" });
+        return HttpResponse.json({ status: 404, msg: 'Contact not found' });
       }
     } catch (error) {
-      return HttpResponse.json({ status: 400, msg: "failed", data: error });
+      return HttpResponse.json({ status: 400, msg: 'failed', data: error });
     }
-  })
-]
-
+  }),
+];
 
 export default ContactList;

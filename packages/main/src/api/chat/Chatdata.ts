@@ -2,14 +2,14 @@ import { Chance } from 'chance';
 import { sub } from 'date-fns';
 import { uniqueId } from 'lodash';
 
-import emily from 'src/assets/images/profile/emily.svg';
-import Juan from 'src/assets/images/profile/Juan.svg';
-import ryan from 'src/assets/images/profile/ryan.svg';
+import emily from 'src/assets/images/profile/emily.png';
+import Juan from 'src/assets/images/profile/Juan.png';
+import ryan from 'src/assets/images/profile/ryan.png';
 
-import Kiley from 'src/assets/images/profile/Kiley.svg';
-import jason from 'src/assets/images/profile/jason.svg';
-import Janita from 'src/assets/images/profile/Janita.svg';
-import Dalton from 'src/assets/images/profile/Dalton.svg';
+import Kiley from 'src/assets/images/profile/Kiley.png';
+import jason from 'src/assets/images/profile/jason.png';
+import Janita from 'src/assets/images/profile/Janita.png';
+import Dalton from 'src/assets/images/profile/Dalton.png';
 
 import s1 from 'src/assets/images/blog/blog-image1.jpg';
 

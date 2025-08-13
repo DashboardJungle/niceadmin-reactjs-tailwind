@@ -7,10 +7,10 @@ interface MessageType {
   time: string;
 }
 
-import avatar1 from 'src/assets/images/topprojects/emily.svg';
-import avatar2 from 'src/assets/images/topprojects/jason.svg';
-import avatar3 from 'src/assets/images/topprojects/ryan.svg';
-import avatar4 from 'src/assets/images/topprojects/olivia.svg';
+import avatar1 from 'src/assets/images/profile/emily.png';
+import avatar2 from 'src/assets/images/profile/jason.png';
+import avatar3 from 'src/assets/images/profile/ryan.png';
+import avatar4 from 'src/assets/images/profile/olivia.png';
 
 const MessagesLink: MessageType[] = [
   {

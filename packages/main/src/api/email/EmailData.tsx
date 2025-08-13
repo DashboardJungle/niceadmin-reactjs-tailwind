@@ -1,17 +1,15 @@
 import { EmailType } from '../../types/apps/email';
 import { sub } from 'date-fns';
 
-
-import olivia from 'src/assets/images/profile/olivia.svg';
-import emily from 'src/assets/images/profile/emily.svg';
-import Juan from 'src/assets/images/profile/Juan.svg';
-import ryan from 'src/assets/images/profile/ryan.svg';
-import Reva from 'src/assets/images/profile/Reva.svg';
-import Kiley from 'src/assets/images/profile/Kiley.svg';
-import jason from 'src/assets/images/profile/jason.svg';
-import Janita from 'src/assets/images/profile/Janita.svg';
-import Dalton from 'src/assets/images/profile/Dalton.svg';
-
+import olivia from 'src/assets/images/profile/olivia.png';
+import emily from 'src/assets/images/profile/emily.png';
+import Juan from 'src/assets/images/profile/Juan.png';
+import ryan from 'src/assets/images/profile/ryan.png';
+import Reva from 'src/assets/images/profile/Reva.png';
+import Kiley from 'src/assets/images/profile/Kiley.png';
+import jason from 'src/assets/images/profile/jason.png';
+import Janita from 'src/assets/images/profile/Janita.png';
+import Dalton from 'src/assets/images/profile/Dalton.png';
 
 import adobe from 'src/assets/images/chat/icon-adobe.svg';
 import chrome from 'src/assets/images/chat/icon-chrome.svg';
@@ -505,15 +503,14 @@ let EmailData: EmailType[] = [
 
 //  All Mocked Api
 export const Emailhandlers = [
-
   // Mock api to get emails
   http.get('/api/data/email/EmailData', () => {
     try {
-      return HttpResponse.json({ status: 200, msg: "success", data: EmailData });
+      return HttpResponse.json({ status: 200, msg: 'success', data: EmailData });
     } catch (error) {
       return HttpResponse.json({
         status: 400,
-        msg: "Internal server error",
+        msg: 'Internal server error',
         error,
       });
     }
@@ -521,18 +518,16 @@ export const Emailhandlers = [
 
   // Mock api to delete email
   http.delete('/api/data/email/delete', async ({ request }) => {
-    const { emailId } = await request.json() as { emailId: any }; // Extract email ID from the request data
+    const { emailId } = (await request.json()) as { emailId: any }; // Extract email ID from the request data
     const email = EmailData.find((email) => email.id === emailId); // Find the index of the email with the specified ID
     if (email) {
       let remainingEmails = EmailData.filter((email) => email.id !== emailId);
       EmailData = remainingEmails;
-      return HttpResponse.json({ status: 200, msg: "success", data: EmailData });
+      return HttpResponse.json({ status: 200, msg: 'success', data: EmailData });
     } else {
-      return HttpResponse.json({ status: 4000, msg: "Email not found" });
+      return HttpResponse.json({ status: 4000, msg: 'Email not found' });
     }
-  }
-  )
-]
-
+  }),
+];
 
 export default EmailData;

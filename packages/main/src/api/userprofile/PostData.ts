@@ -1,12 +1,12 @@
 import { PostType } from '../../types/apps/userProfile';
 import { Chance } from 'chance';
 
-import emily from 'src/assets/images/profile/emily.svg';
-import Juan from 'src/assets/images/profile/Juan.svg';
-import olivia from 'src/assets/images/profile/olivia.svg';
-import Kiley from 'src/assets/images/profile/Kiley.svg';
-import jason from 'src/assets/images/profile/jason.svg';
-import Dalton from 'src/assets/images/profile/Dalton.svg';
+import emily from 'src/assets/images/profile/emily.png';
+import Juan from 'src/assets/images/profile/Juan.png';
+import olivia from 'src/assets/images/profile/olivia.png';
+import Kiley from 'src/assets/images/profile/Kiley.png';
+import jason from 'src/assets/images/profile/jason.png';
+import Dalton from 'src/assets/images/profile/Dalton.png';
 
 import s1 from 'src/assets/images/products/s1.jpg';
 import s2 from 'src/assets/images/products/s2.jpg';
