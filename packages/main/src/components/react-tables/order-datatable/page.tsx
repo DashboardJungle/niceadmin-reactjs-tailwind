@@ -1,15 +1,12 @@
+import CardBox from '../../shared/CardBox';
+import OrderDataTable from './OrderDataTable';
 
-import CardBox from '../../shared/CardBox'
-import OrderDataTable from './OrderDataTable'
-
-
-import Juan from 'src/assets/images/profile/Juan.svg';
-import olivia from 'src/assets/images/profile/olivia.svg';
-import Kiley from 'src/assets/images/profile/Kiley.svg';
-import ryan from 'src/assets/images/profile/ryan.svg';
-import jason from 'src/assets/images/profile/jason.svg';
-import Janita from 'src/assets/images/profile/Janita.svg';
-
+import Juan from 'src/assets/images/profile/Juan.png';
+import olivia from 'src/assets/images/profile/olivia.png';
+import Kiley from 'src/assets/images/profile/Kiley.png';
+import ryan from 'src/assets/images/profile/ryan.png';
+import jason from 'src/assets/images/profile/jason.png';
+import Janita from 'src/assets/images/profile/Janita.png';
 
 import s2 from 'src/assets/images/products/updated-product/book-growth.webp';
 
@@ -166,13 +163,13 @@ function OrderTable() {
         },
       ],
     },
-  ]
+  ];
 
   return (
     <CardBox>
       <OrderDataTable data={orders} />
     </CardBox>
-  )
+  );
 }
 
-export default OrderTable
+export default OrderTable;

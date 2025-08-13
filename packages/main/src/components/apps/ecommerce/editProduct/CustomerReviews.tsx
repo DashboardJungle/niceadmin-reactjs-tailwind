@@ -1,113 +1,107 @@
-
-
-import CardBox from "src/components/shared/CardBox";
-import user1 from "src/assets/images/profile/Dalton.svg";
-import user2 from "src/assets/images/profile/jason.svg";
-import user3 from "src/assets/images/profile/Juan.svg";
-import user4 from "src/assets/images/profile/Kiley.svg";
-import { Rating, RatingStar, Table, TableBody, TableCell, TableHead, TableHeadCell, TableRow } from "flowbite-react";
+import CardBox from 'src/components/shared/CardBox';
+import user1 from 'src/assets/images/profile/Dalton.png';
+import user2 from 'src/assets/images/profile/jason.png';
+import user3 from 'src/assets/images/profile/Juan.png';
+import user4 from 'src/assets/images/profile/Kiley.png';
+import {
+  Rating,
+  RatingStar,
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeadCell,
+  TableRow,
+} from 'flowbite-react';
 const LatestReviewData = [
   {
     profile: user1,
-    customername: "Arlene McCoy",
-    customeremail: "macoy@arlene.com",
+    customername: 'Arlene McCoy',
+    customeremail: 'macoy@arlene.com',
     review: 5,
-    reviewtext:
-      "I like this design",
-    time: "1 day ago",
+    reviewtext: 'I like this design',
+    time: '1 day ago',
   },
   {
     profile: user2,
-    customername: "Jerome Bell",
-    customeremail: "belljerome@yahoo.com",
+    customername: 'Jerome Bell',
+    customeremail: 'belljerome@yahoo.com',
     review: 4,
-    reviewtext:
-      "Awesome quality with great matdashs used, but could be more comfortable",
-    time: "Today",
+    reviewtext: 'Awesome quality with great matdashs used, but could be more comfortable',
+    time: 'Today',
   },
   {
     profile: user3,
-    customername: "Jacob Jones",
-    customeremail: "jones009@hotmail.com",
+    customername: 'Jacob Jones',
+    customeremail: 'jones009@hotmail.com',
     review: 4,
     reviewtext:
-      " The best experience we could hope for.Customer service team is amazing and thequality of their products",
-    time: "Nov 8",
+      ' The best experience we could hope for.Customer service team is amazing and thequality of their products',
+    time: 'Nov 8',
   },
   {
     profile: user4,
-    customername: "Annette Black",
-    customeremail: "blackanne@yahoo.com",
+    customername: 'Annette Black',
+    customeremail: 'blackanne@yahoo.com',
     review: 3,
     reviewtext:
-      " The controller is quite comfy for me. Despiteits increased size, the controller still fits well",
-    time: "Nov 10",
+      ' The controller is quite comfy for me. Despiteits increased size, the controller still fits well',
+    time: 'Nov 10',
   },
   {
     profile: user2,
-    customername: "Jerome Bell",
-    customeremail: "belljerome@yahoo.com",
+    customername: 'Jerome Bell',
+    customeremail: 'belljerome@yahoo.com',
     review: 4,
-    reviewtext:
-      "Awesome quality with great matdashs used, but could be more comfortable",
-    time: "Today",
+    reviewtext: 'Awesome quality with great matdashs used, but could be more comfortable',
+    time: 'Today',
   },
   {
     profile: user3,
-    customername: "Jacob Jones",
-    customeremail: "jones009@hotmail.com",
+    customername: 'Jacob Jones',
+    customeremail: 'jones009@hotmail.com',
     review: 4,
     reviewtext:
-      " The best experience we could hope for.Customer service team is amazing and thequality of their products",
-    time: "Nov 8",
+      ' The best experience we could hope for.Customer service team is amazing and thequality of their products',
+    time: 'Nov 8',
   },
   {
     profile: user4,
-    customername: "Annette Black",
-    customeremail: "blackanne@yahoo.com",
+    customername: 'Annette Black',
+    customeremail: 'blackanne@yahoo.com',
     review: 3,
     reviewtext:
-      " The controller is quite comfy for me. Despiteits increased size, the controller still fits well",
-    time: "Nov 10",
+      ' The controller is quite comfy for me. Despiteits increased size, the controller still fits well',
+    time: 'Nov 10',
   },
 ];
 const CustomerReviews = () => {
   return (
     <>
       <CardBox>
-        <h5 className='card-title mb-2'>Customer Reviews</h5>
-        <div className='overflow-x-auto'>
+        <h5 className="card-title mb-2">Customer Reviews</h5>
+        <div className="overflow-x-auto">
           <Table hoverable>
             <TableHead>
               <TableRow>
-                <TableHeadCell className='text-sm font-semibold  pb-2'>
-                  Customer
-                </TableHeadCell>
-                <TableHeadCell className='text-sm font-semibold pb-2'>
-                  Comment
-                </TableHeadCell>
-                <TableHeadCell className='text-sm font-semibold pb-2'>
-                  Date
-                </TableHeadCell>
+                <TableHeadCell className="text-sm font-semibold  pb-2">Customer</TableHeadCell>
+                <TableHeadCell className="text-sm font-semibold pb-2">Comment</TableHeadCell>
+                <TableHeadCell className="text-sm font-semibold pb-2">Date</TableHeadCell>
               </TableRow>
             </TableHead>
-            <TableBody className='divide-y divide-border dark:divide-darkborder '>
+            <TableBody className="divide-y divide-border dark:divide-darkborder ">
               {LatestReviewData.map((item, index) => (
                 <TableRow key={index}>
-                  <TableCell className='whitespace-nowrap ps-6 md:min-w-auto min-w-[200px]'>
-                    <div className='flex gap-3 items-center'>
-                      <img
-                        src={item.profile}
-                        alt='icon'
-                        className='h-8 w-8 rounded-full'
-                      />
-                      <h6 className='text-base'>{item.customername}</h6>
+                  <TableCell className="whitespace-nowrap ps-6 md:min-w-auto min-w-[200px]">
+                    <div className="flex gap-3 items-center">
+                      <img src={item.profile} alt="icon" className="h-8 w-8 rounded-full" />
+                      <h6 className="text-base">{item.customername}</h6>
                     </div>
                   </TableCell>
-                  <TableCell className='whitespace-nowrap md:min-w-auto min-w-[200px]'>
-                    <div className='truncat line-clamp-2 text-wrap max-w-56'>
+                  <TableCell className="whitespace-nowrap md:min-w-auto min-w-[200px]">
+                    <div className="truncat line-clamp-2 text-wrap max-w-56">
                       {item.review == 5 ? (
-                        <Rating size={'sm'} className='mt-1'>
+                        <Rating size={'sm'} className="mt-1">
                           <RatingStar />
                           <RatingStar />
                           <RatingStar />
@@ -115,7 +109,7 @@ const CustomerReviews = () => {
                           <RatingStar />
                         </Rating>
                       ) : item.review == 4 ? (
-                        <Rating size={'sm'} className='mt-1'>
+                        <Rating size={'sm'} className="mt-1">
                           <RatingStar />
                           <RatingStar />
                           <RatingStar />
@@ -123,7 +117,7 @@ const CustomerReviews = () => {
                           <RatingStar filled={false} />
                         </Rating>
                       ) : (
-                        <Rating size={'sm'} className='mt-1'>
+                        <Rating size={'sm'} className="mt-1">
                           <RatingStar />
                           <RatingStar />
                           <RatingStar />
@@ -132,14 +126,12 @@ const CustomerReviews = () => {
                         </Rating>
                       )}
                     </div>
-                    <p className='text-black dark:text-darklink truncat line-clamp-2 text-wrap max-w-56 text-sm'>
+                    <p className="text-black dark:text-darklink truncat line-clamp-2 text-wrap max-w-56 text-sm">
                       {item.reviewtext}
                     </p>
                   </TableCell>
-                  <TableCell className='whitespace-nowrap'>
-                    <p className='text-black dark:text-darklink text-sm'>
-                      {item.time}
-                    </p>
+                  <TableCell className="whitespace-nowrap">
+                    <p className="text-black dark:text-darklink text-sm">{item.time}</p>
                   </TableCell>
                 </TableRow>
               ))}

@@ -1,9 +1,8 @@
-
-import CardBox from "../../shared/CardBox";
-import user1 from "src/assets/images/profile/Juan.svg";
-import user2 from "src/assets/images/profile/emily.svg";
-import user3 from "src/assets/images/profile/Kiley.svg";
-import { Button } from "flowbite-react";
+import CardBox from '../../shared/CardBox';
+import user1 from 'src/assets/images/profile/Juan.png';
+import user2 from 'src/assets/images/profile/emily.png';
+import user3 from 'src/assets/images/profile/Kiley.png';
+import { Button } from 'flowbite-react';
 
 const userImg = [
   {
@@ -33,10 +32,11 @@ const StillHaveQst = () => {
         </div>
         <h4 className="text-2xl font-bold mt-4">Still have questions</h4>
         <p className="text-primary dark:text-primary text-base ">
-          Can't find the answer your're looking for ? Please chat to our
-          friendly team.
+          Can't find the answer your're looking for ? Please chat to our friendly team.
         </p>
-        <Button color={'primary'} className="w-fit mx-auto mt-4">Chat with us</Button>
+        <Button color={'primary'} className="w-fit mx-auto mt-4">
+          Chat with us
+        </Button>
       </CardBox>
     </>
   );
