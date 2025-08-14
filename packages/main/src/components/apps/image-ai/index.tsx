@@ -1,4 +1,3 @@
-'use client';
 import { useContext } from 'react';
 import ImagePrompt from './ImagePrompt';
 import GeneratedImageDisplay from './GeneratedImageDisplay';

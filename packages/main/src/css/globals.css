@@ -573,6 +573,7 @@ html, body {
       }
     }
 
+/* ---- shadcn charts style start ---- */
 /* shadcn bar chart Stacked + Legend hover bg colors */
 .recharts-tooltip-cursor {
   fill: var(--color-lightprimary) !important;
@@ -580,4 +581,44 @@ html, body {
 .dark .recharts-tooltip-cursor {
   fill: var(--color-darkprimary) !important;
 }
+
+/* cartesian-grid line stroke color  */
+/* Light mode */
+.recharts-cartesian-grid-horizontal line,
+.recharts-cartesian-grid-vertical line {
+  stroke: #dddddd90 !important; /* semi-transparent gray */
+}
+
+/* Dark mode */
+.dark .recharts-cartesian-grid-horizontal line,
+.dark .recharts-cartesian-grid-vertical line {
+  stroke: #dddddd30 !important; /* more transparent for dark */
+}
+
+/* radar chart stroke */
+/* Light mode (default) */
+.recharts-polar-grid-angle line,
+.recharts-polar-grid-concentric polygon,
+.recharts-polar-grid-concentric circle {
+  stroke: #dddddd90 !important;
+  stroke-width: 1;
+}
+
+/* Dark mode */
+.dark .recharts-polar-grid-angle line,
+.dark .recharts-polar-grid-concentric 
+.recharts-polar-grid-concentric-polygon,
+.dark .recharts-polar-grid-concentric circle {
+  stroke: #dddddd30 !important;
+  stroke-width: 1;
+}
+
+/* radial chart empty area colors */
+.recharts-radial-bar-background-sector {
+  fill: #dddddd90 !important;
+}
+.dark .recharts-radial-bar-background-sector {
+  fill: #dddddd30 !important;
+}
+/* ---- shadcn charts style end ---- */
 

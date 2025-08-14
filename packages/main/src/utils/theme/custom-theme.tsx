@@ -1,4 +1,4 @@
-import { createTheme } from 'flowbite-react'
+import { createTheme } from 'flowbite-react';
 
 const customTheme = createTheme({
   button: {
@@ -15,8 +15,7 @@ const customTheme = createTheme({
       sky: 'bg-sky text-white hover:bg-primaryemphasis',
       success: 'bg-success text-white hover:bg-success/90',
       muted: 'bg-muted text-dark dark:text-white dark:bg-darkmuted ',
-      lighterror:
-        'bg-lighterror dark:bg-darkerror text-error hover:bg-error hover:text-white',
+      lighterror: 'bg-lighterror dark:bg-darkerror text-error hover:bg-error hover:text-white',
       lightprimary:
         'bg-lightprimary dark:bg-darkprimary text-primary hover:bg-primary dark:hover:bg-primary hover:text-white',
       lightsecondary:
@@ -69,16 +68,14 @@ const customTheme = createTheme({
         primary: 'bg-primary text-white',
         secondary: 'bg-secondary text-black ',
         info: 'bg-info text-white',
-        success:
-          'bg-success dark:bg-success hover:bg-success dark:hover:bg-success text-white',
+        success: 'bg-success dark:bg-success hover:bg-success dark:hover:bg-success text-white',
         warning: 'bg-warning text-white ',
         error: 'bg-error text-white ',
         lightsuccess: 'bg-lightsuccess dark:bg-lightsuccess text-success',
         lightprimary: 'bg-lightprimary dark:bg-darkprimary text-primary',
         lightwarning: 'bg-lightwarning dark:bg-lightwarning text-warning',
         lightinfo: 'bg-lightinfo dark:bg-lightinfo text-info',
-        lightsecondary:
-          'bg-lightsecondary dark:bg-lightsecondary text-secondary',
+        lightsecondary: 'bg-lightsecondary dark:bg-lightsecondary text-secondary',
         lighterror: 'bg-lighterror dark:bg-lighterror text-error',
         lightgray: 'bg-lightgray dark:bg-lightgray text-gray',
         white: 'bg-body dark:bg-darkmuted text-black/60 dark:text-white/60',
@@ -126,8 +123,7 @@ const customTheme = createTheme({
         closeButton:
           'absolute end-2.5 top-3 flex h-8 w-8 items-center justify-center rounded-md bg-black/5 dark:bg-white/10 dark:hover:bg-white/15 hover:cursor-pointer',
         closeIcon: 'h-4 w-4',
-        titleText:
-          'mb-4 inline-flex items-center text-base font-semibold text-ld',
+        titleText: 'mb-4 inline-flex items-center text-base font-semibold text-ld',
       },
     },
   },
@@ -136,8 +132,7 @@ const customTheme = createTheme({
     base: 'fixed inset-x-0 top-0 z-50 h-screen overflow-y-auto overflow-x-hidden md:inset-0 md:h-full',
     content: {
       base: 'relative h-full w-full p-4 md:h-auto',
-      inner:
-        'relative flex max-h-[90dvh] flex-col rounded-md bg-white dark:bg-black',
+      inner: 'relative flex max-h-[90dvh] flex-col rounded-md bg-white dark:bg-black',
     },
     sizes: {
       sm: 'max-w-sm',
@@ -199,8 +194,7 @@ const customTheme = createTheme({
   table: {
     root: {
       base: 'w-full text-left text-sm text-gray-500 dark:text-gray-400',
-      shadow:
-        'absolute left-0 top-0 -z-10 h-full w-full  bg-transparent drop-shadow-md ',
+      shadow: 'absolute left-0 top-0 -z-10 h-full w-full  bg-transparent drop-shadow-md ',
       wrapper: 'relative',
     },
     head: {
@@ -218,8 +212,7 @@ const customTheme = createTheme({
     row: {
       base: 'group/row bg-transparent ',
       hovered: 'bg-hover hover:bg-transparent dark:hover:bg-transparent',
-      striped:
-        'odd:bg-transparent even:bg-gray-50 odd:dark:bg-black even:dark:bg-white/5',
+      striped: 'odd:bg-transparent even:bg-gray-50 odd:dark:bg-black even:dark:bg-white/5',
     },
   },
 
@@ -275,8 +268,8 @@ const customTheme = createTheme({
       base: 'group flex items-center',
       chevron: 'mx-1 h-4 w-4 text-gray-400 group-first:hidden md:mx-2',
       href: {
-        off: 'flex items-center text-sm font-medium text-gray-500 dark:text-gray-400',
-        on: 'flex items-center text-sm font-medium text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white',
+        off: 'flex items-center text-sm font-medium text-muted dark:text-darkmuted',
+        on: 'flex items-center text-sm font-medium text-muted hover:text-gray-900 dark:text-darkmuted dark:hover:text-white',
       },
       icon: 'mr-2 h-4 w-4',
     },
@@ -390,18 +383,13 @@ const customTheme = createTheme({
       warning: 'bg-warning text-dark border-yellow-500 dark:text-yellow-800',
       error: 'bg-error text-white border-yellow-500',
       dark: 'bg-dark text-white dark:bg-black border-yellow-500',
-      lightsuccess:
-        'bg-lightsuccess dark:bg-lightsuccess text-success border-success',
-      lightprimary:
-        'bg-lightprimary dark:bg-lightprimary text-primary border-primary',
-      lightwarning:
-        'bg-lightwarning dark:bg-lightwarning text-warning border-yellow-500',
+      lightsuccess: 'bg-lightsuccess dark:bg-lightsuccess text-success border-success',
+      lightprimary: 'bg-lightprimary dark:bg-lightprimary text-primary border-primary',
+      lightwarning: 'bg-lightwarning dark:bg-lightwarning text-warning border-yellow-500',
       lightinfo: 'bg-lightinfo dark:bg-lightinfo text-info border-info',
-      lightsecondary:
-        'bg-lightsecondary dark:bg-lightsecondary text-secondary border-secondary',
+      lightsecondary: 'bg-lightsecondary dark:bg-lightsecondary text-secondary border-secondary',
       lighterror: 'bg-lighterror dark:bg-lighterror text-error border-error',
-      lightgray:
-        'bg-lightgray dark:bg-black text-dark dark:text-white border-lightgray',
+      lightgray: 'bg-lightgray dark:bg-black text-dark dark:text-white border-lightgray',
     },
     icon: 'mr-3 inline h-5 w-5 shrink-0',
     rounded: 'rounded-md',
@@ -477,8 +465,7 @@ const customTheme = createTheme({
         on: 'cursor-pointer',
         off: 'cursor-not-allowed opacity-50',
       },
-      label:
-        'ms-3 mt-0.5 text-start text-sm font-medium text-gray-900 dark:text-gray-300',
+      label: 'ms-3 mt-0.5 text-start text-sm font-medium text-gray-900 dark:text-gray-300',
     },
     toggle: {
       base: 'relative rounded-full border after:absolute after:rounded-full after:bg-white after:transition-all group-focus:ring-0 group-focus:ring-0',
@@ -486,30 +473,21 @@ const customTheme = createTheme({
         on: 'after:translate-x-full after:border-transparent after:dark:border-transparent rtl:after:-translate-x-full',
         off: 'border-ld bg-gray-200 dark:border-gray-600 dark:bg-gray-700',
         color: {
-          default:
-            'bg-primary group-focus:ring-primary dark:group-focus:ring-primary',
+          default: 'bg-primary group-focus:ring-primary dark:group-focus:ring-primary',
           blue: 'bg-blue-700 group-focus:ring-blue-300 dark:group-focus:ring-blue-800',
           dark: 'bg-gray-700 group-focus:ring-gray-300 dark:group-focus:ring-gray-800',
-          failure:
-            'bg-red-700 group-focus:ring-red-300 dark:group-focus:ring-red-800',
+          failure: 'bg-red-700 group-focus:ring-red-300 dark:group-focus:ring-red-800',
           gray: 'bg-gray-500 group-focus:ring-gray-300 dark:group-focus:ring-gray-800',
-          green:
-            'bg-green-600 group-focus:ring-green-300 dark:group-focus:ring-green-800',
-          light:
-            'bg-gray-300 group-focus:ring-gray-300 dark:group-focus:ring-gray-800',
+          green: 'bg-green-600 group-focus:ring-green-300 dark:group-focus:ring-green-800',
+          light: 'bg-gray-300 group-focus:ring-gray-300 dark:group-focus:ring-gray-800',
           red: 'bg-red-700 group-focus:ring-red-300 dark:group-focus:ring-red-800',
-          purple:
-            'bg-purple-700 group-focus:ring-purple-300 dark:group-focus:ring-purple-800',
-          success:
-            'bg-green-500 group-focus:ring-green-300 dark:group-focus:ring-green-800',
-          yellow:
-            'bg-yellow-400 group-focus:ring-yellow-300 dark:group-focus:ring-yellow-800',
-          warning:
-            'bg-yellow-600 group-focus:ring-yellow-300 dark:group-focus:ring-yellow-800',
+          purple: 'bg-purple-700 group-focus:ring-purple-300 dark:group-focus:ring-purple-800',
+          success: 'bg-green-500 group-focus:ring-green-300 dark:group-focus:ring-green-800',
+          yellow: 'bg-yellow-400 group-focus:ring-yellow-300 dark:group-focus:ring-yellow-800',
+          warning: 'bg-yellow-600 group-focus:ring-yellow-300 dark:group-focus:ring-yellow-800',
           cyan: 'bg-cyan-500 group-focus:ring-cyan-300 dark:group-focus:ring-cyan-800',
           lime: 'bg-lime-400 group-focus:ring-lime-300 dark:group-focus:ring-lime-800',
-          indigo:
-            'bg-indigo-400 group-focus:ring-indigo-300 dark:group-focus:ring-indigo-800',
+          indigo: 'bg-indigo-400 group-focus:ring-indigo-300 dark:group-focus:ring-indigo-800',
           teal: 'bg-teal-400 group-focus:ring-teal-300 dark:group-focus:ring-teal-800',
           info: 'bg-cyan-600 group-focus:ring-cyan-300 dark:group-focus:ring-cyan-800',
           pink: 'bg-pink-600 group-focus:ring-pink-300 dark:group-focus:ring-pink-800',
@@ -547,8 +525,7 @@ const customTheme = createTheme({
       },
       header: {
         base: '',
-        title:
-          'px-2 py-3 text-center font-semibold text-gray-900 dark:text-white',
+        title: 'px-2 py-3 text-center font-semibold text-gray-900 dark:text-white',
         selectors: {
           base: 'mb-2 flex justify-between',
           button: {
@@ -577,8 +554,7 @@ const customTheme = createTheme({
       days: {
         header: {
           base: 'mb-1 grid grid-cols-7',
-          title:
-            'h-6 text-center text-sm font-medium leading-6 text-gray-500 dark:text-gray-400',
+          title: 'h-6 text-center text-sm font-medium leading-6 text-gray-500 dark:text-gray-400',
         },
         items: {
           base: 'grid w-64 grid-cols-7',
@@ -640,8 +616,7 @@ const customTheme = createTheme({
       content: {
         base: 'flex-1 whitespace-nowrap px-0',
       },
-      active:
-        'bg-lightprimary text-primary! dark:bg-lightprimary !dark:text-primary ',
+      active: 'bg-lightprimary text-primary! dark:bg-lightprimary !dark:text-primary ',
     },
 
     collapse: {
@@ -783,15 +758,12 @@ const customTheme = createTheme({
   radio: {
     base: 'h-4 w-4 appearance-none rounded-full border border-gray-300 bg-gray-100 bg-[length:1em_1em] bg-center bg-no-repeat checked:border-transparent checked:bg-current checked:bg-dot-icon focus:outline-none focus:ring-2 focus:ring-offset-2 dark:border-gray-600 dark:bg-gray-700 dark:checked:border-transparent dark:checked:bg-current',
     color: {
-      default:
-        'text-primary focus:ring-primary dark:ring-offset-gray-800 dark:focus:ring-primary',
+      default: 'text-primary focus:ring-primary dark:ring-offset-gray-800 dark:focus:ring-primary',
       dark: 'text-gray-800 focus:ring-gray-800 dark:ring-offset-gray-800 dark:focus:ring-gray-800',
-      failure:
-        'text-red-900 focus:ring-red-900 dark:ring-offset-red-900 dark:focus:ring-red-900',
+      failure: 'text-red-900 focus:ring-red-900 dark:ring-offset-red-900 dark:focus:ring-red-900',
       gray: 'text-gray-900 focus:ring-gray-900 dark:ring-offset-gray-900 dark:focus:ring-gray-900',
       info: 'text-cyan-800 focus:ring-cyan-800 dark:ring-offset-gray-800 dark:focus:ring-cyan-800',
-      light:
-        'text-gray-900 focus:ring-gray-900 dark:ring-offset-gray-900 dark:focus:ring-gray-900',
+      light: 'text-gray-900 focus:ring-gray-900 dark:ring-offset-gray-900 dark:focus:ring-gray-900',
       purple:
         'text-purple-600 focus:ring-purple-600 dark:ring-offset-purple-600 dark:focus:ring-purple-600',
       success:
@@ -812,6 +784,6 @@ const customTheme = createTheme({
         'text-yellow-400 focus:ring-yellow-400 dark:ring-offset-yellow-400 dark:focus:ring-yellow-400',
     },
   },
-})
+});
 
-export default customTheme
+export default customTheme;

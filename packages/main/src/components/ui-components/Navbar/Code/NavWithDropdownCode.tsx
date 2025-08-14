@@ -1,4 +1,4 @@
-import FullLogo from 'src/layouts/full/shared/logo/FullLogo'
+import FullLogo from 'src/layouts/full/shared/logo/FullLogo';
 import {
   Navbar,
   Dropdown,
@@ -9,30 +9,24 @@ import {
   NavbarToggle,
   NavbarCollapse,
   NavbarLink,
-} from 'flowbite-react'
+} from 'flowbite-react';
+import user2 from '/src/assets/images/profile/user-2.jpg';
 
 const NavWithDropdownCode = () => {
   return (
     <>
       <div>
-        <Navbar fluid className='rounded-md'>
+        <Navbar fluid className="rounded-md">
           <FullLogo />
-          <div className='flex md:order-2'>
+          <div className="flex md:order-2">
             <Dropdown
               arrowIcon={false}
               inline
-              label={
-                <Avatar
-                  alt='User settings'
-                  img='/images/profile/user-2.jpg'
-                  rounded
-                />
-              }>
+              label={<Avatar alt="User settings" img={user2} rounded />}
+            >
               <DropdownHeader>
-                <span className='block text-sm'>Bonnie Green</span>
-                <span className='block truncate text-sm font-medium'>
-                  info@niceadmi.com
-                </span>
+                <span className="block text-sm">Bonnie Green</span>
+                <span className="block truncate text-sm font-medium">info@niceadmi.com</span>
               </DropdownHeader>
               <DropdownItem>Dashboard</DropdownItem>
               <DropdownItem>Settings</DropdownItem>
@@ -42,22 +36,19 @@ const NavWithDropdownCode = () => {
             </Dropdown>
             <NavbarToggle />
           </div>
-          <NavbarCollapse className='overflow-x-auto'>
-            <NavbarLink
-              href='#'
-              active
-              className='hover:bg-transparent hover:text-blue'>
+          <NavbarCollapse className="overflow-x-auto">
+            <NavbarLink href="#" active className="hover:bg-transparent hover:text-blue">
               Home
             </NavbarLink>
-            <NavbarLink href='#'>About</NavbarLink>
-            <NavbarLink href='#'>Services</NavbarLink>
-            <NavbarLink href='#'>Pricing</NavbarLink>
-            <NavbarLink href='#'>Contact</NavbarLink>
+            <NavbarLink href="#">About</NavbarLink>
+            <NavbarLink href="#">Services</NavbarLink>
+            <NavbarLink href="#">Pricing</NavbarLink>
+            <NavbarLink href="#">Contact</NavbarLink>
           </NavbarCollapse>
         </Navbar>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default NavWithDropdownCode
+export default NavWithDropdownCode;

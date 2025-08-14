@@ -1,4 +1,3 @@
-'use client';
 import SimpleBar from 'simplebar-react';
 import { Icon } from '@iconify/react';
 import { Button } from 'flowbite-react';

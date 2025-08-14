@@ -1,5 +1,3 @@
-'use client';
-
 import { useEffect, useRef, useState } from 'react';
 import CardBox from '../../shared/CardBox';
 import { masonryImages } from 'src/api/image-ai/dropdowndata';

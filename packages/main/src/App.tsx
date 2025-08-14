@@ -1,11 +1,9 @@
-import { RouterProvider } from "react-router";
+import { RouterProvider } from 'react-router';
 import { ThemeProvider, ThemeModeScript } from 'flowbite-react';
 import customTheme from './utils/theme/custom-theme';
-import router from "./routes/Router";
-
+import router from './routes/Router';
 
 function App() {
-
   return (
     <>
       <ThemeModeScript />

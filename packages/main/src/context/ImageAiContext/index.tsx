@@ -1,5 +1,3 @@
-'use client';
-
 import { createContext, ReactNode, useEffect, useState } from 'react';
 import { getFetcher, postFetcher } from 'src/api/globalFetcher';
 import useSWR from 'swr';

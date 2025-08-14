@@ -1,4 +1,3 @@
-'use client';
 import { useContext } from 'react';
 import CardBox from '../../shared/CardBox';
 import { Alert } from 'flowbite-react';

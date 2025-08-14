@@ -2,7 +2,7 @@ export const navbarLinks = {
   navbarList: [
     {
       label: 'Components',
-      href: 'https://niceadmin-nextjs-tailwind-main.vercel.app/componentpage/ui-components/flowbite/buttons',
+      href: '/components/flowbite/buttons',
     },
     { label: 'Docs', href: '/docs' },
     { label: 'Support', href: 'https://support.wrappixel.com/' },

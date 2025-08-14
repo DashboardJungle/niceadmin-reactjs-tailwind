@@ -1,4 +1,3 @@
-'use client';
 import React, { useContext, useRef, useState } from 'react';
 import CardBox from '../../shared/CardBox';
 import {
