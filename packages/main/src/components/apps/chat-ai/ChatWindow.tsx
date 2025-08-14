@@ -7,6 +7,7 @@ import { marked } from 'marked';
 import DOMPurify from 'dompurify';
 import SimpleBar from 'simplebar-react';
 import { ChatAIContext } from 'src/context/AIChatContext';
+import user from '/src/assets/images/profile/user-1.jpg';
 
 function ChatWindow({
   onClickMobile,
@@ -162,9 +163,7 @@ function ChatWindow({
                   )}
                 </div>
 
-                {isUser && (
-                  <Avatar rounded img="/src/assets/images/profile/user-1.jpg" alt="User" />
-                )}
+                {isUser && <Avatar rounded img={user} alt="User" />}
               </div>
             );
           })}

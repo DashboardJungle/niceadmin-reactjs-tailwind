@@ -1,3 +1,16 @@
+import masonry1 from '/src/assets/images/image-ai/masonry/masonry-1.webp';
+import masonry2 from '/src/assets/images/image-ai/masonry/masonry-2.jpg';
+import masonry3 from '/src/assets/images/image-ai/masonry/masonry-3.jpg';
+import masonry4 from '/src/assets/images/image-ai/masonry/masonry-4.webp';
+import masonry5 from '/src/assets/images/image-ai/masonry/masonry-5.jpg';
+import masonry6 from '/src/assets/images/image-ai/masonry/masonry-6.jpg';
+import masonry7 from '/src/assets/images/image-ai/masonry/masonry-7.jpg';
+import masonry8 from '/src/assets/images/image-ai/masonry/masonry-8.jpg';
+import masonry9 from '/src/assets/images/image-ai/masonry/masonry-9.jpg';
+import masonry10 from '/src/assets/images/image-ai/masonry/masonry-10.webp';
+import masonry11 from '/src/assets/images/image-ai/masonry/masonry-11.jpg';
+import masonry12 from '/src/assets/images/image-ai/masonry/masonry-12.jpg';
+
 export const AspectRatio = [
   { id: 1, label: 'Landscape (4:3)', icon: 'ion:tablet-landscape-outline' },
   { id: 2, label: 'Square (1:1)', icon: 'ion:square-outline' },
@@ -198,16 +211,16 @@ export const cameraOptions = [
 ];
 
 export const masonryImages = [
-  '/src/assets/images/image-ai/masonry/masonry-1.webp',
-  '/src/assets/images/image-ai/masonry/masonry-2.jpg',
-  '/src/assets/images/image-ai/masonry/masonry-3.jpg',
-  '/src/assets/images/image-ai/masonry/masonry-4.webp',
-  '/src/assets/images/image-ai/masonry/masonry-5.jpg',
-  '/src/assets/images/image-ai/masonry/masonry-6.jpg',
-  '/src/assets/images/image-ai/masonry/masonry-7.jpg',
-  '/src/assets/images/image-ai/masonry/masonry-8.jpg',
-  '/src/assets/images/image-ai/masonry/masonry-9.jpg',
-  '/src/assets/images/image-ai/masonry/masonry-10.webp',
-  '/src/assets/images/image-ai/masonry/masonry-11.jpg',
-  '/src/assets/images/image-ai/masonry/masonry-12.jpg',
+  masonry1,
+  masonry2,
+  masonry3,
+  masonry4,
+  masonry5,
+  masonry6,
+  masonry7,
+  masonry8,
+  masonry9,
+  masonry10,
+  masonry11,
+  masonry12,
 ];
