@@ -1,19 +1,32 @@
 import { GoogleGenAI, Modality } from '@google/genai';
 import { http, HttpResponse } from 'msw';
 
+import flower1 from '/src/assets/images/image-ai/flower1.jpg';
+import flower2 from '/src/assets/images/image-ai/flower2.jpg';
+import flower3 from '/src/assets/images/image-ai/flower3.jpg';
+import flower4 from '/src/assets/images/image-ai/flower4.jpg';
+import spaceship1 from '/src/assets/images/image-ai/spaceship1.jpg';
+import spaceship2 from '/src/assets/images/image-ai/spaceship2.jpg';
+import spaceship3 from '/src/assets/images/image-ai/spaceship3.jpg';
+import spaceship4 from '/src/assets/images/image-ai/spaceship4.jpg';
+import laptop1 from '/src/assets/images/image-ai/leptop1.jpg';
+import laptop2 from '/src/assets/images/image-ai/leptop2.jpg';
+import laptop3 from '/src/assets/images/image-ai/leptop3.jpg';
+import laptop4 from '/src/assets/images/image-ai/leptop4.jpg';
+
 const imageData = [
-  '/src/assets/images/image-ai/flower1.jpg',
-  '/src/assets/images/image-ai/flower2.jpg',
-  '/src/assets/images/image-ai/flower3.jpg',
-  '/src/assets/images/image-ai/flower4.jpg',
-  '/src/assets/images/image-ai/spaceship1.jpg',
-  '/src/assets/images/image-ai/spaceship2.jpg',
-  '/src/assets/images/image-ai/spaceship3.jpg',
-  '/src/assets/images/image-ai/spaceship4.jpg',
-  '/src/assets/images/image-ai/leptop1.jpg',
-  '/src/assets/images/image-ai/leptop2.jpg',
-  '/src/assets/images/image-ai/leptop3.jpg',
-  '/src/assets/images/image-ai/leptop4.jpg',
+  flower1,
+  flower2,
+  flower3,
+  flower4,
+  spaceship1,
+  spaceship2,
+  spaceship3,
+  spaceship4,
+  laptop1,
+  laptop2,
+  laptop3,
+  laptop4,
 ];
 
 export const ImageAiHandlers = [
