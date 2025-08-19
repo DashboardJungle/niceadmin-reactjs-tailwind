@@ -16,7 +16,7 @@ import InputWithRightIcon from 'src/components/form-components/Form-Elements/Inp
 import RoundedInputs from 'src/components/form-components/Form-Elements/RoundedInputs';
 import SelectInput from 'src/components/form-components/Form-Elements/SelectInput';
 import TextAreaEle from 'src/components/form-components/Form-Elements/TextArea';
-import DefaultForm from 'src/components/form-components/Form-Layouts/DefaultForm';
+import DefaultForm from 'src/components/form-components/Form-Elements/DefaultInput';
 import ComponentApi from 'src/components/ui-components/ComponentApi';
 
 const intro = {
