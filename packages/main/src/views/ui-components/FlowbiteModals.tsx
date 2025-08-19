@@ -3,19 +3,13 @@ import FormModal from 'src/components/ui-components/Modals/FormModal';
 import PlacementModal from 'src/components/ui-components/Modals/PlacementModal';
 import PopupModal from 'src/components/ui-components/Modals/PopupModal';
 import SizingModal from 'src/components/ui-components/Modals/SizingModal';
-import BreadcrumbComp from 'src/layouts/full/shared/breadcrumb/BreadcrumbComp';
 import ComponentApi from 'src/components/ui-components/ComponentApi';
+import Intro from 'src/components/component-page/shared/Intro';
 
-const BCrumb = [
-  {
-    href: '/',
-    text: 'Dashboard',
-  },
-  {
-    href: '/',
-    text: 'Modals',
-  },
-];
+const intro = {
+  heading: 'Modals',
+  desc: 'A Modal is a UI component used to display content in a layered overlay that captures user attention and requires interaction.',
+};
 
 const allApis = [
   {
@@ -65,8 +59,11 @@ const allApis = [
 const FlowbiteModals = () => {
   return (
     <>
-      <BreadcrumbComp title="Modals" links={BCrumb} />
       <div className="grid grid-cols-12 gap-5 sm:gap-30">
+        {/* intro */}
+        <div className="col-span-12">
+          <Intro detail={intro} />
+        </div>
         {/* Default */}
         <div className="col-span-12">
           <DefaultModal />

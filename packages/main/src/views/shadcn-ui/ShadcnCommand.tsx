@@ -1,23 +1,20 @@
+import Intro from 'src/components/component-page/shared/Intro';
+import BasicCommand from 'src/components/shadcn-ui/Command/BasicCommand';
+import DialogCommand from 'src/components/shadcn-ui/Command/DialogCommand';
 
-import BasicCommand from "src/components/shadcn-ui/Command/BasicCommand";
-import DialogCommand from "src/components/shadcn-ui/Command/DialogCommand";
-import BreadcrumbComp from "src/layouts/full/shared/breadcrumb/BreadcrumbComp";
+const intro = {
+  heading: 'Command',
+  desc: 'A Command is a UI component that provides a searchable list of actions or commands for quick access.',
+};
 
-const BCrumb = [
-  {
-    href: '/',
-    text: 'Dashboard',
-  },
-  {
-    href: '/',
-    text: "Command",
-  },
-];
 const page = () => {
   return (
     <div>
-      <BreadcrumbComp title="Command" links={BCrumb} />
       <div className="grid grid-cols-12 gap-5 sm:gap-30">
+        {/* intro */}
+        <div className="col-span-12">
+          <Intro detail={intro} />
+        </div>
         {/* Basic */}
         <div className="col-span-12">
           <BasicCommand />

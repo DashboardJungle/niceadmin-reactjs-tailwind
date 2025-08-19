@@ -1,14 +1,6 @@
-import {
-  Label,
-  TextInput,
-  Textarea,
-  Checkbox,
-  Radio,
-  Select,
-  Button,
-} from "flowbite-react";
+import { Label, TextInput, Textarea, Checkbox, Radio, Select, Button } from 'flowbite-react';
 
-import TitleCard from "../../shared/TitleBorderCard";
+import TitleCard from '../../shared/TitleBorderCard';
 
 const DefaultForm = () => {
   return (
@@ -43,12 +35,7 @@ const DefaultForm = () => {
             <div className="mb-2 block">
               <Label htmlFor="password1">Password</Label>
             </div>
-            <TextInput
-              id="password1"
-              type="password"
-              className="!form-control"
-              required
-            />
+            <TextInput id="password1" type="password" className="!form-control" required />
           </div>
           <div className="col-span-12">
             <div className="mb-2 block">
@@ -66,31 +53,20 @@ const DefaultForm = () => {
             <div className="flex flex-col gap-[1rem]">
               <div className="flex items-center gap-2">
                 <Checkbox id="promotion" className="checkbox" />
-                <Label htmlFor="promotion">
-                  I want to get promotional offers
-                </Label>
+                <Label htmlFor="promotion">I want to get promotional offers</Label>
               </div>
               <div className="flex items-center gap-2">
                 <Checkbox id="promotion1" className="checkbox" />
-                <Label htmlFor="promotion1">
-                  I want to get promotional offers
-                </Label>
+                <Label htmlFor="promotion1">I want to get promotional offers</Label>
               </div>
               <div className="flex items-center gap-2">
                 <Checkbox id="promotion2" className="checkbox" />
-                <Label htmlFor="promotion2">
-                  I want to get promotional offers
-                </Label>
+                <Label htmlFor="promotion2">I want to get promotional offers</Label>
               </div>
             </div>
             <div className="flex flex-col gap-[1rem] md:mt-0  mt-6">
               <div className="flex items-center gap-2">
-                <Radio
-                  id="united-state"
-                  name="countries"
-                  value="USA"
-                  defaultChecked
-                />
+                <Radio id="united-state" name="countries" value="USA" defaultChecked />
                 <Label htmlFor="united-state">United States</Label>
               </div>
               <div className="flex items-center gap-2">

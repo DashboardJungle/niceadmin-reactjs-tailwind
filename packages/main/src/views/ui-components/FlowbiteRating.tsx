@@ -3,19 +3,13 @@ import DefaultRatting from 'src/components/ui-components/Ratting/DefaultRatting'
 import RattingCount from 'src/components/ui-components/Ratting/RattingCount';
 import StarRatting from 'src/components/ui-components/Ratting/StarRatting';
 import WithTextRattings from 'src/components/ui-components/Ratting/WithTextRattings';
-import BreadcrumbComp from 'src/layouts/full/shared/breadcrumb/BreadcrumbComp';
 import ComponentApi from 'src/components/ui-components/ComponentApi';
+import Intro from 'src/components/component-page/shared/Intro';
 
-const BCrumb = [
-  {
-    href: '/',
-    text: 'Dashboard',
-  },
-  {
-    href: '/',
-    text: 'Rating',
-  },
-];
+const intro = {
+  heading: 'Rating',
+  desc: 'A Rating is a UI component used to display or collect user feedback.',
+};
 
 const allApis = [
   {
@@ -44,8 +38,11 @@ const allApis = [
 const FlowbiteRating = () => {
   return (
     <>
-      <BreadcrumbComp title="Rating" links={BCrumb} />
       <div className="grid grid-cols-12 gap-5 sm:gap-30">
+        {/* intro */}
+        <div className="col-span-12">
+          <Intro detail={intro} />
+        </div>
         {/* Default */}
         <div className="col-span-12">
           <DefaultRatting />

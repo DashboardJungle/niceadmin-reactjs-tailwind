@@ -1,26 +1,20 @@
-
-import CardBox from '../../shared/CardBox'
-import { Label, Select } from 'flowbite-react'
+import CardBox from '../../shared/CardBox';
+import Selectinput from './Codes/SelectInputCode';
+import SelectinputCode from './Codes/SelectInputCode.tsx?raw';
+import CodeDialog from '../../shared/CodeDialog';
 
 const SelectInput = () => {
   return (
-    <div className='h-full'>
-      <CardBox className='h-full'>
-        <h4 className='text-lg font-semibold mb-2'>Select Input</h4>
-        <div className='pb-6'>
-          <div className='mb-2 block'>
-            <Label htmlFor='countries'>Select your country</Label>
-          </div>
-          <Select id='countries' required className='select-md'>
-            <option>United States</option>
-            <option>Canada</option>
-            <option>France</option>
-            <option>Germany</option>
-          </Select>
+    <div>
+      <CardBox className="p-0">
+        <div className="p-6">
+          <h4 className="text-lg font-semibold mb-2">Select Input</h4>
+          <Selectinput />
         </div>
+        <CodeDialog>{SelectinputCode}</CodeDialog>
       </CardBox>
     </div>
-  )
-}
+  );
+};
 
-export default SelectInput
+export default SelectInput;

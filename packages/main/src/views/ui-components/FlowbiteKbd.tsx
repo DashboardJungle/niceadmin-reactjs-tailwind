@@ -5,19 +5,13 @@ import InsideTable from 'src/components/ui-components/Kbd/InsideTable';
 import InsideText from 'src/components/ui-components/Kbd/InsideText';
 import LetterKeys from 'src/components/ui-components/Kbd/LetterKeys';
 import NumbersKeys from 'src/components/ui-components/Kbd/NumbersKeys';
-import BreadcrumbComp from 'src/layouts/full/shared/breadcrumb/BreadcrumbComp';
 import ComponentApi from 'src/components/ui-components/ComponentApi';
+import Intro from 'src/components/component-page/shared/Intro';
 
-const BCrumb = [
-  {
-    href: '/',
-    text: 'Dashboard',
-  },
-  {
-    href: '/',
-    text: 'KBD',
-  },
-];
+const intro = {
+  heading: 'KBD',
+  desc: 'A KBD is a UI component used to display keyboard inputs or shortcuts in a styled, readable format.',
+};
 
 const allApis = [
   {
@@ -32,8 +26,11 @@ const allApis = [
 const FlowbiteKbd = () => {
   return (
     <>
-      <BreadcrumbComp title="KBD" links={BCrumb} />
       <div className="grid grid-cols-12 gap-5 sm:gap-30">
+        {/* intro */}
+        <div className="col-span-12">
+          <Intro detail={intro} />
+        </div>
         {/* Default KBD*/}
         <div className="col-span-12">
           <DefaultKbd />

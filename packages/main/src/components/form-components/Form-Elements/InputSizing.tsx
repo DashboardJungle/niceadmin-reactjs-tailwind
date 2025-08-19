@@ -1,50 +1,20 @@
-import { Label, TextInput } from 'flowbite-react'
-
-import CardBox from '../../shared/CardBox'
+import CardBox from '../../shared/CardBox';
+import Inputsizing from './Codes/InputSizingCode';
+import InputsizingCode from './Codes/InputSizingCode.tsx?raw';
+import CodeDialog from '../../shared/CodeDialog';
 
 const InputSizing = () => {
   return (
     <div>
-      <CardBox>
-        <h4 className='text-lg font-semibold'>Input sizing</h4>
-        <div className='flex max-w-md flex-col gap-4'>
-          <div>
-            <div className='mb-2 block'>
-              <Label htmlFor='small'>Small input</Label>
-            </div>
-            <TextInput
-              id='small'
-              type='text'
-              sizing='sm'
-              className='!form-control'
-            />
-          </div>
-          <div>
-            <div className='mb-2 block'>
-              <Label htmlFor='base'>Base input</Label>
-            </div>
-            <TextInput
-              id='base'
-              type='text'
-              sizing='md'
-              className='!form-control'
-            />
-          </div>
-          <div>
-            <div className='mb-2 block'>
-              <Label htmlFor='large'>Large input</Label>
-            </div>
-            <TextInput
-              id='large'
-              type='text'
-              sizing='lg'
-              className='!form-control'
-            />
-          </div>
+      <CardBox className="p-0">
+        <div className="p-6">
+          <h4 className="text-lg font-semibold mb-4">Input sizing</h4>
+          <Inputsizing />
         </div>
+        <CodeDialog>{InputsizingCode}</CodeDialog>
       </CardBox>
     </div>
-  )
-}
+  );
+};
 
-export default InputSizing
+export default InputSizing;

@@ -1,27 +1,22 @@
-
-
 import BasicBreadcrumb from 'src/components/shadcn-ui/Breadcrumb/BasicBreadcrumb';
 import BreadcrumbWithSeparator from 'src/components/shadcn-ui/Breadcrumb/BreadcrumbWithSeparator';
 import BreadcrumbWithDropdown from 'src/components/shadcn-ui/Breadcrumb/BreadcrumbWithDropdown';
 import BreadcrumbWithEllipsis from 'src/components/shadcn-ui/Breadcrumb/BreadcrumbWithEllipsis';
-import BreadcrumbComp from 'src/layouts/full/shared/breadcrumb/BreadcrumbComp';
+import Intro from 'src/components/component-page/shared/Intro';
 
+const intro = {
+  heading: 'Breadcrumb',
+  desc: 'A Breadcrumb is a UI component that shows the user’s navigation path within a website or app.',
+};
 
-const BCrumb = [
-  {
-    href: '/',
-    text: 'Dashboard',
-  },
-  {
-    href: '/',
-    text: "Breadcrumb",
-  },
-];
 const page = () => {
   return (
     <>
-      <BreadcrumbComp title="Breadcrumb" links={BCrumb} />
       <div className="grid grid-cols-12 gap-5 sm:gap-30">
+        {/* intro */}
+        <div className="col-span-12">
+          <Intro detail={intro} />
+        </div>
         {/* Basic */}
         <div className="col-span-12">
           <BasicBreadcrumb />
@@ -35,11 +30,9 @@ const page = () => {
         <div className="col-span-12">
           <BreadcrumbWithEllipsis />
         </div>
-
-
       </div>
     </>
-  )
-}
+  );
+};
 
-export default page
+export default page;

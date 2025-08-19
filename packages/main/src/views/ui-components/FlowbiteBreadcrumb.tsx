@@ -1,18 +1,12 @@
+import Intro from 'src/components/component-page/shared/Intro';
 import BackgroundBread from 'src/components/ui-components/Breadcrumb/BackgroundBread';
 import Default from 'src/components/ui-components/Breadcrumb/Default';
-import BreadcrumbComp from 'src/layouts/full/shared/breadcrumb/BreadcrumbComp';
 import ComponentApi from 'src/components/ui-components/ComponentApi';
 
-const BCrumb = [
-  {
-    href: '/',
-    text: 'Dashboard',
-  },
-  {
-    href: '/',
-    text: 'Breadcrumb',
-  },
-];
+const intro = {
+  heading: 'Breadcrumb',
+  desc: 'A Breadcrumb is a UI component used to display the navigational path and help users understand their location within a website or app.',
+};
 
 const allApis = [
   {
@@ -27,8 +21,11 @@ const allApis = [
 const FlowbiteBreadcrumb = () => {
   return (
     <>
-      <BreadcrumbComp title="Breadcrumb" links={BCrumb} />
       <div className="grid grid-cols-12 gap-5 sm:gap-30">
+        {/* intro */}
+        <div className="col-span-12">
+          <Intro detail={intro} />
+        </div>
         {/* Default  */}
         <div className="col-span-12">
           <Default />

@@ -1,19 +1,13 @@
 import CTANav from 'src/components/ui-components/Navbar/CTANav';
 import DefaultNav from 'src/components/ui-components/Navbar/DefaultNav';
 import NavWithDropdown from 'src/components/ui-components/Navbar/NavWithDropdown';
-import BreadcrumbComp from 'src/layouts/full/shared/breadcrumb/BreadcrumbComp';
 import ComponentApi from 'src/components/ui-components/ComponentApi';
+import Intro from 'src/components/component-page/shared/Intro';
 
-const BCrumb = [
-  {
-    href: '/',
-    text: 'Dashboard',
-  },
-  {
-    href: '/',
-    text: 'Navbar',
-  },
-];
+const intro = {
+  heading: 'Navbar',
+  desc: 'A Navbar is a UI component used to provide site-wide navigation links, usually displayed at the top of a page.',
+};
 
 const allApis = [
   {
@@ -49,8 +43,11 @@ const allApis = [
 const FlowbiteNavbar = () => {
   return (
     <>
-      <BreadcrumbComp title="Navbar" links={BCrumb} />
       <div className="grid grid-cols-12 gap-5 sm:gap-30">
+        {/* intro */}
+        <div className="col-span-12">
+          <Intro detail={intro} />
+        </div>
         {/* Default Navbar*/}
         <div className="col-span-12">
           <DefaultNav />

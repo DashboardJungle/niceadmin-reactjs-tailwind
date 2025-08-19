@@ -4,19 +4,13 @@ import PaginationWithIcon from 'src/components/ui-components/Pagination/Paginati
 import PrevNextPagiantion from 'src/components/ui-components/Pagination/PrevNextPagiantion';
 import PrevNextPagiantionIcon from 'src/components/ui-components/Pagination/PrevNextPagiantionIcon';
 import TableDataPaginationIcon from 'src/components/ui-components/Pagination/TableDataPaginationIcon';
-import BreadcrumbComp from 'src/layouts/full/shared/breadcrumb/BreadcrumbComp';
 import ComponentApi from 'src/components/ui-components/ComponentApi';
+import Intro from 'src/components/component-page/shared/Intro';
 
-const BCrumb = [
-  {
-    href: '/',
-    text: 'Dashboard',
-  },
-  {
-    href: '/',
-    text: 'Pagination',
-  },
-];
+const intro = {
+  heading: 'Pagination',
+  desc: 'Pagination is a UI component used to divide content into separate pages and allow users to navigate through them.',
+};
 
 const allApis = [
   {
@@ -66,8 +60,11 @@ const allApis = [
 const FlowbitePagination = () => {
   return (
     <>
-      <BreadcrumbComp title="Pagination" links={BCrumb} />
       <div className="grid grid-cols-12 gap-5 sm:gap-30">
+        {/* intro */}
+        <div className="col-span-12">
+          <Intro detail={intro} />
+        </div>
         {/* Default */}
         <div className="col-span-12">
           <DefaultPagination />

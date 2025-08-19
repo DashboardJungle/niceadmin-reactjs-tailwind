@@ -2,19 +2,13 @@ import ColorOptions from 'src/components/ui-components/ButtonGroup/ColorOptions'
 import DefaultGroup from 'src/components/ui-components/ButtonGroup/DefaultGroup';
 import GroupWithIcon from 'src/components/ui-components/ButtonGroup/GroupWithIcon';
 import OutlineButtonGroup from 'src/components/ui-components/ButtonGroup/OutlineButtonGroup';
-import BreadcrumbComp from 'src/layouts/full/shared/breadcrumb/BreadcrumbComp';
 import ComponentApi from 'src/components/ui-components/ComponentApi';
+import Intro from 'src/components/component-page/shared/Intro';
 
-const BCrumb = [
-  {
-    href: '/',
-    text: 'Dashboard',
-  },
-  {
-    href: '/',
-    text: 'Button Group',
-  },
-];
+const intro = {
+  heading: 'Button Group',
+  desc: 'A Button Group is a UI component used to group multiple buttons together for related actions.',
+};
 
 const allApis = [
   {
@@ -36,8 +30,11 @@ const allApis = [
 const page = () => {
   return (
     <>
-      <BreadcrumbComp title="Button Group" links={BCrumb} />
       <div className="grid grid-cols-12 gap-5 sm:gap-30">
+        {/* intro */}
+        <div className="col-span-12">
+          <Intro detail={intro} />
+        </div>
         {/* Default */}
         <div className="col-span-12">
           <DefaultGroup />

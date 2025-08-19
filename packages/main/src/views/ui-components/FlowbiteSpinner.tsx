@@ -3,19 +3,13 @@ import ColorSpinner from 'src/components/ui-components/Spinner/ColorSpinner';
 import DefaultSpinner from 'src/components/ui-components/Spinner/DefaultSpinner';
 import LoadButton from 'src/components/ui-components/Spinner/LoadButton';
 import SizingSpinner from 'src/components/ui-components/Spinner/SizingSpinner';
-import BreadcrumbComp from 'src/layouts/full/shared/breadcrumb/BreadcrumbComp';
 import ComponentApi from 'src/components/ui-components/ComponentApi';
+import Intro from 'src/components/component-page/shared/Intro';
 
-const BCrumb = [
-  {
-    href: '/',
-    text: 'Dashboard',
-  },
-  {
-    href: '/',
-    text: 'Spinner',
-  },
-];
+const intro = {
+  heading: 'Spinner',
+  desc: 'A Spinner is a UI component used to show loading or processing states in the interface.',
+};
 
 const allApis = [
   {
@@ -37,8 +31,11 @@ const allApis = [
 const FlowbiteSpinner = () => {
   return (
     <>
-      <BreadcrumbComp title="Spinner" links={BCrumb} />
       <div className="grid grid-cols-12 gap-5 sm:gap-30">
+        {/* intro */}
+        <div className="col-span-12">
+          <Intro detail={intro} />
+        </div>
         {/* Default */}
         <div className="col-span-12">
           <DefaultSpinner />

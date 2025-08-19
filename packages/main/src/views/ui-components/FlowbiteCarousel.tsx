@@ -6,19 +6,13 @@ import SlideEventChange from 'src/components/ui-components/Curousel/SlideEventCh
 import SliderContent from 'src/components/ui-components/Curousel/SliderContent';
 import SlidingInterval from 'src/components/ui-components/Curousel/SlidingInterval';
 import StaticCurosel from 'src/components/ui-components/Curousel/StaticCurosel';
-import BreadcrumbComp from 'src/layouts/full/shared/breadcrumb/BreadcrumbComp';
 import ComponentApi from 'src/components/ui-components/ComponentApi';
+import Intro from 'src/components/component-page/shared/Intro';
 
-const BCrumb = [
-  {
-    href: '/',
-    text: 'Dashboard',
-  },
-  {
-    href: '/',
-    text: 'Carousel',
-  },
-];
+const intro = {
+  heading: 'Carousel',
+  desc: 'A Carousel is a UI component used to cycle through a series of images or content in a sliding manner.',
+};
 
 const allApis = [
   {
@@ -82,8 +76,11 @@ const allApis = [
 const FlowbiteCarousel = () => {
   return (
     <>
-      <BreadcrumbComp title="Carousel" links={BCrumb} />
       <div className="grid grid-cols-12 gap-5 sm:gap-30">
+        {/* intro */}
+        <div className="col-span-12">
+          <Intro detail={intro} />
+        </div>
         {/* Default */}
         <div className="col-span-12">
           <DefaultCusrosel />

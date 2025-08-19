@@ -1,6 +1,7 @@
-import { Blockquote, Avatar } from "flowbite-react";
+import { Blockquote, Avatar } from 'flowbite-react';
 
-import CardBox from "../../shared/CardBox";
+import CardBox from '../../shared/CardBox';
+import user2 from '/src/assets/images/profile/user-2.jpg';
 
 const ReviewTypo = () => {
   return (
@@ -19,28 +20,18 @@ const ReviewTypo = () => {
           </svg>
           <Blockquote>
             <p className="text-2xl font-medium italic text-gray-900 dark:text-white">
-              "Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting"
+              "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+              Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+              unknown printer took a galley of type and scrambled it to make a type specimen book.
+              It has survived not only five centuries, but also the leap into electronic
+              typesetting"
             </p>
           </Blockquote>
           <figcaption className="mt-6 flex items-center justify-center space-x-3">
-            <Avatar
-              rounded
-              size="xs"
-              img="/images/profile/user-2.jpg"
-              alt="profile picture"
-            />
+            <Avatar rounded size="xs" img={user2} alt="profile picture" />
             <div className="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
-              <cite className="pr-3 font-medium text-gray-900 dark:text-white">
-                Micheal Gough
-              </cite>
-              <cite className="pl-3 text-sm text-gray-500 dark:text-gray-400">
-                CEO at Google
-              </cite>
+              <cite className="pr-3 font-medium text-gray-900 dark:text-white">Micheal Gough</cite>
+              <cite className="pl-3 text-sm text-gray-500 dark:text-gray-400">CEO at Google</cite>
             </div>
           </figcaption>
         </figure>

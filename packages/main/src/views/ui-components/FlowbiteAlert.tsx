@@ -9,19 +9,13 @@ import LightBorderAccent from 'src/components/ui-components/Alert/LightBorderAcc
 import LightDismissibleAlert from 'src/components/ui-components/Alert/LightDismissibleAlert';
 import LightRoundeAlert from 'src/components/ui-components/Alert/LightRoundeAlert';
 import RoundedAlert from 'src/components/ui-components/Alert/RoundedAlert';
-import BreadcrumbComp from 'src/layouts/full/shared/breadcrumb/BreadcrumbComp';
 import ComponentApi from 'src/components/ui-components/ComponentApi';
+import Intro from 'src/components/component-page/shared/Intro';
 
-const BCrumb = [
-  {
-    href: '/',
-    text: 'Dashboard',
-  },
-  {
-    href: '/',
-    text: 'Alert',
-  },
-];
+const intro = {
+  heading: 'Alert',
+  desc: 'An Alert is a UI component used to display important messages or notifications to the user.',
+};
 
 const allApis = [
   {
@@ -71,8 +65,11 @@ const allApis = [
 const FlowbiteAlert = () => {
   return (
     <>
-      <BreadcrumbComp title="Alert" links={BCrumb} />
       <div className="grid grid-cols-12 gap-5 sm:gap-30">
+        {/* intro */}
+        <div className="col-span-12">
+          <Intro detail={intro} />
+        </div>
         {/* Default Alert */}
         <div className="col-span-12">
           <DefaultAlert />

@@ -284,6 +284,11 @@ const SidebarContent: SidebarContentType = {
         },
         {
           id: uniqueId(),
+          name: 'Toast',
+          url: '/components/shadcn/toast',
+        },
+        {
+          id: uniqueId(),
           name: 'Skeleton',
           url: '/components/shadcn/skeleton',
         },

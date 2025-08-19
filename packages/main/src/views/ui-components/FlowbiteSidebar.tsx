@@ -4,19 +4,13 @@ import DefaultSidebar from 'src/components/ui-components/Sidebar/DefaultSidebar'
 import MultilevelDropdown from 'src/components/ui-components/Sidebar/MultilevelDropdown';
 import SidebarWithButton from 'src/components/ui-components/Sidebar/SidebarWithButton';
 import SidebarWithLogo from 'src/components/ui-components/Sidebar/SidebarWithLogo';
-import BreadcrumbComp from 'src/layouts/full/shared/breadcrumb/BreadcrumbComp';
 import ComponentApi from 'src/components/ui-components/ComponentApi';
+import Intro from 'src/components/component-page/shared/Intro';
 
-const BCrumb = [
-  {
-    href: '/',
-    text: 'Dashboard',
-  },
-  {
-    href: '/',
-    text: 'Sidebar',
-  },
-];
+const intro = {
+  heading: 'Sidebar',
+  desc: 'A Sidebar is a UI component used to provide navigation links or additional content alongside the main page area.',
+};
 
 const allApis = [
   {
@@ -52,8 +46,11 @@ const allApis = [
 const FlowbiteSidebar = () => {
   return (
     <>
-      <BreadcrumbComp title="Sidebar" links={BCrumb} />
       <div className="grid grid-cols-12 gap-5 sm:gap-30">
+        {/* intro */}
+        <div className="col-span-12">
+          <Intro detail={intro} />
+        </div>
         {/* Default */}
         <div className="col-span-12">
           <DefaultSidebar />

@@ -2,19 +2,13 @@ import DropDownHeader from 'src/components/ui-components/Dropdown/DropdownHeader
 import DropdownPalcements from 'src/components/ui-components/Dropdown/DropdownPlacements';
 import DropDownSize from 'src/components/ui-components/Dropdown/DropDownSize';
 import DropdownWithIcon from 'src/components/ui-components/Dropdown/DropdownWithIcon';
-import BreadcrumbComp from 'src/layouts/full/shared/breadcrumb/BreadcrumbComp';
 import ComponentApi from 'src/components/ui-components/ComponentApi';
+import Intro from 'src/components/component-page/shared/Intro';
 
-const BCrumb = [
-  {
-    href: '/',
-    text: 'Dashboard',
-  },
-  {
-    href: '/',
-    text: 'Dropdown',
-  },
-];
+const intro = {
+  heading: 'Dropdown',
+  desc: 'A Dropdown is a UI component that displays a list of options or actions triggered by user interaction.',
+};
 
 const allApis = [
   {
@@ -50,8 +44,11 @@ const allApis = [
 const FlowbiteDropdown = () => {
   return (
     <>
-      <BreadcrumbComp title="Dropdown" links={BCrumb} />
       <div className="grid grid-cols-12 gap-5 sm:gap-30">
+        {/* intro */}
+        <div className="col-span-12">
+          <Intro detail={intro} />
+        </div>
         {/* Default Drodown & Header Dropdown*/}
         <div className="col-span-12">
           <DropDownHeader />

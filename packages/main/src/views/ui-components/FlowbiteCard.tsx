@@ -9,19 +9,13 @@ import FormCard from 'src/components/ui-components/Card/FormCard';
 import HorizontalCard from 'src/components/ui-components/Card/HorizontalCard';
 import PricingCard from 'src/components/ui-components/Card/PricingCard';
 import UserProfileCard from 'src/components/ui-components/Card/UserProfileCard';
-import BreadcrumbComp from 'src/layouts/full/shared/breadcrumb/BreadcrumbComp';
 import ComponentApi from 'src/components/ui-components/ComponentApi';
+import Intro from 'src/components/component-page/shared/Intro';
 
-const BCrumb = [
-  {
-    href: '/',
-    text: 'Dashboard',
-  },
-  {
-    href: '/',
-    text: 'Card',
-  },
-];
+const intro = {
+  heading: 'Cards',
+  desc: 'A Card is a UI component used to group related information and actions within a contained, visually distinct box.',
+};
 
 const allApis = [
   {
@@ -65,8 +59,11 @@ const allApis = [
 const FlowbiteCard = () => {
   return (
     <>
-      <BreadcrumbComp title="Card" links={BCrumb} />
       <div className="grid grid-cols-12 gap-5 sm:gap-30">
+        {/* intro */}
+        <div className="col-span-12">
+          <Intro detail={intro} />
+        </div>
         {/* Default */}
         <div className="col-span-12">
           <DefaultCard />

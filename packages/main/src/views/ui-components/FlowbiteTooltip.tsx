@@ -3,19 +3,13 @@ import DisableTooltip from 'src/components/ui-components/Tooltip/DisableTooltip'
 import TooltipPlacement from 'src/components/ui-components/Tooltip/TooltipPlacement';
 import TooltipStyle from 'src/components/ui-components/Tooltip/TooltipStyle';
 import TooltipTrigger from 'src/components/ui-components/Tooltip/TooltipTrigger';
-import BreadcrumbComp from 'src/layouts/full/shared/breadcrumb/BreadcrumbComp';
 import ComponentApi from 'src/components/ui-components/ComponentApi';
+import Intro from 'src/components/component-page/shared/Intro';
 
-const BCrumb = [
-  {
-    href: '/',
-    text: 'Dashboard',
-  },
-  {
-    href: '/',
-    text: 'Tooltips',
-  },
-];
+const intro = {
+  heading: 'Tooltip',
+  desc: 'A Tooltip is a UI component used to display informative text when users hover over or focus on an element.',
+};
 
 const allApis = [
   {
@@ -58,9 +52,11 @@ const allApis = [
 const FlowbiteTooltip = () => {
   return (
     <>
-      <BreadcrumbComp title="Tooltips" links={BCrumb} />
-
       <div className="grid grid-cols-12 gap-5 sm:gap-30">
+        {/* intro */}
+        <div className="col-span-12">
+          <Intro detail={intro} />
+        </div>
         {/* Tooltip Style */}
         <div className="col-span-12">
           <TooltipStyle />

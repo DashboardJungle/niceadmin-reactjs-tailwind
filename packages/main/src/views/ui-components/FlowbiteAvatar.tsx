@@ -1,3 +1,4 @@
+import Intro from 'src/components/component-page/shared/Intro';
 import AvatarWithText from 'src/components/ui-components/Avatar/AvatarWithText';
 import BorderAvatar from 'src/components/ui-components/Avatar/BorderAvatar';
 import ColorAvatar from 'src/components/ui-components/Avatar/ColorAvatar';
@@ -8,19 +9,12 @@ import IntitalAvatar from 'src/components/ui-components/Avatar/IntitalAvatar';
 import PlaceholderAvatar from 'src/components/ui-components/Avatar/PlaceholderAvatar';
 import SizeAvatar from 'src/components/ui-components/Avatar/SizeAvatar';
 import StackAvatar from 'src/components/ui-components/Avatar/StackAvatar';
-import BreadcrumbComp from 'src/layouts/full/shared/breadcrumb/BreadcrumbComp';
 import ComponentApi from 'src/components/ui-components/ComponentApi';
 
-const BCrumb = [
-  {
-    href: '/',
-    text: 'Dashboard',
-  },
-  {
-    href: '/',
-    text: 'Avatar',
-  },
-];
+const intro = {
+  heading: 'Avatar',
+  desc: 'An Avatar is a UI component used to represent a user with an image, icon, or initials.',
+};
 
 const allApis = [
   {
@@ -91,8 +85,11 @@ const allApis = [
 const FlowbiteAvatar = () => {
   return (
     <>
-      <BreadcrumbComp title="Avatar" links={BCrumb} />
       <div className="grid grid-cols-12 gap-5 sm:gap-30">
+        {/* intro */}
+        <div className="col-span-12">
+          <Intro detail={intro} />
+        </div>
         {/* Default */}
         <div className="col-span-12">
           <DefaultAvatar />

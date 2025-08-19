@@ -1,13 +1,11 @@
-
-import { Input } from "src/components/shadcn-ui/Default-Ui/input";
-import { Label } from "src/components/shadcn-ui/Default-Ui/label";
+import { Input } from 'src/components/shadcn-ui/Default-Ui/input';
+import { Label } from 'src/components/shadcn-ui/Default-Ui/label';
 import { Button } from 'src/components/shadcn-ui/Default-Ui/button';
-
 
 const DisableInputWithButtonCode = () => {
   return (
     <>
-      <div className="max-w-sm flex flex-col gap-5 mt-4">
+      <div className="flex flex-col gap-5 mt-4">
         <div>
           <Label htmlFor="name">Name</Label>
           <Input disabled type="text" />
@@ -22,13 +20,13 @@ const DisableInputWithButtonCode = () => {
         </div>
         <div className="flex gap-3">
           <Button disabled>Submit</Button>
-          <Button disabled variant={"error"}>
+          <Button disabled variant={'error'}>
             Cancel
           </Button>
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default DisableInputWithButtonCode
+export default DisableInputWithButtonCode;

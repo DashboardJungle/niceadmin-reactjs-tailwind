@@ -1,12 +1,11 @@
 import { Checkbox, Label } from 'flowbite-react'
-
 import CardBox from '../../shared/CardBox'
 
 const CheckBoxes = () => {
   return (
-    <div>
-      <CardBox>
-        <h4 className='text-lg font-semibold mb-2'>Checkbox</h4>
+    <div className='h-full'>
+      <CardBox className='h-full'>
+        <h4 className='text-lg font-semibold mb-4'>Checkbox</h4>
         <div className='flex max-w-md flex-col gap-4' id='checkbox'>
           <div className='flex items-center gap-2'>
             <Checkbox id='accept' defaultChecked />

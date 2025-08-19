@@ -194,6 +194,10 @@ const ShadcnTab = Loadable(lazy(() => import('../views/shadcn-ui/ShadcnTab')));
 const ShadcnProgress = Loadable(lazy(() => import('../views/shadcn-ui/ShadcnProgress')));
 const ShadcnDrawer = Loadable(lazy(() => import('../views/shadcn-ui/ShadcnDrawer')));
 const ShadcnToast = Loadable(lazy(() => import('../views/shadcn-ui/ShadcnToast')));
+const ShadcnUiInput = Loadable(lazy(() => import('../views/shadcn-ui/ShadcnInput')));
+const ShadcnUiCheckbox = Loadable(lazy(() => import('../views/shadcn-ui/ShadcnCheckbox')));
+const ShadcnUiRadio = Loadable(lazy(() => import('../views/shadcn-ui/ShadcnRadio')));
+const ShadcnUiSelect = Loadable(lazy(() => import('../views/shadcn-ui/ShadcnSelect')));
 
 // shadcn chart
 const ShadcnArearChart = Loadable(lazy(() => import('../views/shadcn-chart/AreaChart')));
@@ -210,6 +214,16 @@ const Dropdown = Loadable(lazy(() => import('../views/headless-ui/Dropdown')));
 const Popover = Loadable(lazy(() => import('../views/headless-ui/Popover')));
 const Tabs = Loadable(lazy(() => import('../views/headless-ui/Tabs')));
 const Transition = Loadable(lazy(() => import('../views/headless-ui/Transition')));
+const HeadlessUiButton = Loadable(lazy(() => import('../views/headless-ui/ButtonForm')));
+const HeadlessUiCheckbox = Loadable(lazy(() => import('../views/headless-ui/CheckboxForm')));
+const HeadlessUiCombobox = Loadable(lazy(() => import('../views/headless-ui/ComboboxForm')));
+const HeadlessUiFieldset = Loadable(lazy(() => import('../views/headless-ui/FieldsetForm')));
+const HeadlessUiInput = Loadable(lazy(() => import('../views/headless-ui/InputForm')));
+const HeadlessUiListbox = Loadable(lazy(() => import('../views/headless-ui/ListboxForm')));
+const HeadlessUiRadio = Loadable(lazy(() => import('../views/headless-ui/RadioGroupForm')));
+const HeadlessUiSelect = Loadable(lazy(() => import('../views/headless-ui/SelectForm')));
+const HeadlessUiSwitch = Loadable(lazy(() => import('../views/headless-ui/SwitchForm')));
+const HeadlessUiTextarea = Loadable(lazy(() => import('../views/headless-ui/TextareaForm')));
 
 // ui components
 const FlowbiteAccordion = Loadable(lazy(() => import('../views/ui-components/FlowbiteAccordion')));
@@ -255,6 +269,12 @@ const FlowbiteTooltip = Loadable(lazy(() => import('../views/ui-components/Flowb
 const FlowbiteTypography = Loadable(
   lazy(() => import('../views/ui-components/FlowbiteTypography')),
 );
+const FlowbiteCheckbox = Loadable(lazy(() => import('../views/ui-components/FlowbiteCheckbox')));
+const FlowbiteRadio = Loadable(lazy(() => import('../views/ui-components/FlowbiteRadio')));
+const FlowbiteToggleSwitch = Loadable(
+  lazy(() => import('../views/ui-components/FlowbiteToggleSwitch')),
+);
+const FlowbiteInput = Loadable(lazy(() => import('../views/ui-components/FlowbiteInput')));
 
 const Error = Loadable(lazy(() => import('../views/authentication/Error')));
 
@@ -454,11 +474,13 @@ const Router = [
       { path: '/components/flowbite/button-group', element: <FlowbiteButtonGroup /> },
       { path: '/components/flowbite/buttons', element: <FlowbiteButtons /> },
       { path: '/components/flowbite/card', element: <FlowbiteCard /> },
+      { path: '/components/flowbite/checkbox', element: <FlowbiteCheckbox /> },
       { path: '/components/flowbite/carousel', element: <FlowbiteCarousel /> },
       { path: '/components/flowbite/datepicker', element: <FlowbiteDatePicker /> },
       { path: '/components/flowbite/drawer', element: <FlowbiteDrawer /> },
       { path: '/components/flowbite/dropdown', element: <FlowbiteDropdown /> },
       { path: '/components/flowbite/footer', element: <FlowbiteFooter /> },
+      { path: '/components/flowbite/input', element: <FlowbiteInput /> },
       { path: '/components/flowbite/kbd', element: <FlowbiteKbd /> },
       { path: '/components/flowbite/listgroup', element: <FlowbiteListgroup /> },
       { path: '/components/flowbite/megamenu', element: <FlowbiteMegamenu /> },
@@ -466,8 +488,10 @@ const Router = [
       { path: '/components/flowbite/navbar', element: <FlowbiteNavbar /> },
       { path: '/components/flowbite/pagination', element: <FlowbitePagination /> },
       { path: '/components/flowbite/popover', element: <FlowbitePopover /> },
+      { path: '/components/flowbite/toggle-switch', element: <FlowbiteToggleSwitch /> },
       { path: '/components/flowbite/progressbar', element: <FlowbiteProgressbar /> },
       { path: '/components/flowbite/rating', element: <FlowbiteRating /> },
+      { path: '/components/flowbite/radio', element: <FlowbiteRadio /> },
       { path: '/components/flowbite/sidebar', element: <FlowbiteSidebar /> },
       { path: '/components/flowbite/spinner', element: <FlowbiteSpinner /> },
       { path: '/components/flowbite/tab', element: <FlowbiteTab /> },
@@ -497,11 +521,12 @@ const Router = [
       { path: '/components/shadcn/tab', element: <ShadcnTab /> },
       { path: '/components/shadcn/progressbar', element: <ShadcnProgress /> },
       { path: '/components/shadcn/drawer', element: <ShadcnDrawer /> },
+      { path: '/components/shadcn/toast', element: <ShadcnToast /> },
       //
-      { path: '/components/shadcn/input', element: <ShadcnInput /> },
-      { path: '/components/shadcn/select', element: <ShadcnSelect /> },
-      { path: '/components/shadcn/checkbox', element: <ShadcnCheckbox /> },
-      { path: '/components/shadcn/radio', element: <ShadcnRadio /> },
+      { path: '/components/shadcn/input', element: <ShadcnUiInput /> },
+      { path: '/components/shadcn/select', element: <ShadcnUiSelect /> },
+      { path: '/components/shadcn/checkbox', element: <ShadcnUiCheckbox /> },
+      { path: '/components/shadcn/radio', element: <ShadcnUiRadio /> },
       //
       { path: '/components/shadcn/area', element: <ShadcnArearChart /> },
       { path: '/components/shadcn/bar', element: <ShadcnBarChart /> },
@@ -517,26 +542,26 @@ const Router = [
       { path: '/components/headlessui/tabs', element: <Tabs /> },
       { path: '/components/headlessui/transition', element: <Transition /> },
 
-      { path: '/components/headlessui/buttons', element: <HeadlessButton /> },
-      { path: '/components/headlessui/checkbox', element: <HeadlessCheckbox /> },
-      { path: '/components/headlessui/combobox', element: <HeadlessCombobox /> },
-      { path: '/components/headlessui/fieldset', element: <HeadlessFieldset /> },
-      { path: '/components/headlessui/input', element: <HeadlessInput /> },
-      { path: '/components/headlessui/listbox', element: <HeadlessListbox /> },
-      { path: '/components/headlessui/radiogroup', element: <HeadlessRadio /> },
-      { path: '/components/headlessui/select', element: <HeadlessSelect /> },
-      { path: '/components/headlessui/switch', element: <HeadlessSwitch /> },
-      { path: '/components/headlessui/textarea', element: <HeadlessTextarea /> },
-      { path: '/components/headlessui/buttons', element: <HeadlessButton /> },
-      { path: '/components/headlessui/checkbox', element: <HeadlessCheckbox /> },
-      { path: '/components/headlessui/combobox', element: <HeadlessCombobox /> },
-      { path: '/components/headlessui/fieldset', element: <HeadlessFieldset /> },
-      { path: '/components/headlessui/input', element: <HeadlessInput /> },
-      { path: '/components/headlessui/listbox', element: <HeadlessListbox /> },
-      { path: '/components/headlessui/radiogroup', element: <HeadlessRadio /> },
-      { path: '/components/headlessui/select', element: <HeadlessSelect /> },
-      { path: '/components/headlessui/switch', element: <HeadlessSwitch /> },
-      { path: '/components/headlessui/textarea', element: <HeadlessTextarea /> },
+      { path: '/components/headlessui/buttons', element: <HeadlessUiButton /> },
+      { path: '/components/headlessui/checkbox', element: <HeadlessUiCheckbox /> },
+      { path: '/components/headlessui/combobox', element: <HeadlessUiCombobox /> },
+      { path: '/components/headlessui/fieldset', element: <HeadlessUiFieldset /> },
+      { path: '/components/headlessui/input', element: <HeadlessUiInput /> },
+      { path: '/components/headlessui/listbox', element: <HeadlessUiListbox /> },
+      { path: '/components/headlessui/radiogroup', element: <HeadlessUiRadio /> },
+      { path: '/components/headlessui/select', element: <HeadlessUiSelect /> },
+      { path: '/components/headlessui/switch', element: <HeadlessUiSwitch /> },
+      { path: '/components/headlessui/textarea', element: <HeadlessUiTextarea /> },
+      { path: '/components/headlessui/buttons', element: <HeadlessUiButton /> },
+      { path: '/components/headlessui/checkbox', element: <HeadlessUiCheckbox /> },
+      { path: '/components/headlessui/combobox', element: <HeadlessUiCombobox /> },
+      { path: '/components/headlessui/fieldset', element: <HeadlessUiFieldset /> },
+      { path: '/components/headlessui/input', element: <HeadlessUiInput /> },
+      { path: '/components/headlessui/listbox', element: <HeadlessUiListbox /> },
+      { path: '/components/headlessui/radiogroup', element: <HeadlessUiRadio /> },
+      { path: '/components/headlessui/select', element: <HeadlessUiSelect /> },
+      { path: '/components/headlessui/switch', element: <HeadlessUiSwitch /> },
+      { path: '/components/headlessui/textarea', element: <HeadlessUiTextarea /> },
     ],
   },
   {

@@ -1,25 +1,21 @@
 import BasicDropdown from 'src/components/shadcn-ui/Dropdown/BasicDropdown';
 import DropdownWithRadio from 'src/components/shadcn-ui/Dropdown/DropdownWithRadio';
 import { DropdownMenuCheckboxes } from 'src/components/shadcn-ui/Dropdown/DropdownMenuCheckboxes';
-import BreadcrumbComp from 'src/layouts/full/shared/breadcrumb/BreadcrumbComp';
+import Intro from 'src/components/component-page/shared/Intro';
 
-
-const BCrumb = [
-  {
-    href: '/',
-    text: 'Dashboard',
-  },
-  {
-    href: '/',
-    text: "Dropdown",
-  },
-];
+const intro = {
+  heading: 'Dropdown',
+  desc: 'A Dropdown is a UI component that reveals a list of options or actions when triggered.',
+};
 
 const ShadcnDropdown = () => {
   return (
     <>
-      <BreadcrumbComp title="Dropdown" links={BCrumb} />
       <div className="grid grid-cols-12 gap-5 sm:gap-30">
+        {/* intro */}
+        <div className="col-span-12">
+          <Intro detail={intro} />
+        </div>
         {/* Basic */}
         <div className="col-span-12">
           <BasicDropdown />
@@ -30,10 +26,9 @@ const ShadcnDropdown = () => {
         <div className="col-span-12">
           <DropdownMenuCheckboxes />
         </div>
-
       </div>
     </>
-  )
-}
+  );
+};
 
-export default ShadcnDropdown
+export default ShadcnDropdown;

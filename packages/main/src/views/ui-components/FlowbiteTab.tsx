@@ -3,19 +3,13 @@ import FullWidthTabs from 'src/components/ui-components/Tabs/FullWidthTabs';
 import StateTabs from 'src/components/ui-components/Tabs/StateTabs';
 import TabsWithPill from 'src/components/ui-components/Tabs/TabsWithPill';
 import UnderlineTabs from 'src/components/ui-components/Tabs/UnderlineTabs';
-import BreadcrumbComp from 'src/layouts/full/shared/breadcrumb/BreadcrumbComp';
 import ComponentApi from 'src/components/ui-components/ComponentApi';
+import Intro from 'src/components/component-page/shared/Intro';
 
-const BCrumb = [
-  {
-    href: '/',
-    text: 'Dashboard',
-  },
-  {
-    href: '/',
-    text: 'Tabs',
-  },
-];
+const intro = {
+  heading: 'Tabs',
+  desc: 'Tabs are a UI component used to organize content into separate views that can be switched between within the same space.',
+};
 
 const allApis = [
   {
@@ -37,8 +31,11 @@ const allApis = [
 const FlowbiteTab = () => {
   return (
     <>
-      <BreadcrumbComp title="Tabs" links={BCrumb} />
       <div className="grid grid-cols-12 gap-5 sm:gap-30">
+        {/* intro */}
+        <div className="col-span-12">
+          <Intro detail={intro} />
+        </div>
         {/* Default */}
         <div className="col-span-12">
           <DefaultTabs />

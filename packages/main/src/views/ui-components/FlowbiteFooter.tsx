@@ -2,19 +2,13 @@ import DefaultFooter from 'src/components/ui-components/Footer/DefaultFooter';
 import FooterWithLogo from 'src/components/ui-components/Footer/FooterWithLogo';
 import SitemapLinkFooter from 'src/components/ui-components/Footer/SitemapLinkFooter';
 import SocialFooter from 'src/components/ui-components/Footer/SocialFooter';
-import BreadcrumbComp from 'src/layouts/full/shared/breadcrumb/BreadcrumbComp';
 import ComponentApi from 'src/components/ui-components/ComponentApi';
+import Intro from 'src/components/component-page/shared/Intro';
 
-const BCrumb = [
-  {
-    href: '/',
-    text: 'Dashboard',
-  },
-  {
-    href: '/',
-    text: 'Footer',
-  },
-];
+const intro = {
+  heading: 'Footer',
+  desc: 'A Footer is a UI component displayed at the bottom of a page, typically containing links, credits, or legal information.',
+};
 
 const allApis = [
   {
@@ -64,8 +58,11 @@ const allApis = [
 const FlowbiteFooter = () => {
   return (
     <>
-      <BreadcrumbComp title="Footer" links={BCrumb} />
       <div className="grid grid-cols-12 gap-5 sm:gap-30">
+        {/* intro */}
+        <div className="col-span-12">
+          <Intro detail={intro} />
+        </div>
         {/* Default */}
         <div className="col-span-12">
           <DefaultFooter />

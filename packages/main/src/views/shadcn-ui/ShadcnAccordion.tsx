@@ -1,24 +1,19 @@
+import Intro from 'src/components/component-page/shared/Intro';
+import BasicAccordion from 'src/components/shadcn-ui/Accordion/BasicAccordion';
 
-import BasicAccordion from "src/components/shadcn-ui/Accordion/BasicAccordion";
-import BreadcrumbComp from "src/layouts/full/shared/breadcrumb/BreadcrumbComp";
-
-
-const BCrumb = [
-  {
-    href: '/',
-    text: 'Dashboard',
-  },
-  {
-    href: '/',
-    text: "Accordion",
-  },
-];
+const intro = {
+  heading: 'Accordion',
+  desc: 'An Accordion is a UI component that expands and collapses sections to show or hide related content.',
+};
 
 const page = () => {
   return (
     <>
-      <BreadcrumbComp title="Accordion" links={BCrumb} />
       <div className="grid grid-cols-12 gap-5 sm:gap-30">
+        {/* intro */}
+        <div className="col-span-12">
+          <Intro detail={intro} />
+        </div>
         {/* Basic */}
         <div className="col-span-12">
           <BasicAccordion />

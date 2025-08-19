@@ -1,11 +1,9 @@
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useForm } from 'react-hook-form';
+import { z } from 'zod';
 
-
-import { zodResolver } from '@hookform/resolvers/zod'
-import { useForm } from 'react-hook-form'
-import { z } from 'zod'
-
-import { toast } from 'src/hooks/use-toast'
-import { Button } from 'src/components/shadcn-ui/Default-Ui/button'
+import { toast } from 'src/hooks/use-toast';
+import { Button } from 'src/components/shadcn-ui/Default-Ui/button';
 import {
   Form,
   FormControl,
@@ -14,9 +12,9 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from 'src/components/shadcn-ui/Default-Ui/form'
-import { Textarea } from 'src/components/shadcn-ui/Default-Ui/textarea'
-import CardBox from '../../shared/CardBox'
+} from 'src/components/shadcn-ui/Default-Ui/form';
+import { Textarea } from 'src/components/shadcn-ui/Default-Ui/textarea';
+import CardBox from '../../shared/CardBox';
 const FormSchema = z.object({
   bio: z
     .string()
@@ -26,44 +24,42 @@ const FormSchema = z.object({
     .max(160, {
       message: 'Bio must not be longer than 30 characters.',
     }),
-})
+});
 
 const FormwithTextarea = () => {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
-  })
+  });
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
     toast({
       title: 'You submitted the following values:',
       description: (
-        <pre className='mt-2 w-[340px] rounded-md bg-slate-950 p-4'>
-          <code className='text-white'>{JSON.stringify(data, null, 2)}</code>
+        <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
+          <code className="text-white">{JSON.stringify(data, null, 2)}</code>
         </pre>
       ),
-    })
+    });
   }
 
   return (
     <CardBox>
-      <div className='flex items-center justify-between mb-2'>
-        <h4 className='text-lg font-semibold'>Form Textarea</h4>
+      <div className="flex items-center justify-between mb-2">
+        <h4 className="text-lg font-semibold">Form Textarea</h4>
       </div>
-      <div className='max-w-sm'>
+      <div>
         <Form {...form}>
-          <form
-            onSubmit={form.handleSubmit(onSubmit)}
-            className='w-full space-y-6'>
+          <form onSubmit={form.handleSubmit(onSubmit)} className="w-full space-y-6">
             <FormField
               control={form.control}
-              name='bio'
+              name="bio"
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>Bio</FormLabel>
                   <FormControl>
                     <Textarea
-                      placeholder='Tell us a little bit about yourself'
-                      className='resize-none w-full h-[150px]'
+                      placeholder="Tell us a little bit about yourself"
+                      className="resize-none w-full h-[150px]"
                       {...field}
                     />
                   </FormControl>
@@ -74,12 +70,12 @@ const FormwithTextarea = () => {
                 </FormItem>
               )}
             />
-            <Button type='submit'>Submit</Button>
+            <Button type="submit">Submit</Button>
           </form>
         </Form>
       </div>
     </CardBox>
-  )
-}
+  );
+};
 
-export default FormwithTextarea
+export default FormwithTextarea;

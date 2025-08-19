@@ -2,19 +2,13 @@ import DefaultList from 'src/components/ui-components/ListGroup/DefaultList';
 import LinkList from 'src/components/ui-components/ListGroup/LinkList';
 import ListButton from 'src/components/ui-components/ListGroup/ListButton';
 import ListIcon from 'src/components/ui-components/ListGroup/ListIcon';
-import BreadcrumbComp from 'src/layouts/full/shared/breadcrumb/BreadcrumbComp';
 import ComponentApi from 'src/components/ui-components/ComponentApi';
+import Intro from 'src/components/component-page/shared/Intro';
 
-const BCrumb = [
-  {
-    href: '/',
-    text: 'Dashboard',
-  },
-  {
-    href: '/',
-    text: 'List Group',
-  },
-];
+const intro = {
+  heading: 'ListGroup',
+  desc: 'An Avatar is a UI component used to represent a user with an image, icon, or initials.',
+};
 
 const allApis = [
   {
@@ -57,8 +51,11 @@ const allApis = [
 const FlowbiteListgroup = () => {
   return (
     <>
-      <BreadcrumbComp title="List Group" links={BCrumb} />
       <div className="grid grid-cols-12 gap-5 sm:gap-30">
+        {/* intro */}
+        <div className="col-span-12">
+          <Intro detail={intro} />
+        </div>
         {/* Default */}
         <div className="col-span-12">
           <DefaultList />

@@ -1,28 +1,23 @@
-
-import BreadcrumbComp from "src/layouts/full/shared/breadcrumb/BreadcrumbComp";
 import BasicButton from 'src/components/shadcn-ui/Button/BasicButton';
 import OutlineButton from 'src/components/shadcn-ui/Button/OutlineButton';
 import GhostButton from 'src/components/shadcn-ui/Button/GhostButton';
 import ButtonWithIcon from 'src/components/shadcn-ui/Button/ButtonWithIcon';
 import LoadingButton from 'src/components/shadcn-ui/Button/LoadingButton';
+import Intro from 'src/components/component-page/shared/Intro';
 
-
-const BCrumb = [
-  {
-    href: '/',
-    text: 'Dashboard',
-  },
-  {
-    href: '/',
-    text: "Button",
-  },
-];
+const intro = {
+  heading: 'Buttons',
+  desc: 'A Button is a UI component used to trigger actions or events with a single click or tap.',
+};
 
 const ShadcnButton = () => {
   return (
     <>
-      <BreadcrumbComp title="Button" links={BCrumb} />
       <div className="grid grid-cols-12 gap-5 sm:gap-30">
+        {/* intro */}
+        <div className="col-span-12">
+          <Intro detail={intro} />
+        </div>
         {/* Basic */}
         <div className="col-span-12">
           <BasicButton />
@@ -39,10 +34,9 @@ const ShadcnButton = () => {
         <div className="col-span-12">
           <LoadingButton />
         </div>
-
       </div>
     </>
-  )
-}
+  );
+};
 
-export default ShadcnButton
+export default ShadcnButton;

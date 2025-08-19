@@ -3,19 +3,13 @@ import LabelPostionProgress from 'src/components/ui-components/Progressbar/Label
 import LabelProgress from 'src/components/ui-components/Progressbar/LabelProgress';
 import ProgressColor from 'src/components/ui-components/Progressbar/ProgressColor';
 import ProgressSize from 'src/components/ui-components/Progressbar/ProgressSize';
-import BreadcrumbComp from 'src/layouts/full/shared/breadcrumb/BreadcrumbComp';
 import ComponentApi from 'src/components/ui-components/ComponentApi';
+import Intro from 'src/components/component-page/shared/Intro';
 
-const BCrumb = [
-  {
-    href: '/',
-    text: 'Dashboard',
-  },
-  {
-    href: '/',
-    text: 'Progress Bar',
-  },
-];
+const intro = {
+  heading: 'Progressbar',
+  desc: 'A Progress Bar is a UI component used to visually indicate the progression of a task or process.',
+};
 
 const allApis = [
   {
@@ -79,8 +73,11 @@ const allApis = [
 const FlowbiteProgressbar = () => {
   return (
     <>
-      <BreadcrumbComp title="Progress Bar" links={BCrumb} />
       <div className="grid grid-cols-12 gap-5 sm:gap-30">
+        {/* intro */}
+        <div className="col-span-12">
+          <Intro detail={intro} />
+        </div>
         {/* Default Progress */}
         <div className="col-span-12">
           <DefaultProgress />

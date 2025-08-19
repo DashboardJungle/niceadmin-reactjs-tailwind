@@ -1,49 +1,20 @@
-import { HelperText, Label, TextInput } from 'flowbite-react'
-
-import CardBox from '../../shared/CardBox'
+import CardBox from '../../shared/CardBox';
+import Formvalidation from './Codes/FormValidationCode';
+import FormvalidationCode from './Codes/FormValidationCode.tsx?raw';
+import CodeDialog from '../../shared/CodeDialog';
 
 const FormValidation = () => {
   return (
     <div>
-      <CardBox>
-        <h4 className='text-lg font-semibold'>Form validation</h4>
-        <div className='flex max-w-md flex-col gap-4'>
-          <div>
-            <div className='mb-2 block'>
-              <Label htmlFor='username3' color='success'>
-                Your name
-              </Label>
-            </div>
-            <TextInput
-              id='username'
-              placeholder='Bonnie Green'
-              required
-              color='success'
-            />
-            <HelperText color='success'>
-              <span className='font-medium'>Alright!</span> Username available!
-            </HelperText>
-          </div>
-          <div>
-            <div className='mb-2 block'>
-              <Label htmlFor='username4' color='failure'>
-                Your name
-              </Label>
-            </div>
-            <TextInput
-              id='username4'
-              placeholder='Bonnie Green'
-              required
-              color='failure'
-            />
-            <HelperText color='failure'>
-              <span className='font-medium'>Oops!</span> Username already taken!
-            </HelperText>
-          </div>
+      <CardBox className="p-0">
+        <div className="p-6">
+          <h4 className="text-lg font-semibold mb-4">Form validation</h4>
+          <Formvalidation />
         </div>
+        <CodeDialog>{FormvalidationCode}</CodeDialog>
       </CardBox>
     </div>
-  )
-}
+  );
+};
 
-export default FormValidation
+export default FormValidation;

@@ -6,19 +6,13 @@ import DefaultButtons from 'src/components/ui-components/Button/DefaultButtons';
 import LightButtons from 'src/components/ui-components/Button/LightButtons';
 import RoundedOutline from 'src/components/ui-components/Button/RoundedOutline';
 import SquareButton from 'src/components/ui-components/Button/SquareButton';
-import BreadcrumbComp from 'src/layouts/full/shared/breadcrumb/BreadcrumbComp';
 import ComponentApi from 'src/components/ui-components/ComponentApi';
+import Intro from 'src/components/component-page/shared/Intro';
 
-const BCrumb = [
-  {
-    href: '/',
-    text: 'Dashboard',
-  },
-  {
-    href: '/',
-    text: 'Button',
-  },
-];
+const intro = {
+  heading: 'Buttons',
+  desc: 'A Button is a UI component used to trigger actions or events.',
+};
 
 const allApis = [
   {
@@ -54,8 +48,11 @@ const allApis = [
 const FlowbiteButtons = () => {
   return (
     <>
-      <BreadcrumbComp title="Button" links={BCrumb} />
       <div className="grid grid-cols-12 gap-5 sm:gap-30">
+        {/* intro */}
+        <div className="col-span-12">
+          <Intro detail={intro} />
+        </div>
         {/* Basic */}
         <div className="col-span-12">
           <DefaultButtons />

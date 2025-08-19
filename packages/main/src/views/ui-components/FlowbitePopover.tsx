@@ -6,19 +6,13 @@ import ImagePopover from 'src/components/ui-components/Popover/ImagePopover';
 import PasswordPopover from 'src/components/ui-components/Popover/PasswordPopover';
 import PlacementPopover from 'src/components/ui-components/Popover/PlacementPopover';
 import TriggerType from 'src/components/ui-components/Popover/TriggerType';
-import BreadcrumbComp from 'src/layouts/full/shared/breadcrumb/BreadcrumbComp';
 import ComponentApi from 'src/components/ui-components/ComponentApi';
+import Intro from 'src/components/component-page/shared/Intro';
 
-const BCrumb = [
-  {
-    href: '/',
-    text: 'Dashboard',
-  },
-  {
-    href: '/',
-    text: 'Popover',
-  },
-];
+const intro = {
+  heading: 'Popover',
+  desc: 'A Popover is a UI component used to display contextual information or actions in a small overlay that appears near a trigger element, typically on click or hover.',
+};
 
 const allApis = [
   {
@@ -68,8 +62,11 @@ const allApis = [
 const FlowbitePopover = () => {
   return (
     <>
-      <BreadcrumbComp title="Popover" links={BCrumb} />
       <div className="grid grid-cols-12 gap-5 sm:gap-30">
+        {/* intro */}
+        <div className="col-span-12">
+          <Intro detail={intro} />
+        </div>
         {/* Default */}
         <div className="col-span-12">
           <DefaultPopover />

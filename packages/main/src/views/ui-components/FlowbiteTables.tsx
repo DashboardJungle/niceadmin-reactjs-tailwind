@@ -2,19 +2,13 @@ import DefaultTable from 'src/components/ui-components/Table/DefaultTable';
 import StrippedTable from 'src/components/ui-components/Table/StrippedTable';
 import TableHover from 'src/components/ui-components/Table/TableHover';
 import TableWithCheckbox from 'src/components/ui-components/Table/TableWithCheckbox';
-import BreadcrumbComp from 'src/layouts/full/shared/breadcrumb/BreadcrumbComp';
 import ComponentApi from 'src/components/ui-components/ComponentApi';
+import Intro from 'src/components/component-page/shared/Intro';
 
-const BCrumb = [
-  {
-    href: '/',
-    text: 'Dashboard',
-  },
-  {
-    href: '/',
-    text: 'Tables',
-  },
-];
+const intro = {
+  heading: 'Table',
+  desc: 'A Table is a UI component used to display structured data in rows and columns, allowing users to easily scan, compare, and analyze information.',
+};
 
 const allApis = [
   {
@@ -36,8 +30,11 @@ const allApis = [
 const FlowbiteTables = () => {
   return (
     <>
-      <BreadcrumbComp title="Tables" links={BCrumb} />
       <div className="grid grid-cols-12 gap-5 sm:gap-30">
+        {/* intro */}
+        <div className="col-span-12">
+          <Intro detail={intro} />
+        </div>
         {/* Default */}
         <div className="col-span-12">
           <DefaultTable />

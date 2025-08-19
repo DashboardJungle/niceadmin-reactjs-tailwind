@@ -1,12 +1,10 @@
-
-import { Input } from "src/components/shadcn-ui/Default-Ui/input";
-import { Label } from "src/components/shadcn-ui/Default-Ui/label";
-
+import { Input } from 'src/components/shadcn-ui/Default-Ui/input';
+import { Label } from 'src/components/shadcn-ui/Default-Ui/label';
 
 const InputLabelCode = () => {
   return (
     <>
-      <div className=" max-w-sm flex flex-col gap-5 mt-4">
+      <div className="flex flex-col gap-5 mt-4">
         <div>
           <Label htmlFor="name">Name</Label>
           <Input type="text" />
@@ -21,7 +19,7 @@ const InputLabelCode = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default InputLabelCode
+export default InputLabelCode;

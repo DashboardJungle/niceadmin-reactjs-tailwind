@@ -1,26 +1,23 @@
-import BasicTransition from "src/components/headless-ui/Transition/BasicTransition";
-import ClickTransition from "src/components/headless-ui/Transition/ClickTransition";
-import CoordinationTransition from "src/components/headless-ui/Transition/CoordinationTransition";
-import EnterLeaveTransition from "src/components/headless-ui/Transition/EnterLeaveTransition";
-import OnIntialAmmount from "src/components/headless-ui/Transition/OnIntialAmmount";
-import BreadcrumbComp from "src/layouts/full/shared/breadcrumb/BreadcrumbComp";
+import Intro from 'src/components/component-page/shared/Intro';
+import BasicTransition from 'src/components/headless-ui/Transition/BasicTransition';
+import ClickTransition from 'src/components/headless-ui/Transition/ClickTransition';
+import CoordinationTransition from 'src/components/headless-ui/Transition/CoordinationTransition';
+import EnterLeaveTransition from 'src/components/headless-ui/Transition/EnterLeaveTransition';
+import OnIntialAmmount from 'src/components/headless-ui/Transition/OnIntialAmmount';
 
-const BCrumb = [
-  {
-    href: '/',
-    text: 'Dashboard',
-  },
-  {
-    href: '/',
-    text: "Transition",
-  },
-];
+const intro = {
+  heading: 'Transition',
+  desc: 'A Transition is a UI component that manages the animation of elements as they enter or leave the DOM.',
+};
 
 const Transition = () => {
   return (
     <>
-      <BreadcrumbComp title="Transition" links={BCrumb} />
       <div className="grid grid-cols-12 gap-5 sm:gap-30">
+        {/* intro */}
+        <div className="col-span-12">
+          <Intro detail={intro} />
+        </div>
         <div className="col-span-12">
           <BasicTransition />
         </div>
@@ -38,7 +35,7 @@ const Transition = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Transition
+export default Transition;

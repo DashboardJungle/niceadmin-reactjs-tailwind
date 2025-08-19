@@ -1,24 +1,21 @@
+import Intro from 'src/components/component-page/shared/Intro';
 import BasicDrawer from 'src/components/shadcn-ui/Drawer/BasicDrawer';
-import BreadcrumbComp from 'src/layouts/full/shared/breadcrumb/BreadcrumbComp';
 
-const BCrumb = [
-  {
-    href: '/',
-    text: 'Home',
-  },
-  {
-    href: '/',
-    text: 'Drawer',
-  },
-];
+const intro = {
+  heading: 'Drawer',
+  desc: 'A Drawer is a UI component that slides in from the screen edge to show navigation or additional content.',
+};
+
 const page = () => {
   return (
     <>
-      <BreadcrumbComp title="Drawer" links={BCrumb} />
       <div className="grid grid-cols-12 gap-5 sm:gap-30">
+        {/* intro */}
+        <div className="col-span-12">
+          <Intro detail={intro} />
+        </div>
         {/* Basic */}
         <div className="col-span-12">
-          {/* <BasicDropdown /> */}
           <BasicDrawer />
         </div>
       </div>

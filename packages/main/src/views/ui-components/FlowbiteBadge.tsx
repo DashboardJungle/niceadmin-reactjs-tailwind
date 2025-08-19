@@ -1,22 +1,16 @@
+import Intro from 'src/components/component-page/shared/Intro';
 import BadgeSizes from 'src/components/ui-components/Badge/BadgeSizes';
 import BadgesWithIconText from 'src/components/ui-components/Badge/BadgesWithIconText';
 import Default from 'src/components/ui-components/Badge/Default';
 import IconBadge from 'src/components/ui-components/Badge/IconBadge';
 import LightBadges from 'src/components/ui-components/Badge/LightBadges';
 import LinkBadges from 'src/components/ui-components/Badge/LinkBadges';
-import BreadcrumbComp from 'src/layouts/full/shared/breadcrumb/BreadcrumbComp';
 import ComponentApi from 'src/components/ui-components/ComponentApi';
 
-const BCrumb = [
-  {
-    href: '/',
-    text: 'Dashboard',
-  },
-  {
-    href: '/',
-    text: 'Badges',
-  },
-];
+const intro = {
+  heading: 'Badge',
+  desc: 'A Badge is a UI component used to display statuses, notifications, or labels.',
+};
 
 const allApis = [
   {
@@ -45,9 +39,11 @@ const allApis = [
 const FlowbiteBadge = () => {
   return (
     <>
-      <BreadcrumbComp title="Badges" links={BCrumb} />
-
       <div className="grid grid-cols-12 gap-5 sm:gap-30">
+        {/* intro */}
+        <div className="col-span-12">
+          <Intro detail={intro} />
+        </div>
         {/* Default */}
         <div className="col-span-12">
           <Default />

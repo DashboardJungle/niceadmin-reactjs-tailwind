@@ -1,43 +1,37 @@
-
-import { Label, TextInput, Checkbox, Button } from 'flowbite-react'
+import { Label, TextInput, Checkbox, Button } from 'flowbite-react';
 
 const SquareInputsCodes = () => {
   return (
     <>
-      <form className='flex  flex-col gap-4'>
+      <form className="flex  flex-col gap-4">
         <div>
-          <div className='mb-2 block'>
-            <Label htmlFor='email1'>Your email</Label>
+          <div className="mb-2 block">
+            <Label htmlFor="email1">Your email</Label>
           </div>
           <TextInput
-            id='email1'
-            type='email'
-            placeholder='name@niceadmin.com'
+            id="email1"
+            type="email"
+            placeholder="name@niceadmin.com"
             required
-            className='!form-rounded-md'
+            className="!form-control"
           />
         </div>
         <div>
-          <div className='mb-2 block'>
-            <Label htmlFor='password1'>Your password</Label>
+          <div className="mb-2 block">
+            <Label htmlFor="password1">Your password</Label>
           </div>
-          <TextInput
-            id='password1'
-            type='password'
-            required
-            className='!form-rounded-md'
-          />
+          <TextInput id="password1" type="password" required className="!form-rounded-md" />
         </div>
-        <div className='flex items-center gap-2'>
-          <Checkbox className='checkbox' id='remember1' />
-          <Label htmlFor='remember1'>Remember me</Label>
+        <div className="flex items-center gap-2">
+          <Checkbox className="checkbox" id="remember1" />
+          <Label htmlFor="remember1">Remember me</Label>
         </div>
-        <Button type='submit' className='rounded-md w-fit' color='primary'>
+        <Button type="submit" className="rounded-md w-fit" color="primary">
           Submit
         </Button>
       </form>
     </>
-  )
-}
+  );
+};
 
-export default SquareInputsCodes
+export default SquareInputsCodes;

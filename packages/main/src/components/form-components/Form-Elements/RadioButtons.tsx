@@ -1,21 +1,15 @@
-import { Radio, Label } from "flowbite-react";
-
-import CardBox from "../../shared/CardBox";
+import { Radio, Label } from 'flowbite-react';
+import CardBox from '../../shared/CardBox';
 
 const RadioButtons = () => {
   return (
-    <div>
-      <CardBox>
-        <h4 className="text-lg font-semibold mb-2">Radio Button</h4>
+    <div className="h-full">
+      <CardBox className="h-full">
+        <h4 className="text-lg font-semibold mb-4">Radio Button</h4>
         <fieldset className="flex max-w-md flex-col gap-4 pb-6">
           <legend className="mb-4">Choose your favorite country</legend>
           <div className="flex items-center gap-2">
-            <Radio
-              id="united-state"
-              name="countries"
-              value="USA"
-              defaultChecked
-            />
+            <Radio id="united-state" name="countries" value="USA" defaultChecked />
             <Label htmlFor="united-state">United States</Label>
           </div>
           <div className="flex items-center gap-2">

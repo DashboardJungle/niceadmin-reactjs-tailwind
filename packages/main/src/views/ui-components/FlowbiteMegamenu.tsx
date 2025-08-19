@@ -1,28 +1,23 @@
+import Intro from 'src/components/component-page/shared/Intro';
 import DefaultMegamenu from 'src/components/ui-components/Megamenu/DefaultMegamenu';
 import FullWidthCTA from 'src/components/ui-components/Megamenu/FullWidthCTA';
 import FullWidthMegamenu from 'src/components/ui-components/Megamenu/FullWidthMegamenu';
 import FullWidthWithImage from 'src/components/ui-components/Megamenu/FullWidthWithImage';
 import MegamenuWithIcons from 'src/components/ui-components/Megamenu/MegamenuWithIcons';
-import BreadcrumbComp from 'src/layouts/full/shared/breadcrumb/BreadcrumbComp';
 
-
-const BCrumb = [
-  {
-    href: '/',
-    text: 'Dashboard',
-  },
-  {
-    href: '/',
-    text: 'Mega Menu',
-  },
-];
-
+const intro = {
+  heading: 'Megamenu',
+  desc: 'A Megamenu is a UI component that displays a large, multi-column dropdown menu for easy access to many navigation options.',
+};
 
 const FlowbiteMegamenu = () => {
   return (
     <>
-      <BreadcrumbComp title="Mega Menu" links={BCrumb} />
       <div className="grid grid-cols-12 gap-5 sm:gap-30">
+        {/* intro */}
+        <div className="col-span-12">
+          <Intro detail={intro} />
+        </div>
         {/* Default */}
         <div className="col-span-12">
           <DefaultMegamenu />

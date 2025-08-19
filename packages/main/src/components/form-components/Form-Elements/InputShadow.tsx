@@ -1,70 +1,20 @@
-import { Label, TextInput, Checkbox, Button } from 'flowbite-react'
-
-
-import CardBox from '../../shared/CardBox'
-import { Link } from 'react-router'
+import CardBox from '../../shared/CardBox';
+import Inputshadow from './Codes/InputShadowCode';
+import InputshadowCode from './Codes/InputShadowCode.tsx?raw';
+import CodeDialog from '../../shared/CodeDialog';
 
 const InputShadow = () => {
   return (
     <div>
-      <CardBox>
-        <h4 className='text-lg font-semibold'>Inputs With Shadow</h4>
-        <form className='flex max-w-md flex-col gap-4'>
-          <div>
-            <div className='mb-2 block'>
-              <Label htmlFor='email2'>Your email</Label>
-            </div>
-            <TextInput
-              id='email2'
-              type='email'
-              placeholder='name@niceadmin.com'
-              className='!form-control'
-              required
-              shadow
-            />
-          </div>
-          <div>
-            <div className='mb-2 block'>
-              <Label htmlFor='password2'>Your password</Label>
-            </div>
-            <TextInput
-              id='password2'
-              type='password'
-              className='!form-control'
-              required
-              shadow
-            />
-          </div>
-          <div>
-            <div className='mb-2 block'>
-              <Label htmlFor='repeat-password'>Repeat password</Label>
-            </div>
-            <TextInput
-              id='repeat-password'
-              type='password'
-              className='!form-control'
-              required
-              shadow
-            />
-          </div>
-          <div className='flex items-center gap-2'>
-            <Checkbox id='agree' />
-            <Label htmlFor='agree' className='flex'>
-              I agree with the&nbsp;
-              <Link
-                to='#'
-                className='text-priamry hover:underline dark:text-primary'>
-                terms and conditions
-              </Link>
-            </Label>
-          </div>
-          <Button type='submit' color='primary'>
-            Register new account
-          </Button>
-        </form>
+      <CardBox className="p-0">
+        <div className="p-6">
+          <h4 className="text-lg font-semibold mb-4">Inputs With Shadow</h4>
+          <Inputshadow />
+        </div>
+        <CodeDialog>{InputshadowCode}</CodeDialog>
       </CardBox>
     </div>
-  )
-}
+  );
+};
 
-export default InputShadow
+export default InputShadow;

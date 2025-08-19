@@ -1,29 +1,26 @@
-import BasicTabs from "src/components/headless-ui/Tabs/BasicTabs"
-import ControllTabSelect from "src/components/headless-ui/Tabs/ControllTabSelect"
-import DisableTab from "src/components/headless-ui/Tabs/DisableTab"
-import ListingForChangeTab from "src/components/headless-ui/Tabs/ListingForChangeTab"
-import MannuallActiveTab from "src/components/headless-ui/Tabs/MannuallActiveTab"
-import RenderAsElementTab from "src/components/headless-ui/Tabs/RenderAsElementTab"
-import SpecifiedTab from "src/components/headless-ui/Tabs/SpecifiedTab"
-import VerticalTabs from "src/components/headless-ui/Tabs/VerticalTabs"
-import BreadcrumbComp from "src/layouts/full/shared/breadcrumb/BreadcrumbComp"
+import Intro from 'src/components/component-page/shared/Intro';
+import BasicTabs from 'src/components/headless-ui/Tabs/BasicTabs';
+import ControllTabSelect from 'src/components/headless-ui/Tabs/ControllTabSelect';
+import DisableTab from 'src/components/headless-ui/Tabs/DisableTab';
+import ListingForChangeTab from 'src/components/headless-ui/Tabs/ListingForChangeTab';
+import MannuallActiveTab from 'src/components/headless-ui/Tabs/MannuallActiveTab';
+import RenderAsElementTab from 'src/components/headless-ui/Tabs/RenderAsElementTab';
+import SpecifiedTab from 'src/components/headless-ui/Tabs/SpecifiedTab';
+import VerticalTabs from 'src/components/headless-ui/Tabs/VerticalTabs';
 
-const BCrumb = [
-  {
-    href: '/',
-    text: 'Dashboard',
-  },
-  {
-    href: '/',
-    text: "Tabs",
-  },
-];
+const intro = {
+  heading: 'Tabs',
+  desc: 'Tabs are a UI component that organizes content into separate views, allowing users to switch between them.',
+};
 
 const Tabs = () => {
   return (
     <>
-      <BreadcrumbComp title="Tabs" links={BCrumb} />
       <div className="grid grid-cols-12 gap-5 sm:gap-30">
+        {/* intro */}
+        <div className="col-span-12">
+          <Intro detail={intro} />
+        </div>
         <div className="col-span-12">
           <BasicTabs />
         </div>
@@ -50,7 +47,7 @@ const Tabs = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Tabs
+export default Tabs;

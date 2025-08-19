@@ -1,47 +1,46 @@
-import { Label } from 'flowbite-react'
-
-import CardBox from '../../shared/CardBox'
-import { RangeSlider } from 'flowbite-react'
+import { Label } from 'flowbite-react';
+import CardBox from '../../shared/CardBox';
+import { RangeSlider } from 'flowbite-react';
 const RangeSliders = () => {
   return (
     <div>
       <CardBox>
-        <h4 className='text-lg font-semibold'>Range slider</h4>
-        <div className='flex max-w-md flex-col gap-4 pb-12'>
+        <h4 className="text-lg font-semibold">Range slider</h4>
+        <div className="flex flex-col gap-4 pb-12">
           <div>
-            <div className='mb-1 block'>
-              <Label htmlFor='default-range'>Default</Label>
+            <div className="mb-1 block">
+              <Label htmlFor="default-range">Default</Label>
             </div>
-            <RangeSlider id='default-range' />
+            <RangeSlider id="default-range" />
           </div>
           <div>
-            <div className='mb-1 block'>
-              <Label htmlFor='disbaled-range'>Disabled</Label>
+            <div className="mb-1 block">
+              <Label htmlFor="disbaled-range">Disabled</Label>
             </div>
-            <RangeSlider id='disabled-range' disabled />
+            <RangeSlider id="disabled-range" disabled />
           </div>
           <div>
-            <div className='mb-1 block'>
-              <Label htmlFor='sm-range'>Small</Label>
+            <div className="mb-1 block">
+              <Label htmlFor="sm-range">Small</Label>
             </div>
-            <RangeSlider id='default-range' sizing='sm' />
+            <RangeSlider id="default-range" sizing="sm" />
           </div>
           <div>
-            <div className='mb-1 block'>
-              <Label htmlFor='md-range'>Medium</Label>
+            <div className="mb-1 block">
+              <Label htmlFor="md-range">Medium</Label>
             </div>
-            <RangeSlider id='default-range' sizing='md' />
+            <RangeSlider id="default-range" sizing="md" />
           </div>
           <div>
-            <div className='mb-1 block'>
-              <Label htmlFor='lg-range'>Large</Label>
+            <div className="mb-1 block">
+              <Label htmlFor="lg-range">Large</Label>
             </div>
-            <RangeSlider id='default-range' sizing='lg' />
+            <RangeSlider id="default-range" sizing="lg" />
           </div>
         </div>
       </CardBox>
     </div>
-  )
-}
+  );
+};
 
-export default RangeSliders
+export default RangeSliders;

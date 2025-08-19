@@ -1,24 +1,20 @@
-
+import Intro from 'src/components/component-page/shared/Intro';
 import BasicSkeleton from 'src/components/shadcn-ui/Skeleton/BasicSkeleton';
 import CardSkeleton from 'src/components/shadcn-ui/Skeleton/CardSkeleton';
-import BreadcrumbComp from 'src/layouts/full/shared/breadcrumb/BreadcrumbComp';
 
+const intro = {
+  heading: 'Skeleton',
+  desc: 'A Skeleton is a UI component that displays a placeholder loading animation to indicate content is being loaded.',
+};
 
-const BCrumb = [
-  {
-    href: '/',
-    text: 'Dashboard',
-  },
-  {
-    href: '/',
-    text: "Skeleton",
-  },
-];
 const page = () => {
   return (
     <>
-      <BreadcrumbComp title="Skeleton" links={BCrumb} />
       <div className="grid grid-cols-12 gap-5 sm:gap-30">
+        {/* intro */}
+        <div className="col-span-12">
+          <Intro detail={intro} />
+        </div>
         {/* Basic */}
         <div className="col-span-12">
           <BasicSkeleton />
@@ -26,10 +22,9 @@ const page = () => {
         <div className="col-span-12">
           <CardSkeleton />
         </div>
-
       </div>
     </>
-  )
-}
+  );
+};
 
-export default page
+export default page;

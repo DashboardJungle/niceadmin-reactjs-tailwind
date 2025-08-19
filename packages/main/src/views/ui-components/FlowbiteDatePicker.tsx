@@ -4,19 +4,13 @@ import LimitDatep from 'src/components/ui-components/DatePicker/LimitDatep';
 import LocalizationDatep from 'src/components/ui-components/DatePicker/LocalizationDatep';
 import TitleDatePicker from 'src/components/ui-components/DatePicker/TitleDatePicker';
 import WeekStart from 'src/components/ui-components/DatePicker/WeekStart';
-import BreadcrumbComp from 'src/layouts/full/shared/breadcrumb/BreadcrumbComp';
 import ComponentApi from 'src/components/ui-components/ComponentApi';
+import Intro from 'src/components/component-page/shared/Intro';
 
-const BCrumb = [
-  {
-    href: '/',
-    text: 'Dashboard',
-  },
-  {
-    href: '/',
-    text: 'Datepicker',
-  },
-];
+const intro = {
+  heading: 'Datepicker',
+  desc: 'A Datepicker is a UI component that allows users to select a date from a calendar interface.',
+};
 
 const allApis = [
   {
@@ -80,8 +74,11 @@ const allApis = [
 const FlowbiteDatePicker = () => {
   return (
     <>
-      <BreadcrumbComp title="Datepicker" links={BCrumb} />
       <div className="grid grid-cols-12 gap-5 sm:gap-30">
+        {/* intro */}
+        <div className="col-span-12">
+          <Intro detail={intro} />
+        </div>
         {/* Default Date Picker*/}
         <div className="col-span-12">
           <DefaultDatep />

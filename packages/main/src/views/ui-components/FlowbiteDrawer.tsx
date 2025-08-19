@@ -8,19 +8,13 @@ import LeftDrawer from 'src/components/ui-components/Drawer/LeftDrawer';
 import RightDrawer from 'src/components/ui-components/Drawer/RightDrawer';
 import SwipableDrawer from 'src/components/ui-components/Drawer/SwipableDrawer';
 import TopDrawer from 'src/components/ui-components/Drawer/TopDrawer';
-import BreadcrumbComp from 'src/layouts/full/shared/breadcrumb/BreadcrumbComp';
 import ComponentApi from 'src/components/ui-components/ComponentApi';
+import Intro from 'src/components/component-page/shared/Intro';
 
-const BCrumb = [
-  {
-    href: '/',
-    text: 'Dashboard',
-  },
-  {
-    href: '/',
-    text: 'Drawer',
-  },
-];
+const intro = {
+  heading: 'Drawer',
+  desc: 'A Drawer is a UI component that slides in from the edge of the screen to display navigation, menus, or additional content.',
+};
 
 const allApis = [
   {
@@ -70,9 +64,11 @@ const allApis = [
 const FlowbiteDrawer = () => {
   return (
     <>
-      <BreadcrumbComp title="Drawer" links={BCrumb} />
-
       <div className="grid grid-cols-12 gap-5 sm:gap-30">
+        {/* intro */}
+        <div className="col-span-12">
+          <Intro detail={intro} />
+        </div>
         {/* Default */}
         <div className="col-span-12">
           <DefaultDrawer />

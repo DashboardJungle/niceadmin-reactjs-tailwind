@@ -1,27 +1,20 @@
-
-import CardBox from '../../shared/CardBox'
-import { Label, Textarea } from 'flowbite-react'
+import CardBox from '../../shared/CardBox';
+import TextArea from './Codes/TextAreaCode';
+import TextAreaCode from './Codes/TextAreaCode.tsx?raw';
+import CodeDialog from '../../shared/CodeDialog';
 
 const TextAreaEle = () => {
   return (
     <div>
-      <CardBox>
-        <h4 className='text-lg font-semibold'>Textarea element</h4>
-        <div className='max-w-md '>
-          <div className='mb-2 block'>
-            <Label htmlFor='comment'>Your message</Label>
-          </div>
-          <Textarea
-            id='comment'
-            placeholder='Leave a comment...'
-            required
-            rows={8}
-            className='!form-control-textarea'
-          />
+      <CardBox className="p-0">
+        <div className="p-6">
+          <h4 className="text-lg font-semibold mb-4">Textarea element</h4>
+          <TextArea />
         </div>
+        <CodeDialog>{TextAreaCode}</CodeDialog>
       </CardBox>
     </div>
-  )
-}
+  );
+};
 
-export default TextAreaEle
+export default TextAreaEle;

@@ -1,26 +1,21 @@
-
-
+import Intro from 'src/components/component-page/shared/Intro';
 import BasicDialog from 'src/components/shadcn-ui/Dialog/BasicDialog';
 import DialogWithCustomCloseButton from 'src/components/shadcn-ui/Dialog/DialogWithCustomCloseButton';
 import DialogWithForm from 'src/components/shadcn-ui/Dialog/DialogWithForm';
-import BreadcrumbComp from 'src/layouts/full/shared/breadcrumb/BreadcrumbComp';
 
+const intro = {
+  heading: 'Dialog',
+  desc: 'A Dialog is a UI component that displays a modal window for user interactions, alerts, or confirmations.',
+};
 
-const BCrumb = [
-  {
-    href: '/',
-    text: 'Dashboard',
-  },
-  {
-    href: '/',
-    text: "Dialog",
-  },
-];
 const ShadcnDialog = () => {
   return (
     <>
-      <BreadcrumbComp title="Dialog" links={BCrumb} />
       <div className="grid grid-cols-12 gap-5 sm:gap-30">
+        {/* intro */}
+        <div className="col-span-12">
+          <Intro detail={intro} />
+        </div>
         {/* Basic */}
         <div className="col-span-12">
           <BasicDialog />
@@ -31,10 +26,9 @@ const ShadcnDialog = () => {
         <div className="col-span-12">
           <DialogWithForm />
         </div>
-
       </div>
     </>
-  )
-}
+  );
+};
 
-export default ShadcnDialog
+export default ShadcnDialog;

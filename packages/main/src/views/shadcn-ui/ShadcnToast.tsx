@@ -1,28 +1,24 @@
+import TitleToast from 'src/components/shadcn-ui/Toast/TitleToast';
+import ActionToast from 'src/components/shadcn-ui/Toast/ActionToast';
+import DestructiveToast from 'src/components/shadcn-ui/Toast/DestructiveToast';
+import PrimaryToast from 'src/components/shadcn-ui/Toast/PrimaryToast';
+import SecondaryToast from 'src/components/shadcn-ui/Toast/SecondaryToast';
+import WarningToast from 'src/components/shadcn-ui/Toast/WarningToast';
+import Intro from 'src/components/component-page/shared/Intro';
 
-import TitleToast from "src/components/shadcn-ui/Toast/TitleToast";
-import ActionToast from "src/components/shadcn-ui/Toast/ActionToast";
-import DestructiveToast from "src/components/shadcn-ui/Toast/DestructiveToast";
-import PrimaryToast from "src/components/shadcn-ui/Toast/PrimaryToast";
-import SecondaryToast from "src/components/shadcn-ui/Toast/SecondaryToast";
-import WarningToast from "src/components/shadcn-ui/Toast/WarningToast";
-import BreadcrumbComp from "src/layouts/full/shared/breadcrumb/BreadcrumbComp";
+const intro = {
+  heading: 'Toast',
+  desc: 'A Toast is a UI component that brief notification that appears temporarily to inform users of events or actions.',
+};
 
-
-const BCrumb = [
-  {
-    href: '/',
-    text: 'Dashboard',
-  },
-  {
-    href: '/',
-    text: "Toast",
-  },
-];
 const ShadcnToast = () => {
   return (
     <>
-      <BreadcrumbComp title="Toast" links={BCrumb} />
       <div className="grid grid-cols-12 gap-5 sm:gap-30">
+        {/* intro */}
+        <div className="col-span-12">
+          <Intro detail={intro} />
+        </div>
         <div className="col-span-12">
           <TitleToast />
         </div>

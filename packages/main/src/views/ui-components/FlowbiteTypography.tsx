@@ -1,39 +1,35 @@
-import AlignLeftTypo from "src/components/ui-components/Typography/AlignLeftTypo";
-import AlignRightTypo from "src/components/ui-components/Typography/AlignRightTypo";
-import BlockOutTypo from "src/components/ui-components/Typography/BlockOutTypo";
-import BlockQtIconTypo from "src/components/ui-components/Typography/BlockQtIconTypo";
-import DefaultListTypo from "src/components/ui-components/Typography/DefaultListTypo";
-import HeadingsTyp from "src/components/ui-components/Typography/HeadingsTyp";
-import HorizontalListTypo from "src/components/ui-components/Typography/HorizontalListTypo";
-import IconListTypo from "src/components/ui-components/Typography/IconListTypo";
-import LargeSizeTypo from "src/components/ui-components/Typography/LargeSizeTypo";
-import MediumSizeTypo from "src/components/ui-components/Typography/MediumSizeTypo";
-import NestedTypo from "src/components/ui-components/Typography/NestedTypo";
-import OrderTypo from "src/components/ui-components/Typography/OrderTypo";
-import ParagraphTypo from "src/components/ui-components/Typography/ParagraphTypo";
-import ReviewTypo from "src/components/ui-components/Typography/ReviewTypo";
-import SmallSizeTypo from "src/components/ui-components/Typography/SmallSizeTypo";
-import SolidBgTypo from "src/components/ui-components/Typography/SolidBgTypo";
-import UnstyledTypo from "src/components/ui-components/Typography/UnstyledTypo";
-import BreadcrumbComp from "src/layouts/full/shared/breadcrumb/BreadcrumbComp";
+import Intro from 'src/components/component-page/shared/Intro';
+import AlignLeftTypo from 'src/components/ui-components/Typography/AlignLeftTypo';
+import AlignRightTypo from 'src/components/ui-components/Typography/AlignRightTypo';
+import BlockOutTypo from 'src/components/ui-components/Typography/BlockOutTypo';
+import BlockQtIconTypo from 'src/components/ui-components/Typography/BlockQtIconTypo';
+import DefaultListTypo from 'src/components/ui-components/Typography/DefaultListTypo';
+import HeadingsTyp from 'src/components/ui-components/Typography/HeadingsTyp';
+import HorizontalListTypo from 'src/components/ui-components/Typography/HorizontalListTypo';
+import IconListTypo from 'src/components/ui-components/Typography/IconListTypo';
+import LargeSizeTypo from 'src/components/ui-components/Typography/LargeSizeTypo';
+import MediumSizeTypo from 'src/components/ui-components/Typography/MediumSizeTypo';
+import NestedTypo from 'src/components/ui-components/Typography/NestedTypo';
+import OrderTypo from 'src/components/ui-components/Typography/OrderTypo';
+import ParagraphTypo from 'src/components/ui-components/Typography/ParagraphTypo';
+import ReviewTypo from 'src/components/ui-components/Typography/ReviewTypo';
+import SmallSizeTypo from 'src/components/ui-components/Typography/SmallSizeTypo';
+import SolidBgTypo from 'src/components/ui-components/Typography/SolidBgTypo';
+import UnstyledTypo from 'src/components/ui-components/Typography/UnstyledTypo';
 
-
-const BCrumb = [
-  {
-    href: '/',
-    text: 'Dashboard',
-  },
-  {
-    href: '/',
-    text: "Typography",
-  },
-];
+const intro = {
+  heading: 'Typography',
+  desc: 'Typography is a UI component used to style and format text for better readability and visual hierarchy.',
+};
 
 const FlowbiteTypography = () => {
   return (
     <>
-      <BreadcrumbComp title="Typography" links={BCrumb} />
       <div className="grid grid-cols-12 gap-5 sm:gap-30">
+        {/* intro */}
+        <div className="col-span-12">
+          <Intro detail={intro} />
+        </div>
         {/* Headings Typo */}
         <div className="col-span-12">
           <HeadingsTyp />
