@@ -1,85 +1,22 @@
-
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeadCell,
-  TableRow,
-} from 'flowbite-react'
-
-import CardBox from '../../shared/CardBox'
+import CardBox from '../../shared/CardBox';
+import CodeDialog from '../../shared/CodeDialog';
+import Tablehover from './Code/TableHoverCode';
+import TablehoverCode from './Code/TableHoverCode.tsx?raw';
 
 const TableHover = () => {
   return (
     <div>
-      <CardBox>
-        <h4 className='text-lg font-semibold mb-2'>Table hover state</h4>
-        <div className='overflow-x-auto'>
-          <Table hoverable>
-            <TableHead>
-              <TableRow className='hover:bg-white dark:hover:bg-dark'>
-                <TableHeadCell>Product name</TableHeadCell>
-                <TableHeadCell>Color</TableHeadCell>
-                <TableHeadCell>Category</TableHeadCell>
-                <TableHeadCell>Price</TableHeadCell>
-                <TableHeadCell>
-                  <span className='sr-only'>Edit</span>
-                </TableHeadCell>
-              </TableRow>
-            </TableHead>
-            <TableBody className='divide-y'>
-              <TableRow className='bg-white dark:border-gray-700 dark:bg-gray-800'>
-                <TableCell className='whitespace-nowrap font-medium text-gray-900 dark:text-white'>
-                  {'Apple MacBook Pro 17"'}
-                </TableCell>
-                <TableCell>Sliver</TableCell>
-                <TableCell>Laptop</TableCell>
-                <TableCell>$2999</TableCell>
-                <TableCell>
-                  <a
-                    href='#'
-                    className='font-medium text-primary hover:underline dark:text-primary'>
-                    Edit
-                  </a>
-                </TableCell>
-              </TableRow>
-              <TableRow className='bg-white dark:border-gray-700 dark:bg-gray-800'>
-                <TableCell className='whitespace-nowrap font-medium text-gray-900 dark:text-white'>
-                  Microsoft Surface Pro
-                </TableCell>
-                <TableCell>White</TableCell>
-                <TableCell>Laptop PC</TableCell>
-                <TableCell>$1999</TableCell>
-                <TableCell>
-                  <a
-                    href='#'
-                    className='font-medium text-primary hover:underline dark:text-primary'>
-                    Edit
-                  </a>
-                </TableCell>
-              </TableRow>
-              <TableRow className='bg-white dark:border-gray-700 dark:bg-gray-800'>
-                <TableCell className='whitespace-nowrap font-medium text-gray-900 dark:text-white'>
-                  Magic Mouse 2
-                </TableCell>
-                <TableCell>Black</TableCell>
-                <TableCell>Accessories</TableCell>
-                <TableCell>$99</TableCell>
-                <TableCell>
-                  <a
-                    href='#'
-                    className='font-medium text-primary hover:underline dark:text-primary'>
-                    Edit
-                  </a>
-                </TableCell>
-              </TableRow>
-            </TableBody>
-          </Table>
+      <CardBox className="p-0">
+        <div>
+          <div className="p-6">
+            <h4 className="text-lg font-semibold mb-4">Table hover state</h4>
+            <Tablehover />
+          </div>
+          <CodeDialog>{TablehoverCode}</CodeDialog>
         </div>
       </CardBox>
     </div>
-  )
-}
+  );
+};
 
-export default TableHover
+export default TableHover;

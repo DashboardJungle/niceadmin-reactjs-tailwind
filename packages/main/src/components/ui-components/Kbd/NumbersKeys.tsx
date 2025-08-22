@@ -1,28 +1,22 @@
-
-import { Kbd } from 'flowbite-react'
-
-import CardBox from '../../shared/CardBox'
+import CardBox from '../../shared/CardBox';
+import CodeDialog from '../../shared/CodeDialog';
+import NumbersKey from './Code/NumbersKeysCode';
+import NumbersKeyCode from './Code/NumbersKeysCode.tsx?raw';
 
 const NumbersKeys = () => {
   return (
     <div>
-      <CardBox>
-        <h4 className="text-lg font-semibold mb-2">Number Keys</h4>
-        <div className="flex flex-wrap gap-3">
-          <Kbd>1</Kbd>
-          <Kbd>2</Kbd>
-          <Kbd>3</Kbd>
-          <Kbd>4</Kbd>
-          <Kbd>5</Kbd>
-          <Kbd>6</Kbd>
-          <Kbd>7</Kbd>
-          <Kbd>8</Kbd>
-          <Kbd>9</Kbd>
-          <Kbd>0</Kbd>
+      <CardBox className="p-0">
+        <div>
+          <div className="p-6">
+            <h4 className="text-lg font-semibold mb-4">Number Keys</h4>
+            <NumbersKey />
+          </div>
+          <CodeDialog>{NumbersKeyCode}</CodeDialog>
         </div>
       </CardBox>
     </div>
-  )
-}
+  );
+};
 
-export default NumbersKeys
+export default NumbersKeys;

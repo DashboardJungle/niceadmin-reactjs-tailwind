@@ -1,17 +1,17 @@
-import { Textarea } from 'src/components/shadcn-ui/Default-Ui/textarea';
 import CardBox from '../../shared/CardBox';
-import { Label } from '../../shadcn-ui/Default-Ui/label';
+import CodeDialog from '../../shared/CodeDialog';
+import TextareaWithtext from './code/TextareaWithTextCode';
+import TextareaWithtextCode from './code/TextareaWithTextCode.tsx?raw';
 
 const TextareaWithText = () => {
   return (
-    <CardBox>
-      <div className="flex items-center justify-between mb-2">
-        <h4 className="text-lg font-semibold">Textarea with Label</h4>
-      </div>
-      <div className="grid w-full gap-1.5">
-        <Label htmlFor="message-2">Your Message</Label>
-        <Textarea placeholder="Type your message here." id="message-2" />
-        <p className="text-sm text-bodytext">Your message will be copied to the support team.</p>
+    <CardBox className="p-0">
+      <div>
+        <div className="p-6">
+          <h4 className="text-lg font-semibold mb-4">Textarea with Label</h4>
+          <TextareaWithtext />
+        </div>
+        <CodeDialog>{TextareaWithtextCode}</CodeDialog>
       </div>
     </CardBox>
   );

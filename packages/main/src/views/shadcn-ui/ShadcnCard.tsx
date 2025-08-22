@@ -9,10 +9,10 @@ const intro = {
   desc: 'A Card is a UI component that groups related information and actions within a bordered container.',
 };
 
-const page = () => {
+const ShadcnCard = () => {
   return (
     <>
-      <div className="grid grid-cols-12 gap-5 sm:gap-30">
+      <div className="grid grid-cols-12 gap-6">
         {/* intro */}
         <div className="col-span-12">
           <Intro detail={intro} />
@@ -23,10 +23,10 @@ const page = () => {
         <div className="col-span-12">
           <FormCard />
         </div>
-        <div className="lg:col-span-6 md:col-span-6 col-span-12">
+        <div className="col-span-12">
           <NotificationCard />
         </div>
-        <div className="lg:col-span-6 md:col-span-6 col-span-12">
+        <div className="col-span-12">
           <ChartCard />
         </div>
       </div>
@@ -34,4 +34,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default ShadcnCard;

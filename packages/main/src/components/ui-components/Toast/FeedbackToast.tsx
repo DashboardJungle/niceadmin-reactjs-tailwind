@@ -1,20 +1,19 @@
-
-import { Toast } from "flowbite-react";
-
-import CardBox from "../../shared/CardBox";
-import { FaTelegramPlane } from "react-icons/fa";
+import CardBox from '../../shared/CardBox';
+import Feedbacktoast from './Code/FeedbackToastCode';
+import FeedbacktoastCode from './Code/FeedbackToastCode.tsx?raw';
+import CodeDialog from '../../shared/CodeDialog';
 
 const FeedbackToast = () => {
   return (
     <div>
-      <CardBox>
-        <h4 className="text-lg font-semibold mb-2">Feedback Toast</h4>
-        <Toast>
-          <FaTelegramPlane className="h-5 w-5 text-primary dark:text-primary" />
-          <div className="pl-4 text-sm font-normal">
-            Message sent successfully.
+      <CardBox className="p-0">
+        <div>
+          <div className="p-6">
+            <h4 className="text-lg font-semibold mb-4">Feedback Toast</h4>
+            <Feedbacktoast />
           </div>
-        </Toast>
+          <CodeDialog>{FeedbacktoastCode}</CodeDialog>
+        </div>
       </CardBox>
     </div>
   );

@@ -193,7 +193,6 @@ const ShadcnAccordion = Loadable(lazy(() => import('../views/shadcn-ui/ShadcnAcc
 const ShadcnTab = Loadable(lazy(() => import('../views/shadcn-ui/ShadcnTab')));
 const ShadcnProgress = Loadable(lazy(() => import('../views/shadcn-ui/ShadcnProgress')));
 const ShadcnDrawer = Loadable(lazy(() => import('../views/shadcn-ui/ShadcnDrawer')));
-const ShadcnToast = Loadable(lazy(() => import('../views/shadcn-ui/ShadcnToast')));
 const ShadcnUiInput = Loadable(lazy(() => import('../views/shadcn-ui/ShadcnInput')));
 const ShadcnUiCheckbox = Loadable(lazy(() => import('../views/shadcn-ui/ShadcnCheckbox')));
 const ShadcnUiRadio = Loadable(lazy(() => import('../views/shadcn-ui/ShadcnRadio')));
@@ -393,7 +392,6 @@ const Router = [
       { path: '/shadcn-ui/dropdown', element: <ShadcnDropdown /> },
       { path: '/shadcn-ui/dialogs', element: <ShadcnDialog /> },
       { path: '/shadcn-ui/alert', element: <ShadcnAlert /> },
-      { path: '/shadcn-ui/toast', element: <ShadcnToast /> },
       { path: '/shadcn-ui/breadcrumb', element: <ShadcnBreadcrumb /> },
       { path: '/shadcn-ui/carousel', element: <ShadcnCurosel /> },
       { path: '/shadcn-ui/card', element: <ShadcnCard /> },
@@ -506,7 +504,6 @@ const Router = [
       { path: '/components/shadcn/dropdown', element: <ShadcnDropdown /> },
       { path: '/components/shadcn/dialogs', element: <ShadcnDialog /> },
       { path: '/components/shadcn/alert', element: <ShadcnAlert /> },
-      { path: '/components/shadcn/toast', element: <ShadcnToast /> },
       { path: '/components/shadcn/breadcrumb', element: <ShadcnBreadcrumb /> },
       { path: '/components/shadcn/carousel', element: <ShadcnCurosel /> },
       { path: '/components/shadcn/card', element: <ShadcnCard /> },
@@ -521,7 +518,6 @@ const Router = [
       { path: '/components/shadcn/tab', element: <ShadcnTab /> },
       { path: '/components/shadcn/progressbar', element: <ShadcnProgress /> },
       { path: '/components/shadcn/drawer', element: <ShadcnDrawer /> },
-      { path: '/components/shadcn/toast', element: <ShadcnToast /> },
       //
       { path: '/components/shadcn/input', element: <ShadcnUiInput /> },
       { path: '/components/shadcn/select', element: <ShadcnUiSelect /> },

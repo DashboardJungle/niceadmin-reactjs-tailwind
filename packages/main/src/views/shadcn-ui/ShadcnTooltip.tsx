@@ -6,10 +6,10 @@ const intro = {
   desc: 'A Tooltip is a UI component that shows brief, contextual information when users hover or focus on an element.',
 };
 
-const page = () => {
+const ShadcnTooltip = () => {
   return (
     <>
-      <div className="grid grid-cols-12 gap-5 sm:gap-30">
+      <div className="grid grid-cols-12 gap-6">
         {/* intro */}
         <div className="col-span-12">
           <Intro detail={intro} />
@@ -23,4 +23,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default ShadcnTooltip;

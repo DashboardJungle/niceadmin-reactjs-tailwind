@@ -125,7 +125,7 @@ const allApis = [
   },
 ];
 
-const page = () => {
+const FlowbiteInput = () => {
   return (
     <>
       <div className="grid grid-cols-12 gap-6">
@@ -214,4 +214,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default FlowbiteInput;

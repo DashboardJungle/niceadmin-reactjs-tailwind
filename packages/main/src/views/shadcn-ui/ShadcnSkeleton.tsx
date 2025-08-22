@@ -7,10 +7,10 @@ const intro = {
   desc: 'A Skeleton is a UI component that displays a placeholder loading animation to indicate content is being loaded.',
 };
 
-const page = () => {
+const ShadcnSkeleton = () => {
   return (
     <>
-      <div className="grid grid-cols-12 gap-5 sm:gap-30">
+      <div className="grid grid-cols-12 gap-6">
         {/* intro */}
         <div className="col-span-12">
           <Intro detail={intro} />
@@ -27,4 +27,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default ShadcnSkeleton;

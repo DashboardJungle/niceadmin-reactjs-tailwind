@@ -74,7 +74,7 @@ const allApis = [
 const FlowbiteDatePicker = () => {
   return (
     <>
-      <div className="grid grid-cols-12 gap-5 sm:gap-30">
+      <div className="grid grid-cols-12 gap-6">
         {/* intro */}
         <div className="col-span-12">
           <Intro detail={intro} />

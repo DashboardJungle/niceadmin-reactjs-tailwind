@@ -10,10 +10,10 @@ const intro = {
   desc: 'A Checkbox is a UI component that lets users select one or multiple options from a set.',
 };
 
-const page = () => {
+const ShadcnCheckbox = () => {
   return (
     <>
-      <div className="grid grid-cols-12 gap-5 sm:gap-30">
+      <div className="grid grid-cols-12 gap-6">
         {/* intro */}
         <div className="col-span-12">
           <Intro detail={intro} />
@@ -38,4 +38,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default ShadcnCheckbox;

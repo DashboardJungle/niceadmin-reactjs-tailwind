@@ -62,7 +62,7 @@ const allApis = [
 const FlowbitePopover = () => {
   return (
     <>
-      <div className="grid grid-cols-12 gap-5 sm:gap-30">
+      <div className="grid grid-cols-12 gap-6">
         {/* intro */}
         <div className="col-span-12">
           <Intro detail={intro} />
@@ -84,19 +84,19 @@ const FlowbitePopover = () => {
           <DisableArrow />
         </div>
         {/* Image Popover */}
-        <div className="lg:col-span-6 col-span-12">
+        <div className="col-span-12">
           <ImagePopover />
         </div>
         {/* Password Popover */}
-        <div className="lg:col-span-6 col-span-12">
+        <div className="col-span-12">
           <PasswordPopover />
         </div>
         {/* Placement Popover */}
-        <div className="lg:col-span-8 col-span-12">
+        <div className="col-span-12">
           <PlacementPopover />
         </div>
         {/* Trigger Type */}
-        <div className="lg:col-span-4 col-span-12">
+        <div className="col-span-12">
           <TriggerType />
         </div>
         {/* Api */}

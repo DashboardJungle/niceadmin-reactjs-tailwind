@@ -1,6 +1,6 @@
 import Intro from 'src/components/component-page/shared/Intro';
 import AlignLeftTypo from 'src/components/ui-components/Typography/AlignLeftTypo';
-import AlignRightTypo from 'src/components/ui-components/Typography/AlignRightTypo';
+import AlignRightTypo from 'src/components/ui-components/Typography/AlignCenterTypo';
 import BlockOutTypo from 'src/components/ui-components/Typography/BlockOutTypo';
 import BlockQtIconTypo from 'src/components/ui-components/Typography/BlockQtIconTypo';
 import DefaultListTypo from 'src/components/ui-components/Typography/DefaultListTypo';
@@ -25,7 +25,7 @@ const intro = {
 const FlowbiteTypography = () => {
   return (
     <>
-      <div className="grid grid-cols-12 gap-5 sm:gap-30">
+      <div className="grid grid-cols-12 gap-6">
         {/* intro */}
         <div className="col-span-12">
           <Intro detail={intro} />
@@ -49,34 +49,34 @@ const FlowbiteTypography = () => {
         <div className="col-span-12">
           <ReviewTypo />
         </div>
-        <div className="lg:col-span-6 col-span-12">
+        <div className="col-span-12">
           <AlignLeftTypo />
         </div>
-        <div className="lg:col-span-6 col-span-12">
+        <div className="col-span-12">
           <AlignRightTypo />
         </div>
-        <div className="lg:col-span-6 col-span-12">
+        <div className="col-span-12">
           <SmallSizeTypo />
         </div>
-        <div className="lg:col-span-6 col-span-12">
+        <div className="col-span-12">
           <MediumSizeTypo />
         </div>
         <div className="col-span-12">
           <LargeSizeTypo />
         </div>
-        <div className="lg:col-span-6 col-span-12">
+        <div className="col-span-12">
           <DefaultListTypo />
         </div>
-        <div className="lg:col-span-6 col-span-12">
+        <div className="col-span-12">
           <IconListTypo />
         </div>
         <div className="col-span-12">
           <NestedTypo />
         </div>
-        <div className="lg:col-span-6 col-span-12">
+        <div className="col-span-12">
           <UnstyledTypo />
         </div>
-        <div className="lg:col-span-6 col-span-12">
+        <div className="col-span-12">
           <OrderTypo />
         </div>
         <div className="col-span-12">

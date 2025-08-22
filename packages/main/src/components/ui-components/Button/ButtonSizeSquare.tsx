@@ -1,30 +1,18 @@
-
-import CardBox from "../../shared/CardBox";
-import { Button } from "flowbite-react";
+import CardBox from '../../shared/CardBox';
+import ButtonSizesquare from './Code/ButtonSizeSquareCode';
+import ButtonSizesquareCode from './Code/ButtonSizeSquareCode.tsx?raw';
+import CodeDialog from 'src/components/shared/CodeDialog';
 
 const ButtonSizesSquare = () => {
   return (
     <>
-      <CardBox>
-        <div className="flex items-center justify-between mb-2">
-          <h4 className="text-lg font-semibold ">Button Square Sizes</h4>
-        </div>
-        <div className="flex flex-wrap items-start gap-2 mt-2">
-          <Button size="xs" color={"primary"} className="rounded-md" >
-            Extra small
-          </Button>
-          <Button size="sm" color={"secondary"} className="rounded-md">
-            Small
-          </Button>
-          <Button size="md" color={"error"} className="rounded-md">
-            Base
-          </Button>
-          <Button size="lg" color={"info"} className="rounded-md">
-            Large
-          </Button>
-          <Button size="xl" color={"warning"} className="rounded-md">
-            Extra large
-          </Button>
+      <CardBox className="p-0">
+        <div>
+          <div className="p-6">
+            <h4 className="text-lg font-semibold mb-4">Button Square Sizes</h4>
+            <ButtonSizesquare />
+          </div>
+          <CodeDialog>{ButtonSizesquareCode}</CodeDialog>
         </div>
       </CardBox>
     </>

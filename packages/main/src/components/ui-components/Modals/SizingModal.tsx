@@ -1,83 +1,22 @@
-
-import { useState } from 'react'
-import CardBox from '../../shared/CardBox'
-import {
-  Button,
-  Modal,
-  ModalBody,
-  ModalFooter,
-  ModalHeader,
-  Select,
-} from 'flowbite-react'
+import CardBox from '../../shared/CardBox';
+import CodeDialog from '../../shared/CodeDialog';
+import Sizingmodal from './Code/SizingModalCode';
+import SizingmodalCode from './Code/SizingModalCode.tsx?raw';
 
 const SizingModal = () => {
-  const [sizeModal, setSizeModal] = useState(false)
-  const [modalSize, setModalSize] = useState<string>('md')
   return (
     <div>
-      <CardBox>
+      <CardBox className="p-0">
         <div>
-          <h4 className='text-lg font-semibold '>Sizing options</h4>
-          <div className='flex flex-wrap gap-4 mt-4'>
-            <div className='w-40'>
-              <Select
-                defaultValue='select'
-                className='select-md'
-                onChange={(event) => setModalSize(event.target.value)}>
-                <option value='sm'>sm</option>
-                <option value='md'>md</option>
-                <option value='lg'>lg</option>
-                <option value='xl'>xl</option>
-                <option value='2xl'>2xl</option>
-                <option value='3xl'>3xl</option>
-                <option value='4xl'>4xl</option>
-                <option value='5xl'>5xl</option>
-                <option value='6xl'>6xl</option>
-                <option value='7xl'>7xl</option>
-              </Select>
-            </div>
-            <Button
-              onClick={() => setSizeModal(true)}
-              className='w-fit'
-              color='success'>
-              Toggle Modal
-            </Button>
+          <div className="p-6">
+            <h4 className="text-lg font-semibold mb-4">Sizing options</h4>
+            <Sizingmodal />
           </div>
-          <Modal
-            show={sizeModal}
-            size={modalSize}
-            onClose={() => setSizeModal(false)}>
-            <ModalHeader className='pb-0'>Small modal</ModalHeader>
-            <ModalBody>
-              <div className='space-y-6 '>
-                <p className='text-base leading-relaxed text-gray-500 dark:text-gray-400'>
-                  With less than a month to go before the European Union enacts
-                  new consumer privacy laws for its citizens, companies around
-                  the world are updating their terms of service agreements to
-                  comply.
-                </p>
-                <p className='text-base leading-relaxed text-gray-500 dark:text-gray-400'>
-                  The European Union’s General Data Protection Regulation
-                  (G.D.P.R.) goes into effect on May 25 and is meant to ensure a
-                  common set of data rights in the European Union. It requires
-                  organizations to notify users as soon as possible of high-risk
-                  data breaches that could personally affect them.
-                </p>
-              </div>
-            </ModalBody>
-            <ModalFooter>
-              <Button color='primary' onClick={() => setSizeModal(false)}>
-                I accept
-              </Button>
-              <Button color='error' onClick={() => setSizeModal(false)}>
-                Decline
-              </Button>
-            </ModalFooter>
-          </Modal>
+          <CodeDialog>{SizingmodalCode}</CodeDialog>
         </div>
       </CardBox>
     </div>
-  )
-}
+  );
+};
 
-export default SizingModal
+export default SizingModal;

@@ -1,17 +1,19 @@
-import { Blockquote } from "flowbite-react";
-
-import CardBox from "../../shared/CardBox";
+import CardBox from '../../shared/CardBox';
+import CodeDialog from '../../shared/CodeDialog';
+import SmallSizetypo from './Code/SmallSizeTypoCode';
+import SmallSizetypoCode from './Code/SmallSizeTypoCode.tsx?raw';
 
 const SmallSizeTypo = () => {
   return (
     <div>
-      <CardBox>
-        <h4 className="text-lg font-semibold mb-2">Sizes Small</h4>
-        <Blockquote className="text-lg">
-          "Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer"
-        </Blockquote>
+      <CardBox className="p-0">
+        <div>
+          <div className="p-6">
+            <h4 className="text-lg font-semibold mb-4">Sizes Small</h4>
+            <SmallSizetypo />
+          </div>
+          <CodeDialog>{SmallSizetypoCode}</CodeDialog>
+        </div>
       </CardBox>
     </div>
   );

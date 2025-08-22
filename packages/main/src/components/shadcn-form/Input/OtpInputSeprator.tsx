@@ -1,37 +1,20 @@
-
-
-import {
-  InputOTP,
-  InputOTPGroup,
-  InputOTPSeparator,
-  InputOTPSlot,
-} from 'src/components/shadcn-ui/Default-Ui/input-otp'
-import CardBox from '../../shared/CardBox'
+import CardBox from '../../shared/CardBox';
+import CodeDialog from '../../shared/CodeDialog';
+import OtpInputseprator from './code/OtpInputSepratorCode';
+import OtpInputsepratorCode from './code/OtpInputSepratorCode.tsx?raw';
 
 const OtpInputSeprator = () => {
   return (
-    <CardBox>
-      <div className='flex items-center justify-between mb-2'>
-        <h4 className='text-lg font-semibold'>OTP Input Seprator</h4>
+    <CardBox className="p-0">
+      <div>
+        <div className="p-6">
+          <h4 className="text-lg font-semibold mb-4">OTP Input Seprator</h4>
+          <OtpInputseprator />
+        </div>
+        <CodeDialog>{OtpInputsepratorCode}</CodeDialog>
       </div>
-      <InputOTP maxLength={6}>
-        <InputOTPGroup>
-          <InputOTPSlot index={0} />
-          <InputOTPSlot index={1} />
-        </InputOTPGroup>
-        <InputOTPSeparator />
-        <InputOTPGroup>
-          <InputOTPSlot index={2} />
-          <InputOTPSlot index={3} />
-        </InputOTPGroup>
-        <InputOTPSeparator />
-        <InputOTPGroup>
-          <InputOTPSlot index={4} />
-          <InputOTPSlot index={5} />
-        </InputOTPGroup>
-      </InputOTP>
     </CardBox>
-  )
-}
+  );
+};
 
-export default OtpInputSeprator
+export default OtpInputSeprator;

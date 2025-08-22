@@ -1,58 +1,50 @@
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeadCell,
-  TableRow,
-} from 'flowbite-react'
-import CardBox from '../shared/CardBox'
-
+import { Table, TableBody, TableCell, TableHead, TableHeadCell, TableRow } from 'flowbite-react';
+import CardBox from '../shared/CardBox';
 
 export default function ComponentApi({ allApis, componentName }: any) {
   return (
     <CardBox>
       <div>
-        <h5 className='text-xl font-semibold'>
-          API <span className='text-lg'> ( {componentName} ) </span>
+        <h5 className="text-xl font-semibold">
+          API <span className="text-lg"> ( {componentName} ) </span>
         </h5>
       </div>
-      <div className='border rounded-md border-ld overflow-hidden mt-4'>
-        <div className='overflow-x-auto'>
-          <Table className='' hoverable>
+      <div className="border rounded-md border-ld overflow-hidden mt-4">
+        <div className="overflow-x-auto">
+          <Table className="" hoverable>
             <TableHead>
-              <TableRow className='hover:bg-white dark:hover:bg-transparent'>
-                <TableHeadCell className='text-sm text-black dark:text-white font-semibold py-3 uppercase'>
+              <TableRow className="hover:bg-white dark:hover:bg-transparent hover:cursor-default">
+                <TableHeadCell className="text-sm text-black dark:text-white font-semibold py-3 uppercase">
                   Prop
                 </TableHeadCell>
-                <TableHeadCell className='text-sm text-black dark:text-white font-semibold py-3 uppercase'>
+                <TableHeadCell className="text-sm text-black dark:text-white font-semibold py-3 uppercase">
                   Description
                 </TableHeadCell>
-                <TableHeadCell className='text-sm text-black dark:text-white font-semibold py-3 uppercase'>
+                <TableHeadCell className="text-sm text-black dark:text-white font-semibold py-3 uppercase">
                   Type
                 </TableHeadCell>
-                <TableHeadCell className='text-sm text-black dark:text-white font-semibold py-3 uppercase'>
+                <TableHeadCell className="text-sm text-black dark:text-white font-semibold py-3 uppercase">
                   Default
                 </TableHeadCell>
               </TableRow>
             </TableHead>
-            <TableBody className='divide-y divide-border dark:divide-darkborder '>
+            <TableBody className="divide-y divide-border dark:divide-darkborder ">
               {allApis.map((item: any, index: number) => (
                 <TableRow key={index}>
-                  <TableCell className='whitespace-nowrap'>
-                    <p className='text-sm font-semibold'>{item.prop}</p>
+                  <TableCell className="whitespace-nowrap">
+                    <p className="text-sm font-semibold">{item.prop}</p>
                   </TableCell>
-                  <TableCell className='whitespace-nowrap'>
-                    <p className='text-sm'>{item.description}</p>
+                  <TableCell className="whitespace-nowrap">
+                    <p className="text-sm">{item.description}</p>
                   </TableCell>
-                  <TableCell className='whitespace-nowrap'>
-                    <span className='py-1 px-3 rounded-md bg-gray-100 dark:bg-white/10 block w-fit'>
-                      <p className='text-sm'>{item.type}</p>
+                  <TableCell className="whitespace-nowrap">
+                    <span className="py-1 px-3 rounded-md bg-gray-100 dark:bg-white/10 block w-fit">
+                      <p className="text-sm">{item.type}</p>
                     </span>
                   </TableCell>
-                  <TableCell className='whitespace-nowrap'>
-                    <span className='py-1 px-3 rounded-md bg-gray-100 dark:bg-white/10 block w-fit'>
-                      <p className='text-sm'>{item.default}</p>
+                  <TableCell className="whitespace-nowrap">
+                    <span className="py-1 px-3 rounded-md bg-gray-100 dark:bg-white/10 block w-fit">
+                      <p className="text-sm">{item.default}</p>
                     </span>
                   </TableCell>
                 </TableRow>
@@ -62,5 +54,5 @@ export default function ComponentApi({ allApis, componentName }: any) {
         </div>
       </div>
     </CardBox>
-  )
+  );
 }

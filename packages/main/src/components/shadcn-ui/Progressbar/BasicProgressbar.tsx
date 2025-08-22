@@ -1,24 +1,20 @@
-
-
-import CardBox from '../../shared/CardBox'
-import { Progress } from 'src/components/shadcn-ui/Default-Ui/progress'
+import CardBox from '../../shared/CardBox';
+import CodeDialog from '../../shared/CodeDialog';
+import Basicprogressbar from './code/BasicProgressbarCode';
+import BasicprogressbarCode from './code/BasicProgressbarCode.tsx?raw';
 
 const BasicProgressbar = () => {
   return (
-    <CardBox>
-      <div className='flex items-center justify-between'>
-        <h4 className='text-lg font-semibold'>Basic Progress</h4>
-        {/* <BasicTooltipCode/> */}
-      </div>
-      <div className='flex flex-col items-center gap-4 mt-4'>
-        <Progress value={20} />
-        <Progress value={40} />
-        <Progress value={60} />
-        <Progress value={80} />
-        <Progress value={100} />
+    <CardBox className="p-0">
+      <div>
+        <div className="p-6">
+          <h4 className="text-lg font-semibold mb-4">Basic Progress</h4>
+          <Basicprogressbar />
+        </div>
+        <CodeDialog>{BasicprogressbarCode}</CodeDialog>
       </div>
     </CardBox>
-  )
-}
+  );
+};
 
-export default BasicProgressbar
+export default BasicProgressbar;

@@ -26,7 +26,7 @@ const allApis = [
 const FlowbiteKbd = () => {
   return (
     <>
-      <div className="grid grid-cols-12 gap-5 sm:gap-30">
+      <div className="grid grid-cols-12 gap-6">
         {/* intro */}
         <div className="col-span-12">
           <Intro detail={intro} />
@@ -44,11 +44,11 @@ const FlowbiteKbd = () => {
           <InsideTable />
         </div>
         {/* Arrow Keys KBD*/}
-        <div className="lg:col-span-3 md:col-span-5 col-span-12">
+        <div className="col-span-12">
           <ArrowKeys />
         </div>
         {/* Function Keys KBD*/}
-        <div className="lg:col-span-9 md:col-span-7 col-span-12">
+        <div className="col-span-12">
           <FunctionKeys />
         </div>
         {/* Letter Keys KBD*/}

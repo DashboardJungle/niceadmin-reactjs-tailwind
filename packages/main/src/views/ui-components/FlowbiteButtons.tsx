@@ -48,7 +48,7 @@ const allApis = [
 const FlowbiteButtons = () => {
   return (
     <>
-      <div className="grid grid-cols-12 gap-5 sm:gap-30">
+      <div className="grid grid-cols-12 gap-6">
         {/* intro */}
         <div className="col-span-12">
           <Intro detail={intro} />
@@ -70,19 +70,19 @@ const FlowbiteButtons = () => {
           <SquareButton />
         </div>
         {/* Button Sizes Pill */}
-        <div className="lg:col-span-6 md:col-span-6 col-span-12">
+        <div className="col-span-12">
           <ButtonSizesPill />
         </div>
         {/* Button Sizes Suare */}
-        <div className="lg:col-span-6 md:col-span-6 col-span-12">
+        <div className="col-span-12">
           <ButtonSizesSquare />
         </div>
         {/* Button With Icon */}
-        <div className="lg:col-span-6 md:col-span-6 col-span-12">
+        <div className="col-span-12">
           <ButtonWithIcon />
         </div>
         {/* Loading Button */}
-        <div className="lg:col-span-6 md:col-span-6 col-span-12">
+        <div className="col-span-12">
           <ButtonLoading />
         </div>
         {/* Api */}

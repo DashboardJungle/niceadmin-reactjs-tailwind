@@ -211,7 +211,7 @@ const customTheme = createTheme({
     },
     row: {
       base: 'group/row bg-transparent ',
-      hovered: 'bg-hover hover:bg-transparent dark:hover:bg-transparent',
+      hovered: 'hover:bg-lightprimary dark:hover:bg-darkprimary cursor-pointer',
       striped: 'odd:bg-transparent even:bg-gray-50 odd:dark:bg-black even:dark:bg-white/5',
     },
   },
@@ -663,7 +663,7 @@ const customTheme = createTheme({
         },
       },
       point: {
-        horizontal: 'flex items-center',
+        horizontal: 'flex items-center mb-5',
         line: 'hidden h-0.5 w-full bg-gray-200 dark:bg-gray-700 sm:flex',
         marker: {
           base: {

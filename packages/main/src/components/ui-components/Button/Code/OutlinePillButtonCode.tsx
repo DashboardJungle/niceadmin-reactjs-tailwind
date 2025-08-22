@@ -1,64 +1,71 @@
-import { Button } from 'flowbite-react'
+import { Button } from 'flowbite-react';
 
 const OutlinePillButtonCode = () => {
   return (
     <>
-      <div className='flex gap-4 flex-wrap mt-2'>
+      <div className="flex items-center flex-wrap gap-4">
         <Button
-          color='primary'
-          className='border border-primary text-primary hover:bg-primary hover:text-white'
+          color="primary"
+          className="border border-primary text-primary hover:bg-primary hover:text-white"
           pill
-          outline>
+          outline
+        >
           Primary
         </Button>
         <Button
-          color='secondary'
-          className='border border-secondary text-secondary hover:bg-secondary hover:text-black'
+          color="secondary"
+          className="border border-secondary text-secondary hover:bg-secondary hover:text-black"
           pill
-          outline>
+          outline
+        >
           Secondary
         </Button>
         <Button
-          color='success'
-          className='border border-success text-success hover:bg-success hover:text-white'
+          color="success"
+          className="border border-success text-success hover:bg-success hover:text-white"
           pill
-          outline>
+          outline
+        >
           Success
         </Button>
         <Button
-          color='info'
-          className='border border-info text-info hover:bg-info hover:text-white'
+          color="info"
+          className="border border-info text-info hover:bg-info hover:text-white"
           pill
-          outline>
+          outline
+        >
           Info
         </Button>
         <Button
-          color='warning'
-          className='border border-warning text-warning hover:bg-warning hover:text-white'
+          color="warning"
+          className="border border-warning text-warning hover:bg-warning hover:text-white"
           pill
-          outline>
+          outline
+        >
           Warning
         </Button>
         <Button
-          color='error'
-          className='border border-error text-error hover:bg-error hover:text-white'
+          color="error"
+          className="border border-error text-error hover:bg-error hover:text-white"
           pill
-          outline>
+          outline
+        >
           Danger
         </Button>
-        <Button color='light' className='' pill outline>
+        <Button color="light" className="" pill outline>
           Light
         </Button>
         <Button
-          color='dark'
-          className='border border-dark text-dark hover:bg-dark hover:text-white dark:text-white'
+          color="dark"
+          className="border border-dark text-dark hover:bg-dark hover:text-white dark:text-white"
           pill
-          outline>
+          outline
+        >
           Dark
         </Button>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default OutlinePillButtonCode
+export default OutlinePillButtonCode;

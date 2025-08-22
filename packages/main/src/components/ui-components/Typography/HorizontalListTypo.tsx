@@ -1,24 +1,22 @@
-import { List, ListItem } from 'flowbite-react'
-
-import CardBox from '../../shared/CardBox'
+import CardBox from '../../shared/CardBox';
+import CodeDialog from '../../shared/CodeDialog';
+import HorizontalListtypo from './Code/HorizontalListTypoCode';
+import HorizontalListtypoCode from './Code/HorizontalListTypoCode.tsx?raw';
 
 const HorizontalListTypo = () => {
   return (
     <div>
-      <CardBox>
-        <h4 className='text-lg font-semibold'>Horizontal list</h4>
-        <List horizontal>
-          <ListItem>About</ListItem>
-          <ListItem>Premium</ListItem>
-          <ListItem>Campaigns</ListItem>
-          <ListItem>Blog</ListItem>
-          <ListItem>Affiliate Program</ListItem>
-          <ListItem>FAQs</ListItem>
-          <ListItem>Contact</ListItem>
-        </List>
+      <CardBox className="p-0">
+        <div>
+          <div className="p-6">
+            <h4 className="text-lg font-semibold mb-4">Horizontal list</h4>
+            <HorizontalListtypo />
+          </div>
+          <CodeDialog>{HorizontalListtypoCode}</CodeDialog>
+        </div>
       </CardBox>
     </div>
-  )
-}
+  );
+};
 
-export default HorizontalListTypo
+export default HorizontalListTypo;

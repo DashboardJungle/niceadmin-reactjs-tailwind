@@ -13,10 +13,10 @@ const intro = {
   desc: 'A Checkbox is a UI component that lets users select one or more options from a set.',
 };
 
-const page = () => {
+const CheckboxForm = () => {
   return (
     <div>
-      <div className="grid grid-cols-12 gap-5 sm:gap-30">
+      <div className="grid grid-cols-12 gap-6">
         {/* intro */}
         <div className="col-span-12">
           <Intro detail={intro} />
@@ -39,10 +39,10 @@ const page = () => {
         <div className="col-span-12">
           <TransitionCheckbox />
         </div>
-        <div className="md:col-span-6 col-span-12">
+        <div className="col-span-12">
           <RenderAsDiv />
         </div>
-        <div className="md:col-span-6 col-span-12">
+        <div className="col-span-12">
           <RenderAsProps />
         </div>
       </div>
@@ -50,4 +50,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default CheckboxForm;

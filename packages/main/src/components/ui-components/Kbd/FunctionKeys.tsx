@@ -1,25 +1,18 @@
-import { Kbd } from "flowbite-react";
-
-import CardBox from "../../shared/CardBox";
+import CardBox from '../../shared/CardBox';
+import CodeDialog from '../../shared/CodeDialog';
+import FunctionKey from './Code/FunctionKeysCode';
+import FunctionKeyCode from './Code/FunctionKeysCode.tsx?raw';
 
 const FunctionKeys = () => {
   return (
     <div>
-      <CardBox>
-        <h4 className="text-lg font-semibold mb-2">Function keys</h4>
-        <div className="flex flex-wrap gap-3">
-          <Kbd>F1</Kbd>
-          <Kbd>F2</Kbd>
-          <Kbd>F3</Kbd>
-          <Kbd>F4</Kbd>
-          <Kbd>F5</Kbd>
-          <Kbd>F6</Kbd>
-          <Kbd>F7</Kbd>
-          <Kbd>F8</Kbd>
-          <Kbd>F9</Kbd>
-          <Kbd>F10</Kbd>
-          <Kbd>F11</Kbd>
-          <Kbd>F12</Kbd>
+      <CardBox className="p-0">
+        <div>
+          <div className="p-6">
+            <h4 className="text-lg font-semibold mb-4">Function keys</h4>
+            <FunctionKey />
+          </div>
+          <CodeDialog>{FunctionKeyCode}</CodeDialog>
         </div>
       </CardBox>
     </div>

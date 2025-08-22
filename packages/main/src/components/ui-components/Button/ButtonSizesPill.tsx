@@ -1,34 +1,22 @@
-
-import CardBox from '../../shared/CardBox'
-import { Button } from 'flowbite-react'
+import CodeDialog from 'src/components/shared/CodeDialog';
+import CardBox from '../../shared/CardBox';
+import ButtonSizePill from './Code/ButtonSizesPillCode';
+import ButtonSizePillCode from './Code/ButtonSizesPillCode.tsx?raw';
 
 const ButtonSizesPill = () => {
   return (
     <>
-      <CardBox>
-        <div className='flex items-center justify-between mb-2'>
-          <h4 className='text-lg font-semibold '>Button Pill Sizes</h4>
-        </div>
-        <div className='flex flex-wrap items-start gap-2 mt-2'>
-          <Button size='xs' color={'primary'} pill>
-            Extra small
-          </Button>
-          <Button size='sm' color={'secondary'} pill>
-            Small
-          </Button>
-          <Button size='md' color={'error'} pill>
-            Base
-          </Button>
-          <Button size='lg' color={'info'} pill>
-            Large
-          </Button>
-          <Button size='xl' color={'warning'} pill>
-            Extra large
-          </Button>
+      <CardBox className="p-0">
+        <div>
+          <div className="p-6">
+            <h4 className="text-lg font-semibold mb-4">Button Pill Sizes</h4>
+            <ButtonSizePill />
+          </div>
+          <CodeDialog>{ButtonSizePillCode}</CodeDialog>
         </div>
       </CardBox>
     </>
-  )
-}
+  );
+};
 
-export default ButtonSizesPill
+export default ButtonSizesPill;

@@ -26,7 +26,7 @@ const allApis = [
   },
 ];
 
-const page = () => {
+const FlowbiteToggleSwitch = () => {
   return (
     <>
       <div className="grid grid-cols-12 gap-6">
@@ -55,4 +55,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default FlowbiteToggleSwitch;

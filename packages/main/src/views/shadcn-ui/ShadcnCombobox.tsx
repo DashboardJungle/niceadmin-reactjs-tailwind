@@ -9,10 +9,10 @@ const intro = {
   desc: 'A Combobox is a UI component that combines a text input with a dropdown list of selectable options.',
 };
 
-const page = () => {
+const ShadcnCombobox = () => {
   return (
     <>
-      <div className="grid grid-cols-12 gap-5 sm:gap-30">
+      <div className="grid grid-cols-12 gap-6">
         {/* intro */}
         <div className="col-span-12">
           <Intro detail={intro} />
@@ -34,4 +34,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default ShadcnCombobox;

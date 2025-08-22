@@ -15,7 +15,7 @@ const PlacementModalCode = () => {
   return (
     <div>
       <div>
-        <div className='flex flex-wrap gap-4'>
+        <div className='flex items-center flex-wrap gap-4'>
           <div className='w-40'>
             <Select
               defaultValue='center'

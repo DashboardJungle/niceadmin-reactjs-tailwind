@@ -21,10 +21,10 @@ const intro = {
   desc: 'A Combobox is a UI component that combines a text input with a list of selectable options.',
 };
 
-const page = () => {
+const ComboboxForm = () => {
   return (
     <>
-      <div className="grid grid-cols-12 gap-5 sm:gap-30">
+      <div className="grid grid-cols-12 gap-6">
         {/* intro */}
         <div className="col-span-12">
           <Intro detail={intro} />
@@ -47,7 +47,7 @@ const page = () => {
         <div className="col-span-12">
           <ComboPosition />
         </div>
-        <div className="md:col-span-6 col-span-12">
+        <div className="col-span-12">
           <ComboWidth />
         </div>
         <div className="md:col-span-6 col-span-12">
@@ -83,4 +83,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default ComboboxForm;

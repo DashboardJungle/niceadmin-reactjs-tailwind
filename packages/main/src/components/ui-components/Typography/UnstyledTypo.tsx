@@ -1,22 +1,22 @@
-import { List, ListItem } from 'flowbite-react'
-
-import CardBox from '../../shared/CardBox'
+import CardBox from '../../shared/CardBox';
+import CodeDialog from '../../shared/CodeDialog';
+import Unstyledtypo from './Code/UnstyledTypoCode';
+import UnstyledtypoCode from './Code/UnstyledTypoCode.tsx?raw';
 
 const UnstyledTypo = () => {
   return (
     <div>
-      <CardBox>
-        <h4 className='text-lg font-semibold mb-2'>Unstyled</h4>
-        <List unstyled>
-          <ListItem>At least 10 characters (and up to 100 characters)</ListItem>
-          <ListItem>At least one lowercase character</ListItem>
-          <ListItem>
-            Inclusion of at least one special character, e.g., ! @ # ?
-          </ListItem>
-        </List>
+      <CardBox className="p-0">
+        <div>
+          <div className="p-6">
+            <h4 className="text-lg font-semibold mb-4">Unstyled</h4>
+            <Unstyledtypo />
+          </div>
+          <CodeDialog>{UnstyledtypoCode}</CodeDialog>
+        </div>
       </CardBox>
     </div>
-  )
-}
+  );
+};
 
-export default UnstyledTypo
+export default UnstyledTypo;

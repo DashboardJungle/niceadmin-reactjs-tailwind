@@ -6,16 +6,16 @@ const intro = {
   desc: 'A Progress Bar is a UI component used to visually indicate the completion status of a task or process.',
 };
 
-const page = () => {
+const ShadcnProgress = () => {
   return (
     <>
-      <div className="grid grid-cols-12 gap-5 sm:gap-30">
+      <div className="grid grid-cols-12 gap-6">
         {/* intro */}
         <div className="col-span-12">
           <Intro detail={intro} />
         </div>
         {/* Basic */}
-        <div className="lg:col-span-6 md:col-span-6 col-span-12">
+        <div className="col-span-12">
           <BasicProgressbar />
         </div>
       </div>
@@ -23,4 +23,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default ShadcnProgress;

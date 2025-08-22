@@ -1,73 +1,20 @@
-
-
-import { Button } from 'src/components/shadcn-ui/Default-Ui/button'
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from 'src/components/shadcn-ui/Default-Ui/card'
-import { Switch } from 'src/components/shadcn-ui/Default-Ui/switch'
-import { BellRing, Check } from 'lucide-react'
-
-const notifications = [
-  {
-    title: 'Your call has been confirmed.',
-    description: '1 hour ago',
-  },
-  {
-    title: 'You have a new message!',
-    description: '1 hour ago',
-  },
-  {
-    title: 'Your subscription is expiring soon!',
-    description: '2 hours ago',
-  },
-]
-
+import CardBox from '../../shared/CardBox';
+import Notificationcard from './code/NotificationCardCode';
+import NotificationcardCode from './code/NotificationCardCode.tsx?raw';
+import CodeDialog from '../../shared/CodeDialog';
 const NotificationCard = () => {
   return (
     <>
-      <Card className='w-full'>
-        <CardHeader className='flex flex-row justify-between w-full items-center'>
-          <CardTitle>Notification Card</CardTitle>
-        </CardHeader>
-        <CardContent className='flex flex-col gap-3'>
-          <div className=' flex items-center space-x-4 rounded-md border border-ld p-4'>
-            <BellRing />
-            <div className='flex-1 space-y-1'>
-              <p className='text-15 font-semibold text-ld leading-none'>
-                Push Notifications
-              </p>
-              <p className='text-sm'>Send notifications to device.</p>
-            </div>
-            <Switch />
+      <CardBox className="p-0">
+        <div>
+          <div className="p-6">
+            <Notificationcard />
           </div>
-          <div>
-            {notifications.map((notification, index) => (
-              <div
-                key={index}
-                className='mb-4 grid grid-cols-[25px_1fr] items-start pb-4 last:mb-0 last:pb-0'>
-                <span className='flex h-2 w-2 translate-y-1 rounded-full bg-sky-500' />
-                <div className='space-y-1'>
-                  <p className='text-15 font-semibold text-ld leading-none'>
-                    {notification.title}
-                  </p>
-                  <p className='text-sm'>{notification.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </CardContent>
-        <CardFooter>
-          <Button className='w-full'>
-            <Check /> Mark all as read
-          </Button>
-        </CardFooter>
-      </Card>
+          <CodeDialog>{NotificationcardCode}</CodeDialog>
+        </div>
+      </CardBox>
     </>
-  )
-}
+  );
+};
 
-export default NotificationCard
+export default NotificationCard;

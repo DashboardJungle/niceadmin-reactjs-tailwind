@@ -1,144 +1,17 @@
-;
-
-import * as React from "react";
-import { DropdownMenuCheckboxItemProps } from "@radix-ui/react-dropdown-menu";
-
-import { Button } from "src/components/shadcn-ui/Default-Ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuCheckboxItem,
-  DropdownMenuContent,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "src/components/shadcn-ui/Default-Ui/dropdown-menu";
-import CardBox from "../../shared/CardBox";
-
-type Checked = DropdownMenuCheckboxItemProps["checked"];
+import CardBox from '../../shared/CardBox';
+import CodeDialog from '../../shared/CodeDialog';
+import DropdownMenuCheckbox from './code/DropdownMenuCheckboxesCode';
+import DropdownMenuCheckboxCode from './code/DropdownMenuCheckboxesCode.tsx?raw';
 
 export function DropdownMenuCheckboxes() {
-  const [showStatusBar, setShowStatusBar] = React.useState<Checked>(true);
-  const [showActivityBar, setShowActivityBar] = React.useState<Checked>(false);
-  const [showPanel, setShowPanel] = React.useState<Checked>(false);
-
   return (
-    <CardBox>
-      <div className="flex items-center justify-between">
-        <h4 className="text-lg font-semibold">Dropdown With Checkbox</h4>
-      </div>
-      <div className="flex flex-wrap items-center gap-3 mt-4">
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button >Open Dropdown</Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent className="w-56">
-            <DropdownMenuLabel>Appearance</DropdownMenuLabel>
-            <DropdownMenuSeparator />
-            <DropdownMenuCheckboxItem
-              checked={showStatusBar}
-              onCheckedChange={setShowStatusBar}
-            >
-              Status Bar
-            </DropdownMenuCheckboxItem>
-            <DropdownMenuCheckboxItem
-              checked={showActivityBar}
-              onCheckedChange={setShowActivityBar}
-              disabled
-            >
-              Activity Bar
-            </DropdownMenuCheckboxItem>
-            <DropdownMenuCheckboxItem
-              checked={showPanel}
-              onCheckedChange={setShowPanel}
-            >
-              Panel
-            </DropdownMenuCheckboxItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button variant="secondary">Open Dropdown</Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent className="w-56">
-            <DropdownMenuLabel>Appearance</DropdownMenuLabel>
-            <DropdownMenuSeparator />
-            <DropdownMenuCheckboxItem
-              checked={showStatusBar}
-              onCheckedChange={setShowStatusBar}
-            >
-              Status Bar
-            </DropdownMenuCheckboxItem>
-            <DropdownMenuCheckboxItem
-              checked={showActivityBar}
-              onCheckedChange={setShowActivityBar}
-              disabled
-            >
-              Activity Bar
-            </DropdownMenuCheckboxItem>
-            <DropdownMenuCheckboxItem
-              checked={showPanel}
-              onCheckedChange={setShowPanel}
-            >
-              Panel
-            </DropdownMenuCheckboxItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button variant="warning">Open Dropdown</Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent className="w-56">
-            <DropdownMenuLabel>Appearance</DropdownMenuLabel>
-            <DropdownMenuSeparator />
-            <DropdownMenuCheckboxItem
-              checked={showStatusBar}
-              onCheckedChange={setShowStatusBar}
-            >
-              Status Bar
-            </DropdownMenuCheckboxItem>
-            <DropdownMenuCheckboxItem
-              checked={showActivityBar}
-              onCheckedChange={setShowActivityBar}
-              disabled
-            >
-              Activity Bar
-            </DropdownMenuCheckboxItem>
-            <DropdownMenuCheckboxItem
-              checked={showPanel}
-              onCheckedChange={setShowPanel}
-            >
-              Panel
-            </DropdownMenuCheckboxItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button variant="error">Open Dropdown</Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent className="w-56">
-            <DropdownMenuLabel>Appearance</DropdownMenuLabel>
-            <DropdownMenuSeparator />
-            <DropdownMenuCheckboxItem
-              checked={showStatusBar}
-              onCheckedChange={setShowStatusBar}
-            >
-              Status Bar
-            </DropdownMenuCheckboxItem>
-            <DropdownMenuCheckboxItem
-              checked={showActivityBar}
-              onCheckedChange={setShowActivityBar}
-              disabled
-            >
-              Activity Bar
-            </DropdownMenuCheckboxItem>
-            <DropdownMenuCheckboxItem
-              checked={showPanel}
-              onCheckedChange={setShowPanel}
-            >
-              Panel
-            </DropdownMenuCheckboxItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
+    <CardBox className="p-0">
+      <div>
+        <div className="p-6">
+          <h4 className="text-lg font-semibold mb-4">Dropdown With Checkbox</h4>
+          <DropdownMenuCheckbox />
+        </div>
+        <CodeDialog>{DropdownMenuCheckboxCode}</CodeDialog>
       </div>
     </CardBox>
   );
