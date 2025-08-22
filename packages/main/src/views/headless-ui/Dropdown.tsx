@@ -49,16 +49,16 @@ const Dropdown = () => {
         <div className="col-span-12">
           <DropdownWidth />
         </div>
-        <div className="lg:col-span-6 col-span-12">
+        <div className="col-span-12">
           <TransitionDropdown />
         </div>
-        <div className="lg:col-span-6 col-span-12">
+        <div className="col-span-12">
           <FramerMotion />
         </div>
-        <div className="lg:col-span-6 col-span-12">
+        <div className="col-span-12">
           <ClosingManually />
         </div>
-        <div className="lg:col-span-6 col-span-12">
+        <div className="col-span-12">
           <RendringElements />
         </div>
       </div>

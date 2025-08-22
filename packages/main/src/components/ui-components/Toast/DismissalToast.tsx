@@ -1,5 +1,3 @@
-'use client';
-
 import CardBox from '../../shared/CardBox';
 import CodeDialog from '../../shared/CodeDialog';
 import Dismissaltoast from './Code/DismissalToastCode';

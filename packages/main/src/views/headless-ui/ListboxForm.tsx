@@ -43,22 +43,22 @@ const ListboxForm = () => {
         <div className="col-span-12">
           <ListBoxWithHtmlForm />
         </div>
-        <div className="lg:col-span-4 md:col-span-6 col-span-12">
+        <div className="col-span-12">
           <ListBoxWidth />
         </div>
-        <div className="lg:col-span-4 md:col-span-6 col-span-12">
+        <div className="col-span-12">
           <HorizontalListBox />
         </div>
-        <div className="lg:col-span-4 md:col-span-6 col-span-12">
+        <div className="col-span-12">
           <TransitionListBox />
         </div>
-        <div className="lg:col-span-4 md:col-span-6 col-span-12">
+        <div className="col-span-12">
           <ListboxFramerMotion />
         </div>
-        <div className="lg:col-span-4 md:col-span-6 col-span-12">
+        <div className="col-span-12">
           <ListboxWithMultipleVal />
         </div>
-        <div className="lg:col-span-4 md:col-span-6 col-span-12">
+        <div className="col-span-12">
           <RenderingAsDiffElemtns />
         </div>
       </div>

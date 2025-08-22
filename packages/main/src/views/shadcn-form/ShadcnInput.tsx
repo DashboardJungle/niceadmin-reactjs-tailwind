@@ -22,7 +22,7 @@ const BCrumb = [
   },
 ];
 
-const page = () => {
+const ShadcnInput = () => {
   return (
     <>
       <BreadcrumbComp title="Input" links={BCrumb} />
@@ -65,4 +65,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default ShadcnInput;

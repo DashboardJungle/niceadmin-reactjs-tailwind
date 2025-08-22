@@ -1,42 +1,22 @@
-
-import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/react'
-import { Icon } from '@iconify/react/dist/iconify.js'
-
-import CardBox from '../../shared/CardBox'
-
+import CardBox from '../../shared/CardBox';
+import CodeDialog from '../../shared/CodeDialog';
+import Transitiondropdown from './Codes/TransitionDropdownCode';
+import TransitiondropdownCode from './Codes/TransitionDropdownCode.tsx?raw';
 
 const TransitionDropdown = () => {
   return (
     <div>
-      <CardBox>
-        <div className="flex items-center justify-between mb-2">
-          <h4 className="text-lg font-semibold">Transitions</h4>
+      <CardBox className="p-0">
+        <div>
+          <div className="p-6">
+            <h4 className="text-lg font-semibold mb-4">Transitions</h4>
+            <Transitiondropdown />
+          </div>
+          <CodeDialog>{TransitiondropdownCode}</CodeDialog>
         </div>
-        <Menu>
-          <MenuButton className="ui-button  bg-success gap-2">
-            My Account <Icon icon="solar:alt-arrow-down-outline" height={18} />
-          </MenuButton>
-          <MenuItems transition anchor="bottom" className="ui-dropdown origin-top transition duration-500 ease-out data-[closed]:scale-95 data-[closed]:opacity-0">
-            <MenuItem>
-              <a className="ui-dropdown-item" href="/settings">
-                Settings
-              </a>
-            </MenuItem>
-            <MenuItem>
-              <a className="ui-dropdown-item" href="/support">
-                Support
-              </a>
-            </MenuItem>
-            <MenuItem>
-              <a className="ui-dropdown-item" href="/license">
-                License
-              </a>
-            </MenuItem>
-          </MenuItems>
-        </Menu>
       </CardBox>
     </div>
-  )
-}
+  );
+};
 
-export default TransitionDropdown
+export default TransitionDropdown;

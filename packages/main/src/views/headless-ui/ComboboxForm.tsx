@@ -50,32 +50,31 @@ const ComboboxForm = () => {
         <div className="col-span-12">
           <ComboWidth />
         </div>
-        <div className="md:col-span-6 col-span-12">
+        <div className="col-span-12">
           <WithTransitions />
         </div>
-        <div className="md:col-span-6 col-span-12">
+        <div className="col-span-12">
           <WithFramerMotion />
         </div>
-        <div className="md:col-span-6 col-span-12">
+        <div className="col-span-12">
           <BindingStringAsValue />
         </div>
-
-        <div className="md:col-span-6 col-span-12">
+        <div className="col-span-12">
           <ComboOnFocus />
         </div>
-        <div className="md:col-span-6 col-span-12">
+        <div className="col-span-12">
           <RenderingCombobox />
         </div>
-        <div className="md:col-span-6 col-span-12">
+        <div className="col-span-12">
           <BindingValues />
         </div>
-        <div className="md:col-span-6 col-span-12">
+        <div className="col-span-12">
           <ActiveOptionDetails />
         </div>
-        <div className="md:col-span-6 col-span-12">
+        <div className="col-span-12">
           <VirtualScrollingCombo />
         </div>
-        <div className="md:col-span-6 col-span-12">
+        <div className="col-span-12">
           <MultipleSelectVal />
         </div>
       </div>

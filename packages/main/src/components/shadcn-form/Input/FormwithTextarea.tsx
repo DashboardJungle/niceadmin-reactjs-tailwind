@@ -1,4 +1,3 @@
-'use client';
 import CardBox from '../../shared/CardBox';
 import CodeDialog from '../../shared/CodeDialog';
 import Formwithtextarea from './code/FormwithTextareaCode';
