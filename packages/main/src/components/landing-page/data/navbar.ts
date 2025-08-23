@@ -1,13 +1,12 @@
 export const navbarLinks = {
   navbarList: [
+    { label: 'UI Blocks', href: '/ui-blocks' },
     {
       label: 'Components',
       href: '/components/flowbite/buttons',
     },
-    { label: 'Docs', href: '/docs' },
-    { label: 'Support', href: 'https://support.wrappixel.com/' },
     { label: 'Blog', href: 'https://niceadmin-reactjs-tailwind-main.netlify.app/apps/blog/post' },
-    { label: 'Changelog', href: '/changelog' },
+    { label: 'Docs', href: '/docs' },
   ],
   button: [
     {

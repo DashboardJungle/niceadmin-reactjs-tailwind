@@ -3,12 +3,12 @@
 import { Children, lazy } from 'react';
 import { Navigate, createBrowserRouter } from 'react-router';
 import Loadable from '../layouts/full/shared/loadable/Loadable';
-// import { element } from 'prop-types';
 
 /* ***Layouts**** */
 const FullLayout = Loadable(lazy(() => import('../layouts/full/FullLayout')));
 const BlankLayout = Loadable(lazy(() => import('../layouts/blank/BlankLayout')));
 const ComponentLayout = Loadable(lazy(() => import('../layouts/componentpage/ComponentLayout')));
+const UiBlockLayout = Loadable(lazy(() => import('../layouts/ui-blocks/UiBlockLayout')));
 
 /* ***Dashboard**** */
 // Dashboards
@@ -68,6 +68,9 @@ const Pricing = Loadable(lazy(() => import('../views/pages/Pricing')));
 const AccountSetting = Loadable(lazy(() => import('../views/pages/AccountSetting')));
 const Apikeys = Loadable(lazy(() => import('../views/pages/Apikeys')));
 const Integrations = Loadable(lazy(() => import('../views/pages/Integration')));
+
+// ui-block
+const UIBlocks = Loadable(lazy(() => import('../views/pages/uiblockpage/UiBlockpage')));
 
 //Shadcn Forms
 const ShadcnInput = Loadable(lazy(() => import('../views/shadcn-form/ShadcnInput')));
@@ -457,6 +460,11 @@ const Router = [
       { path: '/headless-ui/tabs', element: <Tabs /> },
       { path: '/headless-ui/transition', element: <Transition /> },
     ],
+  },
+  {
+    path: '/',
+    element: <UiBlockLayout />,
+    children: [{ path: '/ui-blocks', element: <UIBlocks /> }],
   },
   {
     path: '/',

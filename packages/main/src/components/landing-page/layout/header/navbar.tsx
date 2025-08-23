@@ -1,8 +1,8 @@
-import { Link, To, useLocation } from 'react-router';
+import { Link, useLocation } from 'react-router';
 
 import Logo from '../logo';
 
-import { JSXElementConstructor, Key, ReactElement, ReactNode, useEffect, useState } from 'react';
+import { Key, useEffect, useState } from 'react';
 import MobileHeader from './MobileHeader';
 import AnnouncementBar from '../announcement-bar';
 
@@ -27,6 +27,20 @@ const Navbar = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  // navlink active effect
+  const isRouteActive = (href: string, pathname: string) => {
+    if (href.includes('/components/')) {
+      return location.pathname.includes('/components/');
+    }
+
+    if (href.includes('/ui-blocks')) {
+      return location.pathname.startsWith('/ui-blocks');
+    }
+
+    return pathname === href;
+  };
+
   return (
     <>
       {announcementVisible && <AnnouncementBar setIsVisible={setAnnouncementVisible} />}
@@ -44,45 +58,27 @@ const Navbar = () => {
                 <div className="flex items-center gap-7 xl:gap-12">
                   <Logo />
                   <ul className="hidden lg:flex items-center gap-1">
-                    {navbarLinks?.navbarList?.map(
-                      (
-                        value: {
-                          href: To;
-                          label:
-                            | string
-                            | number
-                            | boolean
-                            | ReactElement<any, string | JSXElementConstructor<any>>
-                            | Iterable<ReactNode>
-                            | null
-                            | undefined;
-                        },
-                        index: Key | null | undefined,
-                      ) => {
-                        const isActive =
-                          value.href === '/components/flowbite/buttons'
-                            ? location.pathname.includes('/components/')
-                            : location.pathname === value.href;
-                        return (
-                          <Link key={index} to={value?.href}>
-                            <li
-                              className={`relative h-[35px] overflow-hidden flex flex-col justify-start text-sm hover:bg-lightprimary dark:hover:bg-darkprimary  font-normal rounded-md group ${
-                                isActive
-                                  ? 'text-primary bg-lightprimary dark:text-white dark:bg-darkprimary'
-                                  : 'text-forest-black dark:text-darklink hover:text-primary dark:hover:text-white'
-                              }`}
-                            >
-                              <span className="transform transition-transform duration-300 group-hover:-translate-y-full px-2 xl:px-3 py-1 xl:py-1.5">
-                                {value?.label}
-                              </span>
-                              <span className="transform transition-transform duration-300 group-hover:-translate-y-full px-2 xl:px-3 py-1 xl:py-1.5">
-                                {value?.label}
-                              </span>
-                            </li>
-                          </Link>
-                        );
-                      },
-                    )}
+                    {navbarLinks?.navbarList?.map((value, index) => {
+                      const isActive = isRouteActive(value.href, location.pathname);
+                      return (
+                        <Link key={index} to={value?.href}>
+                          <li
+                            className={`relative h-[35px] overflow-hidden flex flex-col justify-start text-sm hover:bg-lightprimary dark:hover:bg-darkprimary  font-normal rounded-md group ${
+                              isActive
+                                ? 'text-primary bg-lightprimary dark:text-white dark:bg-darkprimary'
+                                : 'text-forest-black dark:text-darklink hover:text-primary dark:hover:text-white'
+                            }`}
+                          >
+                            <span className="transform transition-transform duration-300 group-hover:-translate-y-full px-2 xl:px-3 py-1 xl:py-1.5">
+                              {value?.label}
+                            </span>
+                            <span className="transform transition-transform duration-300 group-hover:-translate-y-full px-2 xl:px-3 py-1 xl:py-1.5">
+                              {value?.label}
+                            </span>
+                          </li>
+                        </Link>
+                      );
+                    })}
                   </ul>
                 </div>
                 <div className="flex items-center gap-4">
